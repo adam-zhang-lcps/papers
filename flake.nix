@@ -28,8 +28,6 @@
                 inherit (texlive) scheme-basic;
               })
               texlab
-              nushell
-              inotify-tools
             ];
 
             shellHook = ''
