@@ -1,0 +1,15 @@
+#!/usr/bin/env nu
+
+def main [name: string] {
+  let name = echo $name | path basename
+  let file = $'($name)/($name).tex'
+
+  zathura --fork $'out/($name).pdf'
+
+  inotifywait -e modify -m $file | each {
+    let result = do { lualatex --output-directory=out/ --halt-on-error $file } | complete
+    if $result.exit_code != 0 {
+      echo $result.stdout
+    }
+  } | to text
+}

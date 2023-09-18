@@ -1,0 +1,7 @@
+#!/usr/bin/env nu
+
+def main [folder: string] {
+  let name = echo $folder | path basename
+  lualatex --output-directory out/ $'($name)/($name).tex'
+  xdg-open $'out/($name).pdf'
+}
