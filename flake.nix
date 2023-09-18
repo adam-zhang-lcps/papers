@@ -24,9 +24,7 @@
         devShells.default = with pkgs;
           mkShell {
             buildInputs = [
-              (texlive.combine {
-                inherit (texlive) scheme-basic;
-              })
+              tectonic
               texlab
             ];
 
