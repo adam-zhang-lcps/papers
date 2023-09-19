@@ -3,6 +3,8 @@
 \usepackage{graphicx}
 \graphicspath{{assets/}}
 
+\usepackage{siunitx}
+
 \addbibresource{refs.bib}
 
 \title{Investigating the Effect of Chain Length on Acceleration}
@@ -51,7 +53,12 @@ The setup of the experiment is shown in Figure \ref{fig:setup}.
 \subsection{Procedures}
 The following procedure was implemented during this experiment.
 \begin{APAenumerate}
-	\item First step
+	\item Construct the experimental setup as shown in Figure \ref{fig:setup}.
+	\item\label{pro:outer-start} Place the 60\unit{\centi\meter} chain on the pulley so that 25\unit{\centi\meter} of the chain is on the side away from the photogate.
+	\item\label{pro:inner-start} Start collecting data on the LabQuest, then release the chain.
+	\item\label{pro:inner-end} End the data collection after the chain has fallen.
+	\item\label{pro:outer-end} Repeat steps \ref{pro:inner-start} through \ref{pro:inner-end} two more times to obtain 3 total trials for this length.
+	\item Repeat steps \ref{pro:outer-start} through \ref{pro:outer-end} four more times, increasing the chain length by 10\unit{\centi\meter} every time to obtain a total of 15 trials.
 \end{APAenumerate}
 
 \section{Results}
