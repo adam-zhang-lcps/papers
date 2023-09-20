@@ -4,6 +4,7 @@
 \graphicspath{{assets/}}
 
 \usepackage{siunitx}
+\usepackage{multirow}
 
 \addbibresource{refs.bib}
 
@@ -62,15 +63,37 @@ The following procedure was implemented during this experiment.
 \end{APAenumerate}
 
 \section{Results}
+
 \subsection{Data}
+For each trial, a trend line was fitted to the velocity data points. The equation of this velocity line is shown in Table \ref{tab:data}.
 \begin{table}
 	\centering
-	\caption{Caption}
+	\caption{Trend Line Equations for Each Trial}
 	\label{tab:data}
-	\begin{tabular}{cc}
-		Column 1 & Column 2 \\
+	\begin{tabular}{|c|c|c|}
 		\hline
-		Data 1 & Data 2
+		Chain Length (\unit{\centi\meter}) & Trial \# & Velocity Equation \\
+		\hline
+		\multirow{3}{*}{60\unit{\centi\meter} Chain} & 1 & ax \\
+									& 2 & ax \\
+									& 3 & ax \\
+		\hline
+		\multirow{3}{*}{70\unit{\centi\meter} Chain} & 1 & ax \\
+									& 2 & ax \\
+									& 3 & ax \\
+		\hline
+		\multirow{3}{*}{80\unit{\centi\meter} Chain} & 1 & ax \\
+									& 2 & ax \\
+									& 3 & ax \\
+		\hline
+		\multirow{3}{*}{90\unit{\centi\meter} Chain} & 1 & ax \\
+									& 2 & ax \\
+									& 3 & ax \\
+		\hline
+		\multirow{3}{*}{100\unit{\centi\meter} Chain} & 1 & ax \\
+									 & 2 & ax \\
+									 & 3 & ax \\
+		\hline
 	\end{tabular}
 \end{table}
 \begin{figure}
