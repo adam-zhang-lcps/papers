@@ -25,7 +25,30 @@
           mkShell {
             buildInputs = [
               (texlive.combine {
-                inherit (texlive) scheme-basic;
+                inherit
+                  (texlive)
+                  scheme-basic
+                  latexmk
+                  siunitx
+                  multirow
+                  biblatex
+                  # APA7 + dependencies
+                  
+                  apa7
+                  biblatex-apa
+                  booktabs
+                  caption
+                  draftwatermark
+                  endfloat
+                  etoolbox
+                  fancyhdr
+                  float
+                  geometry
+                  scalerel
+                  threeparttable
+                  pgf
+                  times
+                  ;
               })
               texlab
             ];
