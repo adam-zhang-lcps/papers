@@ -43,8 +43,9 @@ The following materials are required for this experiment \parencite{Hilsdorf2023
 	\item Meter stick
 	\item Chains of varying lengths % TODO clarify
 \end{APAitemize}
-The setup of the experiment is shown in Figure \ref{fig:setup}.
-\begin{figure}
+The setup of the experiment is shown in \autoref{fig:setup}.
+
+\begin{figure}[H]
 	\centering
 	\caption{Experimental Setup}
 	\label{fig:setup}
@@ -65,7 +66,7 @@ The following procedure was implemented during this experiment.
 \section{Results}
 
 \subsection{Data}
-For each trial, a trend line was fitted to the velocity data points. The equation of this velocity line is shown in Table \ref{tab:equations}. An example graph for the first trial of the 100\unit{\centi\meter} chain is shown in Figure \ref{fig:100-trial1}. For completeness, the distance and interpolated acceleration is included in the graph.
+For each trial, a trend line was fitted to the velocity data points. The equation of this velocity line is shown in \autoref{tab:equations}. An example graph for the first trial of the 100\unit{\centi\meter} chain is shown in \autoref{fig:100-trial1}. For completeness, the distance and interpolated acceleration is included in the graph.
 
 \begin{table}
 	\centering
@@ -102,6 +103,7 @@ For each trial, a trend line was fitted to the velocity data points. The equatio
 		\hline
 	\end{tabular}
 \end{table}
+
 \begin{figure}[H]
 	\centering
 	\caption{Graph for First Trial of 100\unit{\centi\meter} Chain}
@@ -111,7 +113,7 @@ For each trial, a trend line was fitted to the velocity data points. The equatio
 
 \subsection{Calculations}
 % TODO explain calculations
-The calculated equation for acceleration for each trial is shown in Table \ref{tab:acceleration-equation}. The constant for rate of growth for each trial, as well as an average, is shown in Table \ref{tab:acceleration-rog}. A scatterplot of the average rate of growth per chain length is shown in Figure [?]. % TODO
+The calculated equation for acceleration for each trial is shown in \autoref{tab:acceleration-equation}. The constant for rate of growth for each trial, as well as an average, is shown in \autoref{tab:acceleration-rog}. A scatterplot of the average rate of growth per chain length is shown in \autoref{fig:length-vs-rog}.
 
 \begin{table}
 	\centering
@@ -200,16 +202,25 @@ The calculated equation for acceleration for each trial is shown in Table \ref{t
     \end{tabular}
 \end{table}
 
+\begin{figure}[H]
+	\centering
+	\caption{Chain Length vs Average Rate of Change}
+	\label{fig:length-vs-rog}
+	\includegraphics[width=0.75\textwidth]{chain-length-vs-rog}
+\end{figure}
+
 \section{Discussion}
 
 \subsection{Conclusion}
 Discuss if the hypothesis was satisfied, including data/evidence from experiment. Reflect on the success/failure of the experiment (purpose accomplished or not). Make a claim, support it with evidence from the experiment, and use reasoning related to the principles discussed in the background to support it.
 
-\subsection{Errors}
+The hypothesis was not satisfied. As shown by \autoref{tab:acceleration-rog} and \autoref{fig:length-vs-rog}, there is no visible relationship between chain length and the rate of change of acceleration. However, this could be a false conclusion resulting from a large amount of error in experimental data collection (see \nameref{sec:errors}).
+
+\subsection{Errors}\label{sec:errors}
 Describe errors and sources of error. Be specific. Comment on the percent error calculation (if applicable).  Include a discussion of how to minimize error in further research. 
 
 \subsection{Extensions}
-Explain how the conclusions and experiment are relevant to real-life.  Provide commentary to answer required questions.
+Systems of pulleys are extensively used in many areas of modern technology, such as elevators, construction, and exercise machines \parencite{Vork2018PulleyExamples}. Understanding the underlying mechanics in the motion of pulleys is essential in utilizing them correctly and safely to their full potential.
 
 \printbibliography
 
