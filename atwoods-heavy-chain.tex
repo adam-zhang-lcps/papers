@@ -8,7 +8,7 @@
 
 \addbibresource{refs.bib}
 
-\title{Investigating the Effect of Chain Length on Acceleration}
+\title{Investigating the Effect of Chain Length on Change in Acceleration}
 \author{Adam Zhang}
 \affiliation{Academies of Loudoun}
 \course{AP Physics C: Mech, Block 2}
@@ -110,42 +110,92 @@ For each trial, a trend line was fitted to the velocity data points. The equatio
 \end{figure}
 
 \subsection{Calculations}
-Insert an example calculation.  Do not write out “multiply velocity times time…”  Define your parameters, use numbers, and equations. Include the general formula, formula with numbers, and final answer with units. Show \% error calculation steps, if applicable.
-
-The calculated equation for acceleration for each trial is shown in Table \ref{tab:acceleration}.
+% TODO explain calculations
+The calculated equation for acceleration for each trial is shown in Table \ref{tab:acceleration-equation}. The constant for rate of growth for each trial, as well as an average, is shown in Table \ref{tab:acceleration-rog}. A scatterplot of the average rate of growth per chain length is shown in Figure [?]. % TODO
 
 \begin{table}
 	\centering
-	\caption{Calculated Equation for Acceleration per Trial}
-	\label{tab:acceleration}
+	\caption{Equation and Rate of Growth for Acceleration per Trial}
+	\label{tab:acceleration-equation}
 	\begin{tabular}{|c|c|c|c|}
     	\hline
-		Chain Length (\unit{\centi\meter}) & Trial \# & Acceleration Equation ($a(t)$) & Rate of Growth Constant \\
+		Chain Length (\unit{\centi\meter}) & Trial \# & Acceleration Equation ($a(t)$) \\
 		\hline
 		\multirow{3}{*}{60\unit{\centi\meter} Chain}
-		& 1 & $0.728e^{5.022t}$ & 1 \\ % TODO These derivatives are done
-		& 2 & $0.523e^{5.116t}$ & 1 \\
-		& 3 & $2.666e^{5.107t}$ & 1 \\
+		& 1 & $0.728e^{5.022t}$ \\ 
+		\cline{2-3}
+		& 2 & $0.523e^{5.116t}$ \\
+		\cline{2-3}
+		& 3 & $2.666e^{5.107t}$ \\
 		\hline
 		\multirow{3}{*}{70\unit{\centi\meter} Chain}
-		& 1 & $0.180e^{5.164t}$ & 1 \\
-		& 2 & $0.205e^{5.238t}$ & 1 \\
-		& 3 & $0.205e^{5.370t}$ & 1 \\
+		& 1 & $0.930e^{5.164t}$ \\
+		\cline{2-3}
+		& 2 & $1.074e^{5.238t}$ \\
+		\cline{2-3}
+		& 3 & $1.101e^{5.370t}$ \\
 		\hline
 		\multirow{3}{*}{80\unit{\centi\meter} Chain}
-		& 1 & $0.135e^{5.183t}$ & 1 \\
-		& 2 & $0.351e^{4.602t}$ & 1 \\
-		& 3 & $0.116e^{5.548t}$ & 1 \\
+		& 1 & $0.700e^{5.183t}$ \\
+		\cline{2-3}
+		& 2 & $1.615e^{4.602t}$ \\
+		\cline{2-3}
+		& 3 & $0.644e^{5.548t}$ \\
 		\hline
 		\multirow{3}{*}{90\unit{\centi\meter} Chain}
-		& 1 & $0.177e^{5.306t}$ & 1 \\
-		& 2 & $0.334e^{5.046t}$ & 1 \\
-		& 3 & $0.336e^{5.197t}$ & 1 \\
+		& 1 & $0.939e^{5.306t}$ \\
+		\cline{2-3}
+		& 2 & $1.685e^{5.046t}$ \\
+		\cline{2-3}
+		& 3 & $1.746e^{5.197t}$ \\
 		\hline
 		\multirow{3}{*}{100\unit{\centi\meter} Chain}
-		& 1 & $0.436e^{4.922t}$ & 1 \\
-		& 2 & $0.201e^{5.931t}$ & 1 \\
-		& 3 & $0.344e^{5.398t}$ & 1 \\
+		& 1 & $2.146e^{4.922t}$ \\
+		\cline{2-3}
+		& 2 & $1.192e^{5.931t}$ \\
+		\cline{2-3}
+		& 3 & $1.857e^{5.398t}$ \\
+		\hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Rate of Growth of Acceleration}
+	\label{tab:acceleration-rog}
+	\begin{tabular}{|c|c|c|c|}
+    	\hline
+		Chain Length (\unit{\centi\meter}) & Trial \# & Rate of Growth & Average \\
+		\hline
+		\multirow{3}{*}{60\unit{\centi\meter} Chain} & 1 & 5.022 & \multirow{3}{*}{5.082} \\
+		\cline{2-3}
+		& 2 & 5.116 & \\
+		\cline{2-3}
+		& 3 & 5.107 & \\
+		\hline
+		\multirow{3}{*}{70\unit{\centi\meter} Chain} & 1 & 5.164 & \multirow{3}{*}{5.257} \\
+		\cline{2-3}
+		& 2 & 5.238 & \\
+		\cline{2-3}
+		& 3 & 5.370 & \\
+		\hline
+		\multirow{3}{*}{80\unit{\centi\meter} Chain} & 1 & 5.183 & \multirow{3}{*}{5.111} \\
+		\cline{2-3}
+		& 2 & 4.602 & \\
+		\cline{2-3}
+		& 3 & 5.548 & \\
+		\hline
+		\multirow{3}{*}{90\unit{\centi\meter} Chain} & 1 & 5.306 & \multirow{3}{*}{5.183} \\
+		\cline{2-3}
+		& 2 & 5.046 & \\
+		\cline{2-3}
+		& 3 & 5.197 & \\
+		\hline
+		\multirow{3}{*}{100\unit{\centi\meter} Chain} & 1 & 4.922 & \multirow{3}{*}{5.417} \\
+		\cline{2-3}
+		& 2 & 5.931 & \\
+		\cline{2-3}
+		& 3 & 5.398 & \\
 		\hline
     \end{tabular}
 \end{table}
@@ -159,7 +209,7 @@ Discuss if the hypothesis was satisfied, including data/evidence from experiment
 Describe errors and sources of error. Be specific. Comment on the percent error calculation (if applicable).  Include a discussion of how to minimize error in further research. 
 
 \subsection{Extensions}
-Explain how the conclusions and experiment are relevant to real-life.  Provide commentary to answer required questions. 
+Explain how the conclusions and experiment are relevant to real-life.  Provide commentary to answer required questions.
 
 \printbibliography
 
