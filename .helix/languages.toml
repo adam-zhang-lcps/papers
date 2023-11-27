@@ -1,9 +1,0 @@
-[language-server.texlab.config]
-texlab.build.onSave = true
-texlab.build.auxDirectory = "aux/"
-texlab.build.logDirectory = "aux/"
-texlab.build.pdfDirectory = "out/"
-texlab.build.args = ["-pdf", "-lualatex", "-auxdir=aux", "-outdir=out", "-interaction=nonstopmode", "-synctex=1", "%f"]
-texlab.build.forwardSearchAfter = true
-texlab.forwardSearch.executable = "zathura"
-texlab.forwardSearch.args = ["--synctex-forward", "%l:1:%f", "%p"]
