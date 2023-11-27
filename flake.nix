@@ -3,6 +3,10 @@
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
+    devshell = {
+      url = "github:numtide/devshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -12,6 +16,7 @@
   }:
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin"];
+      imports = [inputs.devshell.flakeModule];
       perSystem = {
         config,
         self',
@@ -24,10 +29,12 @@
         # module parameters provide easy access to attributes of the same
         # system.
 
-        devShells.default = with pkgs;
-          mkShell {
-            buildInputs = [
-              (texlive.combine {
+        devshells.default = with pkgs; {
+          commands = [
+            {
+              name = "latexmk";
+              category = "LaTeX";
+              package = texlive.combine {
                 inherit
                   (texlive)
                   scheme-basic
@@ -52,14 +59,14 @@
                   pgf
                   times
                   ;
-              })
-              texlab
-            ];
-
-            shellHook = ''
-              export PATH=bin:$PATH
-            '';
-          };
+              };
+            }
+            {
+              category = "LaTeX";
+              package = texlab;
+            }
+          ];
+        };
       };
     };
 }
