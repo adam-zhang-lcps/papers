@@ -65,6 +65,18 @@
               category = "LaTeX";
               package = texlab;
             }
+            {
+              category = "Typst";
+              package = typst;
+            }
+            {
+              category = "Typst";
+              package = typst-lsp;
+            }
+            {
+              category = "Typst";
+              package = typstfmt;
+            }
           ];
         };
       };
