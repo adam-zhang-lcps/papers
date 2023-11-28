@@ -66,6 +66,10 @@
               package = texlab;
             }
             {
+              category = "LaTeX";
+              package = biber;
+            }
+            {
               category = "Typst";
               package = typst;
             }
