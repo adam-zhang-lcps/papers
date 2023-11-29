@@ -113,57 +113,90 @@ The following procedure was implemented during this experiment.
 + Repeat steps #link(label("proc-outer-start"), "2")#sym.dash.en#link(label("proc-outer-end"), "6") for
     2, 3, 4, and 5 filters stacked together.
 + Plot mass vs. terminal velocity. Fit a linear trendline, and record the slope
-    and R^2 in @trendlines.
+    and $R^2$ in @trendlines.
 + Plot mass vs. terminal velocity squared. Fit a linear trendline, and record the
-    slope and R^2 in @trendlines.
+    slope and $R^2$ in @trendlines.
 
 = Results
 == Data
-@data shows the determined terminal velocity for each trial for each stack of
-filters, along with the mass for each stack of filters.
+@data shows the determined terminal velocity and calculated terminal velocity
+squared for each trial for each stack of filters, along with the mass for each
+stack of filters.
 
 #figure(tablex(
     align: center + horizon,
-    columns: (auto, auto, auto, auto),
+    columns: 5,
     [\# of Filters],
     [Mass (kg)],
     [Trials],
     [$V_T$ (m/s)],
+    [$V_T^2$ (m#super([2])/s#super([2]))],
     rowspanx(2)[1],
     rowspanx(2)[0.03],
     [1],
     [0.8601],
+    [0.7398],
     [2],
     [0.8377],
+    [0.7017],
     rowspanx(2)[2],
     rowspanx(2)[0.07],
     [1],
     [1.244],
+    [1.548],
     [2],
     [1.223],
+    [1.496],
     rowspanx(2)[2],
     rowspanx(2)[0.10],
     [1],
     [1.521],
+    [2.313],
     [2],
     [1.571],
+    [2.468],
     rowspanx(2)[2],
     rowspanx(2)[0.14],
     [1],
     [1.652],
+    [2.729],
     [2],
     [1.711],
+    [2.928],
     rowspanx(2)[2],
     rowspanx(2)[0.17],
     [1],
     [2.075],
+    [4.306],
     [2],
     [1.894],
+    [3.587],
 ), caption: "Terminal Velocity per Filter Stack", kind: table) <data>
 == Calculations
-#lorem(60)
+To determine whether laminar flow ($n = 1$) or turbulent flow ($n = 2$) was a
+better fit for the motion of the coffee filter, two graphs were created;
+@tv-vs-mass fits a linear equation to mass vs. terminal velocity, and
+@tv2-vs-mass fits a linear equation to mass vs. terminal velocity squared.
 
-#figure(table()) <trendlines>
+#figure(
+    image("assets/coffee-filter-drag-mass-vs-tm.png", width: 70%),
+    caption: "Mass vs. Terminal Velocity",
+) <tv-vs-mass>
+#figure(
+    image("assets/coffee-filter-drag-mass-vs-tm2.png", width: 70%),
+    caption: "Mass vs. Terminal Velocity Squared",
+) <tv2-vs-mass>
+
+#figure(tablex(
+    align: center + horizon,
+    columns: (20%, 20%),
+    [Data Range],
+    [$R^2$],
+    [$V_T$],
+    [0.962],
+    [$V_T^2$],
+    [0.954],
+), caption: [$R^2$ per Data Range], kind: table) <trendlines>
 = Discussion
 == Conclusion
 #lorem(50)
