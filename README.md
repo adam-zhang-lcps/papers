@@ -1,5 +1,5 @@
-# LaTeX Sources
-This repository contains the [LaTeX](https://www.latex-project.org) sources for all of my formal academic papers.
+# LaTeX/Typst Sources
+This repository contains the [LaTeX](https://www.latex-project.org) and [Typst](https://typst.app) sources for all of my formal academic papers.
 
 ## License
 Given that this repository contains both software and academic works, this repository is under two separate licenses.
