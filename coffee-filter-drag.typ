@@ -35,10 +35,10 @@
 
         Adam Zhang
 
-        Academy of Engineering and Technology, #box(image("assets/acl-logo.png", height: 0.9em)) Academies
-        of Loudoun
+        Academy of Engineering and Technology,
+        #box(image("assets/acl-logo.png", height: 0.9em)) Academies of Loudoun
 
-        AP Physics C: Mech, Block 2
+        AET AP Physics C: Mechanics
 
         Mr. Matthew Hilsdorf
 
@@ -53,10 +53,12 @@
 == Purpose
 Determine the model of drag that most accurately represents the motion of a
 coffee filter falling from rest. Determine the effect of mass on terminal
-velocity.== Hypothesis The model of drag that will most accurately represent the
-motion of the coffee filter is laminar flow, or $F_"drag" = -b v$. Laminar flow
-more closely models objects moving at relatively slow velocities, such as the
-coffee filter.
+velocity.
+
+== Hypothesis
+The model of drag that will most accurately represent the motion of the coffee
+filter is laminar flow, or $F_"drag" = -b v$. Laminar flow more closely models
+objects moving at relatively slow velocities, such as the coffee filter.
 
 Assuming a laminar flow ($n = 1$ in $-b v^n$; see #link(label("background"), "Background")),
 mass will have a directly proportional relationship with terminal velocity. The
@@ -74,13 +76,29 @@ Again, assuming a laminar flow, $n = 1$, resulting in velocity being directly
 proportional to mass.
 
 == Background <background>
-#lorem(100)
+Objects moving through fluids, including air, experience a resistive force
+opposing the direction of their motion. The magnitude of this resistive force,
+or drag force, is dependent upon the velocity of the object.
+$ F_"drag" = -b v^n $
+$b$ is a constant that depends upon many factors, such as the density of the
+fluid and the cross-sectional area of the object. $n$ indicates the type of drag
+relationship, of which there are commonly two: laminar flow, where $n = 1$, and
+turbulent flow, where $n = 2$. Laminar flow is commonly experienced by objects
+moving at relatively low velocities, whilst turbulent flow is experienced by
+objects moving at relatively high velocities.
 
-#lorem(100)
+Since drag is dependent upon velocity, an accelerating object will eventually
+reach a point where the drag force is equivalent to the force providing
+acceleration. This state is known as terminal velocity, where the object will no
+longer gain or lose speed @Hilsdorf2023CoffeeFilterDragHandout.
 
-#lorem(100)
-
-#lorem(100)
+Objects that experience relatively high drag forces will reach terminal velocity
+quickly. This experiment will measure the terminal velocity of a coffee filter,
+a lightweight object with a large cross-sectional area, and will attempt to
+determine which model of drag more accurately fits the motion---laminar or
+turbulent. Additionally, this experiment will attempt to determine how the mass
+of an object affects the terminal velocity by stacking multiple coffee filters
+together.
 
 = Methods
 == Materials
@@ -200,11 +218,43 @@ better fit for the motion of the coffee filter, two graphs were created;
 ), caption: [$R^2$ per Data Range], kind: table) <trendlines>
 = Discussion
 == Conclusion
-#lorem(50)
+The experiment was successful in accomplishing its purpose, and both hypotheses
+were supported by the data collected.
+
+As shown in @trendlines, a linear fit of mass vs terminal velocity ($V_T$) was a
+better fit, indicating that the drag force in the motion of the coffee filter is
+better modeled by a laminar flow, where $F_"drag" = -b v$.
+
+As shown in @tv-vs-mass, an increase in mass correlated with an increase in
+terminal velocity. Given the high accuracy of a linear fit to the data, the
+correlation is likely linear as hypothesized.
+
 == Errors
-#lorem(50)
+The primary source of error is the requirement for human judgement in
+determining terminal velocity. To determine terminal velocity, the graph of
+position vs. time for the falling coffee filter was manually observed, and the
+linear-appearing section was selected, and applied with a linear curve fit. This
+could cause random error in the data collected, since the judgement was
+imprecise. Additionally, the time that the filter spent with terminal velocity
+was small, making errors likely to be amplified. Further experimentation could
+make use of more advanced equipment and instruments as well as a further fall
+distance to eliminate this error.
+
+Another possible source of error is the movement of the coffee filter while
+falling. Given that the shape of the filter is not perfectly uniform, drag
+forces would cause the filter to rotate, changing the cross-sectional area and
+consequently the $b$ value which is assumed to be constant. Further
+experimentation could attempt to reduce this error via carefully constructed
+apparatus or account for the change in calculations.
+
 == Extensions
-#lorem(50)
+Drag forces play a large role in everyday interactions, and understanding of
+their behavior plays a key role in designing complex machinery such as vehicles.
+One example are airplanes, which are heavily affected by drag forces, especially
+at their high speeds. Another example of drag forces are within fluids, such as
+water; submarines moving through the ocean are also subject to drag forces. In
+both these cases, understanding of drag forces is crucial in making them
+possible.
 
 #pagebreak()
 #set par(first-line-indent: 0in)
