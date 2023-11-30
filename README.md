@@ -7,7 +7,6 @@ Given that this repository contains both software and academic works, this repos
 All software works are licensed under the MIT license. This includes all files and folders in the following list.
 ```
 .gitignore
-.helix
 flake.nix
 flake.lock
 ```
