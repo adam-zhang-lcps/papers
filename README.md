@@ -9,6 +9,7 @@ All software works are licensed under the MIT license. This includes all files a
 .gitignore
 flake.nix
 flake.lock
+typstfmt.toml
 ```
 A copy of the MIT license is available in the [LICENCE-CODE](./LICENSE-CODE) file.
 
