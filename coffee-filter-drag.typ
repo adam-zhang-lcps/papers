@@ -1,53 +1,11 @@
 #import "@preview/tablex:0.0.6": tablex, rowspanx
-#set page(paper: "us-letter", margin: 1in, header: align(right)[
-    #counter(page).display()
-])
-#set par(leading: 1.5em, first-line-indent: 0.5in)
-#set text(font: "New Computer Modern", size: 11pt)
-#show heading.where(level: 1): it => [
-    #set text(size: 11pt, weight: "bold")
-    #set align(center)
-    #block(it.body, spacing: 1.5em)
-]
-#show heading.where(level: 2): it => [
-    #set text(size: 11pt, weight: "bold")
-    #block(it.body, spacing: 1.5em)
-]
-#set list(indent: 0.5in)
-#set enum(indent: 0.5in)
-#set figure.caption(position: top, separator: "")
-#show figure.caption: it => block(width: 100%)[
-    #set align(left)
-    #set par(first-line-indent: 0in)
-    *#it.supplement #it.counter.display()*
-
-    #emph(it.body)
-]
-
-#block(
-    width: 100%,
-    height: 100%,
-)[
-    #align(
-        center + horizon,
-    )[
-        #block(below: 4em)[*Investigating Drag Forces on Falling Coffee Filters*]
-
-        Adam Zhang
-
-        Academy of Engineering and Technology,
-        #box(image("assets/acl-logo.png", height: 0.9em)) Academies of Loudoun
-
-        AET AP Physics C: Mechanics
-
-        Mr. Matthew Hilsdorf
-
-        November 29, 2023
-    ]
-]
-
-#outline(indent: 0.25in)
-#pagebreak()
+#import "aet-lab-report-template.typ": aet-lab-report
+#show: doc => aet-lab-report(
+    title: "Investigating Drag Forces on Falling Coffee Filters",
+    course: "AET AP Physics C: Mechanics",
+    teacher: "Mr. Matthew Hilsdorf",
+    doc,
+)
 
 = Introduction
 == Purpose
@@ -255,7 +213,3 @@ at their high speeds. Another example of drag forces are within fluids, such as
 water; submarines moving through the ocean are also subject to drag forces. In
 both these cases, understanding of drag forces is crucial in making them
 possible.
-
-#pagebreak()
-#set par(first-line-indent: 0in)
-#bibliography("refs.bib", title: "References", style: "apa")
