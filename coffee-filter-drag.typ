@@ -35,7 +35,8 @@
 
         Adam Zhang
 
-        Academy of Engineering and Technology, Academies of Loudoun
+        Academy of Engineering and Technology, #box(image("assets/acl-logo.png", height: 0.9em)) Academies
+        of Loudoun
 
         AP Physics C: Mech, Block 2
 
