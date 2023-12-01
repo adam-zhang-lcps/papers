@@ -1,8 +1,17 @@
-#let aet-lab-report(title: none, course: none, teacher: none, date: datetime.today(), doc) = [
+#let aet-lab-report(
+    title: none,
+    course: none,
+    teacher: none,
+    date: datetime.today(),
+    draft: false,
+    doc,
+) = [
     #set document(title: title, author: "Adam Zhang", date: date)
     #set page(paper: "us-letter", margin: 1in, header: align(right)[
         #counter(page).display()
-    ])
+    ], background: if draft {
+        rotate(45deg, text(144pt, fill: luma(230), tracking: 12pt, "DRAFT"))
+    })
     #set par(leading: 1.5em, first-line-indent: 0.5in)
     #set text(font: "New Computer Modern", size: 11pt)
     #set outline(indent: 0.25in)
