@@ -4,7 +4,7 @@
     title: "Investigating Drag Forces on Falling Coffee Filters",
     course: "AET AP Physics C: Mechanics",
     teacher: "Mr. Matthew Hilsdorf",
-    draft: true,
+    date: datetime(year: 2023, month: 12, day: 7),
     doc,
 )
 
@@ -85,7 +85,7 @@ The following procedure was implemented during this experiment.
 + Once the coffee filter reaches the ground, end the data collection.
 + Highlight the linear section of the position vs. time graph in Vernier#emoji.reg Graphical
     Analysis. Apply a linear fit curve. Record the slope in @data as terminal
-    velocity. <proc-inner-end>
+    velocity. An example is shown in @vernier-example. <proc-inner-end>
 + Repeat steps #link(label("proc-inner-start"), "3")#sym.dash.en#link(label("proc-inner-end"), "5") to
     obtain data for a second trial. <proc-outer-end>
 + Repeat steps #link(label("proc-outer-start"), "2")#sym.dash.en#link(label("proc-outer-end"), "6") for
@@ -94,6 +94,11 @@ The following procedure was implemented during this experiment.
     and $R^2$ in @trendlines.
 + Plot mass vs. terminal velocity squared. Fit a linear trendline, and record the
     slope and $R^2$ in @trendlines.
+
+#figure(
+    image("assets/coffee-filter-vernier-screenshot.png", width: 70%),
+    caption: [Example of Selecting and Fitting a Linear Trendline to Find Terminal Velocity],
+) <vernier-example>
 
 = Results
 == Data
