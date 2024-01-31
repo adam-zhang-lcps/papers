@@ -32,44 +32,6 @@
         devshells.default = with pkgs; {
           commands = [
             {
-              name = "latexmk";
-              category = "LaTeX";
-              package = texlive.combine {
-                inherit
-                  (texlive)
-                  scheme-basic
-                  latexmk
-                  siunitx
-                  multirow
-                  biblatex
-                  # APA7 + dependencies
-                  
-                  apa7
-                  biblatex-apa
-                  booktabs
-                  caption
-                  draftwatermark
-                  endfloat
-                  etoolbox
-                  fancyhdr
-                  float
-                  geometry
-                  scalerel
-                  threeparttable
-                  pgf
-                  times
-                  ;
-              };
-            }
-            {
-              category = "LaTeX";
-              package = texlab;
-            }
-            {
-              category = "LaTeX";
-              package = biber;
-            }
-            {
               category = "Typst";
               package = typst;
             }
