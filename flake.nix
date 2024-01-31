@@ -81,6 +81,9 @@
               category = "Typst";
               package = typstfmt;
             }
+            {
+              package = gnuplot;
+            }
           ];
         };
       };

@@ -61,6 +61,7 @@ tubing exactly 6.0m.
 
 = Results
 == Data
+#figure(image("assets/barbie-bungee-jump/graph.png"), caption: []) <graph>
 
 == Calculations
 === Part 1
