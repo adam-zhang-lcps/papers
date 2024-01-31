@@ -1,10 +1,12 @@
 #import "@preview/tablex:0.0.6": tablex, rowspanx
 #import "aet-lab-report-template.typ": aet-lab-report
 #show: doc => aet-lab-report(
-    title: "Barbie Bungee Jump [TODO]",
+    // TODO: this title sucks
+    title: "Calculating the Mass Needed to Stretch an Elastic Material",
     course: "AET AP Physics C: Mechanics",
     teacher: "Mr. Matthew Hilsdorf",
     date: datetime(year: 2024, month: 01, day: 30),
+    draft: true,
     doc,
 )
 
@@ -14,6 +16,8 @@ Determine the mass $m$ required to stretch a 2.5m length of thin surgical
 tubing exactly to the floor when dropped from a height of 6.0m.
 
 == Hypothesis
+0.515kg of mass will be needed to be attached to the end of the elastic
+surgical tubing in order to stretch it 6.0m when dropped.
 
 == Background <background>
 
@@ -30,6 +34,7 @@ tubing exactly to the floor when dropped from a height of 6.0m.
 - Scale
 
 == Procedure
+// TODO: setup pictures
 This experiment has two procedures. The first procedure will use the materials
 tester to empirically calculate a force of distance function, $F(x)$, for the
 surgical tubing. The second procedure will use the calculated function to
@@ -38,7 +43,9 @@ tubing exactly 6.0m.
 
 === Part 1 <procedure-1>
 + Cut out 0.10m of thin surgical tubing.
-+ [insert material testing steps here]
+// TODO: Perhaps detail this?
++ Use the materials tester to obtain force vs. distance data for the surgical
+    tubing.
 + Using the obtained CSV data, calculate strain data ($epsilon_x$) with the load
     and distance columns.
 + Fit a second-degree polynomial regression to strain vs. force ($epsilon_x$ vs $F$).
@@ -53,8 +60,10 @@ tubing exactly 6.0m.
 + Measure Barbie's mass using the scale.
 + Attach the calculated mass from #link(label("procedure-1"), [Part 1]) minus
     Barbie's mass to Barbie.
-+ Tie one end of the surgical tubing to Barbie.
-+ Tie the other end of the surgical tubing to the drop platform.
++ Tie one end of the surgical tubing to Barbie, ensuring that the knot ends
+    where the tape indicates.
++ Tie the other end of the surgical tubing to the drop platform, again ensuring
+    the knot ends where the tape indicates.
 + Place a meter stick on the ground to use as a frame of reference.
 + Drop Barbie from rest. Use a device to record the drop to determine how close
     to the ground Barbie reached.
@@ -63,8 +72,11 @@ tubing exactly 6.0m.
 == Data
 The graph of strain vs. load obtained from the data collected using the
 Materials Tester is shown in @strain-graph, along with a third-degree
-polynomial regression.
+polynomial regression. @summary shows a summary of the other values measured
+or calculated (see #link(label("calculations"), "Calculations")) throughout
+this experiment.
 
+// TODO: this doesn't need a title, it's already in the caption
 #figure(
     image("assets/barbie-bungee-jump/graph.svg"),
     caption: [Strain (m/m) vs. Load (N)],
@@ -101,6 +113,8 @@ $ m = 0.515"kg" $
 
 = Discussion
 == Conclusion
+
 == Errors
+
 == Applications/Extensions
 
