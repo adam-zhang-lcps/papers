@@ -9,6 +9,7 @@
     draft: true,
     doc,
 )
+// TODO: Add the honor code
 
 = Introduction
 == Purpose
@@ -20,6 +21,42 @@ tubing exactly to the floor when dropped from a height of 6.0m.
 surgical tubing in order to stretch it 6.0m when dropped.
 
 == Background <background>
+// TODO: do this properly, with citations
+Elastic materials exhibit relationships between force ($F$) and displacement ($x$).
+While many materials obey Hooke's Law and demonstrate relationships that are
+linear, others instead exhibit more complicated relationships.
+
+Work done on a system is equal to the change in energy of that system, and can
+be found by integrating force with respect to distance.
+
+$ W = integral F(x) dif x $
+
+Therefore, if the displacement vs. force graph for an elastic material is
+known, the work done by that material can be calculated
+@Hilsdorf2024BarbieBungeeJump. Part one of this experiment will use a material
+testing device to empirically calculate a displacement vs. force function via
+regression.
+
+Part two of this experiment considers a bungee jump scenario. In such a
+scenario, an elastic material with length $L$ is attached to a mass, which is
+then dropped. The material stretches a distance $y$ until, for a moment in
+time, the mass comes to rest. Since the elastic material exerts no force until
+the mass has fallen its length, it will begin to do work once the mass reaches
+a distance of $L$ @Hilsdorf2024BarbieBungeeJump.
+
+$ W_"elastic" = -integral_L^y F(x - L) dif x $
+$ W_"elastic" = -integral_0^(y-L) F(x) dif x $
+
+Additionally, gravity also does work on the mass, equal to $m g y$. Since the
+motion considered begins and ends at rest, the change in the kinetic energy of
+the mass must be zero, which means that the work done by the elastic material
+and the work done by gravity must be equal and opposite.
+
+$ -W_"elastic" = W_g $
+$ -integral_0^(y-L) F(x) dif x = m g y $
+
+This experiment aims to calculate the mass required to stretch a 2.5m length
+of thin surgical tubing 6.0m using the above equation.
 
 = Methods
 == Materials
@@ -99,6 +136,7 @@ this experiment.
 The function obtained from regression is of strain; first, it must be adjusted
 to use the specific trial distance (2.5m).
 
+// TODO: wrong variable idiot
 $ F_"strain" (epsilon) = 4.772x^3 - 15.251x^2 + 21.320x + 0.419 $
 $ F(x) = F_"strain" (x/L) = F_"strain" (x/2.5) = 0.305408x^3 - 2.44016x^2 + 8.528x + 0.419 $
 
@@ -111,10 +149,41 @@ $ integral_0^3.5 F(x) dif x = 58.8m $
 $ 58.8m = 30.284 $
 $ m = 0.515"kg" $
 
+// TODO: level 3 headings aren't styled
+=== Part 2
+The expected stretch length was 6.0m, while the experimental stretch length
+was only 5.47m. This results in a percent error of 8.83%.
+
+$ "% error" &= (|"experimental" - "theoretical"|)/"theoretical" dot 100 \
+&= (|5.47 - 6.0|)/6.0 dot 100 \
+&= 8.83% $
+
 = Discussion
 == Conclusion
+The experiment was successful in accomplishing its purpose. The hypothesis
+proved to be reasonably close to a real value, only off by 53cm (an error of
+8.83%). This demonstrates that conservation of energy is a reasonable way to
+predict motion.
 
 == Errors
+There are many sources of error throughout this experiment that could have
+resulted in an 8.83% error. One such source of error is the inaccuracy of tied
+knots in retaining the length of the tubing. Since extra tubing had to be left
+in order to allow knots to be tied, it is likely that these knots did not
+perfectly retain the length between them. However, it is difficult to know
+whether the knots increased or decreased the true length of elastic material,
+so it is uncertain how measurements were affected.
 
-== Applications/Extensions
+Another source of error in this experiment is the failure to account for
+external forces acting upon the system. Energy is only conserved within an
+isolated system; however, in this experiment, there are forces originating
+from outside the system. The most notable is air resistance, which would
+decrease the velocity of Barbie as she fell. Therefore, it would result in a
+decrease in measured values, which is what was observed in the experiment.
 
+== Applications
+Conservation of energy is a well-established law in physics. Therefore,
+understanding how to apply it to solve real-world problems is a key skill and
+essential in dealing with real-world systems. For example, hydropower plants
+convert the gravitational potential energy of the falling water into
+mechanical and then electrical energy using generators.
