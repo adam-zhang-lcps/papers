@@ -15,7 +15,7 @@ tubing exactly to the floor when dropped from a height of 6.0m.
 
 == Hypothesis
 
-== Background
+== Background <background>
 
 = Methods
 == Materials
@@ -61,12 +61,46 @@ tubing exactly 6.0m.
 
 = Results
 == Data
-#figure(image("assets/barbie-bungee-jump/graph.png"), caption: []) <graph>
+The graph of strain vs. load obtained from the data collected using the
+Materials Tester is shown in @strain-graph, along with a third-degree
+polynomial regression.
 
-== Calculations
+#figure(
+    image("assets/barbie-bungee-jump/graph.svg"),
+    caption: [Strain (m/m) vs. Load (N)],
+) <strain-graph>
+
+#figure(table(
+    columns: (auto, auto),
+    [$L$],
+    [2.5m],
+    [$m$],
+    [0.515kg],
+    [$y_"experimental"$],
+    [5.47cm],
+    [% Error],
+    [8.83%],
+), caption: [Summary of Values]) <summary>
+
+== Calculations <calculations>
 === Part 1
+The function obtained from regression is of strain; first, it must be adjusted
+to use the specific trial distance (2.5m).
+
+$ F_"strain" (epsilon) = 4.772x^3 - 15.251x^2 + 21.320x + 0.419 $
+$ F(x) = F_"strain" (x/L) = F_"strain" (x/2.5) = 0.305408x^3 - 2.44016x^2 + 8.528x + 0.419 $
+
+Then, $F(epsilon)$ can be substituted into the left side of the equation from
+the #link(label("background"), "Background"), and then solved for $m$.
+
+$ integral_0^(y-L) F(x) dif x = m g y $
+$ integral_0^(6.0-2.5) F(x) dif x = m (9.8) (6.0) $
+$ integral_0^3.5 F(x) dif x = 58.8m $
+$ 58.8m = 30.284 $
+$ m = 0.515"kg" $
 
 = Discussion
 == Conclusion
 == Errors
 == Applications/Extensions
+
