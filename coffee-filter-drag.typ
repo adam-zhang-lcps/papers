@@ -20,10 +20,10 @@ filter is laminar flow, or $F_"drag" = -b v$. Laminar flow more closely models
 objects moving at relatively slow velocities, such as the coffee filter.
 
 Assuming a laminar flow ($n = 1$ in $-b v^n$; see #link(label("background"), "Background")),
-mass will have a directly proportional relationship with terminal velocity. The
-derivation for this conclusion is as follows: beginning with Newton's 2nd Law,
-the coffee filter experiences a downward force of gravity, and a drag force in
-the opposite direction.
+mass will have a directly proportional relationship with terminal velocity.
+The derivation for this conclusion is as follows: beginning with Newton's 2nd
+Law, the coffee filter experiences a downward force of gravity, and a drag
+force in the opposite direction.
 $ a = (m g - b v^n)/m $
 Since terminal velocity is reached when acceleration is equal to zero, the
 equation can be solved for velocity as follows.
@@ -40,24 +40,24 @@ opposing the direction of their motion. The magnitude of this resistive force,
 or drag force, is dependent upon the velocity of the object.
 $ F_"drag" = -b v^n $
 $b$ is a constant that depends upon many factors, such as the density of the
-fluid and the cross-sectional area of the object. $n$ indicates the type of drag
-relationship, of which there are commonly two: laminar flow, where $n = 1$, and
-turbulent flow, where $n = 2$. Laminar flow is commonly experienced by objects
-moving at relatively low velocities, whilst turbulent flow is experienced by
-objects moving at relatively high velocities.
+fluid and the cross-sectional area of the object. $n$ indicates the type of
+drag relationship, of which there are commonly two: laminar flow, where $n = 1$,
+and turbulent flow, where $n = 2$. Laminar flow is commonly experienced by
+objects moving at relatively low velocities, whilst turbulent flow is
+experienced by objects moving at relatively high velocities.
 
 Since drag is dependent upon velocity, an accelerating object will eventually
 reach a point where the drag force is equivalent to the force providing
-acceleration. This state is known as terminal velocity, where the object will no
-longer gain or lose speed @Hilsdorf2023CoffeeFilterDragHandout.
+acceleration. This state is known as terminal velocity, where the object will
+no longer gain or lose speed @Hilsdorf2023CoffeeFilterDragHandout.
 
-Objects that experience relatively high drag forces will reach terminal velocity
-quickly. This experiment will measure the terminal velocity of a coffee filter,
-a lightweight object with a large cross-sectional area, and will attempt to
-determine which model of drag more accurately fits the motion---laminar or
-turbulent. Additionally, this experiment will attempt to determine how the mass
-of an object affects the terminal velocity by stacking multiple coffee filters
-together.
+Objects that experience relatively high drag forces will reach terminal
+velocity quickly. This experiment will measure the terminal velocity of a
+coffee filter, a lightweight object with a large cross-sectional area, and
+will attempt to determine which model of drag more accurately fits the
+motion---laminar or turbulent. Additionally, this experiment will attempt to
+determine how the mass of an object affects the terminal velocity by stacking
+multiple coffee filters together.
 
 = Methods
 == Materials
@@ -70,15 +70,15 @@ The following materials are required for this experiment.
 The setup for this experiment is shown in @setup.
 
 #figure(
-    image("assets/coffee-filter-setup.jpeg", width: 50%),
+    image("assets/coffee-filter-drag/coffee-filter-setup.jpeg", width: 50%),
     caption: "Experimental Setup",
 )<setup>
 == Procedures
 The following procedure was implemented during this experiment.
 + Open Vernier#emoji.reg Graphical Analysis and pair with the Vernier#emoji.reg Motion
     Sensor. Place the Motion Sensor on the ground, facing upwards.
-+ Measure the mass of a single coffee filter using the balance. Record the mass in
-    @data. <proc-outer-start>
++ Measure the mass of a single coffee filter using the balance. Record the mass
+    in @data. <proc-outer-start>
 + Hold the coffee filter high above the motion sensor. Begin collecting data in
     Vernier#emoji.reg Graphical Analysis, then drop the coffee filter.
     <proc-inner-start>
@@ -92,11 +92,14 @@ The following procedure was implemented during this experiment.
     2, 3, 4, and 5 filters stacked together.
 + Plot mass vs. terminal velocity. Fit a linear trendline, and record the slope
     and $R^2$ in @trendlines.
-+ Plot mass vs. terminal velocity squared. Fit a linear trendline, and record the
-    slope and $R^2$ in @trendlines.
++ Plot mass vs. terminal velocity squared. Fit a linear trendline, and record
+    the slope and $R^2$ in @trendlines.
 
 #figure(
-    image("assets/coffee-filter-vernier-screenshot.png", width: 70%),
+    image(
+        "assets/coffee-filter-drag/coffee-filter-vernier-screenshot.png",
+        width: 70%,
+    ),
     caption: [Example of Selecting and Fitting a Linear Trendline to Find Terminal Velocity],
 ) <vernier-example>
 
@@ -161,14 +164,14 @@ better fit for the motion of the coffee filter, two graphs were created;
 @tv-vs-mass fits a linear equation to mass vs. terminal velocity, and
 @tv2-vs-mass fits a linear equation to mass vs. terminal velocity squared.
 
-#figure(
-    image("assets/coffee-filter-drag-mass-vs-tm.png", width: 70%),
-    caption: "Mass vs. Terminal Velocity",
-) <tv-vs-mass>
-#figure(
-    image("assets/coffee-filter-drag-mass-vs-tm2.png", width: 70%),
-    caption: "Mass vs. Terminal Velocity Squared",
-) <tv2-vs-mass>
+#figure(image(
+    "assets/coffee-filter-drag/coffee-filter-drag-mass-vs-tm.png",
+    width: 70%,
+), caption: "Mass vs. Terminal Velocity") <tv-vs-mass>
+#figure(image(
+    "assets/coffee-filter-drag/coffee-filter-drag-mass-vs-tm2.png",
+    width: 70%,
+), caption: "Mass vs. Terminal Velocity Squared") <tv2-vs-mass>
 
 #figure(tablex(
     align: center + horizon,
@@ -182,12 +185,12 @@ better fit for the motion of the coffee filter, two graphs were created;
 ), caption: [$R^2$ per Data Range], kind: table) <trendlines>
 = Discussion
 == Conclusion
-The experiment was successful in accomplishing its purpose, and both hypotheses
-were supported by the data collected.
+The experiment was successful in accomplishing its purpose, and both
+hypotheses were supported by the data collected.
 
-As shown in @trendlines, a linear fit of mass vs terminal velocity ($V_T$) was a
-better fit, indicating that the drag force in the motion of the coffee filter is
-better modeled by a laminar flow, where $F_"drag" = -b v$.
+As shown in @trendlines, a linear fit of mass vs terminal velocity ($V_T$) was
+a better fit, indicating that the drag force in the motion of the coffee
+filter is better modeled by a laminar flow, where $F_"drag" = -b v$.
 
 As shown in @tv-vs-mass, an increase in mass correlated with an increase in
 terminal velocity. Given the high accuracy of a linear fit to the data, the
@@ -197,8 +200,8 @@ correlation is likely linear as hypothesized.
 The primary source of error is the requirement for human judgement in
 determining terminal velocity. To determine terminal velocity, the graph of
 position vs. time for the falling coffee filter was manually observed, and the
-linear-appearing section was selected, and applied with a linear curve fit. This
-could cause random error in the data collected, since the judgement was
+linear-appearing section was selected, and applied with a linear curve fit.
+This could cause random error in the data collected, since the judgement was
 imprecise. Additionally, the time that the filter spent with terminal velocity
 was small, making errors likely to be amplified. Further experimentation could
 make use of more advanced equipment and instruments as well as a further fall
@@ -213,9 +216,9 @@ apparatus or account for the change in calculations.
 
 == Extensions
 Drag forces play a large role in everyday interactions, and understanding of
-their behavior plays a key role in designing complex machinery such as vehicles.
-One example are airplanes, which are heavily affected by drag forces, especially
-at their high speeds. Another example of drag forces are within fluids, such as
-water; submarines moving through the ocean are also subject to drag forces. In
-both these cases, understanding of drag forces is crucial in making them
-possible.
+their behavior plays a key role in designing complex machinery such as
+vehicles. One example are airplanes, which are heavily affected by drag
+forces, especially at their high speeds. Another example of drag forces are
+within fluids, such as water; submarines moving through the ocean are also
+subject to drag forces. In both these cases, understanding of drag forces is
+crucial in making them possible.
