@@ -134,8 +134,7 @@ this experiment.
 The function obtained from regression is of strain; first, it must be adjusted
 to use the specific trial distance (2.5m).
 
-// TODO: wrong variable idiot
-$ F_"strain" (epsilon) = 4.772x^3 - 15.251x^2 + 21.320x + 0.419 $
+$ F_"strain" (epsilon) = 4.772epsilon^3 - 15.251epsilon^2 + 21.320epsilon + 0.419 $
 $ F(x) = F_"strain" (x/L) = F_"strain" (x/2.5) = 0.305408x^3 - 2.44016x^2 + 8.528x + 0.419 $
 
 Then, $F(epsilon)$ can be substituted into the left side of the equation from
