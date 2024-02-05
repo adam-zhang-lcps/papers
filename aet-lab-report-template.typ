@@ -41,8 +41,13 @@
         #it
     ]
 
-    #block(width: 100%, height: 100%)[
-        #align(center + horizon)[
+    #block(
+        width: 100%,
+        height: 100%,
+    )[
+        #align(
+            center + horizon,
+        )[
             #block(below: 4em)[*#title*]
 
             Adam Zhang
@@ -55,6 +60,9 @@
             #teacher
 
             #date.display("[month repr:long] [day], [year]")
+
+            On my honor, I will not accept nor provide any unauthorized aid on this
+            assignment.
         ]
     ]
 

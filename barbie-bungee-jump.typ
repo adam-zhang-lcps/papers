@@ -9,7 +9,6 @@
     draft: true,
     doc,
 )
-// TODO: Add the honor code
 
 = Introduction
 == Purpose
