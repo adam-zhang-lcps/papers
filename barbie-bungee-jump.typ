@@ -1,7 +1,6 @@
 #import "@preview/tablex:0.0.6": tablex, rowspanx
 #import "aet-lab-report-template.typ": aet-lab-report
 #show: doc => aet-lab-report(
-    // TODO: this title sucks
     title: "Calculating the Mass Needed to Stretch an Elastic Material",
     course: "AET AP Physics C: Mechanics",
     teacher: "Mr. Matthew Hilsdorf",
@@ -148,7 +147,6 @@ $ integral_0^3.5 F(x) dif x = 58.8m $
 $ 58.8m = 30.284 $
 $ m = 0.515"kg" $
 
-// TODO: level 3 headings aren't styled
 === Part 2
 The expected stretch length was 6.0m, while the experimental stretch length
 was only 5.47m. This results in a percent error of 8.83%.

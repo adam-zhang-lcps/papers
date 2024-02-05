@@ -24,6 +24,10 @@
         #set text(size: 11pt, weight: "bold")
         #block(it.body, spacing: 1.5em)
     ]
+    #show heading.where(level: 3): it => [
+        #set text(size: 11pt, weight: "bold", style: "italic")
+        #block(it.body, spacing: 1.5em)
+    ]
     #set list(indent: 0.5in)
     #set enum(indent: 0.5in)
     #set figure.caption(position: top, separator: "")
