@@ -11,7 +11,7 @@
         #show figure: set block(breakable: true)
         #figure(caption: [Raw Data from Materials Tester])[
             #table(columns: (auto, auto, auto, auto, auto), ..data.flatten())
-        ]
+        ] <raw-data>
     ],
     draft: true,
     doc,
@@ -117,7 +117,8 @@ The graph of strain vs. load obtained from the data collected using the
 Materials Tester is shown in @strain-graph, along with a third-degree
 polynomial regression. @summary shows a summary of the other values measured
 or calculated (see #link(label("calculations"), "Calculations")) throughout
-this experiment.
+this experiment. A table containing all the raw readings from the materials
+tester in available in @raw-data in the Appendix.
 
 // TODO: this doesn't need a title, it's already in the caption
 #figure(
