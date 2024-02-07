@@ -5,6 +5,14 @@
     course: "AET AP Physics C: Mechanics",
     teacher: "Mr. Matthew Hilsdorf",
     date: datetime(year: 2024, month: 01, day: 30),
+    appendix: [
+        #let data = csv("assets/barbie-bungee-jump/data.csv")
+
+        #show figure: set block(breakable: true)
+        #figure(caption: [Raw Data from Materials Tester])[
+            #table(columns: (auto, auto, auto, auto, auto), ..data.flatten())
+        ]
+    ],
     draft: true,
     doc,
 )
@@ -183,3 +191,4 @@ understanding how to apply it to solve real-world problems is a key skill and
 essential in dealing with real-world systems. For example, hydropower plants
 convert the gravitational potential energy of the falling water into
 mechanical and then electrical energy using generators.
+

@@ -3,6 +3,7 @@
     course: none,
     teacher: none,
     date: datetime.today(),
+    appendix: none,
     draft: false,
     doc,
 ) = [
@@ -76,6 +77,12 @@
     #doc
 
     #bibliography("refs.bib")
+
+    #if appendix != none [
+        #pagebreak()
+        = Appendix
+        #appendix
+    ]
 ]
 
 = Introduction
