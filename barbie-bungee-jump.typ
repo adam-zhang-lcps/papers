@@ -120,9 +120,8 @@ or calculated (see #link(label("calculations"), "Calculations")) throughout
 this experiment. A table containing all the raw readings from the materials
 tester in available in @raw-data in the Appendix.
 
-// TODO: this doesn't need a title, it's already in the caption
 #figure(
-    image("assets/barbie-bungee-jump/graph.svg"),
+    image("assets/barbie-bungee-jump/strain-load.svg"),
     caption: [Strain (m/m) vs. Load (N)],
 ) <strain-graph>
 

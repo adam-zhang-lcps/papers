@@ -21,5 +21,5 @@ plot 'data.csv' using 5:(abs($2)) with lines linestyle 1, \
      f(x) with lines linestyle 2
 
 set terminal svg
-set output 'graph.svg'
+set output 'strain-load.svg'
 replot
