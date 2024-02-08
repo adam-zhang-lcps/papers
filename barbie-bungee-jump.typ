@@ -13,7 +13,6 @@
             #table(columns: (auto, auto, auto, auto, auto), ..data.flatten())
         ] <raw-data>
     ],
-    draft: true,
     doc,
 )
 
@@ -27,7 +26,6 @@ tubing exactly to the floor when dropped from a height of 6.0m.
 surgical tubing in order to stretch it 6.0m when dropped.
 
 == Background <background>
-// TODO: do this properly, with citations
 Elastic materials exhibit relationships between force ($F$) and displacement ($x$).
 While many materials obey Hooke's Law and demonstrate relationships that are
 linear, others instead exhibit more complicated relationships.
