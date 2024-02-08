@@ -77,7 +77,6 @@ of thin surgical tubing 6.0m using the above equation.
 - Scale
 
 == Procedure
-// TODO: setup pictures
 This experiment has two procedures. The first procedure will use the materials
 tester to empirically calculate a force of distance function, $F(x)$, for the
 surgical tubing. The second procedure will use the calculated function to
@@ -95,6 +94,15 @@ tubing exactly 6.0m.
 + With the resulting value for energy, solve for the needed mass $m$ as shown in
     Equation 4.
 
+An example of using the materials tester is shown in
+@materials-tester-picture.
+
+#figure(
+    caption: [Using the Materials Tester],
+)[
+    #image("assets/barbie-bungee-jump/materials-tester-setup.png", width: 50%)
+] <materials-tester-picture>
+
 === Part 2
 + Using the leftover surgical tubing, measure out 2.5m using the tape measure,
     and indicate the exact length using tape. Ensure there is extra space on both
@@ -109,6 +117,13 @@ tubing exactly 6.0m.
 + Place a meter stick on the ground to use as a frame of reference.
 + Drop Barbie from rest. Use a device to record the drop to determine how close
     to the ground Barbie reached.
+
+An example of Barbie's setup before dropping is shown in
+@barbie-setup-picture.
+
+#figure(caption: [Barbie's Drop Setup])[
+    #image("assets/barbie-bungee-jump/barbie-setup.jpg", width: 50%)
+] <barbie-setup-picture>
 
 = Results
 == Data
