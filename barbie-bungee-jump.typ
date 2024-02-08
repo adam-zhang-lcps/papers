@@ -86,7 +86,6 @@ tubing exactly 6.0m.
 
 === Part 1 <procedure-1>
 + Cut out 0.10m of thin surgical tubing.
-// TODO: Perhaps detail this?
 + Use the materials tester to obtain force vs. distance data for the surgical
     tubing.
 + Using the obtained CSV data, calculate strain data ($epsilon_x$) with the load
@@ -114,16 +113,22 @@ tubing exactly 6.0m.
 = Results
 == Data
 The graph of strain vs. load obtained from the data collected using the
-Materials Tester is shown in @strain-graph, along with a third-degree
-polynomial regression. @summary shows a summary of the other values measured
+Materials Tester is shown in @strain-load-graph, along with a third-degree
+polynomial regression. @potential-energy-graph shows the corresponding
+potential energy curve. @summary shows a summary of the other values measured
 or calculated (see #link(label("calculations"), "Calculations")) throughout
 this experiment. A table containing all the raw readings from the materials
 tester in available in @raw-data in the Appendix.
 
 #figure(
-    image("assets/barbie-bungee-jump/strain-load.svg"),
+    image("assets/barbie-bungee-jump/strain-load.svg", width: 70%),
     caption: [Strain (m/m) vs. Load (N)],
-) <strain-graph>
+) <strain-load-graph>
+
+#figure(
+    image("assets/barbie-bungee-jump/strain-potential-energy.svg", width: 70%),
+    caption: [Strain (m/m) vs. Potential Energy (J)],
+) <potential-energy-graph>
 
 #figure(table(
     columns: (auto, auto),
