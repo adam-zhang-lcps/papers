@@ -3,6 +3,7 @@
     author: "Adam Zhang",
     date: datetime.today(),
 )
+#set page(paper: "us-letter")
 #set text(font: "New Computer Modern")
 
 #align(center)[
@@ -23,12 +24,18 @@ In solving this problem, the following materials were used:
 - 30 FPS Camera
 
 = Procedure
-+ Measure the outer radius of the toilet paper roll. Record the value in @measurements.
-+ Measure the inner (hollow) radius of the toilet paper roll. Record the value in @measurements.
-+ Measure the mass of the toilet paper roll using the scale. Record the value in @measurements.
-+ Use the measured values to calculate the height to drop the held roll from to match the fall time of the free-falling roll.
-+ Drop the two rolls from their respective heights. Record the fall using the camera.
-+ Determine the maximum possible $Delta t$ between the two rolls impacting the ground using the difference in frames from the video.
++ Measure the outer radius of the toilet paper roll. Record the value in
+    @measurements.
++ Measure the inner (hollow) radius of the toilet paper roll. Record the value
+    in @measurements.
++ Measure the mass of the toilet paper roll using the scale. Record the value in
+    @measurements.
++ Use the measured values to calculate the height to drop the held roll from to
+    match the fall time of the free-falling roll.
++ Drop the two rolls from their respective heights. Record the fall using the
+    camera.
++ Determine the maximum possible $Delta t$ between the two rolls impacting the
+    ground using the difference in frames from the video.
 
 = Calculations
 == Part 1
@@ -86,7 +93,7 @@ $ a &= (m g R^2)/(1/2 m (r^2 + R^2) + m R^2) \
 &= (2 g R^2)/(r^2 + R^2 + 2R^2) \
 &= (2 g R^2)/(r^2 + 3R^2) $
 
-== Part 2
+== Part 2 <drop-height-calculations>
 Since the falling toilet paper roll experiences uniform acceleration and
 begins falling from rest, the time which it takes to reach the ground can be
 calculated using the following basic kinematic equation.
@@ -95,11 +102,6 @@ $ Delta y_"free" = 1/2 g t^2 $
 The equation can then be solved for $t$.
 $ t = sqrt((2 Delta y_"free")/g) $
 
-Substituting in known values yields the following: // TODO
-$ 1"m " = 1/2 dot 9.81"m/s"^2 dot t^2 $ // HACK for some reason a single character in a string stays in math font, but adding a space makes it text ¯\_(ツ)_/¯
-$ t &= sqrt(2 / 9.81) \
-&= 0.452"s " $
-
 Since the drop height of the held roll also experiences near-uniform
 acceleration, the drop height can be calculated using the same equation as
 above, substituting in the time from the above drop.
@@ -107,9 +109,6 @@ $ Delta y_"held" &= 1/2 a t^2 \
 &= 1/2 a (sqrt((2 Delta y_"free")/g))^2 \
 &= a/2 dot (2 Delta y_"free")/g \
 &= (a Delta y_"free")/g $
-
-$ &= 1/2 dot 6.249"m/s"^2 dot 0.452^2"s "^2 \
-&= 0.638"m " $
 
 = Results
 == Measurements
@@ -131,10 +130,14 @@ $ &= 1/2 dot 6.249"m/s"^2 dot 0.452^2"s "^2 \
 Substituting measured values into the #link(label("accel-function"))[previously calculated acceleration function] results
 in the following:
 $ a &= (2 dot 9.8"m/s"^2 dot 0.054^2"m "^2)/(0.020^2"m "^2 + 3 dot 0.054^2"m "^2) \
-    &= 6.249 "m/s"^2 $
+&= 6.249 "m/s"^2 $
 
 === Part 2
-$ a &= (a Delta y)/g $
+Substituting measured values as well as the acceleration calculated above into the #link(label("drop-height-calculations"))[drop height equation] yields the following:
+$ Delta y_"held" &= (6.249 "m/s"^2 dot 1"m ")/(9.8"m/s"^2) \
+&= 0.638"m " $
+
+== Drops
 
 
 // NOTE Video link for later: https://drive.google.com/file/d/1hEyK2Em6v7i22vvdASuWQ_-FS7laz5oN/view?usp=drive_link
