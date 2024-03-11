@@ -98,6 +98,9 @@ begins falling from rest, the time which it takes to reach the ground can be
 calculated using the following basic kinematic equation.
 $ Delta y = 1/2 g t^2 $
 
+The equation can then be solved for $t$.
+$ t = sqrt((2 Delta y)/g) $
+
 Substituting in known values yields the following: // TODO
 $ 1"m " = 1/2 dot 9.81"m/s"^2 dot t^2 $ // HACK for some reason a single character in a string stays in math font, but adding a space makes it text ¯\_(ツ)_/¯
 $ t &= sqrt(2 / 9.81) \
@@ -105,9 +108,13 @@ $ t &= sqrt(2 / 9.81) \
 
 Since the drop height of the held roll also experiences near-uniform
 acceleration, the drop height can be calculated using the same equation as
-above.
-$ Delta y &= 1/2 g t^2 \
-&= 1/2 dot 6.249"m/s"^2 dot 0.452^2"s "^2 \
+above, substituting in the time from the above drop.
+$ Delta y &= 1/2 a t^2 \
+    &= 1/2 a (sqrt((2 Delta y)/g))^2 \
+    &= a/2 dot (2 Delta y)/g \
+    &= (a Delta y)/g $
+
+$ &= 1/2 dot 6.249"m/s"^2 dot 0.452^2"s "^2 \
 &= 0.638"m " $
 
 = Results
