@@ -28,9 +28,18 @@ In solving this problem, the following materials were used:
 + Measure the mass of the toilet paper roll using the scale.
 
 = Measurements
-- Outer radius: 0.054m
-- Inner radius: 0.020m
-- Mass: 0.175kg
+#figure(caption: [Toilet Paper Roll Measurements])[
+    #table(
+        columns: (auto, auto),
+        align: (right, left),
+        [Outer Radius],
+        [0.054m],
+        [Inner Radius],
+        [0.020m],
+        [Mass],
+        [0.175kg],
+    )
+]
 
 = Calculations
 == Part 1
