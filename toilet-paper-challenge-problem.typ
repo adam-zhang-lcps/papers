@@ -18,14 +18,17 @@ heights.
 = Materials
 In solving this problem, the following materials were used:
 - Two toilet paper rolls
-- Ruler
+- Meter stick
 - Scale
+- 30 FPS Camera
 
 = Procedure
-// TODO
-+ Measure the outer radius of the toilet paper roll.
-+ Measure the inner (hollow) radius of the toilet paper roll.
-+ Measure the mass of the toilet paper roll using the scale.
++ Measure the outer radius of the toilet paper roll. Record the value in @measurements.
++ Measure the inner (hollow) radius of the toilet paper roll. Record the value in @measurements.
++ Measure the mass of the toilet paper roll using the scale. Record the value in @measurements.
++ Use the measured values to calculate the height to drop the held roll from to match the fall time of the free-falling roll.
++ Drop the two rolls from their respective heights. Record the fall using the camera.
++ Determine the maximum possible $Delta t$ between the two rolls impacting the ground using the difference in frames from the video.
 
 = Calculations
 == Part 1
@@ -121,7 +124,7 @@ $ &= 1/2 dot 6.249"m/s"^2 dot 0.452^2"s "^2 \
         [Mass ($m$)],
         [0.175kg],
     )
-]
+] <measurements>
 
 == Calculations
 === Part 1
