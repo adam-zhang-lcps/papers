@@ -23,6 +23,12 @@ In solving this problem, the following materials were used:
 
 = Procedure
 // TODO
++ Measure the outer radius of the toilet paper roll.
++ Measure the inner (hollow) radius of the toilet paper roll.
++ Measure the mass of the toilet paper roll using the scale.
+
+= Measurements
+// TODO
 
 = Calculations
 == Part 1
