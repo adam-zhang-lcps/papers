@@ -28,7 +28,9 @@ In solving this problem, the following materials were used:
 + Measure the mass of the toilet paper roll using the scale.
 
 = Measurements
-// TODO
+- Outer radius: 0.054m
+- Inner radius: 0.020m
+- Mass: 0.175kg
 
 = Calculations
 == Part 1
@@ -39,6 +41,7 @@ follows:
 $ I = 1/2 m (r_1^2 + r_2^2) $
 
 Plugging in the measured numbers yields the following:
+$ I = 1/2 dot 0.175"kg" dot (0.02^2"m "^2 + 0.054^2"m "^2) $
 $ I = "??" $ // TODO get measurements (why did I not write this down…)
 
 === Acceleration Function
