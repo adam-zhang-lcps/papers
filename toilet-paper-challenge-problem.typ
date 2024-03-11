@@ -45,21 +45,17 @@ $ I = integral x^2 phi dot 2 pi x h dif x $
 Since the mass of a partially-hollow cylinder is contained within two rings,
 the bounds of integration are from the inner ring to the outer ring.
 $ I &= integral_r^R x^2 phi dot 2 pi x L dif x \
-    &= 2 phi pi L integral_r^R x^3 dif x $
+&= 2 phi pi L integral_r^R x^3 dif x $
 
 Integrating yields the following:
 $ I &= 2 phi pi L dot (1/4 R^4 - 1/4 r^4) \
 &= 1/2 dot m/V dot pi dot L dot (R^4 - r^4) \
-    &= 1/2 dot m/(pi L (R^2 - r^2)) dot pi L dot (R^4 - r^4) \
-    &= 1/2 m dot (R^4 - r^4)/(R^2 - r^2) \
-    &= 1/2 m dot ((R^2 + r^2)(R^2 - r^2))/(R^2 - r^2) \
-    &= 1/2 m (R^2 + r^2) $
+&= 1/2 dot m/(pi L (R^2 - r^2)) dot pi L dot (R^4 - r^4) \
+&= 1/2 m dot (R^4 - r^4)/(R^2 - r^2) \
+&= 1/2 m dot ((R^2 + r^2)(R^2 - r^2))/(R^2 - r^2) \
+&= 1/2 m (R^2 + r^2) $
 
-Plugging in the measured numbers yields the following:
-$ I = 1/2 dot 0.175"kg" dot (0.02^2"m "^2 + 0.054^2"m "^2) $
-$ I = 0.000290 "kg m"^2 $
-
-=== Acceleration Function
+=== Acceleration Function <accel-function>
 Applying Newton's 2nd Law for both the translational and rotational motion
 yields the following two equations:
 $ a = F_"net"/m "and" alpha = tau_"net"/I $
@@ -83,14 +79,9 @@ Solving for $a$ yields the following:
 $ a = (m g R^2)/(I + m R^2) $
 
 Finally, substituting in rotational inertia results in the following:
-$ a = (m g R^2)/(1/2 m (r^2 + R^2) + m R^2) $
-$ a = (2 g R^2)/(r^2 + R^2 + 2R^2) $
-$ a = (2 g R^2)/(r^2 + 3R^2) $
-
-Finally, substituting measured values results in the following:
-// TODO I need these numbers 😭
-$ a = (0.175"kg" dot 9.8"m/s"^2 dot 0.054^2"m "^2)/(0.000290"kg m"^2 + 0.175"kg" dot 0.054^2"m "^2) $
-$ a = 6.249 "m/s"^2 $
+$ a &= (m g R^2)/(1/2 m (r^2 + R^2) + m R^2) \
+&= (2 g R^2)/(r^2 + R^2 + 2R^2) \
+&= (2 g R^2)/(r^2 + 3R^2) $
 
 == Part 2
 Since the falling toilet paper roll experiences uniform acceleration and
@@ -110,9 +101,9 @@ Since the drop height of the held roll also experiences near-uniform
 acceleration, the drop height can be calculated using the same equation as
 above, substituting in the time from the above drop.
 $ Delta y &= 1/2 a t^2 \
-    &= 1/2 a (sqrt((2 Delta y)/g))^2 \
-    &= a/2 dot (2 Delta y)/g \
-    &= (a Delta y)/g $
+&= 1/2 a (sqrt((2 Delta y)/g))^2 \
+&= a/2 dot (2 Delta y)/g \
+&= (a Delta y)/g $
 
 $ &= 1/2 dot 6.249"m/s"^2 dot 0.452^2"s "^2 \
 &= 0.638"m " $
@@ -133,3 +124,10 @@ $ &= 1/2 dot 6.249"m/s"^2 dot 0.452^2"s "^2 \
 ]
 
 == Calculations
+=== Part 1
+Substituting measured values into the #link(label("accel-function"))[previously calculated acceleration function] results
+in the following:
+$ a &= (2 dot 9.8"m/s"^2 dot 0.054^2"m "^2)/(0.020^2"m "^2 + 3 dot 0.054^2"m "^2) \
+    &= 6.249 "m/s"^2 $
+
+=== Part 2
