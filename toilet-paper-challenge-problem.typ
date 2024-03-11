@@ -90,10 +90,10 @@ $ a &= (m g R^2)/(1/2 m (r^2 + R^2) + m R^2) \
 Since the falling toilet paper roll experiences uniform acceleration and
 begins falling from rest, the time which it takes to reach the ground can be
 calculated using the following basic kinematic equation.
-$ Delta y = 1/2 g t^2 $
+$ Delta y_"free" = 1/2 g t^2 $
 
 The equation can then be solved for $t$.
-$ t = sqrt((2 Delta y)/g) $
+$ t = sqrt((2 Delta y_"free")/g) $
 
 Substituting in known values yields the following: // TODO
 $ 1"m " = 1/2 dot 9.81"m/s"^2 dot t^2 $ // HACK for some reason a single character in a string stays in math font, but adding a space makes it text ¯\_(ツ)_/¯
@@ -103,10 +103,10 @@ $ t &= sqrt(2 / 9.81) \
 Since the drop height of the held roll also experiences near-uniform
 acceleration, the drop height can be calculated using the same equation as
 above, substituting in the time from the above drop.
-$ Delta y &= 1/2 a t^2 \
-&= 1/2 a (sqrt((2 Delta y)/g))^2 \
-&= a/2 dot (2 Delta y)/g \
-&= (a Delta y)/g $
+$ Delta y_"held" &= 1/2 a t^2 \
+&= 1/2 a (sqrt((2 Delta y_"free")/g))^2 \
+&= a/2 dot (2 Delta y_"free")/g \
+&= (a Delta y_"free")/g $
 
 $ &= 1/2 dot 6.249"m/s"^2 dot 0.452^2"s "^2 \
 &= 0.638"m " $
@@ -134,3 +134,7 @@ $ a &= (2 dot 9.8"m/s"^2 dot 0.054^2"m "^2)/(0.020^2"m "^2 + 3 dot 0.054^2"m "^2
     &= 6.249 "m/s"^2 $
 
 === Part 2
+$ a &= (a Delta y)/g $
+
+
+// NOTE Video link for later: https://drive.google.com/file/d/1hEyK2Em6v7i22vvdASuWQ_-FS7laz5oN/view?usp=drive_link
