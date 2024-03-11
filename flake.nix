@@ -32,10 +32,14 @@
           build-changed-files.program = pkgs.writeScriptBin "get-changed-files" ''
             #!${pkgs.lib.getExe pkgs.nushell}
             mkdir out
-            let files = (${pkgs.lib.getExe pkgs.git} diff-tree --no-commit-id --name-only -r ${self.rev} | lines | where { str ends-with ".typ" })
+            echo test1
+            let files = (${pkgs.lib.getExe pkgs.git} diff-tree --no-commit-id --name-only -r HEAD | lines | where { str ends-with ".typ" })
+            echo test2
             for file in $files {
+              echo test3 $file
               ${pkgs.lib.getExe pkgs.typst} c $file $'out/(basename -s .typ $file).pdf'
             }
+            echo test4
           '';
         };
 

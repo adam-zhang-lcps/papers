@@ -1,0 +1,22 @@
+name: Build Changed Typst Files
+on:
+  push:
+    paths:
+      - '**.typ'
+jobs:
+  build-typst-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+      - name: Build PDFs
+        run: nix run .#build-changed-files
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf
+          path: out/*.pdf
