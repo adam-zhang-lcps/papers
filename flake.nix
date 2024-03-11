@@ -10,13 +10,16 @@
   };
 
   outputs = inputs @ {
+  self,
     flake-parts,
     nixpkgs,
     ...
   }:
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin"];
+
       imports = [inputs.devshell.flakeModule];
+
       perSystem = {
         config,
         self',
@@ -25,9 +28,16 @@
         system,
         ...
       }: {
-        # Per-system attributes can be defined here. The self' and inputs'
-        # module parameters provide easy access to attributes of the same
-        # system.
+        apps = {
+          build-changed-files.program = pkgs.writeScriptBin "get-changed-files" ''
+            #!${pkgs.lib.getExe pkgs.nushell}
+            mkdir out
+            let files = (${pkgs.lib.getExe pkgs.git} diff-tree --no-commit-id --name-only -r ${self.rev} | lines | where { str ends-with ".typ" })
+            for file in $files {
+              ${pkgs.lib.getExe pkgs.typst} c $file $'out/(basename -s .typ $file).pdf'
+            }
+          '';
+        };
 
         devshells.default = with pkgs; {
           commands = [
