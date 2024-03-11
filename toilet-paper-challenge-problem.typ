@@ -82,6 +82,11 @@ $ a = (m(g-a) R^2)/I $
 Solving for $a$ yields the following:
 $ a = (m g R^2)/(I + m R^2) $
 
+Finally, substituting in rotational inertia results in the following:
+$ a = (m g R^2)/(1/2 m (r^2 + R^2) + m R^2) $
+$ a = (2 g R^2)/(r^2 + R^2 + 2R^2) $
+$ a = (2 g R^2)/(r^2 + 3R^2) $
+
 Finally, substituting measured values results in the following:
 // TODO I need these numbers 😭
 $ a = (0.175"kg" dot 9.8"m/s"^2 dot 0.054^2"m "^2)/(0.000290"kg m"^2 + 0.175"kg" dot 0.054^2"m "^2) $
