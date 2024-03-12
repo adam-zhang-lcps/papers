@@ -5,6 +5,8 @@
 )
 #set page(paper: "us-letter")
 #set text(font: "New Computer Modern")
+#set quote(block: true)
+#show quote: set pad(x: 2em)
 
 #align(center)[
     #text(size: 24pt)[Challenge Problem: Toilet Paper Roll]
@@ -39,6 +41,23 @@ In solving this problem, the following materials were used:
 
 = Calculations
 == Part 1
+#grid(
+    columns: (auto, auto),
+    rows: 30%,
+    quote(
+        attribution: [from the problem handout],
+    )[
+        A toilet paper roll, dropped while holding the paper will #emph()[not] fall
+        with an acceleration of $g=9.8"m/s/s"$. Using your new knowledge of torque and
+        using the extended free body diagram for the roll, determine the actual linear
+        acceleration that the roll would experience. Write your result in terms of $g$
+        and numerical constants such as measured dimensions of the toilet paper roll.
+    ],
+    figure(caption: [Diagram from Problem Handout])[
+        #image("assets/toilet-paper-challenge-problem/diagram.png")
+    ],
+)
+
 === Rotational Inertia
 First, the rotational inertia of the toilet paper roll must be calculated for
 the next part.
@@ -55,15 +74,15 @@ $ I = integral x^2 phi dot 2 pi x h dif x $
 Since the mass of a partially-hollow cylinder is contained within two rings,
 the bounds of integration are from the inner ring to the outer ring.
 $ I &= integral_r^R x^2 phi dot 2 pi x L dif x \
-&= 2 phi pi L integral_r^R x^3 dif x $
+  &= 2 phi pi L integral_r^R x^3 dif x $
 
 Integrating yields the following:
 $ I &= 2 phi pi L dot (1/4 R^4 - 1/4 r^4) \
-&= 1/2 dot m/V dot pi dot L dot (R^4 - r^4) \
-&= 1/2 dot m/(pi L (R^2 - r^2)) dot pi L dot (R^4 - r^4) \
-&= 1/2 m dot (R^4 - r^4)/(R^2 - r^2) \
-&= 1/2 m dot ((R^2 + r^2)(R^2 - r^2))/(R^2 - r^2) \
-&= 1/2 m (R^2 + r^2) $
+  &= 1/2 dot m/V dot pi dot L dot (R^4 - r^4) \
+  &= 1/2 dot m/(pi L (R^2 - r^2)) dot pi L dot (R^4 - r^4) \
+  &= 1/2 m dot (R^4 - r^4)/(R^2 - r^2) \
+  &= 1/2 m dot ((R^2 + r^2)(R^2 - r^2))/(R^2 - r^2) \
+  &= 1/2 m (R^2 + r^2) $
 
 === Acceleration Function <accel-function>
 Applying Newton's 2nd Law for both the translational and rotational motion
@@ -90,10 +109,18 @@ $ a = (m g R^2)/(I + m R^2) $
 
 Finally, substituting in rotational inertia results in the following:
 $ a &= (m g R^2)/(1/2 m (r^2 + R^2) + m R^2) \
-&= (2 g R^2)/(r^2 + R^2 + 2R^2) \
-&= (2 g R^2)/(r^2 + 3R^2) $
+  &= (2 g R^2)/(r^2 + R^2 + 2R^2) \
+  &= (2 g R^2)/(r^2 + 3R^2) $
 
 == Part 2 <drop-height-calculations>
+#quote(
+    attribution: [from the problem handout],
+)[
+    If another roll is dropped without being held (accelerating under free fall)
+    from $1"m "$, from what height should the held roll be dropped so that, if
+    released at the same time, they hit the ground simultaneously?
+]
+
 Since the falling toilet paper roll experiences uniform acceleration and
 begins falling from rest, the time which it takes to reach the ground can be
 calculated using the following basic kinematic equation.
@@ -106,9 +133,9 @@ Since the drop height of the held roll also experiences near-uniform
 acceleration, the drop height can be calculated using the same equation as
 above, substituting in the time from the above drop.
 $ Delta y_"held" &= 1/2 a t^2 \
-&= 1/2 a (sqrt((2 Delta y_"free")/g))^2 \
-&= a/2 dot (2 Delta y_"free")/g \
-&= (a Delta y_"free")/g $
+               &= 1/2 a (sqrt((2 Delta y_"free")/g))^2 \
+               &= a/2 dot (2 Delta y_"free")/g \
+               &= (a Delta y_"free")/g $
 
 = Results
 == Measurements
@@ -130,18 +157,28 @@ $ Delta y_"held" &= 1/2 a t^2 \
 Substituting measured values into the #link(label("accel-function"))[previously calculated acceleration function] results
 in the following:
 $ a &= (2 dot 9.8"m/s"^2 dot 0.054^2"m "^2)/(0.020^2"m "^2 + 3 dot 0.054^2"m "^2) \
-&= 6.249 "m/s"^2 $
+  &= 6.249 "m/s"^2 $
 
 === Part 2
-Substituting measured values as well as the acceleration calculated above into the #link(label("drop-height-calculations"))[drop height equation] yields the following:
+Substituting measured values as well as the acceleration calculated above into
+the #link(label("drop-height-calculations"))[drop height equation] yields the
+following:
 $ Delta y_"held" &= (6.249 "m/s"^2 dot 1"m ")/(9.8"m/s"^2) \
-&= 0.638"m " $
+               &= 0.638"m " $
 
 == Drops
-Both toilet paper rolls were dropped from their respective calculated heights to validate the results obtained in this experiment. As predicted, both rolls impacted the floor nearly simultaneously—impact occurred on the same frame of the 30 FPS video captured, satisfying the goal of this experiment.
+Both toilet paper rolls were dropped from their respective calculated heights
+to validate the results obtained in this experiment. As predicted, both rolls
+impacted the floor nearly simultaneously—impact occurred on the same frame of
+the 30 FPS video captured, satisfying the goal of this experiment.
 
-@impact-frame shows the frame of the video during which both rolls impacted the floor. The full video is available online #link("https://drive.google.com/file/d/1hEyK2Em6v7i22vvdASuWQ_-FS7laz5oN/view?usp=drive_link")[here].
+@impact-frame shows the frame of the video during which both rolls impacted
+the floor. The full video is available online #link(
+    "https://drive.google.com/file/d/1hEyK2Em6v7i22vvdASuWQ_-FS7laz5oN/view?usp=drive_link",
+)[here].
 
-#figure(caption: [Frame of Impact for Both Rolls])[
+#figure(
+    caption: [Frame of Impact for Both Rolls],
+)[
     #image("assets/toilet-paper-challenge-problem/impact.png", height: 50%)
 ] <impact-frame>
