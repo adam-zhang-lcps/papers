@@ -1,0 +1,26 @@
+#+title: Typst Sources
+#+author: Adam Zhang
+
+This repository contains the [[https://typst.app][Typst]] sources for
+all of my formal academic papers.
+
+* License
+Given that this repository contains both software and academic works,
+this repository is under two separate licenses.
+
+All software works are licensed under the MIT license. This includes all
+files and folders in the following list.
+#+begin_example
+.gitignore
+flake.nix
+flake.lock
+typstfmt.toml
+#+end_example
+
+A copy of the MIT license is available in the
+[[./LICENSE-CODE][LICENCE-CODE]] file.
+
+All other files in this repository are licensed under the Creative
+Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license.
+A copy of the CC BY-SA 4.0 license is available in the
+[[./LICENSE-CC][LICENSE-CC]] file.
