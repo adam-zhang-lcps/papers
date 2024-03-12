@@ -3,6 +3,18 @@
 
 This repository contains the [[https://typst.app][Typst]] sources for all of my formal academic papers.
 
+* Compiled PDFs
+** From GitHub Actions
+A GitHub Actions workflow runs on every push commit and uploads a compiled PDF as an artifact. Either click the "Actions" tab to find the workflow for a specific commit, or look in the commit history for checkmarks.
+
+On the dashboard for a workflow run, download the =pdf= artifact at the bottom of the page.
+** Compiling Manually
+To compile PDFs locally, you will need to install [[https://typst.app][Typst]]. Releases are available [[https://github.com/typst/typst/releases][here]]. Alternatively, you can enter a development shell using [[https://nixos.org][Nix]] with ~nix develop~, which comes with the Typst compiler.
+
+Once Typst is installed, compiling documents is as simple as:
+#+begin_src shell
+typst c document.typ
+#+end_src
 * License
 Given that this repository contains both software and academic works, this repository is under two separate licenses.
 
