@@ -5,7 +5,7 @@ This repository contains the [[https://typst.app][Typst]] sources for all of my 
 
 * Compiled PDFs
 ** From GitHub Actions
-A GitHub Actions workflow runs on every push commit and uploads a compiled PDF as an artifact. Either click the "Actions" tab to find the workflow for a specific commit, or look in the commit history for checkmarks.
+A GitHub Actions workflow runs on every push commit and uploads a compiled PDF as an artifact. Either click [[https://github.com/adam-zhang-lcps/papers/actions][the "Actions" tab]] to find the workflow for a specific commit, or look in [[https://github.com/adam-zhang-lcps/papers/commits/main][the commit history]] for checkmarks.
 
 On the dashboard for a workflow run, download the =pdf= artifact at the bottom of the page.
 ** Compiling Manually
