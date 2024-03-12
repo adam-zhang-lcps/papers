@@ -138,6 +138,10 @@ $ Delta y_"held" &= (6.249 "m/s"^2 dot 1"m ")/(9.8"m/s"^2) \
 &= 0.638"m " $
 
 == Drops
+Both toilet paper rolls were dropped from their respective calculated heights to validate the results obtained in this experiment. As predicted, both rolls impacted the floor nearly simultaneously—impact occurred on the same frame of the 30 FPS video captured, satisfying the goal of this experiment.
 
+@impact-frame shows the frame of the video during which both rolls impacted the floor. The full video is available online #link("https://drive.google.com/file/d/1hEyK2Em6v7i22vvdASuWQ_-FS7laz5oN/view?usp=drive_link")[here].
 
-// NOTE Video link for later: https://drive.google.com/file/d/1hEyK2Em6v7i22vvdASuWQ_-FS7laz5oN/view?usp=drive_link
+#figure(caption: [Frame of Impact for Both Rolls])[
+    #image("assets/toilet-paper-challenge-problem/impact.png", height: 50%)
+] <impact-frame>
