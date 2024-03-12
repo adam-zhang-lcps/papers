@@ -12,6 +12,7 @@ All software works are licensed under the MIT license. This includes all
 files and folders in the following list.
 #+begin_example
 .gitignore
+.github
 flake.nix
 flake.lock
 typstfmt.toml
