@@ -177,6 +177,9 @@ the floor. The full video is available online #link(
     "https://drive.google.com/file/d/1hEyK2Em6v7i22vvdASuWQ_-FS7laz5oN/view?usp=drive_link",
 )[here].
 
+Since both rolls impacted the floor within one frame of a 30 FPS video, the
+margin of error between their contact, $Delta t$, is at most $33.3"ms"$.
+
 #figure(
     caption: [Frame of Impact for Both Rolls],
 )[
