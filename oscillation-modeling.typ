@@ -10,9 +10,11 @@
 
 = Introduction
 == Purpose
-#lorem(20)
+Investigate what factors of a vibrating spring affect the respective simple harmonic motion model.
+
 == Hypothesis
-#lorem(20)
+Starting displacement ($x_0$) and starting velocity ($v_0$) are correlated with the amplitude ($A$) and phase shift ($Phi$) of the model. Mass ($m$) is inversely proportional to period ($omega$). Spring stiffness ($k$) is proportional to period ($omega$).
+
 == Background
 #lorem(100)
 
