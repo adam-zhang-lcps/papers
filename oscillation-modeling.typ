@@ -33,35 +33,76 @@ The following materials are required for this experiment.
 - A computer capable of running Vernier Graphical Analysis.
 - A Vernier Motion Sensor.
 
-The setup for this experiment is shown in @setup.
+The setup for this experiment is shown in @setup and @setup-2.
 
-#figure()[
+#figure(caption: [Setup of spring system in equilibrium])[
+  #cetz.canvas(
+    length: 20%, {
+      import cetz.draw: *
+      import cetz.decorations: *
+
+      line(stroke: 3pt, (-1.6, -1.2), (rel: (0, 2.2)))
+      line(stroke: 2pt, (-2, 1), (1, 1))
+      
+      line(name: "x-axis", stroke: (dash: "dashed"), (-0.2, -0.2), (rel: (1, 0)))
+      content((rel: (-0.2, 0), to: "x-axis.start"))[$ x = 0 $]
+      
+      coil(
+        name: "spring", amplitude: 0.25, start: 5%, end: 95%,
+        line((0.4, 1), (rel: (0, -1))),
+      )
+      content((rel: (0.3, 0), to: "spring.mid"))[$ k $]
+      
+      rect(name: "mass",
+        fill: white,
+        (rel: (-0.2, -0.01), to: "spring.end"),
+        (rel: (0.4, -0.4)))
+      content("mass")[$ m $]
+
+      rect(name: "sensor", (0.3, -1), (0.5, -1.2))
+      arc((rel: (-0.08, 0), to: "sensor.north"), start: 180deg, stop: 360deg, radius: 0.08)
+      content((rel: (-0.6, 0), to: "sensor.east"))[Motion Sensor]
+      line(stroke: (dash: "dotted"), "sensor.north", "mass.south")
+    },
+  )
+] <setup>
+
+#figure(caption: [Setup of spring system before release])[
   #cetz.canvas(
     length: 20%, {
       import cetz.draw: *
       import cetz.decorations: *
         
+      line(stroke: 3pt, (-1.6, -1.2), (rel: (0, 2.2)))
       line(stroke: 2pt, (-2, 1), (1, 1))
-      grid(step: 0.1,
-        help-lines: true,
-        (-1, -1), (1, 1))
+      
+      line(name: "x-axis", stroke: (dash: "dashed"), (-0.2, -0.2), (rel: (0.8, 0)))
+      content((rel: (-0.2, 0), to: "x-axis.start"))[$ x = 0 $]
       
       coil(
         name: "spring", amplitude: 0.25, start: 5%, end: 95%,
-        line((0.6, 1), (rel: (0, -1))),
+        line((0.4, 1), (rel: (0, -1.4))),
       )
       content((rel: (0.3, 0), to: "spring.mid"))[$ k $]
       
       rect(name: "mass",
+        fill: white,
         (rel: (-0.2, -0.01), to: "spring.end"),
         (rel: (0.4, -0.4)))
       content("mass")[$ m $]
 
-      line(name: "x-axis", stroke: (dash: "dashed"), (rel: (-1.4, 0), to: "mass.west"), (rel: (0.2, 0), to: "mass.east"))
-      content((rel: (-0.2, 0), to: "x-axis.start"))[$ x = 0 $]
+      line(name: "dx",
+        (rel: (0.05, 0), to: "x-axis.end"), (rel: (0.1, 0)), (rel: (0, -0.4)), (rel: (-0.1, 0)))
+      content((rel: (0.12, 0), to: "dx.mid"))[$ Delta x $]
+
+      rect(name: "sensor", (0.3, -1), (0.5, -1.2))
+      arc((rel: (-0.08, 0), to: "sensor.north"), start: 180deg, stop: 360deg, radius: 0.08)
+      content((rel: (-0.6, 0), to: "sensor.east"))[Motion Sensor]
+      line(stroke: (dash: "dotted"), "sensor.north", "mass.south")
     },
   )
-] <setup>
+] <setup-2>
+
 
 // #figure(image("assets/dragon.jpg"), caption: "Experimental Setup")<setup>
 
