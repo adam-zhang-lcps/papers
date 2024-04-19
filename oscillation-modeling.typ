@@ -1,4 +1,5 @@
 #import "@preview/cetz:0.2.2"
+#import "@preview/unify:0.5.0": qty
 #import "./aet-lab-report-template.typ": aet-lab-report
 #show: doc => aet-lab-report(
   title: "Investigating the Variables Affecting Simple Harmonic Motion", course: "AET AP Physics C: Mechanics", teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers", date: datetime(year: 2024, month: 04, day: 19), draft: true, doc,
@@ -103,15 +104,16 @@ The setup for this experiment is shown in @setup and @setup-2.
   )
 ] <setup-2>
 
-
-// #figure(image("assets/dragon.jpg"), caption: "Experimental Setup")<setup>
-
 == Procedures
 The following procedure was implemented during this experiment.
-+ #lorem(10)
-+ #lorem(10)
-+ #lorem(10)
-+ #lorem(10)
++ The spring system was setup in equilibrium using the spring of constant $k_1$ and mass $m_1$ (see @setup). <proc-1>
++ The mass was pulled down by #qty(7.5, "cm") ($Delta x$) to bring the system out of equilibrium (see @setup-2).
++ Data collection was initiated in Vernier Graphical Analysis#emoji.reg.
++ The mass was released and allowed to oscillate for the period of data collection. <proc-2>
++ Steps #link(label("proc-1"))[1] through #link(label("proc-2"))[4] were repeated two more times to collect three total trials of data. <proc-3>
++ Steps #link(label("proc-1"))[1] through #link(label("proc-3"))[5] were repeated two more times---once with the spring of constant $k_1$ and mass $m_1$, and once with the mass $m_2$ and spring of constant $k_1$.
++ Data from Vernier Graphical Analysis#emoji.reg was saved as a CSV file.
++ Regressions were fit to each set of trials matching the model for simple harmonic motion.
 
 = Results
 == Data
