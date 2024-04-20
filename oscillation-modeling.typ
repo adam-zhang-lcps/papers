@@ -118,6 +118,7 @@ The following procedure was implemented during this experiment.
 = Results
 == Data
 #lorem(60)
+
 == Calculations
 #lorem(60)
 
