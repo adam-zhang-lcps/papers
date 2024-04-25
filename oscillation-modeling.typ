@@ -2,7 +2,7 @@
 #import "@preview/unify:0.5.0": qty
 #import "./aet-lab-report-template.typ": aet-lab-report
 #show: doc => aet-lab-report(
-  title: "Investigating the Variables Affecting Simple Harmonic Motion", course: "AET AP Physics C: Mechanics", teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers", date: datetime(year: 2024, month: 04, day: 19), draft: true, doc,
+  title: "Investigating the Variables Affecting Simple Harmonic Motion", course: "AET AP Physics C: Mechanics", teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers", date: datetime(year: 2024, month: 04, day: 19), doc,
 )
 
 = Introduction
@@ -117,7 +117,21 @@ The following procedure was implemented during this experiment.
 
 = Results
 == Data
-#lorem(60)
+#figure(caption: [Time vs. Position for Control Trials])[
+    #image("assets/oscillation-modeling/control.svg")
+]
+
+#figure(caption: [Time vs. Position for Further Initial Position Trials])[
+    #image("assets/oscillation-modeling/position.svg")
+]
+
+#figure(caption: [Time vs. Position for Heavier Mass Trials])[
+    #image("assets/oscillation-modeling/mass.svg")
+]
+
+#figure(caption: [Time vs. Position for Stiffer Spring Trials])[
+    #image("assets/oscillation-modeling/spring.svg")
+]
 
 == Calculations
 #lorem(60)
