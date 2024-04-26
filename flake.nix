@@ -10,7 +10,7 @@
   };
 
   outputs = inputs @ {
-  self,
+    self,
     flake-parts,
     nixpkgs,
     ...
@@ -58,7 +58,12 @@
               package = typstfmt;
             }
             {
+              category = "Analysis";
               package = gnuplot;
+            }
+            {
+              category = "Analysis";
+              package = octaveFull.withPackages (ps: with ps; [optim]);
             }
           ];
         };
