@@ -4,6 +4,8 @@ set samples 1000
 set xlabel "Time (s)"
 set ylabel "Position (m)"
 set tics out nomirror
+set xtics scale 1.0 0.5
+set ytics scale 0.02 0.01
 set border 3
 set key above center horizontal samplen 0
 set pointsize 0.5
