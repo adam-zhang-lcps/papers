@@ -63,7 +63,7 @@
             }
             {
               category = "Analysis";
-              package = octaveFull.withPackages (ps: with ps; [optim]);
+              package = octave.withPackages (ps: with ps; [optim]);
             }
           ];
         };
