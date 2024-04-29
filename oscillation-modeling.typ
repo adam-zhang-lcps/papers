@@ -3,15 +3,17 @@
 #import "./aet-lab-report-template.typ": aet-lab-report
 #show: doc => aet-lab-report(
   title: "Investigating the Variables Affecting Simple Harmonic Motion", course: "AET AP Physics C: Mechanics", teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers", date: datetime(year: 2024, month: 04, day: 19), appendix: [
+    Note that in the interest of printability, raw position data has been rounded to 14 digits after the decimal point.
+    
     #import table: header, cell
     
     #let data = csv("assets/oscillation-modeling/data.csv").slice(1)
-    #let captions = ([Control], [b], [c], [d])
+    #let captions = ([Control], [Further Initial Position], [Heavier Mass], [Stiffer Spring])
     
     #show figure: set block(breakable: true)
 
     #let aligning(x, y) = {
-      if y > 0 {
+      if y > 1 {
         if calc.even(x) {
           left
         } else {
@@ -29,17 +31,26 @@
             import calc: round
 
             (
-              [#round(digits: 10, float(r.at(i * 6 + c * 2)))], [#round(digits: 10, float(r.at(i * 6 + c * 2 + 1)))],
+              r.at(i * 6 + c * 2),
+              [#round(digits: 14, float(r.at(i * 6 + c * 2 + 1)))]
             )
           }
         },
       )
 
       figure(
-        caption: [Raw Data from #captions.at(i) Trials], table(
-          columns: (auto, auto, auto, auto, auto, auto), stroke: none, align: aligning, header(
-            cell(colspan: 2)[Trial 1], cell(colspan: 2)[Trial 2], cell(colspan: 2)[Trial 3], ..([Time (s)], [Position (m)]) * 3,
-          ), ..trials.flatten(),
+        caption: [Raw Data from #captions.at(i) Trials],
+        table(
+          columns: (auto, auto, auto, auto, auto, auto),
+          fill: (x, y) => if calc.even(y) and y > 1 { luma(240) } else { white },
+          align: aligning,
+          header(
+            ..range(1, 4).map(i => cell(colspan: 2)[Trial #i]),
+            ..([Time (s)], [Position (m)]) * 3,
+          ),
+          ..range(1, 3).map(i => table.vline(x: i * 2, stroke: 1pt)),
+          ..range(1, 3).map(i => table.hline(y: i, stroke: 1pt)),
+          ..trials.flatten(),
         ),
       )
     }
