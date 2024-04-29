@@ -2,7 +2,48 @@
 #import "@preview/unify:0.5.0": qty, unit
 #import "./aet-lab-report-template.typ": aet-lab-report
 #show: doc => aet-lab-report(
-  title: "Investigating the Variables Affecting Simple Harmonic Motion", course: "AET AP Physics C: Mechanics", teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers", date: datetime(year: 2024, month: 04, day: 19), doc,
+  title: "Investigating the Variables Affecting Simple Harmonic Motion", course: "AET AP Physics C: Mechanics", teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers", date: datetime(year: 2024, month: 04, day: 19), appendix: [
+    #import table: header, cell
+    
+    #let data = csv("assets/oscillation-modeling/data.csv").slice(1)
+    #let captions = ([Control], [b], [c], [d])
+    
+    #show figure: set block(breakable: true)
+
+    #let aligning(x, y) = {
+      if y > 0 {
+        if calc.even(x) {
+          left
+        } else {
+          right
+        }
+      } else {
+        center
+      }
+    }
+
+    #for i in range(0, 4) {
+      let trials = data.map(
+        r => {
+          for c in range(0, 3) {
+            import calc: round
+
+            (
+              [#round(digits: 10, float(r.at(i * 6 + c * 2)))], [#round(digits: 10, float(r.at(i * 6 + c * 2 + 1)))],
+            )
+          }
+        },
+      )
+
+      figure(
+        caption: [Raw Data from #captions.at(i) Trials], table(
+          columns: (auto, auto, auto, auto, auto, auto), stroke: none, align: aligning, header(
+            cell(colspan: 2)[Trial 1], cell(colspan: 2)[Trial 2], cell(colspan: 2)[Trial 3], ..([Time (s)], [Position (m)]) * 3,
+          ), ..trials.flatten(),
+        ),
+      )
+    }
+  ], doc,
 )
 
 = Introduction
@@ -209,7 +250,8 @@ The following procedure was implemented during this experiment.
   ),
 )
 
-#figure(caption: [Time vs. Position for Stiffer Spring Trials], cetz.canvas(
+#figure(
+  caption: [Time vs. Position for Stiffer Spring Trials], cetz.canvas(
     {
       import cetz.draw: *
       import cetz.plot: *
@@ -230,7 +272,8 @@ The following procedure was implemented during this experiment.
         },
       )
     },
-  ))
+  ),
+)
 
 == Calculations
 #lorem(60)
