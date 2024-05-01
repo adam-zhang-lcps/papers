@@ -294,7 +294,7 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
 ) <stiffer-spring-graph>
 
 == Calculations
-#lorem(60)
+The above tables included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion.
 
 = Discussion
 == Conclusion
