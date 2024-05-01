@@ -38,21 +38,24 @@
         },
       )
 
-      figure(
-        caption: [Raw Data from #captions.at(i) Trials],
-        table(
-          columns: (auto, auto, auto, auto, auto, auto),
-          fill: (x, y) => if calc.even(y) and y > 1 { luma(240) } else { white },
-          align: aligning,
-          header(
-            ..range(1, 4).map(i => cell(colspan: 2)[Trial #i]),
-            ..([Time (s)], [Position (m)]) * 3,
+      [
+        #figure(
+          caption: [Raw Data from #captions.at(i) Trials],
+          table(
+            columns: (auto, auto, auto, auto, auto, auto),
+            fill: (x, y) => if calc.even(y) and y > 1 { luma(240) } else { white },
+            align: aligning,
+            header(
+              ..range(1, 4).map(i => cell(colspan: 2)[Trial #i]),
+              ..([Time (s)], [Position (m)]) * 3,
+            ),
+            ..range(1, 3).map(i => table.vline(x: i * 2, stroke: 1pt)),
+            ..range(1, 3).map(i => table.hline(y: i, stroke: 1pt)),
+            ..trials.flatten(),
           ),
-          ..range(1, 3).map(i => table.vline(x: i * 2, stroke: 1pt)),
-          ..range(1, 3).map(i => table.hline(y: i, stroke: 1pt)),
-          ..trials.flatten(),
-        ),
-      )
+        )
+        #label("raw-data-" + str(i))
+      ]
     }
   ], doc,
 )
@@ -83,8 +86,8 @@ The following materials are required for this experiment.
 - Two springs of different stiffness.
 - A bar to hang a spring from.
 - Two differing masses.
-- A computer capable of running Vernier Graphical Analysis.
-- A Vernier Motion Sensor.
+- A computer capable of running Vernier Graphical Analysis#emoji.reg.
+- A Vernier Motion Sensor#emoji.reg.
 
 The setup for this experiment is shown in @setup and @setup-2.
 
@@ -183,6 +186,10 @@ The following procedure was implemented during this experiment.
 
 = Results
 == Data
+Graphs showing the three sets of data collected for each trial as well as a line of best fit were created. @control-graph shows the results from the control trials. @initial-position-graph shows the results from the trials with a further initial position graph. @heavier-mass-graph shows the results from the trials with a heavier mass hanging from the spring. @stiffer-spring-graph shows the results from the trials with a stiffer spring.
+
+The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw-data-2, and @raw-data-3.
+
 #let data = csv("assets/oscillation-modeling/data.csv").slice(1).map(r => r.map(float))
 #let params = csv("assets/oscillation-modeling/parameters.csv").map(r => r.map(float))
 
@@ -196,7 +203,7 @@ The following procedure was implemented during this experiment.
       let data_offset = 1
 
       plot(
-        size: (15, 10), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
+        size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
           for i in range(0, 3) {
             add(
               style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(i + 1)], data.map(r => (r.at(i * 2), r.at(i * 2 + data_offset))),
@@ -209,7 +216,7 @@ The following procedure was implemented during this experiment.
       )
     },
   ),
-)
+) <control-graph>
 
 #figure(
   caption: [Time vs. Position for Further Initial Position Trials], cetz.canvas(
@@ -221,7 +228,7 @@ The following procedure was implemented during this experiment.
       let data_offset = 7
 
       plot(
-        size: (15, 10), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
+        size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
           for i in range(0, 3) {
             add(
               style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(i + 1)], data.map(r => (r.at(i * 2), r.at(i * 2 + data_offset))),
@@ -234,7 +241,7 @@ The following procedure was implemented during this experiment.
       )
     },
   ),
-)
+) <initial-position-graph>
 
 #figure(
   caption: [Time vs. Position for Heavier Mass Trials], cetz.canvas(
@@ -246,7 +253,7 @@ The following procedure was implemented during this experiment.
       let data_offset = 13
 
       plot(
-        size: (15, 10), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
+        size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
           for i in range(0, 3) {
             add(
               style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(i + 1)], data.map(r => (r.at(i * 2), r.at(i * 2 + data_offset))),
@@ -259,7 +266,7 @@ The following procedure was implemented during this experiment.
       )
     },
   ),
-)
+) <heavier-mass-graph>
 
 #figure(
   caption: [Time vs. Position for Stiffer Spring Trials], cetz.canvas(
@@ -271,7 +278,7 @@ The following procedure was implemented during this experiment.
       let data_offset = 19
 
       plot(
-        size: (15, 10), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
+        size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
           for i in range(0, 3) {
             add(
               style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(i + 1)], data.map(r => (r.at(i * 2), r.at(i * 2 + data_offset))),
@@ -284,7 +291,7 @@ The following procedure was implemented during this experiment.
       )
     },
   ),
-)
+) <stiffer-spring-graph>
 
 == Calculations
 #lorem(60)
@@ -292,6 +299,7 @@ The following procedure was implemented during this experiment.
 = Discussion
 == Conclusion
 #lorem(50)
+
 == Errors
 #lorem(50)
 == Extensions
