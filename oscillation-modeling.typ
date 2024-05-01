@@ -1,6 +1,11 @@
 #import "@preview/cetz:0.2.2"
 #import "@preview/unify:0.5.0": qty, unit
 #import "./aet-lab-report-template.typ": aet-lab-report
+
+#set table(
+  fill: (x, y) => if calc.odd(y) and y > 0 { luma(240) } else { white }
+)
+
 #show: doc => aet-lab-report(
   title: "Investigating the Variables Affecting Simple Harmonic Motion", course: "AET AP Physics C: Mechanics", teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers", date: datetime(year: 2024, month: 04, day: 19), appendix: [
     Note that in the interest of printability, raw position data has been rounded to 14 digits after the decimal point.
@@ -192,6 +197,7 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
 
 #let data = csv("assets/oscillation-modeling/data.csv").slice(1).map(r => r.map(float))
 #let params = csv("assets/oscillation-modeling/parameters.csv").map(r => r.map(float))
+#let captions = ([Control], [Further Initial Position], [Heavier Mass], [Stiffer Spring])
 
 #figure(
   caption: [Time vs. Position for Control Trials], cetz.canvas(
@@ -294,7 +300,18 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
 ) <stiffer-spring-graph>
 
 == Calculations
-The above tables included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion.
+The above tables included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion. The values for the parameters for each regression are shown in table @parameters.
+
+#figure(
+  caption: [Simple Harmonic Motion Regression Parameter Values],
+  table(
+    columns: 4,
+    align: (x, y) => if y > 0 and x > 0 { left } else { center },
+    table.header([], $A$, $omega$, $Phi$),
+    ..params.enumerate()
+      .map(((i, r)) => (captions.at(i), ..r.map(str)))
+      .flatten()
+  )) <parameters>
 
 = Discussion
 == Conclusion
