@@ -300,7 +300,7 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
 ) <stiffer-spring-graph>
 
 == Calculations
-The above tables included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion. The values for the parameters for each regression are shown in table @parameters.
+The above figures included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion. The values for the parameters for each regression are shown in table @parameters.
 
 #figure(
   caption: [Simple Harmonic Motion Regression Parameter Values],
@@ -311,7 +311,8 @@ The above tables included lines of best fit from a nonlinear regression calculat
     ..params.enumerate()
       .map(((i, r)) => (captions.at(i), ..r.map(str)))
       .flatten()
-  )) <parameters>
+  )
+) <parameters>
 
 = Discussion
 == Conclusion
