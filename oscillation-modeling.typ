@@ -7,7 +7,7 @@
 )
 
 #show: doc => aet-lab-report(
-  title: "Investigating the Variables Affecting Simple Harmonic Motion", course: "AET AP Physics C: Mechanics", teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers", date: datetime(year: 2024, month: 04, day: 19), appendix: [
+  title: "Investigating the Variables Affecting Simple Harmonic Motion", course: "AET AP Physics C: Mechanics", teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers", date: datetime(year: 2024, month: 05, day: 03), appendix: [
     Note that in the interest of printability, raw position data has been rounded to 14 digits after the decimal point.
     
     #import table: header, cell
@@ -308,9 +308,9 @@ The above figures included lines of best fit from a nonlinear regression calcula
     columns: 4,
     align: (x, y) => if y > 0 and x > 0 { left } else { center },
     table.header([], $A$, $omega$, $Phi$),
-    ..params.enumerate()
-      .map(((i, r)) => (captions.at(i), ..r.map(str)))
-      .flatten()
+    // ..params.enumerate()
+    //   .map(((i, r)) => (captions.at(i), ..r.map(str)))
+    //   .flatten()
   )
 ) <parameters>
 
