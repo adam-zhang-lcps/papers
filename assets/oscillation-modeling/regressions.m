@@ -4,18 +4,15 @@ pkg load optim;
 
 global data = csvread("data.csv");
 global model = @(b, X) b(1) * cos(b(2) * X + b(3));
-global lbound = zeros(3, 1);
 
 function beta = perform_regression (column_idx, beta0)
-  global data model lbound;
+  global data model;
 
   # Combine data from all three trials
   X = data(2:end, column_idx);
   Y = data(2:end, column_idx);
 
-  options = optimset("lbound", lbound);
-  
-  [beta, R, _, _] = nonlin_curvefit(model, beta0, X, Y, options);
+  [beta, R, _, _] = nonlin_curvefit(model, beta0, X, Y);
 endfunction
 
 result = [];
