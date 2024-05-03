@@ -198,106 +198,36 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
 #let data = csv("assets/oscillation-modeling/data.csv").slice(1).map(r => r.map(float))
 #let params = csv("assets/oscillation-modeling/parameters.csv").map(r => r.map(float))
 #let captions = ([Control], [Further Initial Position], [Heavier Mass], [Stiffer Spring])
+#let labels = ("control", "initial-position", "heavier-mass", "stiffer-spring")
 
-#figure(
-  caption: [Time vs. Position for Control Trials], cetz.canvas(
-    {
-      import cetz.draw: *
-      import cetz.plot: *
+#for i in range(0, 4) [
+  #figure(
+    caption: [Time vs. Position for #captions.at(i) Trials], cetz.canvas(
+      {
+        import cetz.draw: *
+        import cetz.plot: *
 
-      let ps = params.at(0)
-      let data_offset = 1
+        let data_offset = i * 6
 
-      plot(
-        size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
-          for i in range(0, 3) {
-            add(
-              style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(i + 1)], data.map(r => (r.at(i * 2), r.at(i * 2 + data_offset))),
-            )
-          }
-          add(
-            domain: (0, 5), samples: 250, x => ps.at(0) * calc.cos(ps.at(1) * x + ps.at(2)),
-          )
-        },
-      )
-    },
-  ),
-) <control-graph>
+        plot(
+          size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
+            for j in range(0, 3) {
+              add(
+                style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(j + 1)], data.map(r => (r.at(j * 2 + data_offset), r.at(j * 2 + data_offset + 1))),
+              )
 
-#figure(
-  caption: [Time vs. Position for Further Initial Position Trials], cetz.canvas(
-    {
-      import cetz.draw: *
-      import cetz.plot: *
-
-      let ps = params.at(1)
-      let data_offset = 7
-
-      plot(
-        size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
-          for i in range(0, 3) {
-            add(
-              style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(i + 1)], data.map(r => (r.at(i * 2), r.at(i * 2 + data_offset))),
-            )
-          }
-          add(
-            domain: (0, 5), samples: 250, x => ps.at(0) * calc.cos(ps.at(1) * x + ps.at(2)),
-          )
-        },
-      )
-    },
-  ),
-) <initial-position-graph>
-
-#figure(
-  caption: [Time vs. Position for Heavier Mass Trials], cetz.canvas(
-    {
-      import cetz.draw: *
-      import cetz.plot: *
-
-      let ps = params.at(2)
-      let data_offset = 13
-
-      plot(
-        size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
-          for i in range(0, 3) {
-            add(
-              style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(i + 1)], data.map(r => (r.at(i * 2), r.at(i * 2 + data_offset))),
-            )
-          }
-          add(
-            domain: (0, 5), samples: 250, x => ps.at(0) * calc.cos(ps.at(1) * x + ps.at(2)),
-          )
-        },
-      )
-    },
-  ),
-) <heavier-mass-graph>
-
-#figure(
-  caption: [Time vs. Position for Stiffer Spring Trials], cetz.canvas(
-    {
-      import cetz.draw: *
-      import cetz.plot: *
-
-      let ps = params.at(3)
-      let data_offset = 19
-
-      plot(
-        size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
-          for i in range(0, 3) {
-            add(
-              style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(i + 1)], data.map(r => (r.at(i * 2), r.at(i * 2 + data_offset))),
-            )
-          }
-          add(
-            domain: (0, 5), samples: 250, x => ps.at(0) * calc.cos(ps.at(1) * x + ps.at(2)),
-          )
-        },
-      )
-    },
-  ),
-) <stiffer-spring-graph>
+              let ps = params.at(j * 3 + i)
+              add(
+                domain: (0, 5), samples: 250, x => ps.at(0) * calc.cos(ps.at(1) * x + ps.at(2)),
+              )
+            }
+          },
+        )
+      },
+    ),
+  )
+  #label(labels.at(i) + "-graph")
+]
 
 == Calculations
 The above figures included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion. The values for the parameters for each regression are shown in table @parameters.
