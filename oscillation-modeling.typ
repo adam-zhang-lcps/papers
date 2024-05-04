@@ -228,7 +228,18 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
 ]
 
 == Calculations
-The above figures included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion. The values for the parameters for each regression are shown in table @parameters.
+#let averages = range(0, 4).map(i => {
+  import calc: round
+  
+  params.slice(i * 3, count: 3)
+    .fold((0, 0, 0), (acc, cur) => {
+      acc.zip(cur).map(((a, b)) => a + b)
+    })
+    .map(x => x / 3)
+    .map(x => round(digits: 14, x))
+})
+
+The above figures included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion. The values for the parameters for each regression, as well as the averages per each set of trials, are shown in @parameters. A graph showing the model for each set of trials using the average parameters is shown in @average-parameters-graph.
 
 #figure(
   caption: [Simple Harmonic Motion Regression Parameter Values],
@@ -250,17 +261,33 @@ The above figures included lines of best fit from a nonlinear regression calcula
           )
         }),
         [Average],
-        ..params.slice(i * 3, count: 3)
-          .fold((0, 0, 0), (acc, cur) => {
-            acc.zip(cur).map(((a, b)) => a + b)
-          })
-          .map(x => x / 3)
-          .map(x => round(digits: 14, x))
-          .map(str)
+        ..averages.at(i).map(str)
       )
     }).flatten()
   )
 ) <parameters>
+
+#figure(
+  caption: [Models Using Average Parameters],
+  cetz.canvas({
+    import cetz.plot: *
+
+    plot(
+      size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
+        import calc: cos
+        
+        for i in range(0, 4) {
+          let ps = averages.at(i)
+          add(
+            domain: (0, 5),
+            samples: 250,
+            label: captions.at(i),
+            x => ps.at(0) * cos(ps.at(1) * x + ps.at(2)))
+        }
+      }
+    )
+  })
+) <average-parameters-graph>
 
 = Discussion
 == Conclusion
