@@ -205,16 +205,16 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
         import cetz.draw: *
         import cetz.plot: *
 
-        let data_offset = i * 6
+        let data_offset = i * 3 + 1
 
         plot(
           size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
             for j in range(0, 3) {
               add(
-                style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(j + 1)], data.map(r => (r.at(j * 2 + data_offset), r.at(j * 2 + data_offset + 1))),
+                style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(j + 1)], data.map(r => (r.at(0), r.at(data_offset + j))),
               )
 
-              let ps = params.at(j * 3 + i)
+              let ps = params.at(i * 3 + j)
               add(
                 domain: (0, 5), samples: 250, x => ps.at(0) * calc.cos(ps.at(1) * x + ps.at(2)),
               )
