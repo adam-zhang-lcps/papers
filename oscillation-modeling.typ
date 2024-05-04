@@ -233,12 +233,32 @@ The above figures included lines of best fit from a nonlinear regression calcula
 #figure(
   caption: [Simple Harmonic Motion Regression Parameter Values],
   table(
-    columns: 4,
-    align: (x, y) => if y > 0 and x > 0 { left } else { center },
-    table.header([], $A$, $omega$, $Phi$),
-    // ..params.enumerate()
-    //   .map(((i, r)) => (captions.at(i), ..r.map(str)))
-    //   .flatten()
+    columns: 5,
+    align: (x, y) => if y > 0 and x > 1 { right } else { center },
+    table.header([], [], $A$, $omega$, $Phi$),
+    ..range(0, 4).map(i => {
+      import calc: round
+      
+      (
+        table.cell(rowspan: 4, inset: (top: 20pt), captions.at(i)),
+        ..range(0, 3).map(j => {
+          (
+            [Trial #(j + 1)],
+            ..params.at(i * 3 + j)
+              .map(f => round(digits: 14, f))
+              .map(str)
+          )
+        }),
+        [Average],
+        ..params.slice(i * 3, count: 3)
+          .fold((0, 0, 0), (acc, cur) => {
+            acc.zip(cur).map(((a, b)) => a + b)
+          })
+          .map(x => x / 3)
+          .map(x => round(digits: 14, x))
+          .map(str)
+      )
+    }).flatten()
   )
 ) <parameters>
 
