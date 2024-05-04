@@ -17,7 +17,16 @@ endfunction
 result = [];
 
 for i = 1:12
-  params = perform_regression(i, [0.045; 7.3; 0.001]);
+  beta0 = [0.045; 7.3; 0.001];
+
+  ## Trials with a heavier mass have a significantly lower period that optimization
+  ## isn't able to find from the usual starting point.
+  if i > 6 && i < 10
+    beta0 = [0.045; 5.3; -0.45];
+  endif
+
+  beta0
+  params = perform_regression(i, beta0);
   result = [result; params'];
 endfor
 
