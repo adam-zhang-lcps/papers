@@ -74,16 +74,15 @@
 
 = Introduction
 == Purpose
-Investigate what factors of a vibrating spring affect the respective simple
-harmonic motion model.
+Investigate what and how factors of a vibrating spring system affect the respective parameters of a simple harmonic motion model.
 
-== Hypothesis
+== Hypothesis <hypothesis>
 Starting displacement ($x_0$) and starting velocity ($v_0$) are correlated with
 the amplitude ($A$) and phase shift ($Phi$) of the model. Mass ($m$) is
 inversely proportional to period ($omega$). Spring stiffness ($k$) is
 proportional to period ($omega$).
 
-== Background
+== Background <background>
 #lorem(100)
 
 #lorem(100)
@@ -310,9 +309,17 @@ Regressions were calculated using a GNU Octave#footnote([https://octave.org]) sc
 
 = Discussion
 == Conclusion
+The purpose of the experiment was partially accomplished. While it was successfully determined which parameters of a simple harmonic motion model are affected by corresponding factors in a simple spring system, the exact relationship between values was not successfully proven.
+
+By looking at the results of varying factors in @parameters and @average-parameters-graph in comparison to the control trial, relationships can be inferred. A further initial position increased the amplitude ($A$) by a significant amount. A heavier mass and stiffer spring decreased and increased the frequency of oscillation ($omega$), respectively, by a significant amount. This lines up with the predictions in #link(label("hypothesis"), [the hypothesis]) and principles discussed in #link(label("background"), [the background]).
+
+Notably, calculated values for phase shift ($Phi$) were not consistent throughout trials. However, this can be attributed to multiple factors. The phase shift is only affected by the initial conditions of the system---the initial position and velocity. Due to inconsistencies in both the initialization of data collection and human error in holding the spring at a perfectly consistent length, these initial conditions were not constant throughout trials. Additionally, due to phase shift being a value with infinite possible values (since the model of simple harmonic motion repeats with its period), nonlinear regressions struggle to converge to a consistent value. See #link(label("background"), [the background]) and #link(label("errors"), [the errors]) sections for more details.
+
+== Errors <errors>
 #lorem(50)
 
-== Errors
-#lorem(50)
 == Extensions
+#lorem(50)
+
+== Applications
 #lorem(50)
