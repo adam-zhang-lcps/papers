@@ -60,6 +60,15 @@
         #label("raw-data-" + str(i))
       ]
     }
+
+    #figure(
+      caption: [GNU Octave Script Used for Nonlinear Regression],
+      raw(
+        lang: "octave",
+        block: true,
+        read("assets/oscillation-modeling/regressions.m")
+      )
+    ) <octave-regression-script>
   ], doc,
 )
 
@@ -240,6 +249,8 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
 })
 
 The above figures included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion. The values for the parameters for each regression, as well as the averages per each set of trials, are shown in @parameters. A graph showing the model for each set of trials using the average parameters is shown in @average-parameters-graph.
+
+Regressions were calculated using a GNU Octave#footnote([https://octave.org]) script as well as the `optim` package#footnote([https://octave.sourceforge.io/optim]). The full script is available in the appendix in @octave-regression-script.
 
 #figure(
   caption: [Simple Harmonic Motion Regression Parameter Values],
