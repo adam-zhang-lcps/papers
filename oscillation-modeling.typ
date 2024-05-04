@@ -198,7 +198,7 @@ The following procedure was implemented during this experiment.
 
 = Results
 == Data
-Graphs showing the three sets of data collected for each trial as well as a line of best fit were created. @control-graph shows the results from the control trials. @initial-position-graph shows the results from the trials with a further initial position graph. @heavier-mass-graph shows the results from the trials with a heavier mass hanging from the spring. @stiffer-spring-graph shows the results from the trials with a stiffer spring.
+Graphs showing the three sets of data collected for each trial as well as a line of best fit for each trial were created. @control-graph shows the results from the control trials. @initial-position-graph shows the results from the trials with a further initial position graph. @heavier-mass-graph shows the results from the trials with a heavier mass hanging from the spring. @stiffer-spring-graph shows the results from the trials with a stiffer spring.
 
 The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw-data-2, and @raw-data-3.
 
@@ -209,29 +209,37 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
 
 #for i in range(0, 4) [
   #figure(
-    caption: [Time vs. Position for #captions.at(i) Trials], cetz.canvas(
-      {
-        import cetz.draw: *
-        import cetz.plot: *
+    caption: [Time vs. Position for #captions.at(i) Trials],
+    cetz.canvas({
+      import cetz.draw: *
+      import cetz.plot: *
 
-        let data_offset = i * 3 + 1
+      let data_offset = i * 3 + 1
+      let colors = (green, blue, red)
 
-        plot(
-          size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
-            for j in range(0, 3) {
-              add(
-                style: (stroke: none), mark: "o", mark-size: .1, label: [Trial #(j + 1)], data.map(r => (r.at(0), r.at(data_offset + j))),
-              )
+      plot(
+        size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
+          for j in range(0, 3) {
+            add(
+              style: (stroke: none),
+              mark: "o",
+              mark-size: .15,
+              mark-style: (stroke: none, fill: colors.at(j)),
+              label: [Trial #(j + 1)],
+              data.map(r => (r.at(0), r.at(data_offset + j))),
+            )
 
-              let ps = params.at(i * 3 + j)
-              add(
-                domain: (0, 5), samples: 250, x => ps.at(0) * calc.cos(ps.at(1) * x + ps.at(2)),
-              )
-            }
-          },
-        )
-      },
-    ),
+            let ps = params.at(i * 3 + j)
+            add(
+              domain: (0, 5),
+              samples: 250,
+              style: (stroke: (paint: colors.at(j), dash: "dashed")),
+              x => ps.at(0) * calc.cos(ps.at(1) * x + ps.at(2)),
+            )
+          }
+        },
+      )
+    }),
   )
   #label(labels.at(i) + "-graph")
 ]
