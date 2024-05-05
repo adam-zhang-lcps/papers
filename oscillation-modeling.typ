@@ -181,16 +181,13 @@ The setup for this experiment is shown in @setup and @setup-2.
 The following procedure was implemented during this experiment.
 + The spring system was setup in equilibrium using the spring of constant $k_1$ and
   mass $m_1$ (see @setup). <proc-1>
-+ The mass was pulled down by #qty(7.5, "cm") ($Delta x$) to bring the system out
++ The mass was pulled down by #qty(5.0, "cm") ($Delta x$) to bring the system out
   of equilibrium (see @setup-2).
 + Data collection was initiated in Vernier Graphical Analysis#emoji.reg.
 + The mass was released and allowed to oscillate for the period of data
   collection. <proc-2>
-+ Steps #link(label("proc-1"))[1] through #link(label("proc-2"))[4] were repeated
-  two more times to collect three total trials of data. <proc-3>
-+ Steps #link(label("proc-1"))[1] through #link(label("proc-3"))[5] were repeated
-  two more times---once with the spring of constant $k_1$ and mass $m_1$, and once
-  with the mass $m_2$ and spring of constant $k_1$.
++ Steps #link(label("proc-1"))[1] through #link(label("proc-2"))[4] were repeated two more times to collect three total trials of data. <proc-3>
++ Steps #link(label("proc-1"))[1] through #link(label("proc-3"))[5] were repeated three more times---once with the mass pulled down #qty(7.5, "cm"), once with the spring of constant $k_1$ and mass $m_1$, and once with the mass $m_2$ and spring of constant $k_1$.
 + Data from Vernier Graphical Analysis#emoji.reg was saved as a CSV file.
 + Regressions were fit to each set of trials matching the model for simple
   harmonic motion.
