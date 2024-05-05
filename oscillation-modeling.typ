@@ -83,13 +83,19 @@ inversely proportional to period ($omega$). Spring stiffness ($k$) is
 proportional to period ($omega$).
 
 == Background <background>
-#lorem(100)
+#set math.equation(numbering: "(1)")
 
-#lorem(100)
+Simple harmonic motion refers to an oscillatory motion in which the force returning the system to equilibrium---the "restoring" force---is directly proportional to the displacement of the system from said equilibrium. In this case, by Newton's 2nd Law of motion, the acceleration is directly proportional to the displacement from equilibrium @MoebsEtAl2016UniversityPhysics.
 
-#lorem(100)
+A quintessential example of simple harmonic motion, and the one investigated in this experiment, is the oscillation of an ideal spring with a weight attached. At displacements small relative to the length of the spring, ideal springs obey Hooke's Law (@hookes-law), which states that the restoring force exerted by a spring is directly proportional to the spring's displacement from equilibrium @Dourmashkin2016HookesLaw.
 
-#lorem(100)
+$ F_s = -k x $ <hookes-law>
+
+By using Newton's 2nd Law, @hookes-law can be used to derive the second-order differential equation shown in @acceleration-difeq. Solving this differential equation yields the model for position as a function of time presented in @basic-shm-model.
+
+$ (dif^2 x)/(dif t^2) = -k/m x $ <acceleration-difeq>
+
+$ x = A cos(omega t + Phi) $ <basic-shm-model>
 
 = Methods
 == Materials
