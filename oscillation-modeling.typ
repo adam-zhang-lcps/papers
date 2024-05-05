@@ -269,7 +269,7 @@ Regressions were calculated using a GNU Octave#footnote([https://octave.org]) sc
       import calc: round
       
       (
-        table.cell(rowspan: 4, inset: (top: 20pt), captions.at(i)),
+        table.cell(rowspan: 4, align: horizon, captions.at(i)),
         ..range(0, 3).map(j => {
           (
             [Trial #(j + 1)],
@@ -323,3 +323,5 @@ Notably, calculated values for phase shift ($Phi$) were not consistent throughou
 
 == Applications
 #lorem(50)
+
+
