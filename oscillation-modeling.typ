@@ -7,7 +7,7 @@
 )
 
 #show: doc => aet-lab-report(
-  title: "Investigating the Variables Affecting Simple Harmonic Motion",
+  title: "Investigating the Factors in a Spring System that Affect a Model of Simple Harmonic Motion",
   course: "AET AP Physics C: Mechanics",
   teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers",
   date: datetime(year: 2024, month: 05, day: 03),
@@ -79,7 +79,7 @@
 
 = Introduction
 == Purpose
-Investigate what and how factors of a vibrating spring system affect the respective parameters of a simple harmonic motion model.
+Investigate what and how factors of an oscillating spring system affect the respective parameters of a simple harmonic motion model.
 
 == Hypothesis <hypothesis>
 Starting displacement ($x_0$) and starting velocity ($v_0$) are correlated with
@@ -92,7 +92,7 @@ proportional to period ($omega$).
 
 Simple harmonic motion refers to an oscillatory motion in which the force returning the system to equilibrium---the "restoring" force---is directly proportional to the displacement of the system from said equilibrium. In this case, by Newton's 2nd Law of motion, the acceleration is directly proportional to the displacement from equilibrium @MoebsEtAl2016UniversityPhysics.
 
-A quintessential example of simple harmonic motion, and the one investigated in this experiment, is the oscillation of an ideal spring with a weight attached. At displacements small relative to the length of the spring, ideal springs obey Hooke's Law (@hookes-law), which states that the restoring force exerted by a spring is directly proportional to the spring's displacement from equilibrium @Dourmashkin2016HookesLaw.
+A quintessential example of simple harmonic motion, and the one investigated in this experiment, is the oscillation of an ideal spring with a weight attached. At displacements small relative to the length of the spring, ideal springs obey Hooke's Law (@hookes-law), which states that the restoring force exerted by a spring is directly proportional to the spring's displacement from equilibrium; the proportionality constant is known as the "spring constant", and relates to the stiffness of the spring @Dourmashkin2016HookesLaw.
 
 $ F_s = -k x $ <hookes-law>
 
@@ -101,9 +101,13 @@ By using Newton's 2nd Law, @hookes-law can be used to derive the second-order di
 $ (dif^2 x)/(dif t^2) = -k/m x $ <acceleration-difeq>
 $ x = A cos(omega t + Phi) $ <basic-shm-model>
 
-As shown by @basic-shm-model, simple harmonic motion is modeled by a sinusoidal wave, where $A$ represents the amplitude of the oscillation, $omega$ represents the angular frequency, and $Phi$ represents the phase shift of the wave. As $A$ represents the amplitude of the oscillation, it represents the maximum distance away from equilibrium that the mass reaches (as $forall x in RR : cos(x) gt.not 1$), and depends solely upon the initial conditions (position and velocity). The angular frequency $omega$ is dependent upon the mass of the oscillating object and the stiffness of the spring, and is equal to $sqrt(k/m)$  @Meyers2024OscillatorKinematics. Finally, phase shift changes only the point at which the wave starts, and is also dependent solely upon initial conditions. Notably, a system with initial velocity is functionally equivalent to a system with no initial velocity and a further starting distance $x_1$, and results only in a phase shift @MoebsEtAl2016UniversityPhysics.
+As shown by @basic-shm-model, simple harmonic motion is modeled by a sinusoidal wave, where $A$ represents the amplitude of the oscillation, $omega$ represents the angular frequency, and $Phi$ represents the phase shift of the wave. As $A$ represents the amplitude of the oscillation, it represents the maximum distance away from equilibrium that the mass reaches (as $forall x in RR : cos(x) gt.not 1$), and depends solely upon the initial conditions (position and velocity). The angular frequency $omega$ is dependent upon the mass of the oscillating object and the stiffness of the spring, and is equal to $sqrt(k/m)$  @Meyers2024OscillatorKinematics. Finally, phase shift changes only the point at which the wave starts, and is also dependent solely upon initial conditions. Notably, a system with initial velocity is functionally equivalent to a system with no initial velocity and a further starting distance, and results only in a phase shift @MoebsEtAl2016UniversityPhysics.
 
-This experiment seeks to experimentally verify the theoretical models discussed above. To do so, a mass will be suspended from a vertical spring and allowed to oscillate from a starting position $x_0$. Motion will be recorded using a Vernier Motion Sensor#emoji.reg. Two differing masses, starting positions, and springs will be tested, each in isolation, to determine how each change affects the resulting simple harmonic motion model.
+This experiment seeks to experimentally verify the theoretical models discussed above. To do so, a mass $m_1$ will be suspended from a vertical spring of stiffness $k_1$ and allowed to oscillate from a starting position $Delta x_1$. Motion will be recorded using a Vernier Motion Sensor#emoji.reg. Two differing masses ($m_1$ and $m_2$), starting positions ($Delta x_1$ and $Delta x_2$), and springs ($k_1$ and $k_2$) will be tested, each in isolation, to determine how each change affects the resulting simple harmonic motion model.
+
+To calculate resulting parameters for the simple harmonic motion model, a nonlinear regression will be performed using a GNU Octave#footnote([https://octave.org]) script utilizing the `optim` package#footnote([https://octave.sourceforge.io/optim]), which performs nonlinear regression using the Levenberg–Marquardt algorithm (LMA). Regression is generally performed by attempting to minimize the squares of the difference between the predicted values from a model and the actual values ($S$ in @least-squares). LMA is a method to solve the least squares problem for nonlinear models, such as simple harmonic motion. Unlike regressions with linear models, which can be solved absolutely, LMA attempts to find a minimum through iteratively descending parameters towards values that minimize the squares @Levenberg1944LeastSquares @Marquardt1963LeastSquares. This means that LMA is sensitive to the initial parameter choices---especially in cases where the model involves periodic functions, such as simple harmonic motion. For this experiment, initial parameters were set in the script to achieve the best regression results possible. Notably, phase shift ($Phi$) is especially difficult to calculate, as there are infinite possibilities (since cosine is periodic). The full script is available in the appendix in @octave-regression-script.
+
+$ S = sum_(i=0)^n (y_i - f(x_i))^2 $ <least-squares>
 
 = Methods
 == Materials
@@ -195,22 +199,19 @@ The setup for this experiment is shown in @setup and @setup-2.
 
 == Procedures
 The following procedure was implemented during this experiment.
-+ The spring system was setup in equilibrium using the spring of constant $k_1$ and
-  mass $m_1$ (see @setup). <proc-1>
-+ The mass was pulled down by #qty(5.0, "cm") ($Delta x$) to bring the system out
-  of equilibrium (see @setup-2).
++ The spring system was set up in equilibrium using the spring of constant $k_1$ and mass $m_1$ (see @setup). <proc-1>
++ The mass was pulled down by #qty(5.0, "cm") ($Delta x_1$) to bring the system out of equilibrium (see @setup-2).
 + Data collection was initiated in Vernier Graphical Analysis#emoji.reg.
 + The mass was released and allowed to oscillate for the period of data
   collection. <proc-2>
 + Steps #link(label("proc-1"))[1] through #link(label("proc-2"))[4] were repeated two more times to collect three total trials of data. <proc-3>
-+ Steps #link(label("proc-1"))[1] through #link(label("proc-3"))[5] were repeated three more times---once with the mass pulled down #qty(7.5, "cm"), once with the spring of constant $k_1$ and mass $m_1$, and once with the mass $m_2$ and spring of constant $k_1$.
++ Steps #link(label("proc-1"))[1] through #link(label("proc-3"))[5] were repeated three more times---once with the mass pulled down #qty(7.5, "cm") ($Delta x_2$), once with the spring of constant $k_1$ and mass $m_2$, and once with the mass $m_1$ and spring of constant $k_2$.
 + Data from Vernier Graphical Analysis#emoji.reg was saved as a CSV file.
-+ Regressions were fit to each set of trials matching the model for simple
-  harmonic motion.
++ Regressions were fit to each set of trials matching the model for simple harmonic motion as described in #link(label("background"), [the background]).
 
 = Results
 == Data
-Graphs showing the three sets of data collected for each trial as well as a line of best fit for each trial were created. @control-graph shows the results from the control trials. @initial-position-graph shows the results from the trials with a further initial position graph. @heavier-mass-graph shows the results from the trials with a heavier mass hanging from the spring. @stiffer-spring-graph shows the results from the trials with a stiffer spring.
+Graphs showing the three trials of data collected for each variation as well as a line of best fit for each trial were created. @control-graph shows the results from the control trials. @initial-position-graph shows the results from the trials with a further initial position. @heavier-mass-graph shows the results from the trials with a heavier mass hanging from the spring. @stiffer-spring-graph shows the results from the trials with a stiffer spring.
 
 The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw-data-2, and @raw-data-3.
 
@@ -268,9 +269,7 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
     .map(x => round(digits: 14, x))
 })
 
-The above figures included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion. The values for the parameters for each regression, as well as the averages per each set of trials, are shown in @parameters. A graph showing the model for each set of trials using the average parameters is shown in @average-parameters-graph.
-
-Regressions were calculated using a GNU Octave#footnote([https://octave.org]) script as well as the `optim` package#footnote([https://octave.sourceforge.io/optim]). The full script is available in the appendix in @octave-regression-script.
+The above figures included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion. The values for the parameters for each regression, as well as the averages per each set of trials, are shown in @parameters. A graph showing the model for each set of trials using the average parameter values is shown in @average-parameters-graph.
 
 #figure(
   caption: [Simple harmonic motion regression parameter values],
