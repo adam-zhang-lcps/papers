@@ -113,6 +113,7 @@ The setup for this experiment is shown in @setup and @setup-2.
 #figure(
   caption: [Setup of spring system in equilibrium],
 )[
+  #set math.equation(numbering: none)
   #cetz.canvas(
     length: 20%, {
       import cetz.draw: *
@@ -147,6 +148,7 @@ The setup for this experiment is shown in @setup and @setup-2.
 #figure(
   caption: [Setup of spring system before release],
 )[
+  #set math.equation(numbering: none)
   #cetz.canvas(
     length: 20%, {
       import cetz.draw: *
