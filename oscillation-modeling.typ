@@ -7,7 +7,11 @@
 )
 
 #show: doc => aet-lab-report(
-  title: "Investigating the Variables Affecting Simple Harmonic Motion", course: "AET AP Physics C: Mechanics", teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers", date: datetime(year: 2024, month: 05, day: 03), appendix: [
+  title: "Investigating the Variables Affecting Simple Harmonic Motion",
+  course: "AET AP Physics C: Mechanics",
+  teacher: "Mr. Matthew Hilsdorf and Mr. Joseph Meyers",
+  date: datetime(year: 2024, month: 05, day: 03),
+  appendix: [
     Note that in the interest of printability, raw position data has been rounded to 14 digits after the decimal point.
     
     #import table: header, cell
@@ -69,7 +73,8 @@
         read("assets/oscillation-modeling/regressions.m")
       )
     ) <octave-regression-script>
-  ], doc,
+  ],
+  doc,
 )
 
 = Introduction
@@ -98,7 +103,7 @@ $ x = A cos(omega t + Phi) $ <basic-shm-model>
 
 As shown by @basic-shm-model, simple harmonic motion is modeled by a sinusoidal wave, where $A$ represents the amplitude of the oscillation, $omega$ represents the angular frequency, and $Phi$ represents the phase shift of the wave. As $A$ represents the amplitude of the oscillation, it represents the maximum distance away from equilibrium that the mass reaches (as $forall x in RR : cos(x) gt.not 1$), and depends solely upon the initial conditions (position and velocity). The angular frequency $omega$ is dependent upon the mass of the oscillating object and the stiffness of the spring, and is equal to $sqrt(k/m)$  @Meyers2024OscillatorKinematics. Finally, phase shift changes only the point at which the wave starts, and is also dependent solely upon initial conditions. Notably, a system with initial velocity is functionally equivalent to a system with no initial velocity and a further starting distance $x_1$, and results only in a phase shift @MoebsEtAl2016UniversityPhysics.
 
-This experiment seeks to experimentally verify the theoretical models discussed above. To do so, a mass will be suspended from a vertical spring and allowed to oscillate from a starting position $x_0$. Motion will be recorded using a Vernier Motion Sensor#emoji.reg. Two differing masses, starting positions, and springs will be tested, each in isolation to determine how each change affects the resulting simple harmonic motion model.
+This experiment seeks to experimentally verify the theoretical models discussed above. To do so, a mass will be suspended from a vertical spring and allowed to oscillate from a starting position $x_0$. Motion will be recorded using a Vernier Motion Sensor#emoji.reg. Two differing masses, starting positions, and springs will be tested, each in isolation, to determine how each change affects the resulting simple harmonic motion model.
 
 = Methods
 == Materials
