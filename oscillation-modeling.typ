@@ -13,7 +13,7 @@
     #import table: header, cell
     
     #let data = csv("assets/oscillation-modeling/data.csv").slice(1)
-    #let captions = ([Control], [Further Initial Position], [Heavier Mass], [Stiffer Spring])
+    #let captions = ([control], [further initial position], [heavier mass], [stiffer spring])
     
     #show figure: set block(breakable: true)
 
@@ -45,7 +45,7 @@
 
       [
         #figure(
-          caption: [Raw Data from #captions.at(i) Trials],
+          caption: [Raw data from #captions.at(i) trials],
           table(
             columns: 6,
             fill: (x, y) => if calc.even(y) and y > 1 { luma(240) } else { white },
@@ -62,7 +62,7 @@
     }
 
     #figure(
-      caption: [GNU Octave Script Used for Nonlinear Regression],
+      caption: [GNU Octave script used for nonlinear regression],
       raw(
         lang: "octave",
         block: true,
@@ -103,9 +103,9 @@ This experiment seeks to experimentally verify the theoretical models discussed 
 = Methods
 == Materials
 The following materials are required for this experiment.
-- Two springs of different stiffness.
+- Two springs of different stiffness $k_1$ and $k_2$.
 - A bar to hang a spring from.
-- Two differing masses.
+- Two differing masses $m_1$ and $m_2$.
 - A computer capable of running Vernier Graphical Analysis#emoji.reg.
 - A Vernier Motion Sensor#emoji.reg.
 
@@ -216,7 +216,7 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
 
 #for i in range(0, 4) [
   #figure(
-    caption: [Time vs. Position for #captions.at(i) Trials],
+    caption: [Time vs. Position for #lower(captions.at(i)) trials],
     cetz.canvas({
       import cetz.draw: *
       import cetz.plot: *
@@ -268,7 +268,7 @@ The above figures included lines of best fit from a nonlinear regression calcula
 Regressions were calculated using a GNU Octave#footnote([https://octave.org]) script as well as the `optim` package#footnote([https://octave.sourceforge.io/optim]). The full script is available in the appendix in @octave-regression-script.
 
 #figure(
-  caption: [Simple Harmonic Motion Regression Parameter Values],
+  caption: [Simple harmonic motion regression parameter values],
   table(
     columns: 5,
     align: (x, y) => if y > 0 and x > 1 { right } else { center },
@@ -294,7 +294,7 @@ Regressions were calculated using a GNU Octave#footnote([https://octave.org]) sc
 ) <parameters>
 
 #figure(
-  caption: [Models Using Average Parameters],
+  caption: [Models using average parameters],
   cetz.canvas({
     import cetz.plot: *
 
