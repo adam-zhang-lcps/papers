@@ -1,5 +1,5 @@
 #import "@preview/cetz:0.2.2"
-#import "@preview/unify:0.5.0": qty, unit
+#import "@preview/unify:0.5.0": qty
 #import "./aet-lab-report-template.typ": aet-lab-report
 
 #set table(
