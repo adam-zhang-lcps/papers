@@ -97,6 +97,8 @@ $ (dif^2 x)/(dif t^2) = -k/m x $ <acceleration-difeq>
 
 $ x = A cos(omega t + Phi) $ <basic-shm-model>
 
+As shown above, simple harmonic motion is modeled by a sinusoidal wave, where $A$ represents the amplitude of the oscillation, $omega$ represents the angular frequency, and $Phi$ represents the phase shift of the wave. As $A$ represents the amplitude of the oscillation, it represents the maximum distance away from equilibrium that the mass reaches (as $forall x in RR : cos(x) gt.not 1$), and depends solely upon the initial conditions (position and velocity). The angular frequency $omega$ is dependent upon the mass of the oscillating object and the stiffness of the spring, and is equal to $sqrt(k/m)$  @Meyers2024OscillatorKinematics.
+
 = Methods
 == Materials
 The following materials are required for this experiment.
@@ -319,12 +321,25 @@ By looking at the results of varying factors in @parameters and @average-paramet
 Notably, calculated values for phase shift ($Phi$) were not consistent throughout trials. However, this can be attributed to multiple factors. The phase shift is only affected by the initial conditions of the system---the initial position and velocity. Due to inconsistencies in both the initialization of data collection and human error in holding the spring at a perfectly consistent length, these initial conditions were not constant throughout trials. Additionally, due to phase shift being a value with infinite possible values (since the model of simple harmonic motion repeats with its period), nonlinear regressions struggle to converge to a consistent value. See #link(label("background"), [the background]) and #link(label("errors"), [the errors]) sections for more details.
 
 == Errors <errors>
-#lorem(50)
+There were many sources of error present within this experiment that resulted in data not fully consistent with theoretical models.
+
+As mentioned previously, the largest inconsistency throughout the collected data is the calculated phase shift $Phi$. This is largely attributable to inconsistencies in the starting condition of the spring system. Considering the model for simple harmonic motion (@basic-shm-model), the phase shift affects only where the sinusoidal wave begins. Thus, it is dependent only upon the starting position and velocity of the spring @MoebsEtAl2016UniversityPhysics. While every effort was made to keep the starting position at exactly #qty(5.0, "cm") or #qty(7.5, "cm") and starting velocity at exactly zero, due to the procedure being executed by humans, natural human error was present. This error is especially prevalent in @initial-position-graph and @stiffer-spring-graph. Further experimentation should attempt to minimize this error through a precise manner of controlling starting conditions.
+
+Another source of experimental error is the failure to account for dampened motion. Simple harmonic motion accurately models an ideal system, where energy is fully conserved. Unfortunately, the real world is not an ideal system, and is subject to external factors---most notably friction and air resistance. Since the experiment was performed with a spring suspended vertically, friction is not a major concern---however, air resistance was undoubtedly present. This results in _damped_ harmonic motion. Since air resistance is dependent upon the current velocity of the object, @acceleration-difeq becomes @acceleration-damped-difq. Solving this equation yields @damped-shm-model @MoebsEtAl2016UniversityPhysics @Kreyszig1972EngineeringMathematics @Meyers2024DampedAndOtherOscillations.
+
+$ (dif^2 x)/(dif t^2) = -k/m x - mu (dif x)/(dif t) $ <acceleration-damped-difq>
+$ x = A_0 e^(-b/(2m) t) cos(omega t + Phi) $ <damped-shm-model>
+
+As shown by @damped-shm-model, damped harmonic motion in the context of air resistance includes an exponential decay term, the speed of which is determined by the value $b$. This value represents properties of the system such as the fluid viscosity @Meyers2024DampedAndOtherOscillations. This decaying amplitude is visible in the graphs of the data collected, most visibly in @heavier-mass-graph.
+
+Finally, an error in the design of this experiment restricted the ability to draw full conclusions. Data regarding how a change in the spring system affected the resultant model was only collected in one direction; e.g. a control mass $m_1$ and a heavier mass $m_2$ were tested, but not a lighter mass $m_3$. Additionally, the exact numerical values of the spring constants for the springs used, $k_1$ and $k_2$, were not recorded due to a lack of foresight. This restricts the conclusions that can be gathered, as a full theoretical model cannot be made.
 
 == Extensions
-#lorem(50)
+Extensions to this experiment should primarily aim to fix the shortcoming discussed in the #link(label("errors"), "errors"). A more controlled environment can be used to ensure that the starting conditions of each trial are consistent so that the difference in phase shift can be accurately calculated---one way this could be accomplished is by using a reproducible mechanism to release the spring. Additionally, more trials should be performed with a larger number of variations of the characteristics of the spring system so the mathematical model for simple harmonic motion can be validated from experimental data. Finally, future experimenters may consider performing the experiment in a vacuum to reduce the effects of air resistance.
+
+Alternatively, other facets of harmonic motion can be tested, such as dampening. While air resistance is one form of damped harmonic motion, there are many other systems that experience damping, such as a spring moving through a viscous fluid, friction within vibrating solids such as a tuning fork, and the suspension system of a car. Further experimentation could extend to include data to determine the factors that affect the model of damped harmonic motion.
 
 == Applications
-#lorem(50)
+Harmonic motion is present in many places. Springs are a common example, such as the springs in a car's suspension system. Another common example is pendulums, such as the pendulum in a grandfather clock. 
 
 
