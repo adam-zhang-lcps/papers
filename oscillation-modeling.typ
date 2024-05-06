@@ -266,15 +266,15 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
       acc.zip(cur).map(((a, b)) => a + b)
     })
     .map(x => x / 3)
-    .map(x => round(digits: 14, x))
 })
 
 The above figures included lines of best fit from a nonlinear regression calculated using the model of simple harmonic motion. The values for the parameters for each regression, as well as the averages per each set of trials, are shown in @parameters. A graph showing the model for each set of trials using the average parameter values is shown in @average-parameters-graph.
 
 #figure(
-  caption: [Simple harmonic motion regression parameter values],
+  caption: [Simple harmonic motion regression parameter values (rounded to 14 decimal places)],
   table(
     columns: 5,
+    stroke: (x, y) => if x < 2 and y < 1 { none } else { 1pt },
     align: (x, y) => if y > 0 and x > 1 { right } else { center },
     table.header([], [], $A$, $omega$, $Phi$),
     ..range(0, 4).map(i => {
@@ -291,7 +291,10 @@ The above figures included lines of best fit from a nonlinear regression calcula
           )
         }),
         [Average],
-        ..averages.at(i).map(str)
+        ..averages
+          .at(i)
+          .map(x => round(digits: 14, x))
+          .map(str)
       )
     }).flatten()
   )
@@ -325,7 +328,7 @@ The purpose of the experiment was partially accomplished. While it was successfu
 
 By looking at the results of varying factors in @parameters and @average-parameters-graph in comparison to the control trial, relationships can be inferred. A further initial position increased the amplitude ($A$) by a significant amount. A heavier mass and stiffer spring decreased and increased the frequency of oscillation ($omega$), respectively, by a significant amount. This lines up with the predictions in #link(label("hypothesis"), [the hypothesis]) and principles discussed in #link(label("background"), [the background]).
 
-Notably, calculated values for phase shift ($Phi$) were not consistent throughout trials. However, this can be attributed to multiple factors. The phase shift is only affected by the initial conditions of the system---the initial position and velocity. Due to inconsistencies in both the initialization of data collection and human error in holding the spring at a perfectly consistent length, these initial conditions were not constant throughout trials. Additionally, due to phase shift being a value with infinite possible values (since the model of simple harmonic motion repeats with its period), nonlinear regressions struggle to converge to a consistent value. See #link(label("background"), [the background]) and #link(label("errors"), [the errors]) sections for more details.
+Notably, calculated values for phase shift ($Phi$) were not consistent throughout trials. However, this can be attributed to multiple factors. The phase shift is only affected by the initial conditions of the system---the initial position and velocity. Due to inconsistencies in both the initialization of data collection and human error in holding the spring at a perfectly consistent length, these initial conditions were not constant throughout trials. Additionally, due to phase shift being a value with infinite possible values, nonlinear regressions struggle to converge to a consistent value. See #link(label("background"), [the background]) and #link(label("errors"), [the errors]) sections for more details.
 
 == Errors <errors>
 There were many sources of error present within this experiment that resulted in data not fully consistent with theoretical models.
@@ -342,7 +345,7 @@ As shown by @damped-shm-model, damped harmonic motion includes an exponential de
 Finally, an error in the design of this experiment restricted the ability to draw full conclusions. Data regarding how a change in the spring system affected the resultant model was only collected in one direction; e.g. a control mass $m_1$ and a heavier mass $m_2$ were tested, but not a lighter mass $m_3$. Additionally, the exact numerical values of the spring constants for the springs used, $k_1$ and $k_2$, were not recorded due to a lack of foresight. This restricts the conclusions that can be gathered, as a full theoretical model cannot be made.
 
 == Extensions
-Extensions to this experiment should primarily aim to fix the shortcoming discussed in the #link(label("errors"), "errors"). A more controlled environment can be used to ensure that the starting conditions of each trial are consistent so that the difference in phase shift can be accurately calculated---one way this could be accomplished is by using a reproducible mechanism to release the spring. Additionally, more trials should be performed with a larger number of variations of the characteristics of the spring system so the mathematical model for simple harmonic motion can be validated from experimental data. Finally, future experimenters may consider performing the experiment in a vacuum to reduce the effects of air resistance.
+Extensions to this experiment should primarily aim to fix the shortcoming discussed in the #link(label("errors"), "errors"). A more controlled environment can be used to ensure that the starting conditions of each trial are consistent so that the difference in phase shift can be accurately calculated---one way this could be accomplished is by using a reproducible mechanism to release the spring. Additionally, more trials should be performed with a larger number of variations of the characteristics of the spring system so the mathematical model for simple harmonic motion can be validated from experimental data. Finally, future experimenters may consider performing the experiment in a vacuum to negate the effects of air resistance.
 
 Alternatively, other facets of harmonic motion can be tested, such as dampening. While air resistance is one form of damped harmonic motion, there are many other systems that experience damping, such as a spring moving through a viscous fluid, friction within vibrating solids such as a tuning fork, and the suspension system of a car. Further experimentation could extend to include data to determine the factors that affect the model of damped harmonic motion.
 
