@@ -94,10 +94,11 @@ $ F_s = -k x $ <hookes-law>
 By using Newton's 2nd Law, @hookes-law can be used to derive the second-order differential equation shown in @acceleration-difeq. Solving this differential equation yields the model for position as a function of time presented in @basic-shm-model.
 
 $ (dif^2 x)/(dif t^2) = -k/m x $ <acceleration-difeq>
-
 $ x = A cos(omega t + Phi) $ <basic-shm-model>
 
-As shown above, simple harmonic motion is modeled by a sinusoidal wave, where $A$ represents the amplitude of the oscillation, $omega$ represents the angular frequency, and $Phi$ represents the phase shift of the wave. As $A$ represents the amplitude of the oscillation, it represents the maximum distance away from equilibrium that the mass reaches (as $forall x in RR : cos(x) gt.not 1$), and depends solely upon the initial conditions (position and velocity). The angular frequency $omega$ is dependent upon the mass of the oscillating object and the stiffness of the spring, and is equal to $sqrt(k/m)$  @Meyers2024OscillatorKinematics.
+As shown by @basic-shm-model, simple harmonic motion is modeled by a sinusoidal wave, where $A$ represents the amplitude of the oscillation, $omega$ represents the angular frequency, and $Phi$ represents the phase shift of the wave. As $A$ represents the amplitude of the oscillation, it represents the maximum distance away from equilibrium that the mass reaches (as $forall x in RR : cos(x) gt.not 1$), and depends solely upon the initial conditions (position and velocity). The angular frequency $omega$ is dependent upon the mass of the oscillating object and the stiffness of the spring, and is equal to $sqrt(k/m)$  @Meyers2024OscillatorKinematics. Finally, phase shift changes only the point at which the wave starts, and is also dependent solely upon initial conditions. Notably, a system with initial velocity is functionally equivalent to a system with no initial velocity and a further starting distance $x_1$, and results only in a phase shift @MoebsEtAl2016UniversityPhysics.
+
+This experiment seeks to experimentally verify the theoretical models discussed above. To do so, a mass will be suspended from a vertical spring and allowed to oscillate from a starting position $x_0$. Motion will be recorded using a Vernier Motion Sensor#emoji.reg. Two differing masses, starting positions, and springs will be tested, each in isolation to determine how each change affects the resulting simple harmonic motion model.
 
 = Methods
 == Materials
@@ -332,7 +333,7 @@ Another source of experimental error is the failure to account for dampened moti
 $ (dif^2 x)/(dif t^2) = -k/m x - mu (dif x)/(dif t) $ <acceleration-damped-difq>
 $ x = A_0 e^(-b/(2m) t) cos(omega t + Phi) $ <damped-shm-model>
 
-As shown by @damped-shm-model, damped harmonic motion in the context of air resistance includes an exponential decay term, the speed of which is determined by the value $b$. This value represents properties of the system such as the fluid viscosity @Meyers2024DampedAndOtherOscillations. This decaying amplitude is visible in the graphs of the data collected, most visibly in @heavier-mass-graph.
+As shown by @damped-shm-model, damped harmonic motion includes an exponential decay term, the speed of which is determined by the value $b$. This value represents properties of the system such as the fluid viscosity @Meyers2024DampedAndOtherOscillations. This decaying amplitude is visible in the graphs of the data collected, most visibly in @heavier-mass-graph.
 
 Finally, an error in the design of this experiment restricted the ability to draw full conclusions. Data regarding how a change in the spring system affected the resultant model was only collected in one direction; e.g. a control mass $m_1$ and a heavier mass $m_2$ were tested, but not a lighter mass $m_3$. Additionally, the exact numerical values of the spring constants for the springs used, $k_1$ and $k_2$, were not recorded due to a lack of foresight. This restricts the conclusions that can be gathered, as a full theoretical model cannot be made.
 
