@@ -350,6 +350,4 @@ Extensions to this experiment should primarily aim to fix the shortcoming discus
 Alternatively, other facets of harmonic motion can be tested, such as dampening. While air resistance is one form of damped harmonic motion, there are many other systems that experience damping, such as a spring moving through a viscous fluid, friction within vibrating solids such as a tuning fork, and the suspension system of a car. Further experimentation could extend to include data to determine the factors that affect the model of damped harmonic motion.
 
 == Applications
-Harmonic motion is present in many places. Springs are a common example, such as the springs in a car's suspension system. Another common example is pendulums, such as the pendulum in a grandfather clock. 
-
-
+Harmonic motion is present in many places. Springs are a common example, such as the springs in a car's suspension system, which present an example of damped motion---these springs attempt to reduce oscillation resulting from road imperfections. Another common example is pendulums, such as the pendulum in a grandfather clock, which oscillates with a period of one second.
