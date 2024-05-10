@@ -44,6 +44,14 @@
 
     #emph(it.body)
   ]
+
+  #set table(
+    fill: (x, y) => if calc.odd(y) and y > 0 { luma(240) } else { white }
+  )
+
+  #set math.equation(numbering: "(1)")
+  // Without this, equations in CeTZ diagrams have labels all over them.
+  #show figure: set math.equation(numbering: none)
   
   #set bibliography(style: "apa", title: "References")
   #show bibliography: it => [

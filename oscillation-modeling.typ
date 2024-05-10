@@ -2,10 +2,6 @@
 #import "@preview/unify:0.5.0": qty
 #import "./aet-lab-report-template.typ": aet-lab-report
 
-#set table(
-  fill: (x, y) => if calc.odd(y) and y > 0 { luma(240) } else { white }
-)
-
 #show: doc => aet-lab-report(
   title: "Investigating the Factors in a Spring System that Affect a Model of Simple Harmonic Motion",
   course: "AET AP Physics C: Mechanics",
@@ -88,8 +84,6 @@ inversely proportional to period ($omega$). Spring stiffness ($k$) is
 proportional to period ($omega$).
 
 == Background <background>
-#set math.equation(numbering: "(1)")
-
 Simple harmonic motion refers to an oscillatory motion in which the force returning the system to equilibrium---the "restoring" force---is directly proportional to the displacement of the system from said equilibrium. In this case, by Newton's 2nd Law of motion, the acceleration is directly proportional to the displacement from equilibrium @MoebsEtAl2016UniversityPhysics.
 
 A quintessential example of simple harmonic motion, and the one investigated in this experiment, is the oscillation of an ideal spring with a weight attached. At displacements small relative to the length of the spring, ideal springs obey Hooke's Law (@hookes-law), which states that the restoring force exerted by a spring is directly proportional to the spring's displacement from equilibrium; the proportionality constant is known as the "spring constant", and relates to the stiffness of the spring @Dourmashkin2016HookesLaw.
@@ -123,7 +117,6 @@ The setup for this experiment is shown in @setup and @setup-2.
 #figure(
   caption: [Setup of spring system in equilibrium],
 )[
-  #set math.equation(numbering: none)
   #cetz.canvas(
     length: 20%, {
       import cetz.draw: *
@@ -158,7 +151,6 @@ The setup for this experiment is shown in @setup and @setup-2.
 #figure(
   caption: [Setup of spring system before release],
 )[
-  #set math.equation(numbering: none)
   #cetz.canvas(
     length: 20%, {
       import cetz.draw: *
