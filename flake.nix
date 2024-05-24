@@ -47,11 +47,11 @@
             }
             {
               category = "Typst";
-              package = typst-lsp;
+              package = tinymist;
             }
             {
               category = "Typst";
-              package = typstfmt;
+              package = typstyle;
             }
             {
               category = "Analysis";
