@@ -4,7 +4,7 @@
   date: datetime.today(),
 )
 #set page(paper: "us-letter")
-#set text(font: "New Computer Modern", size: 11pt)
+#set text(font: "Liberation Serif", size: 11pt)
 #set par(first-line-indent: 0.25in)
 #show par: set block(spacing: 0.65em)
 
