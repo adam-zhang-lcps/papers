@@ -22,3 +22,18 @@
 ]
 #pagebreak()
 
+Woah look information@Britannica2024NationalSecurityAgency
+
+#set bibliography(style: "chicago-fullnotes")
+#show bibliography: it => {
+  show heading: it => {
+    set align(center) 
+    set text(weight: "regular", size: 12pt)
+    it
+    v(2em)
+  }
+
+  pagebreak()
+  it
+}
+#bibliography("refs.bib")
