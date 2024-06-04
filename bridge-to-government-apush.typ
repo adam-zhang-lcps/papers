@@ -7,7 +7,7 @@
   },
 )
 #set text(font: "Liberation Serif", size: 12pt)
-#set par(leading: 1.3em)
+#set par(leading: 1.3em, first-line-indent: 0.5in)
 
 #set page(numbering: none)
 #v(30%)
@@ -22,7 +22,7 @@
 ]
 #pagebreak()
 
-Woah look information@Britannica2024NationalSecurityAgency
+Although it existed in earlier forms, the NSA in its modern form was formed in 1952 following a directive from President Truman @Britannica2024NationalSecurityAgency. The goal of the various incarnations of the agency before its formal inception was to break the encryption of communications, especially during wartime, to support national intelligence.
 
 #set bibliography(style: "chicago-fullnotes")
 #show bibliography: it => {
