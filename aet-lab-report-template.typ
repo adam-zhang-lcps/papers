@@ -47,7 +47,8 @@
   ]
 
   #set table(
-    fill: (x, y) => if calc.odd(y) and y > 0 { luma(240) } else { white }
+    fill: (x, y) => if calc.odd(y) and y > 0 { luma(240) } else { white },
+    align: center + horizon
   )
 
   #set math.equation(numbering: "(1)")
