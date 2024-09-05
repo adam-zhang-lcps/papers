@@ -56,7 +56,7 @@ Photos of your results with captions MUST be included in this section. Each phot
 Insert an example calculation. Do not write out “multiply velocity time time…” Define your parameters, use numbers, and equations. Include the general formula, formula with numbers, and final answer with units. If using statistics, this is where to put the null and alternative hypotheses.
 
 = QUESTIONS
-Number the questions from the lab, and you may either rewrite the question or write the answer in complete sentences by incorporating the question into the answer. If there are no questions, type N/A.
+There were no questions provided with this experiment.
 
 = DISCUSSION
 == Conclusions
