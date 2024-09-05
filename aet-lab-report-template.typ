@@ -2,6 +2,7 @@
   title: none,
   course: none,
   teacher: none,
+  partners: none,
   date: datetime.today(),
   appendix: none,
   draft: false,
@@ -71,6 +72,10 @@
 
       Adam Zhang
 
+      #if (partners != none) [
+        Lab Partner#if partners.len() > 1 [s]: #partners.join(", ")
+      ]
+      
       Academy of Engineering and Technology,
       #box(image("assets/acl-logo.png", height: 0.9em)) Academies of Loudoun
 

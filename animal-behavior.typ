@@ -4,6 +4,7 @@
   title: "Animal Behavior", // TODO
   course: "AET AP Biology",
   teacher: "Ms. Suzanne Lohr",
+  partners: ([Cole Strickland],),
   draft: true,
   doc
 )
