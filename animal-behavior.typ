@@ -42,7 +42,7 @@ Photos of your results with captions MUST be included in this section. Each phot
 
 #figure(
   table(
-    columns: (auto, auto, auto, auto, auto, auto, auto),
+    columns: (auto, 8%, 8%, 8%, 8%, 8%, 8%),
     table.cell(rowspan: 2)[Time (m:s)],
     table.cell(colspan: 2)[Trial 1],
     table.cell(colspan: 2)[Trial 2],
