@@ -38,9 +38,13 @@ Photographic Documentation
 Photos of your results with captions MUST be included in this section. Each photo is labeled with the word Figure and the next consecutive number throughout your report. See above that Figure 1 is used in the set-up. Your next photograph would be Figure 2: description as shown below. Do not make your photographs excessively large. Several should fit on one page,
 
 == Data
+The data collected for all three trials in shown in @data-table.
+
 #let data = csv("assets/animal-behavior/data.csv").slice(1)
+#let totals = data.last()
 
 #figure(
+  caption: [Number of Beetles per Side of Choice Chamber],
   table(
     columns: (auto, 8%, 8%, 8%, 8%, 8%, 8%),
     table.cell(rowspan: 2)[Time (m:s)],
@@ -48,9 +52,10 @@ Photos of your results with captions MUST be included in this section. Each phot
     table.cell(colspan: 2)[Trial 2],
     table.cell(colspan: 2)[Trial 3],
     ..([Left], [Right]) * 3,
-    ..data.flatten()
+    ..data.slice(0, 20).flatten(),
+    ..totals.map(x => [*#x*])
   ),
-)
+) <data-table>
 
 == Calculations
 Insert an example calculation. Do not write out “multiply velocity time time…” Define your parameters, use numbers, and equations. Include the general formula, formula with numbers, and final answer with units. If using statistics, this is where to put the null and alternative hypotheses.
