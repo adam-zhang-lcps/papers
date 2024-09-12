@@ -32,7 +32,11 @@ All apparati and materials are included in the method and defined, if appropriat
 All safety issues are addressed and specific to the lab, link any mention of chemicals to a current SDS.
 Description of method is in flowing, paragraph form and allows for complete repeatability and collection of relevant data.
 A properly-labeled image of the set-up must be included and referenced in the text of this section.
-Figure 1: Set-up of Inclined Plane and Cart.
+
+#figure(
+  caption: [Experimental Setup],
+  image(width: 80%, "assets/animal-behavior/setup.jpg"),
+)
 
 = RESULTS
 == Qualitative Observations
@@ -40,6 +44,11 @@ Figure 1: Set-up of Inclined Plane and Cart.
 
 == Photographic Documentation
 Photos of your results with captions MUST be included in this section. Each photo is labeled with the word Figure and the next consecutive number throughout your report. See above that Figure 1 is used in the set-up. Your next photograph would be Figure 2: description as shown below. Do not make your photographs excessively large. Several should fit on one page,
+
+#figure(
+  caption: [Beetles in the Chamber during Trial 1],
+  image(width: 80%, "assets/animal-behavior/mid-experiment.jpg"),
+)
 
 == Data
 The data collected for all three trials in shown in @data-table. @graph-left shows a graph of the number of beetles in the left side of the choice chamber (containing plain Cheerios) for all three trials. @graph-right shows a graph of the number of beetles in the right side of the choice chamber (containing Honey Nut Cheerios) for all three trials.
