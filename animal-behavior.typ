@@ -32,9 +32,12 @@ All safety issues are addressed and specific to the lab, link any mention of che
 Description of method is in flowing, paragraph form and allows for complete repeatability and collection of relevant data.
 A properly-labeled image of the set-up must be included and referenced in the text of this section.
 Figure 1: Set-up of Inclined Plane and Cart.
-RESULTS
-Qualitative Observations (physical description of substances, reactions, products, etc.)
-Photographic Documentation
+
+= RESULTS
+== Qualitative Observations
+(physical description of substances, reactions, products, etc.)
+
+== Photographic Documentation
 Photos of your results with captions MUST be included in this section. Each photo is labeled with the word Figure and the next consecutive number throughout your report. See above that Figure 1 is used in the set-up. Your next photograph would be Figure 2: description as shown below. Do not make your photographs excessively large. Several should fit on one page,
 
 == Data
