@@ -24,19 +24,18 @@ If #species has a choice between normal Cheerios and Honey Nut Cheerios, then th
 Describe relevant background, concepts, and applicable equations. This should be about two to three paragraphs in length, but may be longer depending on the nature of the lab. Must include in-text citations with references alphabetized at the end of the laboratory document.
 
 == EXPERIMENTAL METHOD
-(The following items need to be included in the Experimental Method section, but NOT labeled as subheadings. You will not give step-by-step procedures or a materials list, which is different from the past. Instead, your methodology will be in paragraph form):
+Place the choice chamber upon a consistent, level surface, oriented length-wise horizontally. Place ten plain Cheerios on the left side of the chamber and ten Honey Nut Cheerios in the right side of the chamber—this is the independent variable. Use a hard object to crush the Cheerios within the choice chamber. The experimental setup is now complete. See @setup for a photograph of this setup.
 
-Experimental parameters clearly address the original question and hypothesis
-Variables (IV, DV), constants, and controls are appropriately identified
-All apparati and materials are included in the method and defined, if appropriate.
-All safety issues are addressed and specific to the lab, link any mention of chemicals to a current SDS.
-Description of method is in flowing, paragraph form and allows for complete repeatability and collection of relevant data.
-A properly-labeled image of the set-up must be included and referenced in the text of this section.
+Place ten #species in the center of the chamber and begin a timer for ten minutes. Count the number of #species in each side of the chamber in intervals of 30 seconds. Record these values in @data-table—this is the dependent variable. Upon completion of the ten minute timer, return the beetles to the center of the choice chamber and repeat the procedure twice more to collect data for three total trials. Ensure the chamber contents are not disturbed between trials and remains in a constant state. See @mid-experiment for a photograph of the experiment in progress.
+
+Ensure that appropriate safety guidelines are obeyed throughout the experiment. Upon conclusion of the experiment, follow all instructor directions to ensure safe post-experiment cleanup.
+
+Note that both photographs included in this report show the Cheerios in an intact state, contrary to the procedure given. This is due to an oversight by the experimentators when collecting photographic documentation. All data collected in this experiment was collected with crushed Cheerios in the choice chamber.
 
 #figure(
   caption: [Experimental Setup],
   image(width: 80%, "assets/animal-behavior/setup.jpg"),
-)
+) <setup>
 
 = RESULTS
 == Qualitative Observations
@@ -48,7 +47,7 @@ Photos of your results with captions MUST be included in this section. Each phot
 #figure(
   caption: [Beetles in the Chamber during Trial 1],
   image(width: 80%, "assets/animal-behavior/mid-experiment.jpg"),
-)
+) <mid-experiment>
 
 == Data
 The data collected for all three trials in shown in @data-table. @graph-left shows a graph of the number of beetles in the left side of the choice chamber (containing plain Cheerios) for all three trials. @graph-right shows a graph of the number of beetles in the right side of the choice chamber (containing Honey Nut Cheerios) for all three trials.
