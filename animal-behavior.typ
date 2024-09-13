@@ -142,6 +142,80 @@ The data collected for all three trials in shown in @data-table. @graph-left sho
 == Calculations
 Insert an example calculation. Do not write out “multiply velocity time time…” Define your parameters, use numbers, and equations. Include the general formula, formula with numbers, and final answer with units. If using statistics, this is where to put the null and alternative hypotheses.
 
+#let diff(o, e) = calc.pow(o - e, 2) / e
+#let diffs = totals.slice(1).chunks(2).map(x => {
+  let (left, right) = x.map(int)
+  let left_diff = diff(left, 100)
+  let right_diff = diff(right, 100)
+
+  (
+    left: (val: left, diff: left_diff),
+    right: (val: right, diff: right_diff),
+    chi: left_diff + right_diff,
+  )
+})
+#let averages = {
+  let (left, right) = diffs
+    .fold(
+      (left: 0, right: 0),
+      (acc, cur) => {
+        (left: acc.left + cur.left.val, right: acc.right + cur.right.val)
+      },
+    )
+    .values()
+    .map(x => x / 3)
+  let left_diff = diff(left, 100)
+  let right_diff = diff(right, 100)
+
+  (
+    left: (val: left, diff: left_diff),
+    right: (val: right, diff: right_diff),
+    chi: left_diff + right_diff,
+  )
+}
+
+#figure(
+  caption: [$chi^2$ Calculations for Each Trial and Average],
+  table(
+    columns: 8,
+    table.cell(rowspan: 2)[Trial],
+    table.cell(colspan: 3)[Left (plain Cheerios)],
+    table.cell(colspan: 3)[Right (Honey Nut Cheerios)],
+    table.cell(rowspan: 2)[$ chi^2 $],
+    ..(
+      [Observed],
+      [Expected],
+      [$ (o-e)^2 / e $],
+    ) * 2,
+    ..(
+      diffs.enumerate().map(((i, x)) => {
+        (
+          [Trial #{i+1}],
+          x.left.val,
+          100,
+          x.left.diff,
+          x.right.val,
+          100,
+          x.right.diff,
+          x.chi,
+        )
+      }).flatten().map(x => [#x])
+    ),
+    [Average],
+    ..{
+      (
+        averages.left.val,
+        100,
+        averages.left.diff,
+        averages.right.val,
+        100,
+        averages.right.diff,
+        averages.chi,
+      ).map(x => [#x])
+    }
+  ),
+) <statistics>
+
 = QUESTIONS
 There were no questions provided with this experiment.
 
