@@ -30,7 +30,7 @@ Place ten #species in the center of the chamber and begin a timer for ten minute
 
 Ensure that appropriate safety guidelines are obeyed throughout the experiment. Upon conclusion of the experiment, follow all instructor directions to ensure safe post-experiment cleanup.
 
-Note that both photographs included in this report show the Cheerios in an intact state, contrary to the procedure given. This is due to an oversight by the experimentators when collecting photographic documentation. All data collected in this experiment was collected with crushed Cheerios in the choice chamber.
+Note that both photographs included in this report show the Cheerios in an intact state, contrary to the procedure given. This is due to an oversight by the experimentators when collecting photographic documentation. All data collected in this experiment was collected with crushed Cheerios in the choice chamber. <whoops>
 
 #figure(
   caption: [Experimental Setup],
@@ -39,13 +39,13 @@ Note that both photographs included in this report show the Cheerios in an intac
 
 = RESULTS
 == Qualitative Observations
-(physical description of substances, reactions, products, etc.)
+Through the experiment, some #species appeared to struggle with movement, perhaps due to the density and inconsistency of the crushed Cheerios.
 
 == Photographic Documentation
-Photos of your results with captions MUST be included in this section. Each photo is labeled with the word Figure and the next consecutive number throughout your report. See above that Figure 1 is used in the set-up. Your next photograph would be Figure 2: description as shown below. Do not make your photographs excessively large. Several should fit on one page,
+A photograph showing the experiment in progress is shown in @mid-experiment. Note that the trial shown in @mid-experiment was not a part of the final experimental data due to an oversight by the experimentators; see the #link(<whoops>, [experimental method]) section for more details.
 
 #figure(
-  caption: [Beetles in the Chamber during Trial 1],
+  caption: [Beetles in the Chamber during Experimentation],
   image(width: 80%, "assets/animal-behavior/mid-experiment.jpg"),
 ) <mid-experiment>
 
