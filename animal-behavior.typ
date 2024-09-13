@@ -23,7 +23,7 @@ If #species has a choice between normal Cheerios and Honey Nut Cheerios, then th
 == Background
 Describe relevant background, concepts, and applicable equations. This should be about two to three paragraphs in length, but may be longer depending on the nature of the lab. Must include in-text citations with references alphabetized at the end of the laboratory document.
 
-== EXPERIMENTAL METHOD
+= EXPERIMENTAL METHOD
 Place the choice chamber upon a consistent, level surface, oriented length-wise horizontally. Place ten plain Cheerios on the left side of the chamber and ten Honey Nut Cheerios in the right side of the chamber—this is the independent variable. Use a hard object to crush the Cheerios within the choice chamber. The experimental setup is now complete. See @setup for a photograph of this setup.
 
 Place ten #species in the center of the chamber and begin a timer for ten minutes. Count the number of #species in each side of the chamber in intervals of 30 seconds. Record these values in @data-table—this is the dependent variable. Upon completion of the ten minute timer, return the beetles to the center of the choice chamber and repeat the procedure twice more to collect data for three total trials. Ensure the chamber contents are not disturbed between trials and remains in a constant state. See @mid-experiment for a photograph of the experiment in progress.
@@ -39,7 +39,7 @@ Note that both photographs included in this report show the Cheerios in an intac
 
 = RESULTS
 == Qualitative Observations
-Through the experiment, some #species appeared to struggle with movement, perhaps due to the density and inconsistency of the crushed Cheerios.
+Through the experiment, some #species appeared to struggle with movement, perhaps due to the density and inconsistency of the crushed Cheerios. Most beetles either frequently changed sides throughout a trial or did not change sides at all.
 
 == Photographic Documentation
 A photograph showing the experiment in progress is shown in @mid-experiment. Note that the trial shown in @mid-experiment was not a part of the final experimental data due to an oversight by the experimentators; see the #link(<whoops>, [experimental method]) section for more details.
@@ -226,7 +226,7 @@ There were no questions provided with this experiment.
 
 = DISCUSSION
 == Conclusions
-Discuss if the hypothesis was rejected or failed to be rejected by using data/evidence from the experiment as well as “real science” to explain and support the results and observations obtained through experimentation. This may need to be researched and then included in the references section. This is your “reasoning” section. Do NOT forget to include scientific reasoning in this section and citations from valid and reliable sources. Do not use personal pronouns and avoid using words like “the hypothesis was correct, satisfied, or proven.” It is either supported or not supported by the data or rejected or failed to be rejected if using statistics.
+This experiment failed to reject its null hypothesis, and thus does not support the original hypothesis. Since the $chi^2$-test showed no significant difference, #species does not have a preference for plain Cheerios or Honey Nut Cheerios. Their behavior appeared to exhibit no forms of taxis, merely kinesis or a lack of movement. This could be due to many different factors. One reason could be that #species are unable to feed off of Cheerios at all, since they generally feed on pure grain sources such as flour; however, Cheerios contains many non-grain ingredients, including vitamins and preservatives. Additionally, both plain Cheerios and Honey Nut Cheerios have a nearly-identical list of ingredients, differing only in sugar and honey content @CheeriosIngredients @HoneyNutCheeriosIngredients @BaldwinFasulo2010ConfusedFlourBeetles.
 
 == Errors and Limitations
 Describe errors and comment on percent error calculation. Include a discussion of how to minimize error in further research. Discuss the limitations that may have impacted your results.
