@@ -140,8 +140,6 @@ The data collected for all three trials in shown in @data-table. @graph-left sho
 ) <graph-right>
 
 == Calculations
-Insert an example calculation. Do not write out “multiply velocity time time…” Define your parameters, use numbers, and equations. Include the general formula, formula with numbers, and final answer with units. If using statistics, this is where to put the null and alternative hypotheses.
-
 #let diff(o, e) = calc.pow(o - e, 2) / e
 #let diffs = totals.slice(1).chunks(2).map(x => {
   let (left, right) = x.map(int)
@@ -173,6 +171,12 @@ Insert an example calculation. Do not write out “multiply velocity time time�
     chi: left_diff + right_diff,
   )
 }
+
+The result of the $chi^2$-test for each trial, as well as an average, is shown in @statistics. Given that this is a statistical experiment, the null and alternative hypotheses follow.
+
+/ Null Hypothesis: When given the choice between plain Cheerios and Honey Nut Cheerios, there is no significant difference in the type of Cheerios that #species prefers.
+
+/ Alternative Hypothesis: When given the choice between plain Cheerios and Honey Nut Cheerios, there is a significant difference in the number of #species that prefer Honey Nut Cheerios.
 
 #figure(
   caption: [$chi^2$ Calculations for Each Trial and Average],
@@ -215,6 +219,8 @@ Insert an example calculation. Do not write out “multiply velocity time time�
     }
   ),
 ) <statistics>
+
+Since the average $chi^2$-test value is #averages.chi, this experiment fails to reject its null hypothesis.
 
 = QUESTIONS
 There were no questions provided with this experiment.
