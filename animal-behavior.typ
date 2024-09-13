@@ -204,7 +204,7 @@ The result of the $chi^2$-test for each trial, as well as an average, is shown i
         )
       }).flatten().map(x => [#x])
     ),
-    [Average],
+    [*Average*],
     ..{
       (
         averages.left.val,
@@ -214,12 +214,12 @@ The result of the $chi^2$-test for each trial, as well as an average, is shown i
         100,
         averages.right.diff,
         averages.chi,
-      ).map(x => [#x])
+      ).map(x => [*#x*])
     }
   ),
 ) <statistics>
 
-Since the average $chi^2$-test value is #averages.chi, this experiment fails to reject its null hypothesis.
+The critical value for the $chi^2$-test in this experiment is $3.84$. Since the average $chi^2$-test value is #averages.chi, and $0.5 < 3.84$, this experiment fails to reject its null hypothesis.
 
 = QUESTIONS
 There were no questions provided with this experiment.
