@@ -234,4 +234,4 @@ Describe errors and comment on percent error calculation. Include a discussion o
 == Applications
 Explain how the conclusions and experiment are relevant to real-life--research to find specific examples of this concept or model in current use. Must include in-text citations.
 
-
+@Kavallieratos2020:BiologicFeaturesPopulationGrowthTwoSoutheas
