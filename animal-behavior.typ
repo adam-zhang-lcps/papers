@@ -8,6 +8,7 @@
   course: "AET AP Biology",
   teacher: "Ms. Suzanne Lohr",
   partners: ([Cole Strickland],),
+  date: datetime(year: 2024, month: 09, day: 12),
   draft: true,
   doc,
 )
@@ -18,7 +19,7 @@
 Determine whether #species has a preference for normal Cheerios or Honey Nut Cheerios.
 
 == Hypothesis
-If #species has a choice between normal Cheerios and Honey Nut Cheerios, then they will choose the Honey Nut Cheerios due to their preference for sweet foods in some scenarios [citation needed].
+If #species has a choice between normal Cheerios and Honey Nut Cheerios, then they will choose the Honey Nut Cheerios due to their consumption of sweet foods, such as fruit @HagstrumSubramanyam2017:StoredProductInsectResource.
 
 == Background
 Describe relevant background, concepts, and applicable equations. This should be about two to three paragraphs in length, but may be longer depending on the nature of the lab. Must include in-text citations with references alphabetized at the end of the laboratory document.
@@ -28,7 +29,7 @@ Place the choice chamber upon a consistent, level surface, oriented length-wise 
 
 Place ten #species in the center of the chamber and begin a timer for ten minutes. Count the number of #species in each side of the chamber in intervals of 30 seconds. Record these values in @data-table—this is the dependent variable. Upon completion of the ten minute timer, return the beetles to the center of the choice chamber and repeat the procedure twice more to collect data for three total trials. Ensure the chamber contents are not disturbed between trials and remains in a constant state. See @mid-experiment for a photograph of the experiment in progress.
 
-Ensure that appropriate safety guidelines are obeyed throughout the experiment. Upon conclusion of the experiment, follow all instructor directions to ensure safe post-experiment cleanup.
+Ensure that appropriate safety guidelines are obeyed throughout the experiment. Handle #species with caution, as they are capable of secreting substances that can cause itchiness upon contact with skin @Mullen2009:MedicalVeterinarEntomolog. Upon conclusion of the experiment, follow all instructor directions to ensure safe post-experiment cleanup.
 
 Note that both photographs included in this report show the Cheerios in an intact state, contrary to the procedure given. This is due to an oversight by the experimentators when collecting photographic documentation. All data collected in this experiment was collected with crushed Cheerios in the choice chamber. <whoops>
 
