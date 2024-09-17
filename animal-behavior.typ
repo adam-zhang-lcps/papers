@@ -22,7 +22,15 @@ Determine whether #species has a preference for normal Cheerios or Honey Nut Che
 If #species has a choice between normal Cheerios and Honey Nut Cheerios, then they will choose the Honey Nut Cheerios due to their consumption of sweet foods, such as fruit @HagstrumSubramanyam2017:StoredProductInsectResource.
 
 == Background
-Describe relevant background, concepts, and applicable equations. This should be about two to three paragraphs in length, but may be longer depending on the nature of the lab. Must include in-text citations with references alphabetized at the end of the laboratory document.
+#species, also known colloquially as the "confused flour beetle", is a small insect, named for its tendency to infest grain-based food such as flour. Originally from Africa, #species is now found worldwide, and is particularly problematic in the United States. They are small beetles, around one-eighth of an inch long (0.32 centimeters), and is reddish-brown in color. Larvae hatch and grow relatively fast, making them a good candidate for experimentation @BaldwinFasulo2010ConfusedFlourBeetles @Calvin2023:ConfusedFlourBeetleRedFlourBeetle.
+
+This experiment seeks to investigate animal behavior---specifically that of #species. When investigating animal behavior, behaviors can be broadly categorized into two categories: "kinesis" and "taxis". Kinesis refers to undirected, or "random", movement in response to a stimulus. This usually refers to a change in speed or direction of movement. On the other hand, taxis refers to directed movement---usually towards or away from a stimulus, known as positive and negative taxis, respectively. Taxis are named after the type of stimulus---for example, hydrotaxis refers to a movement towards or away from moisture, while phototaxis refers to a movement towards or away from light @Gunn1937:ClassificTaxesKineses @Mackenzie2023:HowAnimalsFollow.
+
+The taxis investigated in this experiment will be the movement of #species when given the choice between plain Cheerios and Honey Nut Cheerios in a choice chamber. Plain Cheerios and Honey Nut Cheerios share a very similar ingredients list, with the only notable difference being the addition of honey in the latter @CheeriosIngredients @HoneyNutCheeriosIngredients. If #species show a preference for one type of Cheerios, there should be observable positive taxis in their movement towards their preferred type of Cheerios.
+
+This experiment will use a $chi^2$ test to draw a conclusion about the results of manipulating the independent variable. The $chi^2$ test allows for determining the relationship between two sets of data, and whether that relationship is "statistically significant"---not due to random chance. If the calculated $chi^2$ value surpasses a "critical value" for a certain probability#footnote[A table of critical values is available online #link("https://statisticsbyjim.com/hypothesis-testing/chi-square-table")[here].], the relationship can be concluded to be statistically significant, and not due to chance. The value for the $chi^2$ test is calculated by summing the difference of the "observed" and "expected" data sets squared, divided by the "expected" data set; see @chi-squared-equation @Pearson1900:X. This experiment will use a probability of 0.05, and thus the critical value will be 3.84.
+
+$ chi^2 = sum_(i=0)^n (o_i - e_i)^2 / e_i $ <chi-squared-equation>
 
 = EXPERIMENTAL METHOD
 Place the choice chamber upon a consistent, level surface, oriented length-wise horizontally. Place ten plain Cheerios on the left side of the chamber and ten Honey Nut Cheerios in the right side of the chamber—this is the independent variable. Use a hard object to crush the Cheerios within the choice chamber. The experimental setup is now complete. See @setup for a photograph of this setup.
@@ -172,11 +180,11 @@ The data collected for all three trials in shown in @data-table. @graph-left sho
   )
 }
 
-The result of the $chi^2$-test for each trial, as well as an average, is shown in @statistics. Given that this is a statistical experiment, the null and alternative hypotheses follow.
+The result of the $chi^2$ test for each trial, as well as an average, is shown in @statistics. Given that this is a statistical experiment, the null and alternative hypotheses follow.
 
 / Null Hypothesis: When given the choice between plain Cheerios and Honey Nut Cheerios, there is no significant difference in the type of Cheerios that #species prefers.
 
-/ Alternative Hypothesis: When given the choice between plain Cheerios and Honey Nut Cheerios, there is a significant difference in the number of #species that prefer Honey Nut Cheerios.
+/ Alternative Hypothesis: When given the choice between plain Cheerios and Honey Nut Cheerios, there is a significant difference in the number of #species that prefer Cheerios or Honey Nut Cheerios.
 
 #figure(
   caption: [$chi^2$ Calculations for Each Trial and Average],
@@ -220,14 +228,14 @@ The result of the $chi^2$-test for each trial, as well as an average, is shown i
   ),
 ) <statistics>
 
-The critical value for the $chi^2$-test in this experiment is $3.84$. Since the average $chi^2$-test value is #averages.chi, and $0.5 < 3.84$, this experiment fails to reject its null hypothesis.
+The critical value for the $chi^2$test in this experiment is $3.84$. Since the average $chi^2$ test value is #averages.chi, and $0.5 < 3.84$, this experiment fails to reject its null hypothesis.
 
 = QUESTIONS
 There were no questions provided with this experiment.
 
 = DISCUSSION
 == Conclusions
-This experiment failed to reject its null hypothesis, and thus does not support the original hypothesis. Since the $chi^2$-test showed no significant difference, #species does not have a preference for plain Cheerios or Honey Nut Cheerios. Their behavior appeared to exhibit no forms of taxis, merely kinesis or a lack of movement. This could be due to many different factors. One reason could be that #species are unable to feed off of Cheerios at all, since they generally feed on pure grain sources such as flour; however, Cheerios contains many non-grain ingredients, including vitamins and preservatives. Additionally, both plain Cheerios and Honey Nut Cheerios have a nearly-identical list of ingredients, differing only in sugar and honey content @CheeriosIngredients @HoneyNutCheeriosIngredients @BaldwinFasulo2010ConfusedFlourBeetles.
+This experiment failed to reject its null hypothesis, and thus does not support the original hypothesis. Since the $chi^2$ test showed no significant difference, #species does not have a preference for plain Cheerios or Honey Nut Cheerios. Their behavior appeared to exhibit no forms of taxis, merely kinesis or a lack of movement. This could be due to many different factors. One reason could be that #species are unable to feed off of Cheerios at all, since they generally feed on pure grain sources such as flour; however, Cheerios contains many non-grain ingredients, including vitamins and preservatives. Additionally, both plain Cheerios and Honey Nut Cheerios have a nearly-identical list of ingredients, differing only in sugar and honey content @CheeriosIngredients @HoneyNutCheeriosIngredients @BaldwinFasulo2010ConfusedFlourBeetles.
 
 == Errors and Limitations
 Describe errors and comment on percent error calculation. Include a discussion of how to minimize error in further research. Discuss the limitations that may have impacted your results.
