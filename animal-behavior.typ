@@ -232,7 +232,11 @@ This experiment failed to reject its null hypothesis, and thus does not support 
 == Errors and Limitations
 Describe errors and comment on percent error calculation. Include a discussion of how to minimize error in further research. Discuss the limitations that may have impacted your results.
 
-== Applications
-Explain how the conclusions and experiment are relevant to real-life--research to find specific examples of this concept or model in current use. Must include in-text citations.
+There were many potential sources of error throughout this experiment. One notable observation is that the #species population tended to exhibit little movement throughout trials, lacking kinesis. This is likely due to difficulty moving within the crushed Cheerios. Further experimentation should attempt to grind the Cheerios to a finer powder or ensure there is less present so as to not impede the movement of the #species population.
 
-@Kavallieratos2020:BiologicFeaturesPopulationGrowthTwoSoutheas
+Additionally, the Cheerios were crushed by hand, and thus the distribution of crushed Cheerios was not perfectly fine---some chunks left were larger than others. Further experimentation should attempt to use a reproducible method to grind Cheerios, such as a blender, to ensure even and fine distribution of crushed Cheerios.
+
+Finally, the choice chamber used had a center section free of the independent variable (see @mid-experiment). However, members of the population within this area were still counted as part of the side they were on, with the dividing line straight across the center of the chamber. This may have resulted in inconsistencies in the data, as the center did not have either Cheerios variant within it, and thus provides no insight into the preference of #species. Further experimentation should attempt to either minimize this uncertain area or properly account for it during statistical analysis.
+
+== Applications
+#species is infamous for infesting and destroying the storage of multiple different grain product. They can spread rapidly through a food source, and there are many strains with varying levels of adaptability and resistance to insecticides. Thus, understanding of the behavior of #species is economically important @Kavallieratos2020:BiologicFeaturesPopulationGrowthTwoSoutheas[pp.~1--2]. Experiments such as this help further develop understanding of the behavior of #species, and thus provide valuable insight into techniques to prevent their infestation. Additionally, a choice chamber is useful to study the behavior of many different species, such as the preferred water type of marine fishes @James2008:ChoiceRhabdosar.
