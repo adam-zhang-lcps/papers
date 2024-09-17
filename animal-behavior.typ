@@ -9,14 +9,12 @@
   teacher: "Ms. Suzanne Lohr",
   partners: ([Cole Strickland],),
   date: datetime(year: 2024, month: 09, day: 12),
-  draft: true,
   doc,
 )
 
-
 = INTRODUCTION
 == Purpose
-Determine whether #species has a preference for normal Cheerios or Honey Nut Cheerios.
+Determine whether #species has a preference for plain Cheerios or Honey Nut Cheerios.
 
 == Hypothesis
 If #species has a choice between normal Cheerios and Honey Nut Cheerios, then they will choose the Honey Nut Cheerios due to their consumption of sweet foods, such as fruit @HagstrumSubramanyam2017:StoredProductInsectResource.
@@ -24,7 +22,7 @@ If #species has a choice between normal Cheerios and Honey Nut Cheerios, then th
 == Background
 #species, also known colloquially as the "confused flour beetle", is a small insect, named for its tendency to infest grain-based food such as flour. Originally from Africa, #species is now found worldwide, and is particularly problematic in the United States. They are small beetles, around one-eighth of an inch long (0.32 centimeters), and is reddish-brown in color. Larvae hatch and grow relatively fast, making them a good candidate for experimentation @BaldwinFasulo2010ConfusedFlourBeetles @Calvin2023:ConfusedFlourBeetleRedFlourBeetle.
 
-This experiment seeks to investigate animal behavior---specifically that of #species. When investigating animal behavior, behaviors can be broadly categorized into two categories: "kinesis" and "taxis". Kinesis refers to undirected, or "random", movement in response to a stimulus. This usually refers to a change in speed or direction of movement. On the other hand, taxis refers to directed movement---usually towards or away from a stimulus, known as positive and negative taxis, respectively. Taxis are named after the type of stimulus---for example, hydrotaxis refers to a movement towards or away from moisture, while phototaxis refers to a movement towards or away from light @Gunn1937:ClassificTaxesKineses @Mackenzie2023:HowAnimalsFollow.
+This experiment seeks to investigate animal behavior---specifically that of #species. When observing animal behavior, behaviors can be broadly categorized into two categories: "kinesis" and "taxis". Kinesis refers to undirected, or "random", movement in response to a stimulus. This usually refers to a change in speed or direction of movement. On the other hand, taxis refers to directed movement---usually towards or away from a stimulus, known as positive and negative taxis, respectively. Taxis are named after the type of stimulus---for example, hydrotaxis refers to a movement towards or away from moisture, while phototaxis refers to a movement towards or away from light @Gunn1937:ClassificTaxesKineses @Mackenzie2023:HowAnimalsFollow.
 
 The taxis investigated in this experiment will be the movement of #species when given the choice between plain Cheerios and Honey Nut Cheerios in a choice chamber. Plain Cheerios and Honey Nut Cheerios share a very similar ingredients list, with the only notable difference being the addition of honey in the latter @CheeriosIngredients @HoneyNutCheeriosIngredients. If #species show a preference for one type of Cheerios, there should be observable positive taxis in their movement towards their preferred type of Cheerios.
 
@@ -59,7 +57,7 @@ A photograph showing the experiment in progress is shown in @mid-experiment. Not
 ) <mid-experiment>
 
 == Data
-The data collected for all three trials in shown in @data-table. @graph-left shows a graph of the number of beetles in the left side of the choice chamber (containing plain Cheerios) for all three trials. @graph-right shows a graph of the number of beetles in the right side of the choice chamber (containing Honey Nut Cheerios) for all three trials.
+The data collected for all three trials is shown in @data-table. @graph-left shows a graph of the number of beetles in the left side of the choice chamber (containing plain Cheerios) for all three trials. @graph-right shows a graph of the number of beetles in the right side of the choice chamber (containing Honey Nut Cheerios) for all three trials.
 
 #let data = csv("assets/animal-behavior/data.csv").slice(1)
 #let totals = data.last()
@@ -238,8 +236,6 @@ There were no questions provided with this experiment.
 This experiment failed to reject its null hypothesis, and thus does not support the original hypothesis. Since the $chi^2$ test showed no significant difference, #species does not have a preference for plain Cheerios or Honey Nut Cheerios. Their behavior appeared to exhibit no forms of taxis, merely kinesis or a lack of movement. This could be due to many different factors. One reason could be that #species are unable to feed off of Cheerios at all, since they generally feed on pure grain sources such as flour; however, Cheerios contains many non-grain ingredients, including vitamins and preservatives. Additionally, both plain Cheerios and Honey Nut Cheerios have a nearly-identical list of ingredients, differing only in sugar and honey content @CheeriosIngredients @HoneyNutCheeriosIngredients @BaldwinFasulo2010ConfusedFlourBeetles.
 
 == Errors and Limitations
-Describe errors and comment on percent error calculation. Include a discussion of how to minimize error in further research. Discuss the limitations that may have impacted your results.
-
 There were many potential sources of error throughout this experiment. One notable observation is that the #species population tended to exhibit little movement throughout trials, lacking kinesis. This is likely due to difficulty moving within the crushed Cheerios. Further experimentation should attempt to grind the Cheerios to a finer powder or ensure there is less present so as to not impede the movement of the #species population.
 
 Additionally, the Cheerios were crushed by hand, and thus the distribution of crushed Cheerios was not perfectly fine---some chunks left were larger than others. Further experimentation should attempt to use a reproducible method to grind Cheerios, such as a blender, to ensure even and fine distribution of crushed Cheerios.
