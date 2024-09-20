@@ -18,7 +18,7 @@
 ])
 #set enum(numbering: "1.a.")
 
-#let proof(body) = box(height: 40%)[
+#let proof(body) = block(height: 40%)[
   #body
 ]
 
@@ -34,6 +34,21 @@
 + If the midpoints of any two consecutive sides of any quadrilateral (in $RR^2$ or $RR^3$) are connected by straight lines, prove that the resulting quadrilateral is a parallelogram.
 
 + Prove that if $arrow(u) + arrow(v)$ and $arrow(u) - arrow(v)$ are orthogonal, then the vectors $arrow(u)$ and $arrow(v)$ must have the same magnitude.
+
+  #proof[
+    Two vectors are orthogonal if $arrow(u) dot arrow(v) = 0$. Let $arrow(u) = angle.l u_1, u_2, dots, u_i angle.r$ and $arrow(v) = angle.l v_1, v_2, dots, v_i angle.r$. Thus:
+    $
+      arrow(u) + arrow(v) = angle.l u_1 + v_1, u_2 + v_2, dots, u_i + v_i angle.r
+    $
+    $
+      arrow(u) - arrow(v) = angle.l u_1 - v_1, u_2 - v_2, dots, u_i - v_i angle.r
+    $
+    $
+      (arrow(u) + arrow(v)) dot (arrow(u) - arrow(v)) = sum_(n=0)^i (
+        (u_n + v_n) dot (u_n - v_n)
+      )
+    $
+  ]
 
 + Suppose that $arrow(a) eq.not 0$.
   + (3 points) If $arrow(a) dot arrow(b) = arrow(a) dot arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
