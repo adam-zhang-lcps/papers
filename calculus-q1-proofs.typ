@@ -5,19 +5,23 @@
   author: "Adam Zhang",
   date: datetime.today(),
 )
-#set page(header: [
-  #grid(
-    columns: (1fr, 1fr),
-    align(left + top)[
-      #set block(spacing: 0.6em)
+#set page(
+  paper: "us-letter",
+  margin: 1in,
+  header: [
+    #grid(
+      columns: (1fr, 1fr),
+      align(left + top)[
+        #set block(spacing: 0.6em)
 
-      AET Multivariable Calculus
+        AET Multivariable Calculus
 
-      *Quarter 1 Proofs*
-    ],
-    align(right + top)[Adam Zhang],
-  )
-])
+        *Quarter 1 Proofs*
+      ],
+      align(right + top)[Adam Zhang],
+    )
+  ],
+)
 #set enum(numbering: "1.a.")
 #set math.equation(numbering: "(1.a)")
 // Allows numbering only referenced equations.
