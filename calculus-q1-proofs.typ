@@ -23,7 +23,7 @@
 // Allows numbering only referenced equations.
 #show: equate.with(sub-numbering: true, number-mode: "label")
 
-#let proof(body) = block(height: 40%)[
+#let proof(body) = block(height: 70%)[
   #body
 ]
 
@@ -34,7 +34,43 @@
 = Proofs
 + Given an unknown point $P$, and known points $𝐴(3, 2, −1)$ and $𝐵(−3, −1, 5)$, if the distance from $P$ to $A$ is equal to twice the distance from $P$ to $B$. Prove that the set of all points defined by $A$, $𝐵$, and $P$ is a sphere. Find the center and the radius.
 
-  #proof[]
+  #proof[
+    A sphere centered at the origin can be defined as the set of vectors ${arrow(v) | norm(arrow(v)) = r}$ where $r$ is the radius of the sphere. To translate the center of the sphere to the point defined by the position vector $arrow(P)$, each vector must be defined relative to the new point; thus, the set of vectors becomes ${arrow(v) mid(|) norm(arrow(v) - arrow(P)) = r}$. This can be represented as in @1-sphere-eq.
+
+    $
+      r &= norm(arrow(v) - arrow(P)) \
+      &= sqrt((v_x - P_x)^2 + (v_y - P_y)^2 + (v_z - P_z)^2) \
+      r^2 &= (v_x - P_x)^2 + (v_y - P_y)^2 + (v_z - P_z)^2 #<1-sphere-eq>
+    $
+
+    Let the position vectors $arrow(P)$, $arrow(A)$, and $arrow(B)$ represent the points P, A, and B, respectively. Thus, the given statement can be represented by @1-eq.
+
+    $
+      norm(arrow(A) - arrow(P)) = 2 norm(arrow(B) - arrow(P))
+    $ <1-eq>
+
+    Via elementary algebra, @1-eq can be rearranged into @1-rearranged, which, as established in @1-sphere-eq, defines a sphere with a radius of six centered at $(-5, -2, 7)$.
+    $
+      sqrt((A_x - P_x)^2 + (A_y - P_y)^2 + (A_z - P_z)^2) = 2 sqrt((B_x - P_x)^2 + (B_y - P_y)^2 + (B_z - P_z)^2) \
+      (A_x - P_x)^2 + (A_y - P_y)^2 + (A_z - P_z)^2 = 4 (B_x - P_x)^2 + (
+        B_y - P_y
+      )^2 + (B_z - P_z)^2 \
+      (3 - P_x)^2 + (2 - P_y)^2 + (-1 - P_z)^2 = 4 (
+        (-3 - P_x)^2 + (-1 - P_y)^2 + (5 - P_z)^2
+      ) \
+      P_x^2 - 6 P_x - 4 P_y + P_y^2 + P_z^2 + 2 P_z
+      + 14 = 4 P_x^2 + 24 P_x + 4 P_y^2 + 8 P_y - 40 P_z
+      + 4 P_z^2 + 140 \
+      - 3 P_x^2 - 30 P_x - 3 P_y^2 - 12 P_y
+      - 3 P_z^2 + 42 P_z = 126 \
+      -3 (P_x^2 + 10 P_x + P_y^2 + 4 P_y + P_z^2 - 14 P_z) = 126 \
+      -3 (
+        P_x^2 + 10 P_x + 25 + P_y^2 + 4 P_y + 4 + P_z^2 - 14 P_z + 49 - 78
+      ) = 126 \
+      -3 ((P_x + 5)^2 + (P_y + 2)^2 + (P_z - 7)^2) = -108 \
+      (P_x + 5)^2 + (P_y + 2)^2 + (P_z - 7)^2 = 6^2 #<1-rearranged>
+    $
+  ]
 
 + If the midpoints of any two consecutive sides of any quadrilateral (in $RR^2$ or $RR^3$) are connected by straight lines, prove that the resulting quadrilateral is a parallelogram.
 
