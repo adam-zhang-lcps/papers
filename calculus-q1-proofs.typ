@@ -103,13 +103,19 @@
 
   $
     &arrow(a) dot arrow(b) = arrow(a) dot arrow(c) = 0 and arrow(b) eq.not arrow(c) \
-    &therefore arrow(a) dot arrow(b) = arrow(a) dot arrow(c) arrow.r.double.not arrow(b) = arrow(c)
+    &therefore arrow(a) dot arrow(b) = arrow(a) dot arrow(c) arrow.double.not arrow(b) = arrow(c)
   $
 
   + (3 points) If $arrow(a) times arrow(b) = arrow(a) times arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
   + (2 points) If $arrow(a) dot arrow(b) = arrow(a) dot arrow(c)$ #underline[and] $arrow(a) times arrow(b) = arrow(a) times arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
 
 + Prove that if $arrow(a) dot (arrow(b) times arrow(c)) = 0$, then $arrow(a)$, $arrow(b)$, and $arrow(c)$ are coplanar.
+
+  $
+    arrow(u) dot arrow(v) = 0 arrow.double arrow(u) perp arrow(v) or arrow(u) = arrow(0) or arrow(v) = arrow(0)
+  $
+
+Consider the two trivial cases where $arrow(a) = arrow(0) or arrow(b) times arrow(c) = 0$. In the former, $arrow(b)$ and $arrow(c)$ must be coplanar, since any two non-zero vectors can define a plane. In the latter, since $arrow(b)$ and $arrow(c)$ are parallel ($arrow(u) times arrow(v) = 0 arrow.double arrow(u) parallel arrow(b)$), they reside upon the same line; thus, along with $arrow(a)$, a plane can be defined.
 
 + Prove the triangle inequality theorem for vectors: $|arrow(a) + arrow(b)| gt.eq |arrow(a)| + |arrow(b)|$.
 
