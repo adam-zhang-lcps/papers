@@ -98,6 +98,14 @@
 
 + Suppose that $arrow(a) eq.not 0$.
   + (3 points) If $arrow(a) dot arrow(b) = arrow(a) dot arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
+
+  Let $arrow(a) = hat(i)$, $arrow(b) = hat(j)$, and $arrow(c) = hat(k)$.
+
+  $
+    &arrow(a) dot arrow(b) = arrow(a) dot arrow(c) = 0 and arrow(b) eq.not arrow(c) \
+    &therefore arrow(a) dot arrow(b) = arrow(a) dot arrow(c) arrow.r.double.not arrow(b) = arrow(c)
+  $
+
   + (3 points) If $arrow(a) times arrow(b) = arrow(a) times arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
   + (2 points) If $arrow(a) dot arrow(b) = arrow(a) dot arrow(c)$ #underline[and] $arrow(a) times arrow(b) = arrow(a) times arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
 
