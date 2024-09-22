@@ -117,6 +117,7 @@
 
   Consider the two trivial cases where $arrow(a) = arrow(0) or arrow(b) times arrow(c) = 0$. In the former, $arrow(b)$ and $arrow(c)$ must be coplanar, since any two non-zero vectors can define a plane. In the latter, since $arrow(b)$ and $arrow(c)$ are parallel ($arrow(u) times arrow(v) = 0 arrow.double arrow(u) parallel arrow(b)$), they reside upon the same line; thus, along with $arrow(a)$, a plane can be defined.
 
+// TODO this equation is wrong… inequality should be in the other direction. This is easy to reason intuitively, but I don't know how to rigorously prove it.
 + Prove the triangle inequality theorem for vectors: $|arrow(a) + arrow(b)| gt.eq |arrow(a)| + |arrow(b)|$.
 
 + If $arrow(A) = A_1 hat(i) + A_2 hat(j) + A_3 hat(k)$, $arrow(B) = B_1 hat(i) + B_2 hat(j) + B_3 hat(k)$, $arrow(C) = C_1 hat(i) + C_2 hat(j) + C_3 hat(k)$, prove that $arrow(A) dot (arrow(B) times arrow(C)) = (arrow(A) times arrow(B)) dot arrow(C)$.
