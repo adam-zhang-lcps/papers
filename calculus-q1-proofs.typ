@@ -115,7 +115,7 @@
     arrow(u) dot arrow(v) = 0 arrow.double arrow(u) perp arrow(v) or arrow(u) = arrow(0) or arrow(v) = arrow(0)
   $
 
-Consider the two trivial cases where $arrow(a) = arrow(0) or arrow(b) times arrow(c) = 0$. In the former, $arrow(b)$ and $arrow(c)$ must be coplanar, since any two non-zero vectors can define a plane. In the latter, since $arrow(b)$ and $arrow(c)$ are parallel ($arrow(u) times arrow(v) = 0 arrow.double arrow(u) parallel arrow(b)$), they reside upon the same line; thus, along with $arrow(a)$, a plane can be defined.
+  Consider the two trivial cases where $arrow(a) = arrow(0) or arrow(b) times arrow(c) = 0$. In the former, $arrow(b)$ and $arrow(c)$ must be coplanar, since any two non-zero vectors can define a plane. In the latter, since $arrow(b)$ and $arrow(c)$ are parallel ($arrow(u) times arrow(v) = 0 arrow.double arrow(u) parallel arrow(b)$), they reside upon the same line; thus, along with $arrow(a)$, a plane can be defined.
 
 + Prove the triangle inequality theorem for vectors: $|arrow(a) + arrow(b)| gt.eq |arrow(a)| + |arrow(b)|$.
 
