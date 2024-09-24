@@ -117,7 +117,19 @@
 
   Consider the two trivial cases where $arrow(a) = arrow(0) or arrow(b) times arrow(c) = 0$. In the former, $arrow(b)$ and $arrow(c)$ must be coplanar, since any two non-zero vectors can define a plane. In the latter, since $arrow(b)$ and $arrow(c)$ are parallel ($arrow(u) times arrow(v) = 0 arrow.double arrow(u) parallel arrow(b)$), they reside upon the same line; thus, along with $arrow(a)$, a plane can be defined.
 
-+ Prove the triangle inequality theorem for vectors: $|arrow(a) + arrow(b)| lt.eq |arrow(a)| + |arrow(b)|$.
++ Prove the triangle inequality theorem for vectors: $|arrow(a) + arrow(b)| <= |arrow(a)| + |arrow(b)|$.
+
+  $
+    norm(arrow(a) + arrow(b))^2 <= (norm(arrow(a)) + norm(arrow(b)))^2 \
+    (arrow(a) + arrow(b)) dot (
+      arrow(a) + arrow(b)
+    ) <= norm(arrow(a))^2 + 2 norm(arrow(a)) norm(arrow(b)) + norm(arrow(b))^2 \
+    norm(arrow(a))^2 + 2 (
+      arrow(a) dot arrow(b)
+    ) + norm(arrow(b))^2 <= norm(arrow(a))^2 + 2 norm(arrow(a)) norm(arrow(b)) + norm(arrow(b))^2 \
+    2 norm(arrow(a)) norm(arrow(b)) cos(theta) <= 2 norm(arrow(a)) norm(arrow(b)) \
+    cos(theta) <= 1
+  $
 
 + If $arrow(A) = A_1 hat(i) + A_2 hat(j) + A_3 hat(k)$, $arrow(B) = B_1 hat(i) + B_2 hat(j) + B_3 hat(k)$, $arrow(C) = C_1 hat(i) + C_2 hat(j) + C_3 hat(k)$, prove that $arrow(A) dot (arrow(B) times arrow(C)) = (arrow(A) times arrow(B)) dot arrow(C)$.
 
