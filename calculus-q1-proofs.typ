@@ -119,6 +119,8 @@
 
 + Prove the triangle inequality theorem for vectors: $|arrow(a) + arrow(b)| <= |arrow(a)| + |arrow(b)|$.
 
+  Using algebraic substitution, the inequality theorem can be rearranged into @6-solution, which is true for all real values of $theta$.
+
   $
     norm(arrow(a) + arrow(b))^2 <= (norm(arrow(a)) + norm(arrow(b)))^2 \
     (arrow(a) + arrow(b)) dot (
@@ -128,7 +130,7 @@
       arrow(a) dot arrow(b)
     ) + norm(arrow(b))^2 <= norm(arrow(a))^2 + 2 norm(arrow(a)) norm(arrow(b)) + norm(arrow(b))^2 \
     2 norm(arrow(a)) norm(arrow(b)) cos(theta) <= 2 norm(arrow(a)) norm(arrow(b)) \
-    cos(theta) <= 1
+    cos(theta) <= 1 #<6-solution>
   $
 
 + If $arrow(A) = A_1 hat(i) + A_2 hat(j) + A_3 hat(k)$, $arrow(B) = B_1 hat(i) + B_2 hat(j) + B_3 hat(k)$, $arrow(C) = C_1 hat(i) + C_2 hat(j) + C_3 hat(k)$, prove that $arrow(A) dot (arrow(B) times arrow(C)) = (arrow(A) times arrow(B)) dot arrow(C)$.
