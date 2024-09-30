@@ -148,6 +148,20 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
 // True
 8. Two lines parallel to a third line are parallel.
 
+  Let the vectors $arrow(v)$ and $arrow(u)$ describe two lines. Two lines are parallel if their direction vectors are parallel. Two vectors are parallel if they are a scalar multiple of each other; thus, if their normalized components are equal or directly opposite one another.
+
+  $
+    arrow(v) parallel arrow(u) <=> 1 / norm(arrow(v)) arrow(v) = plus.minus 1 / norm(arrow(u)) arrow(u)
+  $
+
+  Let $arrow(b)$ and $arrow(c)$ describe two vectors parallel to vector $arrow(a)$. Via the transitive property, @8-transitive can be derived, showing that $arrow(b) parallel arrow(c)$.
+
+  $
+    1 / norm(arrow(b)) arrow(b) &= plus.minus 1 / norm(arrow(a)) arrow(a) \
+    1 / norm(arrow(c)) arrow(c) &= plus.minus 1 / norm(arrow(a)) arrow(a) \
+    1 / norm(arrow(b)) arrow(b) &= plus.minus 1 / norm(arrow(c)) arrow(c) #<8-transitive>
+  $
+
 // False
 + Two lines perpendicular to a third line are parallel.
 
