@@ -70,7 +70,18 @@
       (P_x + 5)^2 + (P_y + 2)^2 + (P_z - 7)^2 = 6^2 #<1-rearranged>
   $
 
+// This proof… this proof *scares* me.
 + If the midpoints of any two consecutive sides of any quadrilateral (in $RR^2$ or $RR^3$) are connected by straight lines, prove that the resulting quadrilateral is a parallelogram.
+
+  A quadrilateral in $RR^3$ can be defined by four points defined by position vectors $arrow(A)$, $arrow(B)$, $arrow(C)$, and $overline(D)$ with edges $overline(A B)$, $overline(B C)$, $overline(C D)$, and $overline(D A)$.
+
+  The midpoint of each edge can be described as a vector as follows:
+  $
+    overline(A B) &: (arrow(B) - arrow(A)) / 2 \
+    overline(B C) &: (arrow(C) - arrow(B)) / 2 \
+    overline(C D) &: (arrow(D) - arrow(C)) / 2 \
+    overline(D A) &: (arrow(D) - arrow(A)) / 2
+  $
 
 + Prove that if $arrow(u) + arrow(v)$ and $arrow(u) - arrow(v)$ are orthogonal, then the vectors $arrow(u)$ and $arrow(v)$ must have the same magnitude.
 
