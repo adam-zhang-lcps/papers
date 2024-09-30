@@ -103,7 +103,7 @@
 
     $
       &arrow(a) dot arrow(b) = arrow(a) dot arrow(c) = 0 and arrow(b) eq.not arrow(c) \
-      &therefore arrow(a) dot arrow(b) = arrow(a) dot arrow(c) arrow.double.not arrow(b) = arrow(c)
+      &therefore arrow(a) dot arrow(b) = arrow(a) dot arrow(c) arrow.double.not arrow(b) = arrow(c) #<4a>
     $
 
   + (3 points) If $arrow(a) times arrow(b) = arrow(a) times arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
@@ -160,6 +160,16 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
 
 // False
 + Two planes perpendicular to a third plane are parallel.
+
+  Two planes are perpendicular if their normal vectors are perpendicular. Two planes are parallel if their normal vectors are parallel. Two vectors are perpendicular if their dot product is zero ($arrow(a) dot arrow(b) = 0$). Two vectors are parallel if their cross product is zero ($arrow(a) times arrow(b) = 0$).
+
+  Let $hat(i)$, $hat(j)$, and $hat(k)$ describe three planes.
+
+  $
+    hat(i) dot hat(j) = 0 => hat(i) perp hat(j) \
+    hat(i) dot hat(k) = 0 => hat(i) perp hat(k) \
+    hat(j) times hat(k) != arrow(0) => not hat(j) parallel hat(k)
+  $
 
 // False
 + Two lines parallel to a plane are parallel.
