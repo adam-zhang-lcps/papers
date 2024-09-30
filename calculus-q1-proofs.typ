@@ -99,14 +99,22 @@
 + Suppose that $arrow(a) eq.not 0$.
   + (3 points) If $arrow(a) dot arrow(b) = arrow(a) dot arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
 
-  Let $arrow(a) = hat(i)$, $arrow(b) = hat(j)$, and $arrow(c) = hat(k)$.
+    Let $arrow(a) = hat(i)$, $arrow(b) = hat(j)$, and $arrow(c) = hat(k)$.
 
-  $
-    &arrow(a) dot arrow(b) = arrow(a) dot arrow(c) = 0 and arrow(b) eq.not arrow(c) \
-    &therefore arrow(a) dot arrow(b) = arrow(a) dot arrow(c) arrow.double.not arrow(b) = arrow(c)
-  $
+    $
+      &arrow(a) dot arrow(b) = arrow(a) dot arrow(c) = 0 and arrow(b) eq.not arrow(c) \
+      &therefore arrow(a) dot arrow(b) = arrow(a) dot arrow(c) arrow.double.not arrow(b) = arrow(c)
+    $
 
   + (3 points) If $arrow(a) times arrow(b) = arrow(a) times arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
+
+    Let $arrow(a) = hat(i)$, $arrow(b) = cos(pi/3)hat(i) + sin(pi/3)hat(j)$, and $arrow(c) = cos((2pi)/3)hat(i) + sin((2pi)/3)hat(j)$.
+
+    $
+      &arrow(a) times arrow(b) = arrow(a) times arrow(c) = vec(0, 0, sqrt(3)/2) \
+      &therefore arrow(a) times arrow(b) = arrow(a) times arrow(c) arrow.double.not arrow(b) = arrow(c)
+    $
+
   + (2 points) If $arrow(a) dot arrow(b) = arrow(a) dot arrow(c)$ #underline[and] $arrow(a) times arrow(b) = arrow(a) times arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
 
 + Prove that if $arrow(a) dot (arrow(b) times arrow(c)) = 0$, then $arrow(a)$, $arrow(b)$, and $arrow(c)$ are coplanar.
