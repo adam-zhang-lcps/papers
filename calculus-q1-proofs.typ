@@ -123,7 +123,11 @@
     arrow(u) dot arrow(v) = 0 arrow.double arrow(u) perp arrow(v) or arrow(u) = arrow(0) or arrow(v) = arrow(0)
   $
 
-  Consider the two trivial cases where $arrow(a) = arrow(0) or arrow(b) times arrow(c) = 0$. In the former, $arrow(b)$ and $arrow(c)$ must be coplanar, since any two non-zero vectors can define a plane. In the latter, since $arrow(b)$ and $arrow(c)$ are parallel ($arrow(u) times arrow(v) = 0 arrow.double arrow(u) parallel arrow(b)$), they reside upon the same line; thus, along with $arrow(a)$, a plane can be defined.
+  Consider the two trivial cases where $arrow(a) = arrow(0) or arrow(b) times arrow(c) = 0$. In the former, $arrow(b)$ and $arrow(c)$ must be coplanar, since any two non-zero vectors can define a plane. In the latter, since $arrow(b)$ and $arrow(c)$ are parallel ($arrow(u) times arrow(v) = 0 arrow.double arrow(u) parallel arrow(v)$), they reside upon the same line; thus, along with $arrow(a)$, a plane can be defined.
+
+  Now consider the non-trivial case where no vector equals $arrow(0)$. A plane can be defined by a normal vector $arrow(n)$ and an origin point $O$. All points $P$ in which a position vector $arrow(P)$ from the origin point $O$ to the point $P$ is orthogonal to the normal vector ($arrow(n) dot arrow(P) = 0$) is contained within the plane.
+
+  By the definition of the cross product, $(arrow(b) times arrow(c)) perp arrow(b) and (arrow(b) times arrow(c)) perp arrow(c)$. Thus, $arrow(b) times arrow(c)$ defines a plane with origin point $(0, 0, 0)$ containing $arrow(b)$ and $arrow(c)$. Since $arrow(a) dot (arrow(b) times arrow(c)) = 0$, $arrow(a)$ is also contained within the plane, making all three vectors coplanar.
 
 + Prove the triangle inequality theorem for vectors: $|arrow(a) + arrow(b)| <= |arrow(a)| + |arrow(b)|$.
 
