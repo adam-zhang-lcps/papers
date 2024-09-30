@@ -77,11 +77,34 @@
 
   The midpoint of each edge can be described as a vector as follows:
   $
-    overline(A B) &: (arrow(B) - arrow(A)) / 2 \
-    overline(B C) &: (arrow(C) - arrow(B)) / 2 \
-    overline(C D) &: (arrow(D) - arrow(C)) / 2 \
-    overline(D A) &: (arrow(D) - arrow(A)) / 2
+    overline(A B) &: (arrow(A) + arrow(B)) / 2 \
+    overline(B C) &: (arrow(B) + arrow(C)) / 2 \
+    overline(C D) &: (arrow(C) + arrow(D)) / 2 \
+    overline(D A) &: (arrow(D) + arrow(A)) / 2
   $
+
+  Thus, the edges between the midpoints can be described as follows:
+  $
+    alpha &= (arrow(B) + arrow(C)) / 2 - (arrow(A) + arrow(B)) / 2 = 1 / 2 (
+      arrow(C) - arrow(A)
+    ) \
+    beta &= (arrow(C) + arrow(D)) / 2 - (arrow(B) + arrow(C)) / 2 = 1 / 2 (
+      arrow(D) - arrow(B)
+    ) \
+    gamma &= (arrow(D) + arrow(A)) / 2 - (arrow(C) + arrow(D)) / 2 = 1 / 2 (
+      arrow(A) - arrow(C)
+    ) \
+    lambda &= (arrow(A) + arrow(B)) / 2 - (arrow(D) + arrow(A)) / 2 = 1 / 2 (
+      arrow(B) - arrow(D)
+    )
+  $
+
+  A quadrilateral is a parallelogram if both opposing edges are parallel. Two vectors are parallel if one is a scalar multiple of the other.
+  $
+    arrow(u) parallel arrow(v) <=> arrow(u) = k arrow(v) and k in RR
+  $
+
+  As $alpha = -gamma and beta = -lambda => alpha parallel gamma and beta parallel lambda$, $alpha$, $beta$, $gamma$, and $lambda$ form a parallelogram.
 
 + Prove that if $arrow(u) + arrow(v)$ and $arrow(u) - arrow(v)$ are orthogonal, then the vectors $arrow(u)$ and $arrow(v)$ must have the same magnitude.
 
