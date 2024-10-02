@@ -152,18 +152,12 @@
   + (2 points) If $arrow(a) dot arrow(b) = arrow(a) dot arrow(c)$ #underline[and] $arrow(a) times arrow(b) = arrow(a) times arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
 
   $
-    norm(arrow(a)) norm(arrow(b)) cos(theta_1) = norm(arrow(a)) norm(arrow(c)) cos(theta_2) and norm(arrow(a)) norm(arrow(b)) sin(theta_1) = norm(arrow(a)) norm(arrow(c)) sin(theta_2) \
-    norm(arrow(b)) cos(theta_1) = norm(arrow(c)) cos(theta_2) and norm(arrow(b)) sin(theta_1) = norm(arrow(c)) sin(theta_2) \
-    norm(arrow(b))^2 cos^2(theta_1) = norm(arrow(c))^2 cos^2(
-      theta_2
-    ) and norm(arrow(b))^2 sin^2(theta_1) = norm(arrow(c))^2 sin^2(theta_2) \
-    norm(arrow(b))^2 cos^2(theta_1) + norm(arrow(b))^2 sin^2(
-      theta_1
-    ) = norm(arrow(c))^2 cos^2(theta_2) + norm(arrow(c))^2 sin^2(theta_2) \
-    norm(arrow(b))^2 (cos^2(theta_1) + sin^2(theta_1)) = norm(arrow(c))^2 (
-      cos^2(theta_2) + sin^2(theta_2)
-    ) \
-    norm(arrow(b)) = norm(arrow(c))
+    arrow(a) dot arrow(b) - arrow(a) dot arrow(c) = 0 \
+    arrow(a) dot (arrow(b) - arrow(c)) = 0 \
+    arrow(a) times arrow(b) - arrow(a) times arrow(b) = 0 \
+    arrow(a) times (arrow(b) - arrow(c)) = 0 \
+    therefore arrow(b) - arrow(c) = arrow(0) \
+    arrow(b) = arrow(c)
   $
 
 + Prove that if $arrow(a) dot (arrow(b) times arrow(c)) = 0$, then $arrow(a)$, $arrow(b)$, and $arrow(c)$ are coplanar.
