@@ -1,6 +1,8 @@
 #+title: Typst Sources
 #+author: Adam Zhang
 
+[[https://creativecommons.org/licenses/by-sa/4.0/][https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg]]
+
 This repository contains the [[https://typst.app][Typst]] sources for my formal academic papers (and sometimes informal assignments as well 🙃).
 
 * Obtaining Compiled PDFs 📄
