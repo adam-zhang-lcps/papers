@@ -3,3 +3,4 @@ out
 .envrc
 aux
 *.pdf
+/public
