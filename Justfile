@@ -26,3 +26,5 @@ build-html:
     })
 
     [$template.0, ...$html, $template.1] | str join | save public/index.html
+
+    cp -r html/assets public/
