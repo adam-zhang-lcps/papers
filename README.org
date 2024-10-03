@@ -4,15 +4,84 @@
 This repository contains the [[https://typst.app][Typst]] sources for my formal academic papers (and sometimes informal assignments as well 🙃).
 
 * Obtaining Compiled PDFs 📄
+** From Index
+An index of all documents is available [[https://adam-zhang-lcps.github.io/papers/][here]] and updated automatically on every commit. PDFs can be saved using the browser's download functionality (which is probably =Control + S=).
+
+Historical copies of the index can be obtained from the "Publish PDF index" GitHub Actions workflows under the =github-pages= artifact.
+
 ** From GitHub Actions
 *Note: GitHub will only allow you to download the artifact if you're signed in!*
 
 A GitHub Actions workflow runs on every push commit and uploads a compiled PDF as an artifact. Either click [[https://github.com/adam-zhang-lcps/papers/actions][the "Actions" tab]] to find the workflow for a specific commit, or look in [[https://github.com/adam-zhang-lcps/papers/commits/main][the commit history]] for checkmarks.
 
-On the dashboard for a workflow run, download the =pdf= artifact at the bottom of the page.
+On the dashboard, select the "Build Changed Typst Files" action, choose a commit, and then download the =pdf= artifact at the bottom of the page.
 
 [[file:docs/actions.png]]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 [[file:docs/download.png]]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 ** Compiling Manually
 To compile PDFs locally, you will need to install [[https://typst.app][Typst]]. Releases are available [[https://github.com/typst/typst/releases][here]]. Alternatively, you can enter a development shell using [[https://nixos.org][Nix]] with ~nix develop~, which comes with the Typst compiler.
