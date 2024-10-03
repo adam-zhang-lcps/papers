@@ -56,6 +56,10 @@
               category = "CI Tooling";
               package = gitMinimal;
             }
+            {
+              category = "CI Tooling";
+              package = just;
+            }
           ];
         };
       };
