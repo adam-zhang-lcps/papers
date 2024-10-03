@@ -15,7 +15,7 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Build PDFs
-        run: nix run .#build-changed-files
+        run: nix run .#devshell -- just build-changed
       - name: Upload PDFs
         uses: actions/upload-artifact@v4
         with:

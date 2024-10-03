@@ -28,16 +28,7 @@
         system,
         ...
       }: {
-        apps = {
-          build-changed-files.program = pkgs.writeScriptBin "get-changed-files" ''
-            #!${pkgs.lib.getExe pkgs.nushell}
-            mkdir out
-            let files = (${pkgs.lib.getExe pkgs.git} diff-tree --no-commit-id --name-only -r HEAD | lines | where { str ends-with ".typ" })
-            for file in $files {
-              ${pkgs.lib.getExe pkgs.typst} c $file $'out/(basename -s .typ $file).pdf'
-            }
-          '';
-        };
+        packages.devshell = self.outputs.devShells.${system}.default;
 
         devshells.default = with pkgs; {
           commands = [
@@ -60,6 +51,10 @@
             {
               category = "Analysis";
               package = octave.withPackages (ps: with ps; [optim]);
+            }
+            {
+              category = "CI Tooling";
+              package = gitMinimal;
             }
           ];
         };
