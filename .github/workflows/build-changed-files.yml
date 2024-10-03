@@ -2,6 +2,8 @@ name: Build Changed Typst Files
 
 on:
   push:
+    branches:
+      - main
     paths:
       - '**.typ'
       - 'Justfile'

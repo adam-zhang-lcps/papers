@@ -2,6 +2,8 @@ name: Publish PDF index
 
 on:
   push:
+    branches:
+      - main
     paths:
       - '**.typ'
       - 'html/*'
