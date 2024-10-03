@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - '**.typ'
+      - 'html/*'
+      - 'Justfile'
 
 permissions:
   contents: read
