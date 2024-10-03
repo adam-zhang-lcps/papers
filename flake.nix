@@ -60,6 +60,10 @@
               category = "CI Tooling";
               package = just;
             }
+            {
+              category = "CI Tooling";
+              package = nushell;
+            }
           ];
         };
       };
