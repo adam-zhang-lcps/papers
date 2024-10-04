@@ -190,6 +190,50 @@
 
 + If $arrow(A) = A_1 hat(i) + A_2 hat(j) + A_3 hat(k)$, $arrow(B) = B_1 hat(i) + B_2 hat(j) + B_3 hat(k)$, $arrow(C) = C_1 hat(i) + C_2 hat(j) + C_3 hat(k)$, prove that $arrow(A) dot (arrow(B) times arrow(C)) = (arrow(A) times arrow(B)) dot arrow(C)$.
 
+  $arrow(u) dot (arrow(v) times arrow(w))$ defines the scalar triple product, which is equal to the determinant of the matrix formed by the three vectors' components.
+
+  $
+    arrow(u) dot (
+      arrow(v) times arrow(w)
+    ) = mat(delim: "|",
+      u_1, v_1, w_1;
+      u_2, v_2, w_2;
+      u_3, v_3, w_3
+    )
+  $
+
+  // Reference isn't processed directly after an opening parenthesis.
+  Thus, finding the determinants of both expressions (#[@7-det-1] and @7-det-2) shows that they are equal (#[@7-solution]).
+
+  $
+    arrow(A) dot (
+      arrow(B) times arrow(C)
+    ) &= mat(delim: "|",
+      A_1, B_1, C_1;
+      A_2, B_2, C_2;
+      A_3, B_3, C_3
+      ) \
+      &= A_1(B_2 C_3 - C_2 B_3) - B_1(A_2 C_3 - C_2 A_3) + C_1(A_2 B_3 - B_2 A_3) \
+      // Would like to highlight matching terms, but unfortunately highlights within math are broken in the current version of the compiler.
+      &= A_1 B_2 C_3 - A_1 C_2 B_3 - B_1 A_2 C_3 + B_1 C_2 A_3 + C_1 A_2 B_3 - C_1 B_2 A_3 #<7-det-1> \
+    arrow(C) dot (
+      arrow(A) times arrow(B)
+    ) &= mat(delim: "|",
+      C_1, A_1, B_1;
+      C_2, A_2, B_2;
+      C_3, A_3, B_3
+    ) \
+    &= C_1 (A_2 B_3 - B_2 A_3) - A_1 (C_2 B_3 - B_2 C_3) + B_1 (
+      C_2 A_3 - A_2 C_3
+    ) \
+      &= C_1 A_2 B_3 - C_1 B_2 A_3 - A_1 C_2 B_3 + A_1 B_2 C_3 + B_1 C_2 A_3 - B_1 A_2 C_3 #<7-det-2> \
+      &therefore arrow(A) dot (
+        arrow(B) times arrow(C)
+      ) = arrow(C) dot (
+        arrow(A) times arrow(B)
+      ) #<7-solution>
+  $
+
 = True or False
 Prove that the given statement is true in $RR^3$ or provide a counterexample to show that it is false.
 // True
