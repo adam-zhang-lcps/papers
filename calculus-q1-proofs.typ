@@ -120,9 +120,8 @@
       (u_n + v_n) dot (u_n - v_n)
     ) \
     &= sum_(n=0)^i (u_n^2 - v_n^2) \
-    &= u_1^2 - v^2_1 + u_2^2 - v_2^2 + dots + u_i^2 - v_i^2 \
-    &= 0
-  $ <3-zero-sum>
+    &= u_1^2 - v^2_1 + u_2^2 - v_2^2 + dots + u_i^2 - v_i^2 = 0 #<3-zero-sum>
+  $
 
   The above can be rearranged into @3-rearrange. By taking the square root of both sides, as in @3-sqrt, both sides of the equation are equal to the magnitude of each vector respectively; thus, $arrow(u) + arrow(v)$ and $arrow(u) - arrow(v)$ are orthogonal only if their magnitudes are equal.
   $
