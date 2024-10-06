@@ -281,6 +281,21 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
 // False
 + Two lines parallel to a plane are parallel.
 
+  A line can be defined by a direction vector $arrow(v)$ and origin point $p$. A plane can be defined by a normal vector $arrow(v)$ and origin point $p$. Let $overline(L)$ represent any line and $P$ represent any plane.
+
+  $
+    overline(L) parallel P <=> arrow(v)_L dot arrow(v)_P = 0 \
+    overline(L_1) parallel overline(L_2) <=> exists k in RR : arrow(v)_L_1 = k arrow(v)_L_2
+  $
+
+  Let $hat(k)$ define a plane with origin point $(0, 0, 0)$. Let $hat(i)$ and $hat(j)$ define two lines with origin point $(0, 1, 0)$.
+
+  $
+    hat(k) dot hat(i) = 0 and hat(k) dot hat(j) = 0 => hat(k) parallel hat(i) and hat(k) parallel hat(j) \
+    exists.not k in RR : hat(i) = k hat(j) => hat(i) parallel.not arrow(j) \
+    therefore arrow(v)_"line"_1 parallel arrow(v)_"plane" and arrow(v)_"line"_2 parallel arrow(v)_"plane" arrow.double.not arrow(v)_"line"_1 parallel arrow(v)_"line"_2
+  $
+
 // True
 + Two lines perpendicular to a plane are parallel.
 
