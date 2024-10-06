@@ -238,8 +238,9 @@
 
 = True or False
 Prove that the given statement is true in $RR^3$ or provide a counterexample to show that it is false.
+
 // True
-8. Two lines parallel to a third line are parallel.
+8. Two lines parallel to a third line are parallel. <8>
 
   Let the vectors $arrow(v)$ and $arrow(u)$ describe two lines. Two lines are parallel if their direction vectors are parallel. Two vectors are parallel if they are a scalar multiple of each other; thus, if their normalized components are equal or directly opposite one another.
 
@@ -298,6 +299,14 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
 
 // True
 + Two lines perpendicular to a plane are parallel.
+
+  A line is perpendicular to a plane if the direction vector of the line $arrow(l)$ is parallel to the normal vector of the plane $arrow(n)$. Let $arrow(l_1)$ and $arrow(l_2)$ describe two lines that are perpendicular to the plane described by normal vector $arrow(n)$.
+
+  $
+    arrow(l_1) parallel arrow(n) and arrow(l_2) parallel arrow(n)
+  $
+
+  Thus, by #link(<8>)[Proof 8], $arrow(l_1) parallel arrow(l_2)$.
 
 // False
 + Two planes parallel to a line are parallel.
