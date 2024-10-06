@@ -257,7 +257,7 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
   $
 
 // False
-+ Two lines perpendicular to a third line are parallel.
++ Two lines perpendicular to a third line are parallel. <9>
 
   Two lines, described by $arrow(u)$ and $arrow(v)$, are perpendicular if and only if $arrow(u) dot arrow(v) = 0$. Thus, by @8-ik and @8-jk, the unit vectors $hat(i)$ and $hat(j)$ are both perpendicular to $hat(k)$. However, by @8-ij, $hat(i)$ and $hat(j)$ must also be perpendicular to each other, which means they cannot be parallel, disproving the statement by counterexample.
   $
@@ -310,3 +310,17 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
 
 // False
 + Two planes parallel to a line are parallel.
+
+  A plane is parallel to a line if the line's direction vector $arrow(l)$ is perpendicular to the plane's normal vector $arrow(n)$.
+
+  $
+    P parallel overline(L) <=> arrow(n) dot arrow(l) = 0
+  $
+
+  Let $arrow(n_1)$ and $arrow(n_2)$ be normal vectors describing two planes parallel to the line described by direction vector $arrow(l)$.
+
+  $
+    arrow(n_1) dot arrow(l) = 0 and arrow(n_2) dot arrow(l) = 0
+  $
+
+  By #link(<9>)[Proof 9], two vectors perpendicular to a third does not imply that those vectors are parallel; thus, two planes parallel to a line does not imply that those planes are parallel.
