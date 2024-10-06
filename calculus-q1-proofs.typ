@@ -293,7 +293,7 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
 
   $
     hat(k) dot hat(i) = 0 and hat(k) dot hat(j) = 0 => hat(k) parallel hat(i) and hat(k) parallel hat(j) \
-    exists.not k in RR : hat(i) = k hat(j) => hat(i) parallel.not arrow(j) \
+    exists.not k in RR_(!= 0) : hat(i) = k hat(j) => hat(i) parallel.not arrow(j) \
     therefore arrow(v)_"line"_1 parallel arrow(v)_"plane" and arrow(v)_"line"_2 parallel arrow(v)_"plane" arrow.double.not arrow(v)_"line"_1 parallel arrow(v)_"line"_2
   $
 
