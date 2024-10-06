@@ -151,14 +151,16 @@
 
   + (2 points) If $arrow(a) dot arrow(b) = arrow(a) dot arrow(c)$ #underline[and] $arrow(a) times arrow(b) = arrow(a) times arrow(c)$, does it follow that $arrow(b) = arrow(c)$? Why or why not?
 
-  $
-    arrow(a) dot arrow(b) - arrow(a) dot arrow(c) = 0 \
-    arrow(a) dot (arrow(b) - arrow(c)) = 0 \
-    arrow(a) times arrow(b) - arrow(a) times arrow(b) = 0 \
-    arrow(a) times (arrow(b) - arrow(c)) = 0 \
-    therefore arrow(b) - arrow(c) = arrow(0) \
-    arrow(b) = arrow(c)
-  $
+    The given equations can be rearranged into @4c-rearranged. For both equations to be true, either $arrow(a) = arrow(0)$ or $arrow(b) - arrow(c) = arrow(0)$. Since the former cannot be true, the latter must be true, indicating that $arrow(b)$ and $arrow(c)$ are equal as per @4c-solution.
+
+    $
+      arrow(a) dot arrow(b) - arrow(a) dot arrow(c) = 0 and arrow(a) times arrow(b) - arrow(a) times arrow(b) = arrow(0) \
+      arrow(a) dot (arrow(b) - arrow(c)) = 0 and arrow(a) times (
+          arrow(b) - arrow(c)
+      ) = arrow(0) #<4c-rearranged> \
+        therefore arrow(b) - arrow(c) = arrow(0) \
+        therefore arrow(b) = arrow(c) #<4c-solution>
+    $
 
 + Prove that if $arrow(a) dot (arrow(b) times arrow(c)) = 0$, then $arrow(a)$, $arrow(b)$, and $arrow(c)$ are coplanar.
 
