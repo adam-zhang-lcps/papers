@@ -285,7 +285,7 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
 
   $
     overline(L) parallel P <=> arrow(v)_L dot arrow(v)_P = 0 \
-    overline(L_1) parallel overline(L_2) <=> exists k in RR : arrow(v)_L_1 = k arrow(v)_L_2
+    overline(L_1) parallel overline(L_2) <=> exists k in RR : arrow(v)_L_1 = k arrow(v)_L_2 and k != 0
   $
 
   Let $hat(k)$ define a plane with origin point $(0, 0, 0)$. Let $hat(i)$ and $hat(j)$ define two lines with origin point $(0, 1, 0)$.
