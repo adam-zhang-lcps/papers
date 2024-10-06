@@ -22,6 +22,7 @@
     )
   ],
 )
+#set text(font: "New Computer Modern")
 #set enum(numbering: "1.a.")
 #set math.equation(numbering: "(1.a)")
 // Allows numbering only referenced equations.
