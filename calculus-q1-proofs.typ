@@ -236,6 +236,7 @@
       ) #<7-solution>
   $
 
+#pagebreak()
 = True or False
 Prove that the given statement is true in $RR^3$ or provide a counterexample to show that it is false.
 
@@ -279,6 +280,7 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
     hat(j) times hat(k) != arrow(0) => not hat(j) parallel hat(k)
   $
 
+#pagebreak()
 // False
 + Two lines parallel to a plane are parallel.
 
