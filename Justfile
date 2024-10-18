@@ -17,7 +17,7 @@ build-html:
     let template = (open html/template.html | split row '<!-- CONTENT HERE -->')
     let files = (ls *.typ | get name)
 
-    let html = ($files | par-each {|f|
+    let html = ($files | each {|f|
       let basename = (basename -s '.typ' $f)
 
       typst c $f $'public/pdf/($basename).pdf'
