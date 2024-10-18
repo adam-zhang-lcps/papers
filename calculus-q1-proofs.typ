@@ -282,7 +282,7 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
 
 #pagebreak()
 // False
-+ Two lines parallel to a plane are parallel.
+11. Two lines parallel to a plane are parallel.
 
   A line can be defined by a direction vector $arrow(v)$ and origin point $p$. A plane can be defined by a normal vector $arrow(v)$ and origin point $p$. Let $overline(L)$ represent any line and $P$ represent any plane.
 
