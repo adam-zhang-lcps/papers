@@ -109,25 +109,11 @@
 
 + Prove that if $arrow(u) + arrow(v)$ and $arrow(u) - arrow(v)$ are orthogonal, then the vectors $arrow(u)$ and $arrow(v)$ must have the same magnitude.
 
-  Two vectors are orthogonal if and only if $arrow(u) dot arrow(v) = 0$. Let $arrow(u) = angle.l u_1, u_2, dots, u_i angle.r$ and $arrow(v) = angle.l v_1, v_2, dots, v_i angle.r$. Given that $arrow(u) + arrow(v)$ and $arrow(u) - arrow(v)$ are orthogonal, @3-zero-sum can be derived.
   $
-    arrow(u) + arrow(v) = angle.l u_1 + v_1, u_2 + v_2, dots, u_i + v_i angle.r
-  $
-  $
-    arrow(u) - arrow(v) = angle.l u_1 - v_1, u_2 - v_2, dots, u_i - v_i angle.r
-  $
-  $
-    (arrow(u) + arrow(v)) dot (arrow(u) - arrow(v)) &= sum_(n=0)^i (
-      (u_n + v_n) dot (u_n - v_n)
-    ) \
-    &= sum_(n=0)^i (u_n^2 - v_n^2) \
-    &= u_1^2 - v^2_1 + u_2^2 - v_2^2 + dots + u_i^2 - v_i^2 = 0 #<3-zero-sum>
-  $
-
-  The above can be rearranged into @3-rearrange. By taking the square root of both sides, as in @3-sqrt, both sides of the equation are equal to the magnitude of each vector respectively; thus, $arrow(u) + arrow(v)$ and $arrow(u) - arrow(v)$ are orthogonal only if their magnitudes are equal.
-  $
-    u_1^2 + u_2^2 + dots + u_i^2 &= v^2_1 + v_2^2 + dots + v_i^2 #<3-rearrange> \
-      sqrt(u_1^2 + u_2^2 + dots + u_i^2) &= sqrt(v^2_1 + v_2^2 + dots + v_i^2) #<3-sqrt>
+    (arrow(u) + arrow(v)) dot (arrow(u) - arrow(v)) = 0 \
+    (arrow(u) dot arrow(u)) - (arrow(v) dot arrow(v)) = 0 \
+    arrow(u) dot arrow(u) = arrow(v) dot arrow(v) \
+    norm(arrow(u))^2 = norm(arrow(v))^2
   $
 
 + Suppose that $arrow(a) eq.not 0$.
