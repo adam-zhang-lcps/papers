@@ -161,7 +161,7 @@
 
   By the definition of the cross product, $(arrow(b) times arrow(c)) perp arrow(b) and (arrow(b) times arrow(c)) perp arrow(c)$. Thus, $arrow(b) times arrow(c)$ defines a plane with origin point $(0, 0, 0)$ containing $arrow(b)$ and $arrow(c)$. Since $arrow(a) dot (arrow(b) times arrow(c)) = 0$, $arrow(a)$ is also contained within the plane, making all three vectors coplanar.
 
-+ Prove the triangle inequality theorem for vectors: $|arrow(a) + arrow(b)| <= |arrow(a)| + |arrow(b)|$.
++ Prove the triangle inequality theorem for vectors: $norm(arrow(a) + arrow(b)) <= norm(arrow(a)) + norm(arrow(b))$.
 
   $
     norm(arrow(a) + arrow(b)) &= sqrt(norm(arrow(a) + arrow(b))^2) \
