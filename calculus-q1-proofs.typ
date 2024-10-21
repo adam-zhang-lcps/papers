@@ -113,7 +113,8 @@
     (arrow(u) + arrow(v)) dot (arrow(u) - arrow(v)) = 0 \
     (arrow(u) dot arrow(u)) - (arrow(v) dot arrow(v)) = 0 \
     arrow(u) dot arrow(u) = arrow(v) dot arrow(v) \
-    norm(arrow(u))^2 = norm(arrow(v))^2
+    norm(arrow(u))^2 = norm(arrow(v))^2 \
+    norm(arrow(u)) = norm(arrow(v))
   $
 
 + Suppose that $arrow(a) eq.not 0$.
