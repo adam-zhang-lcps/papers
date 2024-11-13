@@ -20,7 +20,7 @@
 
   #class
 
-  #if date != none [#date] else [#datetime.today().display()]
+  #if date != none [#date] else [#datetime.today().display("[day padding:zero] [month repr:long] [year]")]
 
   #set par(leading: 1.5em, first-line-indent: 0.5in)
   #align(center)[
