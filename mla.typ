@@ -1,4 +1,4 @@
-#let mla(doc) = [
+#let mla(title: none, professor: none, class: none, date: none, doc) = [
   #set page(
     paper: "us-letter",
     margin: 1in,
@@ -14,20 +14,28 @@
   ]
 
   #set par(first-line-indent: 0in)
-  E. L. Angel
+  Adam Zhang
 
-  Professor Patricia Sullivan
+  #professor
 
-  English 624
+  #class
 
-  12 February 2012
+  #if date != none [#date] else [#datetime.today().display()]
 
   #set par(leading: 1.5em, first-line-indent: 0.5in)
   #align(center)[
-    Toward a Recovery of Nineteenth Century Farming Handbooks
+    #title
   ]
 
   #doc
+
+  #pagebreak(weak: true)
+  #set bibliography(style: "mla", title: none)
+  #show bibliography: it => [
+    #align(center)[Works Cited]
+    #it
+  ]
+  #bibliography("refs.bib")
 ]
 
 While researching texts written about nineteenth century farming, I found a few
