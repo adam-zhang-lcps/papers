@@ -2,12 +2,18 @@
 // an old MLA template, but it was never finished and is sitting in a private
 // branch… looks like it's finally time to dust it off. Until then, not gonna bother doing any formatting ¯\_(ツ)_/¯.
 
-#set page(paper: "us-letter")
+#import "mla.typ": mla
+
+#show: doc => mla(
+  title: [Integrity in Education],
+  professor: [Hilarie Jennings],
+  class: [English 111],
+  doc,
+)
 
 // I love Wikipedia 🫡.
 #let CN = super[[citation needed]]
 
-= Integrity in Education
 // This is just a collection of possibly-useful rambling to be organized at a later time™.
 
 Integrity is widely regarded as one of the most important moral characteristics#CN. However, its presence in education and student bodies is often lower than in other fields due to academic pressures#CN. Thus it may be useful to investigate how the value of integrity within education has changed over time, especially throughout generations that may have valued both integrity and academic success with differing weight.
@@ -21,8 +27,3 @@ In an interview, Dr. Gerald Shapiro offered his unique perspective on academic i
   - Shapiro points out that it might lower the barrier
 - Did integrity really ever change over time?
   - Shapiro says no
-- Am I allowed to use personal anecdotes?
-  - Am I even allowed to use personal pronouns?
-
-// TODO Delete when MLA template is incorporated.
-#bibliography(style: "mla", title: [Works Cited], "refs.bib")
