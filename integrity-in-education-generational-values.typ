@@ -1,7 +1,4 @@
-// TODO This is the first MLA-style paper in this repository. I do actually have
-// an old MLA template, but it was never finished and is sitting in a private
-// branch… looks like it's finally time to dust it off. Until then, not gonna bother doing any formatting ¯\_(ツ)_/¯.
-
+// TODO This MLA template definitely needs… *work*.
 #import "mla.typ": mla
 
 #show: doc => mla(
@@ -15,6 +12,12 @@
 #let CN = super[[citation needed]]
 
 // This is just a collection of possibly-useful rambling to be organized at a later time™.
+
+I have attended the Academies of Loudoun (ACL) for the past three years of my education. ACL is a magnet school#CN—a school for the "academically talented" and "gifted" students among us. Classes are small and compartmentalized, so becoming acquainted with everyone that typically surrounded me was not a particularly hard nor time-consuming task.
+
+ACL is known, especially by its students, for having an extraordinarily stringent and visible honor code—"On my honor, I will not accept nor provide any unauthorized aid on any test, quiz, or assignment."#CN This honor code is prominently displayed upon a wall in every classroom, and is even prominent on some walls in the hallway. Most teachers require the honor code to be signed on every major assessment.
+
+Yet, despite the remarkable exhortation of the honor code, I have experienced countless instances of evident academic dishonesty—or, colloquially, "cheating"—throughout my years of attendance. Now, the magnitude of academic dishonesty varied greatly—some were insignificant, others were much
 
 Integrity is widely regarded as one of the most important moral characteristics#CN. However, its presence in education and student bodies is often lower than in other fields due to academic pressures#CN. Thus it may be useful to investigate how the value of integrity within education has changed over time, especially throughout generations that may have valued both integrity and academic success with differing weight.
 
