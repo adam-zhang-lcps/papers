@@ -1,29 +1,33 @@
-#set page(
-  paper: "us-letter",
-  margin: 1in,
-  header: align(right)[Zhang #counter(page).display()],
-)
-#set text(12pt, font: "Times New Roman")
-#show par: set block(spacing: 1.8em)
-#show heading: it => [
-  #set text(12pt, weight: "regular")
-  #block(spacing: 2em)[
-    #upper(it.body)
+#let mla(doc) = [
+  #set page(
+    paper: "us-letter",
+    margin: 1in,
+    header: align(right)[Zhang #context counter(page).display()],
+  )
+  #set text(12pt, font: "Liberation Serif")
+  #set par(spacing: 1.8em)
+  #show heading: it => [
+    #set text(12pt, weight: "regular")
+    #block(spacing: 2em)[
+      #upper(it.body)
+    ]
   ]
-]
 
-#set par(first-line-indent: 0in)
-E. L. Angeli
+  #set par(first-line-indent: 0in)
+  E. L. Angel
 
-Professor Patricia Sullivan
+  Professor Patricia Sullivan
 
-English 624
+  English 624
 
-12 February 2012
+  12 February 2012
 
-#set par(leading: 1.5em, first-line-indent: 0.5in)
-#align(center)[
-  Toward a Recovery of Nineteenth Century Farming Handbooks
+  #set par(leading: 1.5em, first-line-indent: 0.5in)
+  #align(center)[
+    Toward a Recovery of Nineteenth Century Farming Handbooks
+  ]
+
+  #doc
 ]
 
 While researching texts written about nineteenth century farming, I found a few
