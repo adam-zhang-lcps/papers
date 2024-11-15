@@ -38,6 +38,11 @@
 + Show that $arrow(A) dot (dif arrow(A))/(dif t) = norm(arrow(A)) (dif norm(arrow(A)))/(dif t)$.
 + You are told that there is a function $f(x, y)$ whose partial derivatives are given by $f_x (x, y) = -2 x y sin(x^2 y)$ and $f_y (x, y) = -x^2 sin(x^2 y)$. Should you believe it? Why or why not?
 + The gas law for a fixed mass $m$ of an ideal gas at absolute temperature $T$, pressure $P$, and volume $V$ is $P V = m R T$ where $R$ is the gas constant. Show that $T (diff V)/(diff T) (diff P)/(diff T) = m R$.
+  $
+    V = (m R T) / P and P = (m R T) / V and T = (P V) / (m R) \
+    T (diff V) / (diff T) (diff P) / (diff T) = (P V) / (m R) (m R) / P (m R) / V = m R
+  $
+
 + Prove, given that the third-order partial derivatives of $f(x, y, z)$ are continuous then, $f_(x y z) = f_(z x y) = f_(y z x)$.
 + Verify that if $z(x, y) = f(x^2 + y^2)$ then $y (diff z)/(diff x) (x, y) - x (diff z)/(diff x) (x, y) = 0$.
 // TODO I think there's a typo in the original document, need to confirm.
