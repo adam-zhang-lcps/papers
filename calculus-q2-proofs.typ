@@ -53,7 +53,7 @@
 Prove that the given statement is true in $RR^3$ or provide a counterexample to show that it is false.
 
 9. The curves $arrow(r)_1 (t) = (-1 + t)hat(i) + (1 + 2t)hat(j) = (5 - t)hat(k)$ and $arrow(r)_2 (t) = (2 + 2t)hat(i) + (4 + t)hat(j) + (3 + t)hat(k)$ intersect.
-+ If $arrow(r)(t)$ is a differentiable vector function, then $dif/(dif t) norm(arrow(r)(t)) = norm(arrow(r)'(t))$.
++ If $arrow(r)(t)$ is a differentiable vector function, then $dif/(dif t) norm(arrow(r)(t)) = norm(arrow(r)'(t))$. <10>
 
   Let $arrow(r)(t) = cos(t^2)hat(i) + sin(t^2)hat(j)$.
 
@@ -67,6 +67,9 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
   $
 
 + If $norm(arrow(r)(t)) = 1$ for all $t$, then $norm(arrow(r)'(t))$ is a constant.
+
+  Let $arrow(r)(t) = cos(t^2)hat(i) + sin(t^2)hat(j)$. By #link(<10>)[Proof 10], $forall t in RR : norm(arrow(r)(t)) = 1 and norm(arrow(r)'(t)) = 2t$.
+
 + Any surface which is the level surface of a three-variable function $g(x, y, z)$ can also be represented as the graph of a two-variable function $f(x, y)$.
 // TODO Check if this one has a typo as well.
 + If $f$ is a function, then $lim_((x, y, z) -> (2, 5, 3)) f(x, y, z) = f(2, 5, 3)$.
