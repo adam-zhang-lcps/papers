@@ -38,6 +38,7 @@
 + Show that $arrow(A) dot (dif arrow(A))/(dif t) = norm(arrow(A)) (dif norm(arrow(A)))/(dif t)$.
 + You are told that there is a function $f(x, y)$ whose partial derivatives are given by $f_x (x, y) = -2 x y sin(x^2 y)$ and $f_y (x, y) = -x^2 sin(x^2 y)$. Should you believe it? Why or why not?
 + The gas law for a fixed mass $m$ of an ideal gas at absolute temperature $T$, pressure $P$, and volume $V$ is $P V = m R T$ where $R$ is the gas constant. Show that $T (diff V)/(diff T) (diff P)/(diff T) = m R$.
+
   $
     V = (m R T) / P and P = (m R T) / V and T = (P V) / (m R) \
     T (diff V) / (diff T) (diff P) / (diff T) = (P V) / (m R) (m R) / P (m R) / V = m R
@@ -52,8 +53,20 @@
 Prove that the given statement is true in $RR^3$ or provide a counterexample to show that it is false.
 
 9. The curves $arrow(r)_1 (t) = (-1 + t)hat(i) + (1 + 2t)hat(j) = (5 - t)hat(k)$ and $arrow(r)_2 (t) = (2 + 2t)hat(i) + (4 + t)hat(j) + (3 + t)hat(k)$ intersect.
-10. If $arrow(r)(t)$ is a differentiable vector function, then $dif/(dif t) norm(arrow(r)(t)) = norm(arrow(r)'(t))$.
-11. If $norm(arrow(r)(t)) = 1$ for all $t$, then $norm(arrow(r)'(t))$ is a constant.
-12. Any surface which is the level surface of a three-variable function $g(x, y, z)$ can also be represented as the graph of a two-variable function $f(x, y)$.
++ If $arrow(r)(t)$ is a differentiable vector function, then $dif/(dif t) norm(arrow(r)(t)) = norm(arrow(r)'(t))$.
+
+  Let $arrow(r)(t) = cos(t^2)hat(i) + sin(t^2)hat(j)$.
+
+  $
+    forall t in RR : norm(arrow(r)(t)) = sqrt(cos^2(t^2) + sin^2(t^2)) = 1 \
+    therefore dif / (dif t) norm(arrow(r)(t)) = 0 \
+    arrow(r)'(t) = -2t sin(t^2)hat(i) + 2t cos(t^2)hat(j) \
+    norm(arrow(r)'(t)) = sqrt(4t^2 sin^2(t^2) + 4t^2 cos^2(t^2)) = 2t \
+    0 != 2t therefore exists (arrow(r)(t) : RR |-> RR^3) :
+    dif / (dif t) norm(arrow(r)(t)) != norm(arrow(r)'(t))
+  $
+
++ If $norm(arrow(r)(t)) = 1$ for all $t$, then $norm(arrow(r)'(t))$ is a constant.
++ Any surface which is the level surface of a three-variable function $g(x, y, z)$ can also be represented as the graph of a two-variable function $f(x, y)$.
 // TODO Check if this one has a typo as well.
-13. If $f$ is a function, then $lim_((x, y, z) -> (2, 5, 3)) f(x, y, z) = f(2, 5, 3)$.
++ If $f$ is a function, then $lim_((x, y, z) -> (2, 5, 3)) f(x, y, z) = f(2, 5, 3)$.
