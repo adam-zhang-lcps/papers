@@ -16,7 +16,7 @@
 
         AET Multivariable Calculus
 
-        *Quarter 1 Proofs*
+        *Quarter 2 Proofs*
       ],
       align(right + top)[Adam Zhang],
     )
