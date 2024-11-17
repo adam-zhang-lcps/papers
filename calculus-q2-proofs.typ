@@ -117,5 +117,8 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
   Let $arrow(r)(t) = cos(t^2)hat(i) + sin(t^2)hat(j)$. By #link(<10>)[Proof 10], $forall t in RR : norm(arrow(r)(t)) = 1 and norm(arrow(r)'(t)) = 2t therefore norm(arrow(r)(t)) = 1 arrow.double.not forall t in RR : norm(arrow(r)'(t)) = c$.
 
 + Any surface which is the level surface of a three-variable function $g(x, y, z)$ can also be represented as the graph of a two-variable function $f(x, y)$.
+
+  Let $g(x, y, z) = x^2 + y^2 + z^2$. The level surface $g(x, y, z) = 1$ is given by $x^2 +y^2 + z^2 = 1$. Solving for $z$ yields $z = plus.minus sqrt(1 - x^2 + y^2)$, which cannot be described as a function, as the range contains multiple outputs per input.
+
 // TODO Check if this one has a typo as well.
 + If $f$ is a function, then $lim_((x, y, z) -> (2, 5, 3)) f(x, y, z) = f(2, 5, 3)$.
