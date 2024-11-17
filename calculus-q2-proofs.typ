@@ -109,7 +109,7 @@
   $
 
 // TODO I think there's a typo in the original document, need to confirm.
-+ Let $a > 0$ be a constant. Prove that $u(x, y, z, t) = 1/(t^(3/2)) e^((x^2 + y^2 + z^2)/(4 alpha t))$, satisfies the heat equation given by: $u_t = alpha (u_(x x) + u_(y y) + u_(z z))$ for all $t > 0$.
++ Let $alpha > 0$ be a constant. Prove that $u(x, y, z, t) = 1/(t^(3/2)) e^((x^2 + y^2 + z^2)/(4 alpha t))$, satisfies the heat equation given by: $u_t = alpha (u_(x x) + u_(y y) + u_(z z))$ for all $t > 0$.
 
 = True or False
 Prove that the given statement is true in $RR^3$ or provide a counterexample to show that it is false.
