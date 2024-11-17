@@ -67,7 +67,17 @@
   $
 
 + Prove, given that the third-order partial derivatives of $f(x, y, z)$ are continuous then, $f_(x y z) = f_(z x y) = f_(y z x)$.
-+ Verify that if $z(x, y) = f(x^2 + y^2)$ then $y (diff z)/(diff x) (x, y) - x (diff z)/(diff x) (x, y) = 0$.
+// TODO I think there's a typo here as well, they're both (diff z)/(diff x) in the original document.
++ Verify that if $z(x, y) = f(x^2 + y^2)$ then $y (diff z)/(diff x) (x, y) - x (diff z)/(diff y) (x, y) = 0$.
+
+  $
+    (diff z) / (diff x) = f'(x^2 + y^2) dot 2x = 2x f'(x^2 + y^2) \
+    (diff z) / (diff y) = f'(x^2 + y^2) dot 2y = 2y f'(x^2 + y^2) \
+    y (diff z) / (diff x) (x, y) - x (diff z) / (diff y) (x, y) = 2 x y f'(
+      x^2 + y^2
+    ) - 2 x y f'(x^2 + y^2) = 0
+  $
+
 // TODO I think there's a typo in the original document, need to confirm.
 + Let $a > 0$ be a constant. Prove that $u(x, y, z, t) = 1/(t^(3/2)) e^((x^2 + y^2 + z^2)/(4 alpha t))$, satisfies the heat equation given by: $u_t = alpha (u_(x x) + u_(y y) + u_(z z))$ for all $t > 0$.
 
