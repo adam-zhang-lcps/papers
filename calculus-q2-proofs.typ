@@ -37,6 +37,14 @@
 + If $arrow(u)(t) = arrow(r)(t) dot [arrow(r)'(t) times arrow(r)''(t)]$, show that $arrow(u)'(t) = arrow(r)(t) dot [arrow(r)''(t) times arrow(r)'''(t)]$.
 + Show that $arrow(A) dot (dif arrow(A))/(dif t) = norm(arrow(A)) (dif norm(arrow(A)))/(dif t)$.
 + You are told that there is a function $f(x, y)$ whose partial derivatives are given by $f_x (x, y) = -2 x y sin(x^2 y)$ and $f_y (x, y) = -x^2 sin(x^2 y)$. Should you believe it? Why or why not?
+
+  Let $f(x) = cos(x^2 y)$.
+
+  $
+    (diff f) / (diff x) &= -sin(x^2 y) dot 2 x y = - 2 x y sin(x^2 y)\
+    (diff f) / (diff y) &= -sin(x^2 y) dot x^2 = - x^2 sin (x^2 y)
+  $
+
 + The gas law for a fixed mass $m$ of an ideal gas at absolute temperature $T$, pressure $P$, and volume $V$ is $P V = m R T$ where $R$ is the gas constant. Show that $T (diff V)/(diff T) (diff P)/(diff T) = m R$.
 
   $
