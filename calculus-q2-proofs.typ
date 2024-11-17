@@ -34,6 +34,23 @@
 
 = Proofs
 + If $arrow(r)(t) = arrow(a) cos(omega t) + arrow(b) sin (omega t)$, where $arrow(a)$ and $arrow(b)$ are constant vectors, show that: $arrow(r)(t) times arrow(r)'(t) = omega arrow(a) times arrow(b)$ (*Note*: $arrow(r)(t)$ is not in component form).
+
+  // TODO I have no idea if this is mathematically rigorous, and, if so, I need to justify that determinant somehow 😭.
+  $
+    arrow(r)'(t) = -omega arrow(a) sin(omega t) + omega arrow(b) cos(omega t) \
+    arrow(r)(t) times arrow(r)'(
+      t
+    ) = mat(delim: "|",
+      arrow(a), cos(omega t), -omega sin(omega t);
+      arrow(b), sin(omega t),  omega cos(omega t);
+      arrow(a) times arrow(b), 0, 0
+      ) \
+    = (arrow(a) times arrow(b))(omega cos^2(omega t) - -omega sin^2(omega t)) \
+    = (arrow(a) times arrow(b)) (omega (cos^2(omega t) + sin^2(omega t))) \
+    = omega (arrow(a) times arrow(b))
+    = omega arrow(a) times arrow(b)
+  $
+
 + If $arrow(u)(t) = arrow(r)(t) dot [arrow(r)'(t) times arrow(r)''(t)]$, show that $arrow(u)'(t) = arrow(r)(t) dot [arrow(r)''(t) times arrow(r)'''(t)]$.
 + Show that $arrow(A) dot (dif arrow(A))/(dif t) = norm(arrow(A)) (dif norm(arrow(A)))/(dif t)$.
 
