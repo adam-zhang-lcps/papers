@@ -36,6 +36,20 @@
 + If $arrow(r)(t) = arrow(a) cos(omega t) + arrow(b) sin (omega t)$, where $arrow(a)$ and $arrow(b)$ are constant vectors, show that: $arrow(r)(t) times arrow(r)'(t) = omega arrow(a) times arrow(b)$ (*Note*: $arrow(r)(t)$ is not in component form).
 + If $arrow(u)(t) = arrow(r)(t) dot [arrow(r)'(t) times arrow(r)''(t)]$, show that $arrow(u)'(t) = arrow(r)(t) dot [arrow(r)''(t) times arrow(r)'''(t)]$.
 + Show that $arrow(A) dot (dif arrow(A))/(dif t) = norm(arrow(A)) (dif norm(arrow(A)))/(dif t)$.
+
+  Let $arrow(A) = arrow(r)(t)$ and $m(t) = norm(arrow(r)(t))$.
+
+  $
+    arrow(r)(t) dot (dif arrow(r)) / (dif t) &= m(t) (dif m) / (dif t) \
+    &= dif / (dif t) integral m(t) m'(t) dif t \
+    &= dif / (dif t) [m(t)^2 / 2] \
+    &= 1 / 2 dif / (dif t) [arrow(r) dot arrow(r)] \
+    &= 1 / 2 (
+      (dif arrow(r)) / (dif t) dot arrow(r) + (dif arrow(r)) / (dif t) dot arrow(r)
+    ) \
+    &= arrow(r) dot (dif r) / (dif t)
+  $
+
 + You are told that there is a function $f(x, y)$ whose partial derivatives are given by $f_x (x, y) = -2 x y sin(x^2 y)$ and $f_y (x, y) = -x^2 sin(x^2 y)$. Should you believe it? Why or why not?
 
   Let $f(x) = cos(x^2 y)$.
