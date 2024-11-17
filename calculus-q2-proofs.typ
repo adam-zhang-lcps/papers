@@ -84,7 +84,21 @@
 = True or False
 Prove that the given statement is true in $RR^3$ or provide a counterexample to show that it is false.
 
-9. The curves $arrow(r)_1 (t) = (-1 + t)hat(i) + (1 + 2t)hat(j) = (5 - t)hat(k)$ and $arrow(r)_2 (t) = (2 + 2t)hat(i) + (4 + t)hat(j) + (3 + t)hat(k)$ intersect.
+9. The curves $arrow(r)_1 (t) = (-1 + t)hat(i) + (1 + 2t)hat(j) + (5 - t)hat(k)$ and $arrow(r)_2 (t) = (2 + 2t)hat(i) + (4 + t)hat(j) + (3 + t)hat(k)$ intersect.
+
+  Let $arrow(r_2)(s) = (2 + 2s)hat(i) + (4 + s)hat(j) + (3 + s)hat(k)$.
+
+  $
+    (-1 + t)hat(i) = (2 + 2s)hat(i) => t = 2s + 3 \
+    (1 + 2t)hat(j) = (4 + s)hat(j) \
+    s + 4 = 1 + 4s + 6 \
+    3s = -3 \
+    s = -1 and t = 1 \
+    (5 - t)hat(k) = (3 + s)hat(k) \
+    4 != 2 \
+    therefore exists.not (t, s) in RR^2 : arrow(r)_1(t) = arrow(r)_2(s)
+  $
+
 + If $arrow(r)(t)$ is a differentiable vector function, then $dif/(dif t) norm(arrow(r)(t)) = norm(arrow(r)'(t))$. <10>
 
   Let $arrow(r)(t) = cos(t^2)hat(i) + sin(t^2)hat(j)$.
