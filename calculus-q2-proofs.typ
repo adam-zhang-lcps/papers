@@ -51,7 +51,20 @@
     = omega arrow(a) times arrow(b)
   $
 
-+ If $arrow(u)(t) = arrow(r)(t) dot [arrow(r)'(t) times arrow(r)''(t)]$, show that $arrow(u)'(t) = arrow(r)(t) dot [arrow(r)''(t) times arrow(r)'''(t)]$.
++ If $arrow(u)(t) = arrow(r)(t) dot [arrow(r)'(t) times arrow(r)''(t)]$, show that $arrow(u)'(t) = arrow(r)(t) dot [arrow(r)'(t) times arrow(r)'''(t)]$.
+
+  $
+    arrow(u)'(t) &= arrow(r)'(t) dot [
+      arrow(r)'(t) times arrow(r)''(t)
+    ] + arrow(r)(t) dot [
+      arrow(r)''(t) times arrow(r)''(t) + arrow(r)'(t) times arrow(r)'''(t)
+    ] \
+    &= arrow(r)'(t) dot [arrow(r)'(t) times arrow(r)''(t)] + arrow(r)(t) dot [
+      arrow(r)'(t) times arrow(r)'''(t)
+    ] \
+    &= arrow(r)(t) dot [arrow(r)'(t) times arrow(r)'''(t)]
+  $
+
 + Show that $arrow(A) dot (dif arrow(A))/(dif t) = norm(arrow(A)) (dif norm(arrow(A)))/(dif t)$.
 
   Let $arrow(A) = arrow(r)(t)$ and $m(t) = norm(arrow(r)(t))$.
