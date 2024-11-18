@@ -82,11 +82,12 @@
 
 + You are told that there is a function $f(x, y)$ whose partial derivatives are given by $f_x (x, y) = -2 x y sin(x^2 y)$ and $f_y (x, y) = -x^2 sin(x^2 y)$. Should you believe it? Why or why not?
 
-  Let $f(x) = cos(x^2 y)$.
-
   $
-    (diff f) / (diff x) &= -sin(x^2 y) dot 2 x y = - 2 x y sin(x^2 y)\
-    (diff f) / (diff y) &= -sin(x^2 y) dot x^2 = - x^2 sin (x^2 y)
+    integral f_x dif x &= -integral 2 x y sin(x^2 y) dif x \
+    &= cos(x^2 y) + g(y) \
+    integral f_y dif y &= -integral x^2 sin(x^2 y) dif y \
+    &= cos(x^2 y) + h(x) \
+    therefore f(x, y) &= cos(x^2 y)
   $
 
 + The gas law for a fixed mass $m$ of an ideal gas at absolute temperature $T$, pressure $P$, and volume $V$ is $P V = m R T$ where $R$ is the gas constant. Show that $T (diff V)/(diff T) (diff P)/(diff T) = m R$.
