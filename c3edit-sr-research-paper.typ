@@ -1,3 +1,5 @@
+#import "@preview/fletcher:0.5.2": diagram, node, edge
+
 #let name = [c#super[3]edit]
 #let title = [#name: a software framework for real-time cross-editor collaborative editing]
 
@@ -50,6 +52,24 @@ Creating a framework for multiple editors required development of multiple softw
 The backend software is non-user-facing and contains both document replication/synchronization logic and network logic. The backend software was written in the Rust programming language#footnote[https://www.rust-lang.org/] for its memory safety, robust ecosystem, and high performance. Document synchronization and replication was handled by the Loro Rust library#footnote[https://loro.dev/], chosen for being highly capable and performant. Network logic was handled by the Tokio library's #footnote[https://tokio.rs/] networking primitives, along with Serde#footnote[https://serde.rs/] for data serialization/deserialization. The backend was designed for peer-to-peer communication between clients.
 
 The backend software was designed to communicate with any arbitrary frontend implementation via a standardized protocol. The "#name protocol" was formalized in specification in version v1.0. The backend is started by the editor frontend, and communication occurs via standard input/output. Messages are passed via JSON according to the #name specification.
+
+#diagram(
+  node-stroke: 1pt,
+  node-corner-radius: 4pt,
+  node-inset: 4mm,
+  node-outset: 1mm,
+  edge-stroke: 1pt,
+  mark-scale: 80%,
+  node((0, 0), [Editor]),
+  edge("<|-|>"),
+  node((1, 0), [Backend]),
+  node(enclose: ((0, 0), (1, 0)), inset: 6mm, snap: false),
+  edge("<|-|>"),
+  node((3, 0), [Backend]),
+  edge("<|-|>"),
+  node((4, 0), [Editor]),
+  node(enclose: ((3, 0), (4, 0)), inset: 6mm, snap: false),
+)
 
 Frontend implementations were designed to integrate into a specific editor's dedicated extension or plugin functionality. Frontend implementations are user-facing and thus were designed to be easy to use; communication with the backend was designed to be invisible to the user. Three reference frontends were developed; one each for Emacs#footnote[https://github.com/c3edit/emacs], VSCode#footnote[https://github.com/c3edit/vscode], and NeoVim. Frontends utilized editor-specific interfaces and systems.
 #pagebreak()
