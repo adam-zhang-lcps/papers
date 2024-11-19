@@ -98,7 +98,16 @@
   $
 
 + Prove, given that the third-order partial derivatives of $f(x, y, z)$ are continuous then, $f_(x y z) = f_(z x y) = f_(y z x)$.
-// TODO I think there's a typo here as well, they're both (diff z)/(diff x) in the original document.
+
+  // TODO Prove this theorem? Double integral proof is fairly trivial.
+  If $f(x) : RR^n |-> RR$ has continuous second derivatives at $x$, then $(diff^2 f) / (diff x_i x_j) = (diff^2 f) / (diff x_j x_i)$.
+
+  $
+    f_(x y z) = f_(z x y) = f_(y z x) \
+    (diff^3 f) / (diff x diff y diff z) = (diff^3 f) / (diff z diff x diff y) = (diff^3 f) / (diff y diff z diff x) \
+    (diff^3 f) / (diff x diff y diff z) = (diff^2) / (diff z diff x) (diff f) / (diff y) = (diff) / (diff y) (diff f) / (diff z diff x)
+  $
+
 + Verify that if $z(x, y) = f(x^2 + y^2)$ then $y (diff z)/(diff x) (x, y) - x (diff z)/(diff y) (x, y) = 0$.
 
   $
@@ -109,7 +118,6 @@
     ) - 2 x y f'(x^2 + y^2) = 0
   $
 
-// TODO I think there's a typo in the original document, need to confirm.
 + Let $alpha > 0$ be a constant. Prove that $u(x, y, z, t) = 1/(t^(3/2)) e^((x^2 + y^2 + z^2)/(4 alpha t))$, satisfies the heat equation given by: $u_t = alpha (u_(x x) + u_(y y) + u_(z z))$ for all $t > 0$.
 
 = True or False
@@ -151,5 +159,4 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
 
   Let $g(x, y, z) = x^2 + y^2 + z^2$. The level surface $g(x, y, z) = 1$ is given by $x^2 +y^2 + z^2 = 1$. Solving for $z$ yields $z = plus.minus sqrt(1 - x^2 + y^2)$, which cannot be described as a function, as the range contains multiple outputs per input.
 
-// TODO Check if this one has a typo as well.
 + If $f$ is a function, then $lim_((x, y, z) -> (2, 5, 3)) f(x, y, z) = f(2, 5, 3)$.
