@@ -176,6 +176,7 @@
       &= E(- 3/(2 t^(5/2)) + (x^2 + y^2 + z^2)/(4 alpha t^(7/2))) #<8-solution>
   $
 
+#pagebreak(weak: true)
 = True or False
 Prove that the given statement is true in $RR^3$ or provide a counterexample to show that it is false.
 
@@ -199,11 +200,13 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
   Let $arrow(r)(t) = cos(t^2)hat(i) + sin(t^2)hat(j)$.
 
   $
-    forall t in RR : norm(arrow(r)(t)) = sqrt(cos^2(t^2) + sin^2(t^2)) = 1 \
-    therefore dif / (dif t) norm(arrow(r)(t)) = 0 \
-    arrow(r)'(t) = -2t sin(t^2)hat(i) + 2t cos(t^2)hat(j) \
-    norm(arrow(r)'(t)) = sqrt(4t^2 sin^2(t^2) + 4t^2 cos^2(t^2)) = 2t \
-    0 != 2t therefore exists (arrow(r)(t) : RR |-> RR^3) :
+    forall t in RR : norm(arrow(r)(t)) &= sqrt(cos^2(t^2) + sin^2(t^2)) = 1 \
+    &therefore dif / (dif t) norm(arrow(r)(t)) = 0 \
+    arrow(r)'(t) &= -2t sin(t^2)hat(i) + 2t cos(t^2)hat(j) \
+    norm(arrow(r)'(t)) &= sqrt(4t^2 sin^2(t^2) + 4t^2 cos^2(t^2)) = 2t \
+    exists t in RR : 0 != 2t &therefore exists (
+      arrow(r)(t) : RR |-> RR^3
+    ) exists t in RR :
     dif / (dif t) norm(arrow(r)(t)) != norm(arrow(r)'(t))
   $
 
