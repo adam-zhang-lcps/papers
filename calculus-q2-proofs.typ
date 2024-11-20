@@ -139,6 +139,43 @@
 
 + Let $alpha > 0$ be a constant. Prove that $u(x, y, z, t) = 1/(t^(3/2)) e^(- (x^2 + y^2 + z^2)/(4 alpha t))$, satisfies the heat equation given by: $u_t = alpha (u_(x x) + u_(y y) + u_(z z))$ for all $t > 0$.
 
+  Let $E = e^(- (x^2 + y^2 + z^2)/(4 alpha t))$. Due to the symmetry of $u(x, y, z, t)$ across $x$, $y$, and $z$, @8-uxx can be used to derive @8-uyy and @8-uzz.
+
+  $
+    u_x (x, y, z, t) &= 1 / (t^(3 / 2)) E (
+      -x / (2 alpha t)
+    ) = -(x) / (2 alpha t^(5 / 2)) E \
+    u_(x x) (
+      x, y, z, t
+    ) &= - 1 / (2 alpha t^(5 / 2))E + -x / (2 alpha t^(5 / 2)) E (
+      - x / (2 alpha t)
+    ) \
+      &= E (- 1 / (2 alpha t^(5 / 2)) + x^2 / (4 alpha^2 t^(7 / 2))) #<8-uxx> \
+      u_(y y) &= E (- 1 / (2 alpha t^(5 / 2)) + y^2 / (4 alpha^2 t^(7 / 2))) #<8-uyy> \
+      u_(z z) &= E (- 1 / (2 alpha t^(5 / 2)) + z^2 / (4 alpha^2 t^(7 / 2))) #<8-uzz> \
+  $
+
+  $u_t (x, y, z, t)$ is given by @8-ut.
+
+  $
+    u_t (x, y, z, t) &= - 3 / (2 t^(5 / 2)) E + 1 / (t^(3 / 2)) E (
+      (x^2 + y^2 + z^2) / (4 alpha t^2)
+    ) \
+    &= E (- 3 / (2 t^(5 / 2)) + (x^2+y^2+z^2) / (4 alpha t^(7 / 2))) #<8-ut>
+  $
+
+  Combine to show equality (@8-solution).
+
+  $
+    E (- 3 / (2 t^(5 / 2)) + (x^2+y^2+z^2) / (4 alpha t^(7 / 2))) &= alpha (
+      u_(x x) + u_(y y) + u_(z z)
+    ) \
+    &= alpha E (
+      - 3 / (2 alpha t^(5 / 2)) + (x^2 + y^2 + z^2) / (4 alpha^2 t^(7 / 2))
+    ) \
+      &= E(- 3/(2 t^(5/2)) + (x^2 + y^2 + z^2)/(4 alpha t^(7/2))) #<8-solution>
+  $
+
 = True or False
 Prove that the given statement is true in $RR^3$ or provide a counterexample to show that it is false.
 
