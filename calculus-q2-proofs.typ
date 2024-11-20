@@ -203,3 +203,10 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
   Let $g(x, y, z) = x^2 + y^2 + z^2$. The level surface $g(x, y, z) = 1$ is given by $x^2 +y^2 + z^2 = 1$. Solving for $z$ yields $z = plus.minus sqrt(1 - x^2 + y^2)$, which cannot be represented as a function, as the range contains multiple outputs per input.
 
 + If $f$ is a function, then $lim_((x, y, z) -> (2, 5, 3)) f(x, y, z) = f(2, 5, 3)$.
+
+  $
+    f(
+      x, y, z
+    ) : RR^3 |-> R = cases(x + y + z "if" x >= 2, x + y + 1 "if" x < 2) \
+    f(2, 5, 3) = 10 and lim_((x, y, z) -> (2, 5, 3)) f(x, y, z) "does not exist"
+  $
