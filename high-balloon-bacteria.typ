@@ -1,3 +1,5 @@
+#import "@preview/cetz:0.3.1"
+#import "@preview/cetz-plot:0.1.0": plot, chart
 #import "aet-lab-report-template.typ": aet-lab-report
 
 #show: doc => aet-lab-report(
@@ -28,7 +30,144 @@
 
 = Results
 == Data
-#lorem(60)
+#let process_data(data) = {
+  let data_parsed = ()
+
+  for row in data {
+    let row_parsed = (:)
+    for (key, value) in row {
+      row_parsed.insert(key, float(value))
+    }
+    data_parsed.push(row_parsed)
+  }
+
+  // Remove wavelengths with garbage data.
+  data_parsed.filter(r => r.at("WL(nm)") >= 390)
+}
+
+#let coag_control = process_data(
+  csv(
+    "assets/high-balloon-bacteria/coag-control.csv",
+    row-type: dictionary,
+  ),
+)
+#let coag_group1 = process_data(
+  csv(
+    "assets/high-balloon-bacteria/coag-group1.csv",
+    row-type: dictionary,
+  ),
+)
+#let coag_group2 = process_data(
+  csv(
+    "assets/high-balloon-bacteria/coag-group2.csv",
+    row-type: dictionary,
+  ),
+)
+#let ecoli_group1 = process_data(
+  csv(
+    "assets/high-balloon-bacteria/ecoli-group1.csv",
+    row-type: dictionary,
+  ),
+)
+#let ecoli_group2 = process_data(
+  csv(
+    "assets/high-balloon-bacteria/ecoli-group2.csv",
+    row-type: dictionary,
+  ),
+)
+#let halo_control = process_data(
+  csv(
+    "assets/high-balloon-bacteria/halo-control.csv",
+    row-type: dictionary,
+  ),
+)
+#let halo_group1 = process_data(
+  csv(
+    "assets/high-balloon-bacteria/halo-group1.csv",
+    row-type: dictionary,
+  ),
+)
+#let halo_group2 = process_data(
+  csv(
+    "assets/high-balloon-bacteria/halo-group2.csv",
+    row-type: dictionary,
+  ),
+)
+
+#figure(
+  caption: [Absorbance Levels for [SCIENTIFIC NEEDED] Coagulans],
+  cetz.canvas({
+    plot.plot(
+      size: (12, 10),
+      axis-style: "scientific-auto",
+      x-label: [Wavelength (nm)],
+      y-label: [Absorbance],
+      {
+        plot.add(
+          label: [Control],
+          coag_control.map(r => (r.at("WL(nm)"), r.at("Abs."))),
+        )
+        plot.add(
+          label: [Trial Group 1],
+          coag_group1.map(r => (r.at("WL(nm)"), r.at("Abs."))),
+        )
+        plot.add(
+          label: [Trial Group 2],
+          coag_group2.map(r => (r.at("WL(nm)"), r.at("Abs."))),
+        )
+      },
+    )
+  }),
+)
+
+#figure(
+  caption: [Absorbance Levels for _E. coli_],
+  cetz.canvas({
+    plot.plot(
+      size: (12, 10),
+      axis-style: "scientific-auto",
+      x-label: [Wavelength (nm)],
+      y-label: [Absorbance],
+      {
+        plot.add(
+          label: [Trial Group 1],
+          ecoli_group1.map(r => (r.at("WL(nm)"), r.at("Abs."))),
+        )
+        plot.add(
+          label: [Trial Group 2],
+          ecoli_group2.map(r => (r.at("WL(nm)"), r.at("Abs."))),
+        )
+      },
+    )
+  }),
+)
+
+#figure(
+  caption: [Absorbance Levels for [SCIENTIFIC NEEDED] Halo],
+  cetz.canvas({
+    plot.plot(
+      size: (12, 10),
+      axis-style: "scientific-auto",
+      x-label: [Wavelength (nm)],
+      y-label: [Absorbance],
+      {
+        plot.add(
+          label: [Control],
+          halo_control.map(r => (r.at("WL(nm)"), r.at("Abs."))),
+        )
+        plot.add(
+          label: [Trial Group 1],
+          halo_group1.map(r => (r.at("WL(nm)"), r.at("Abs."))),
+        )
+        plot.add(
+          label: [Trial Group 2],
+          halo_group2.map(r => (r.at("WL(nm)"), r.at("Abs."))),
+        )
+      },
+    )
+  }),
+)
+
 == Calculations
 #lorem(60)
 
