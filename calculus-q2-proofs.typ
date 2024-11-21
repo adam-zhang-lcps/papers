@@ -46,20 +46,25 @@
     &= cos(omega t) cos(omega t) (
       arrow(a) times omega arrow(b)
     ) + sin(omega t) sin(omega t) (arrow(b) times -omega arrow(a)) \
-    &= (cos^2(omega t) + sin^2(omega t)) (omega arrow(a) times arrow(b)) \
+    &= cancel((cos^2(omega t) + sin^2(omega t))) (
+      omega arrow(a) times arrow(b)
+    ) \
     &= omega arrow(a) times arrow(b)
   $
 
 + If $arrow(u)(t) = arrow(r)(t) dot [arrow(r)'(t) times arrow(r)''(t)]$, show that $arrow(u)'(t) = arrow(r)(t) dot [arrow(r)'(t) times arrow(r)'''(t)]$.
 
   $
-    arrow(u)'(t) &= arrow(r)'(t) dot [
+    arrow(u)'(
+      t
+    ) &= cancel(arrow(r)'(t) dot [
       arrow(r)'(t) times arrow(r)''(t)
-    ] + arrow(r)(t) dot [
-      arrow(r)''(t) times arrow(r)''(t) + arrow(r)'(t) times arrow(r)'''(t)
-    ] \
-    &= arrow(r)'(t) dot [arrow(r)'(t) times arrow(r)''(t)] + arrow(r)(t) dot [
-      arrow(r)'(t) times arrow(r)'''(t)
+    ]) + arrow(r)(
+      t
+    ) dot [
+      cancel(arrow(r)''(t) times arrow(r)''(t)) + arrow(r)'(
+        t
+      ) times arrow(r)'''(t)
     ] \
     &= arrow(r)(t) dot [arrow(r)'(t) times arrow(r)'''(t)]
   $
@@ -93,7 +98,7 @@
 
   $
     V = (m R T) / P and P = (m R T) / V and T = (P V) / (m R) \
-    T (diff V) / (diff T) (diff P) / (diff T) = (P V) / (m R) (m R) / P (m R) / V = m R
+    T (diff V) / (diff T) (diff P) / (diff T) = cancel(P V) / cancel(m R) cancel(m R) / cancel(P) (m R) / cancel(V) = m R
   $
 
 + Prove, given that the third-order partial derivatives of $f(x, y, z)$ are continuous then, $f_(x y z) = f_(z x y) = f_(y z x)$.
