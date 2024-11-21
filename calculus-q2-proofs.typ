@@ -98,17 +98,16 @@
 
 + Prove, given that the third-order partial derivatives of $f(x, y, z)$ are continuous then, $f_(x y z) = f_(z x y) = f_(y z x)$.
 
-  // TODO Prove this theorem? Double integral proof is fairly trivial.
   If $f(x) : RR^n |-> RR$ has continuous second derivatives at $x$, then $(diff^2 f) / (diff x_i x_j) = (diff^2 f) / (diff x_j x_i)$ (Schwarz's theorem).
 
   $
-    f_(x y z) &= f_(z x y) = f_(y z x) \
-    (diff^3 f) / (diff x diff y diff z) &= (diff^3 f) / (diff z diff x diff y) = (diff^3 f) / (diff y diff z diff x) \
-    &= (diff^2) / (diff z diff x) (diff f) / (diff y) = (diff) / (diff y) (diff^2 f) / (diff z diff x) \
-    &= (diff^2) / (diff x diff z) (diff f) / (diff y) = (diff) / (diff y) (diff^2 f) / (diff x diff z) \
-    &= diff / (diff x) (diff^2 f) / (diff z diff y) = (diff^2) / (diff y diff x) (diff f) / (diff z) \
-    &= (diff) / (diff x) (diff^2 f) / (diff y diff z) = diff^2 / (diff x diff y) (diff f) / (diff z) \
-    &= (diff^3 f) / (diff x diff y diff z) = (diff^3 f) / (diff x diff y diff z)
+    f_(x y z) &= f_(z x y) &&= f_(y z x) \
+    (diff^3 f) / (diff z diff y diff x) &= (diff^3 f) / (diff y diff x diff z) &&= (diff^3 f) / (diff x diff z diff y) \
+    &= (diff) / (diff y) (diff^2 f) / (diff x diff z) &&= (diff^2) / (diff x diff z) (diff f) / (diff y) \
+    &= (diff) / (diff y) (diff^2 f) / (diff z diff x) &&= (diff^2) / (diff z diff x) (diff f) / (diff y) \
+    &= (diff^2) / (diff y diff z) (diff f) / (diff x) &&= (diff) / (diff z) (diff^2 f) / (diff x diff y) \
+    &= (diff^2) / (diff z diff y) (diff f) / (diff x) &&= diff / (diff z) (diff^2 f) / (diff y diff x) \
+    &= (diff^3 f) / (diff z diff y diff x) &&= (diff^3 f) / (diff z diff y diff x)
   $
 
 + Verify that if $z(x, y) = f(x^2 + y^2)$ then $y (diff z)/(diff x) (x, y) - x (diff z)/(diff y) (x, y) = 0$.
