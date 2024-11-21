@@ -2,6 +2,10 @@
 #import "@preview/cetz-plot:0.1.0": plot, chart
 #import "aet-lab-report-template.typ": aet-lab-report
 
+#show "E coli": [_E. coli_]
+#show "Coagulans": [_B. coagulans_]
+#show "Halo": [_Halobacterium_ sp. NRC-1]
+
 #show: doc => aet-lab-report(
   title: [Evaluating and Comparing Radiation Resistance of Model Bacteriums],
   partners: ([Cole Strickland], [Eva Ulreich], [Luz Lazo]),
@@ -95,13 +99,21 @@
 )
 
 #figure(
-  caption: [Absorbance Levels for [SCIENTIFIC NEEDED] Coagulans],
+  caption: [Absorbance Levels for Coagulans],
   cetz.canvas({
     plot.plot(
       size: (12, 10),
       axis-style: "scientific-auto",
+      legend: "north",
+      legend-style: (
+        orientation: ltr,
+        stroke: none,
+        item: (spacing: 0.25, preview: (width: 0.5)),
+      ),
       x-label: [Wavelength (nm)],
+      x-grid: true,
       y-label: [Absorbance],
+      y-grid: true,
       {
         plot.add(
           label: [Control],
@@ -121,13 +133,21 @@
 )
 
 #figure(
-  caption: [Absorbance Levels for _E. coli_],
+  caption: [Absorbance Levels for E coli],
   cetz.canvas({
     plot.plot(
       size: (12, 10),
       axis-style: "scientific-auto",
+      legend: "north",
+      legend-style: (
+        orientation: ltr,
+        stroke: none,
+        item: (spacing: 0.25, preview: (width: 0.5)),
+      ),
       x-label: [Wavelength (nm)],
+      x-grid: true,
       y-label: [Absorbance],
+      y-grid: true,
       {
         plot.add(
           label: [Trial Group 1],
@@ -143,13 +163,21 @@
 )
 
 #figure(
-  caption: [Absorbance Levels for [SCIENTIFIC NEEDED] Halo],
+  caption: [Absorbance Levels for Halo],
   cetz.canvas({
     plot.plot(
       size: (12, 10),
       axis-style: "scientific-auto",
+      legend: "north",
+      legend-style: (
+        orientation: ltr,
+        stroke: none,
+        item: (spacing: 0.25, preview: (width: 0.5)),
+      ),
       x-label: [Wavelength (nm)],
+      x-grid: true,
       y-label: [Absorbance],
+      y-grid: true,
       {
         plot.add(
           label: [Control],
