@@ -76,7 +76,7 @@
     &= 1 / 2 (
       (dif arrow(r)) / (dif t) dot arrow(r) + (dif arrow(r)) / (dif t) dot arrow(r)
     ) \
-    &= arrow(r) dot (dif r) / (dif t)
+    &= arrow(r) dot (dif arrow(r)) / (dif t)
   $
 
 + You are told that there is a function $f(x, y)$ whose partial derivatives are given by $f_x (x, y) = -2 x y sin(x^2 y)$ and $f_y (x, y) = -x^2 sin(x^2 y)$. Should you believe it? Why or why not?
