@@ -77,7 +77,32 @@
   course: "AET AP Biology",
   date: datetime(year: 2024, month: 11, day: 22),
   draft: true,
-  appendix: [],
+  appendix: [
+    // Allow tables to span pages.
+    #show figure: set block(breakable: true)
+    #set table.cell(inset: 0.14cm)
+
+    #for (label, name, data) in (
+      (label: <ecoli-data>, name: [Ecoli], data: (ecoli_group1, ecoli_group2)),
+      (label: <coag-data>, name: [Coagulans], data: (coag_control, coag_group1, coag_group2)),
+      (label: <halo-data>, name: [Halo], data: (halo_control, halo_group1, halo_group1)),
+    ) [
+      #figure(
+        caption: [Spectrophotometer Absorbance Readings for #name],
+        table(
+          columns: data.len() * 2,
+          // Yes, this is horrendous, but it works, so whatever ¯\_(ツ)_/¯; stupid lost E.coli trial.
+          ..(
+            table.cell(colspan: 2)[Control],
+            table.cell(colspan: 2)[Trial Group 1],
+            table.cell(colspan: 2)[Trial Group 2],
+          ).rev().slice(0, data.len()).rev(),
+          ..([Wavelength (nm)], [Absorbance]) * data.len(),
+          ..data.reduce((acc, cur) => acc.zip(cur)).flatten().map(str)
+        ),
+      ) #label
+    ]
+  ],
   doc,
 )
 
@@ -104,7 +129,7 @@ Since Halo has shown exceptional radiation resistance in previous research#CN, i
 
 = Results
 == Data
-Graphs of the absorbance values per wavelength for each bacterium's control and experimental groups is shown in @ecoli-graph, @coag-graph, and @halo-graph.
+Graphs of the absorbance values per wavelength for each bacterium's control and experimental groups are shown in @ecoli-graph, @coag-graph, and @halo-graph. Raw absorbance readings from the spectrophotometer are shown in the appendix in @ecoli-data, @coag-data, and @halo-data.
 
 // Iterate over datasets backwards so I can simply accounting for the missing control data for E. coli
 #for (label, species, data) in (
