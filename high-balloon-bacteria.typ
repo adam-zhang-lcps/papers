@@ -131,6 +131,8 @@ Since Halo has shown exceptional radiation resistance in previous research#CN, i
 == Data
 Graphs of the absorbance values per wavelength for each bacterium's control and experimental groups are shown in @ecoli-graph, @coag-graph, and @halo-graph. Raw absorbance readings from the spectrophotometer are shown in the appendix in @ecoli-data, @coag-data, and @halo-data.
 
+Unfortunately, the data for the Ecoli control trial failed to be recorded due to procedural error by the experimentors.
+
 // Iterate over datasets backwards so I can simply accounting for the missing control data for E. coli
 #for (label, species, data) in (
   (
@@ -185,7 +187,37 @@ Graphs of the absorbance values per wavelength for each bacterium's control and 
 ]
 
 == Calculations
-#lorem(60)
+#let average_diff(a, b) = {
+  let a_data = a.map(r => r.last())
+  let b_data = b.map(r => r.last())
+
+  calc.round(
+    digits: 5,
+    a_data.zip(b_data).map(((a, b)) => b - a).sum() / a_data.len(),
+  )
+}
+
+#let coag_diff_1 = average_diff(coag_control, coag_group1)
+#let coag_diff_2 = average_diff(coag_control, coag_group2)
+#let halo_diff_1 = average_diff(halo_control, halo_group1)
+#let halo_diff_2 = average_diff(halo_control, halo_group2)
+
+#figure(
+  table(
+    columns: 4,
+    [Species], [Trial], [Difference], [Average Difference],
+    table.cell(rowspan: 2)[Coagulans], [1], [#coag_diff_1],
+    table.cell(rowspan: 2)[#(
+        calc.round(digits: 5, (coag_diff_1 + coag_diff_2) / 2)
+      )],
+    [2], [#coag_diff_2],
+    table.cell(rowspan: 2)[Halo], [1], [#halo_diff_1],
+    table.cell(rowspan: 2)[#(
+        calc.round(digits: 5, (halo_diff_1 + halo_diff_2) / 2)
+      )],
+    [2], [#halo_diff_2],
+  ),
+)
 
 = Discussion
 == Conclusion
