@@ -103,103 +103,46 @@ Since Halo has shown exceptional radiation resistance in previous research#CN, i
   ),
 )
 
-#figure(
-  caption: [Absorbance Levels for Coagulans],
-  cetz.canvas({
-    plot.plot(
-      size: (12, 10),
-      axis-style: "scientific-auto",
-      legend: "north",
-      legend-style: (
-        orientation: ltr,
-        stroke: none,
-        item: (spacing: 0.25, preview: (width: 0.5)),
-      ),
-      x-label: [Wavelength (nm)],
-      x-grid: true,
-      y-label: [Absorbance],
-      y-grid: true,
-      {
-        plot.add(
-          label: [Control],
-          coag_control.map(r => (r.at("WL(nm)"), r.at("Abs."))),
-        )
-        plot.add(
-          label: [Trial Group 1],
-          coag_group1.map(r => (r.at("WL(nm)"), r.at("Abs."))),
-        )
-        plot.add(
-          label: [Trial Group 2],
-          coag_group2.map(r => (r.at("WL(nm)"), r.at("Abs."))),
-        )
-      },
-    )
-  }),
-)
-
-#figure(
-  caption: [Absorbance Levels for Ecoli],
-  cetz.canvas({
-    plot.plot(
-      size: (12, 10),
-      axis-style: "scientific-auto",
-      legend: "north",
-      legend-style: (
-        orientation: ltr,
-        stroke: none,
-        item: (spacing: 0.25, preview: (width: 0.5)),
-      ),
-      x-label: [Wavelength (nm)],
-      x-grid: true,
-      y-label: [Absorbance],
-      y-grid: true,
-      {
-        plot.add(
-          label: [Trial Group 1],
-          ecoli_group1.map(r => (r.at("WL(nm)"), r.at("Abs."))),
-        )
-        plot.add(
-          label: [Trial Group 2],
-          ecoli_group2.map(r => (r.at("WL(nm)"), r.at("Abs."))),
-        )
-      },
-    )
-  }),
-)
-
-#figure(
-  caption: [Absorbance Levels for Halo],
-  cetz.canvas({
-    plot.plot(
-      size: (12, 10),
-      axis-style: "scientific-auto",
-      legend: "north",
-      legend-style: (
-        orientation: ltr,
-        stroke: none,
-        item: (spacing: 0.25, preview: (width: 0.5)),
-      ),
-      x-label: [Wavelength (nm)],
-      x-grid: true,
-      y-label: [Absorbance],
-      y-grid: true,
-      {
-        plot.add(
-          label: [Control],
-          halo_control.map(r => (r.at("WL(nm)"), r.at("Abs."))),
-        )
-        plot.add(
-          label: [Trial Group 1],
-          halo_group1.map(r => (r.at("WL(nm)"), r.at("Abs."))),
-        )
-        plot.add(
-          label: [Trial Group 2],
-          halo_group2.map(r => (r.at("WL(nm)"), r.at("Abs."))),
-        )
-      },
-    )
-  }),
-)
+// Iterate over datasets backwards so I can simply accounting for the missing control data for E. coli
+#for (species, data) in (
+  (species: [Ecoli], data: (ecoli_group2, ecoli_group1)),
+  (species: [Coagulans], data: (coag_group2, coag_group1, coag_control)),
+  (species: [Halo], data: (halo_group2, halo_group1, halo_control)),
+) {
+  figure(
+    caption: [Absorbance Levels for #species],
+    cetz.canvas({
+      plot.plot(
+        size: (15, 8),
+        axis-style: "scientific-auto",
+        legend: "north",
+        legend-style: (
+          orientation: ltr,
+          stroke: none,
+          item: (spacing: 0.25, preview: (width: 0.5)),
+        ),
+        x-label: [Wavelength (nm)],
+        x-grid: true,
+        y-label: [Absorbance],
+        y-grid: true,
+        {
+          for (row, label) in data
+            .zip((
+                [Trial Group 2],
+                [Trial Group 1],
+                [Control],
+              ))
+            .rev() {
+            plot.add(
+              label: label,
+              row.map(r => (r.at("WL(nm)"), r.at("Abs."))),
+            )
+          }
+        },
+      )
+    }),
+  )
+}
 
 == Calculations
 #lorem(60)
