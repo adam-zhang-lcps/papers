@@ -2,11 +2,12 @@
 #import "@preview/cetz-plot:0.1.0": plot, chart
 #import "aet-lab-report-template.typ": aet-lab-report
 
-#show "E coli": [_E. coli_]
+#show "Ecoli": [_E. coli_]
 #show "Coagulans": [_B. coagulans_]
 #show "Halo": [_Halobacterium sp._ NRC-1]
 
 #show: doc => aet-lab-report(
+  // TODO Technically Halo isn't a bacterium, does it matter?
   title: [Evaluating and Comparing Radiation Resistance of Model Bacteriums],
   partners: ([Cole Strickland], [Eva Ulreich], [Luz Lazo]),
   course: "AET AP Biology",
@@ -15,11 +16,15 @@
   doc,
 )
 
+#let CN = super[[citation needed]]
+
 = Introduction
 == Purpose
-#lorem(20)
+Evaluate and compare the radiation resistance of Ecoli, Coagulans, and Halo.
+
 == Hypothesis
-#lorem(20)
+Since Halo has shown exceptional radiation resistance in previous research#CN, it should show greater radiation resistance compared to both Ecoli and Coagulans, model organisms with no significant demonstrated radiation resistance.
+
 == Background
 #lorem(100)
 
@@ -133,7 +138,7 @@
 )
 
 #figure(
-  caption: [Absorbance Levels for E coli],
+  caption: [Absorbance Levels for Ecoli],
   cetz.canvas({
     plot.plot(
       size: (12, 10),
