@@ -4,7 +4,7 @@
 
 #show "E coli": [_E. coli_]
 #show "Coagulans": [_B. coagulans_]
-#show "Halo": [_Halobacterium_ sp. NRC-1]
+#show "Halo": [_Halobacterium sp._ NRC-1]
 
 #show: doc => aet-lab-report(
   title: [Evaluating and Comparing Radiation Resistance of Model Bacteriums],
