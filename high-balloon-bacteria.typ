@@ -202,10 +202,15 @@ Unfortunately, the data for the Ecoli control trial failed to be recorded due to
 #let halo_diff_1 = average_diff(halo_control, halo_group1)
 #let halo_diff_2 = average_diff(halo_control, halo_group2)
 
+@differences-table shows the average absorbance difference, across all wavelengths, between the control and experimental trials, as well as the average for each species. The average absorbance difference was calculated as the average of the difference between the absorbance of corresponding wavelengths across the control and experimental group.
+
+As the loss of the control trial makes it impossible to perform meaningful analysis, the remaining data for trials involving Ecoli was ignored.
+
 #figure(
+  caption: [Average Absorbance Differences Between Control and Experimental Groups],
   table(
     columns: 4,
-    [Species], [Trial], [Difference], [Average Difference],
+    [Species], [Trial], [Average Absorbance Difference], [Species Average],
     table.cell(rowspan: 2)[Coagulans], [1], [#coag_diff_1],
     table.cell(rowspan: 2)[#(
         calc.round(digits: 5, (coag_diff_1 + coag_diff_2) / 2)
@@ -217,7 +222,7 @@ Unfortunately, the data for the Ecoli control trial failed to be recorded due to
       )],
     [2], [#halo_diff_2],
   ),
-)
+) <differences-table>
 
 = Discussion
 == Conclusion
