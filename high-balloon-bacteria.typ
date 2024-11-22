@@ -6,39 +6,6 @@
 #show "Coagulans": [_B. coagulans_]
 #show "Halo": [_Halobacterium sp._ NRC-1]
 
-#show: doc => aet-lab-report(
-  // TODO Technically Halo isn't a bacterium, does it matter?
-  title: [Evaluating and Comparing Radiation Resistance of Model Bacteriums],
-  partners: ([Cole Strickland], [Eva Ulreich], [Luz Lazo]),
-  course: "AET AP Biology",
-  date: datetime(year: 2024, month: 11, day: 22),
-  draft: true,
-  doc,
-)
-
-#let CN = super[[citation needed]]
-
-= Introduction
-== Purpose
-Evaluate and compare the radiation resistance of Ecoli, Coagulans, and Halo.
-
-== Hypothesis
-Since Halo has shown exceptional radiation resistance in previous research#CN, it will show greater radiation resistance compared to both Ecoli and Coagulans, model organisms with no significant demonstrated radiation resistance.
-
-== Background
-#lorem(100)
-
-#lorem(100)
-
-#lorem(100)
-
-#lorem(100)
-
-= Experimental Method
-#lorem(100)
-
-= Results
-== Data
 #let process_data(data) = {
   let data_parsed = ()
 
@@ -47,11 +14,11 @@ Since Halo has shown exceptional radiation resistance in previous research#CN, i
     for (key, value) in row {
       row_parsed.insert(key, float(value))
     }
-    data_parsed.push(row_parsed)
+    data_parsed.push((row_parsed.at("WL(nm)"), row_parsed.at("Abs.")))
   }
 
   // Remove wavelengths with garbage data.
-  data_parsed.filter(r => r.at("WL(nm)") >= 390)
+  data_parsed.filter(r => r.first() >= 390)
 }
 
 #let coag_control = process_data(
@@ -103,13 +70,61 @@ Since Halo has shown exceptional radiation resistance in previous research#CN, i
   ),
 )
 
+#show: doc => aet-lab-report(
+  // TODO Technically Halo isn't a bacterium, does it matter?
+  title: [Evaluating and Comparing Radiation Resistance of Model Bacteriums],
+  partners: ([Cole Strickland], [Eva Ulreich], [Luz Lazo]),
+  course: "AET AP Biology",
+  date: datetime(year: 2024, month: 11, day: 22),
+  draft: true,
+  appendix: [],
+  doc,
+)
+
+#let CN = super[[citation needed]]
+
+= Introduction
+== Purpose
+Evaluate and compare the radiation resistance of Ecoli, Coagulans, and Halo.
+
+== Hypothesis
+Since Halo has shown exceptional radiation resistance in previous research#CN, it will show greater radiation resistance compared to both Ecoli and Coagulans, model organisms with no significant demonstrated radiation resistance.
+
+== Background
+#lorem(100)
+
+#lorem(100)
+
+#lorem(100)
+
+#lorem(100)
+
+= Experimental Method
+#lorem(100)
+
+= Results
+== Data
+Graphs of the absorbance values per wavelength for each bacterium's control and experimental groups is shown in @ecoli-graph, @coag-graph, and @halo-graph.
+
 // Iterate over datasets backwards so I can simply accounting for the missing control data for E. coli
-#for (species, data) in (
-  (species: [Ecoli], data: (ecoli_group2, ecoli_group1)),
-  (species: [Coagulans], data: (coag_group2, coag_group1, coag_control)),
-  (species: [Halo], data: (halo_group2, halo_group1, halo_control)),
-) {
-  figure(
+#for (label, species, data) in (
+  (
+    label: <ecoli-graph>,
+    species: [Ecoli],
+    data: (ecoli_group2, ecoli_group1),
+  ),
+  (
+    label: <coag-graph>,
+    species: [Coagulans],
+    data: (coag_group2, coag_group1, coag_control),
+  ),
+  (
+    label: <halo-graph>,
+    species: [Halo],
+    data: (halo_group2, halo_group1, halo_control),
+  ),
+) [
+  #figure(
     caption: [Absorbance Levels for #species],
     cetz.canvas({
       plot.plot(
@@ -135,14 +150,14 @@ Since Halo has shown exceptional radiation resistance in previous research#CN, i
             .rev() {
             plot.add(
               label: label,
-              row.map(r => (r.at("WL(nm)"), r.at("Abs."))),
+              row,
             )
           }
         },
       )
     }),
-  )
-}
+  ) #label
+]
 
 == Calculations
 #lorem(60)
