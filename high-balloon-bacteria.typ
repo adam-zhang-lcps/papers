@@ -1,5 +1,5 @@
 #import "@preview/cetz:0.3.1"
-#import "@preview/cetz-plot:0.1.0": plot, chart
+#import "@preview/cetz-plot:0.1.0": plot
 #import "aet-lab-report-template.typ": aet-lab-report
 
 #show "Ecoli": [_E. coli_]
@@ -23,7 +23,7 @@
 Evaluate and compare the radiation resistance of Ecoli, Coagulans, and Halo.
 
 == Hypothesis
-Since Halo has shown exceptional radiation resistance in previous research#CN, it should show greater radiation resistance compared to both Ecoli and Coagulans, model organisms with no significant demonstrated radiation resistance.
+Since Halo has shown exceptional radiation resistance in previous research#CN, it will show greater radiation resistance compared to both Ecoli and Coagulans, model organisms with no significant demonstrated radiation resistance.
 
 == Background
 #lorem(100)
