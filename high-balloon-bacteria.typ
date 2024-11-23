@@ -125,7 +125,21 @@ Since Halo has shown exceptional radiation resistance in previous research#CN, i
 #lorem(100)
 
 = Experimental Method
-#lorem(100)
+This experiment exposed organisms to ionizing radiation in the upper part of Earth's atmosphere by utilizing a high-altitude weather balloon. The weather balloon was prepared by an external party not directly involved in this experiment; experimental items were included as part of a biology "carry-on"; see @balloon-packing for a preliminary image of this payload.
+
+Three cultures of each bacterium were prepared. Bacteriums were cultured in broth inside a tube and inoculated from their shipment containers. Tubes were labeled with their bacterium species as well as the trial they belonged to. Two out of the three cultures for each species were then sent to be carried by the high-altitude weather balloon; the remaining culture remained at ground level to reproduce under "normal" conditions.
+
+Once the cultures from the high-altitude balloon were retrieved, data collection was performed using a VWR#emoji.reg V-1200 spectrophotometer. The spectrophotometer was utilized in tandem with the VWR#emoji.reg application software on a laptop to save measured readings. The spectrophotometer was first zeroed using a measurement of broth with zero microbial presence. Data was then collected in turn using a sample from each trial tube of bacterium, with care taken to ensure the spectrophotometer remained zeroed. Once measured, data was saved as an Excel spreadsheet and then exported to CSV for further analysis. See @spectrophotometer-picture for an image of the data collection setup.
+
+#figure(
+  caption: [Organisms Packed Within Balloon Container],
+  image(height: 40%, "assets/high-balloon-bacteria/balloon-packing.jpg"),
+) <balloon-packing>
+
+#figure(
+  caption: [Setup for Data Collection Using Spectrophotometer],
+  image(height: 40%, "assets/high-balloon-bacteria/spectrophotometer.jpg"),
+) <spectrophotometer-picture>
 
 = Results
 == Data
