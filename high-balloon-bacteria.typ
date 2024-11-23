@@ -240,7 +240,16 @@ As the loss of the control trial makes it impossible to perform meaningful analy
 
 = Discussion
 == Conclusion
-#lorem(50)
+The uncertainty of the data gathered throughout this experiment make it difficult for concrete conclusions to be drawn. The inability to perform meaningful analysis on the results of Ecoli further compound this uncertainty.
+
+@differences-table shows that the experimental groups for Coagulans, on average, had significantly higher absorbance readings than the control group. @coag-graph provides further insight, showing that experimental groups had consistently higher absorbance readings; however, all absorbance readings were also negative, indicating greater transparency than the zero reading (empty broth).
+
+On the other hand, the difference in absorbance readings between the control and experimental groups for Halo did not differ in any significant manner. @halo-graph shows that, in a similar manner as Coagulans, all absorbance readings were negative.
+
+There are two possible conclusions to be drawn from these results. The first possibility is to interpret greater absorbance as indicating a greater microbial presence#CN. Thus, results would indicate that Coagulans development actually _benefited_ from the high-altitude weather balloon, while Halo development was unaffected. The second possibility is to interpret lesser absorbance as indicating decreased presence of bacterial broth, and thus indirectly indicating greater bacterial development through broth consumption. Therefore, the results would indicate that the cultures of Coagulans which experienced the environment of the high-altitude balloon had lessened development compared to the control group, while the development of Halo was, again, unaffected.
+
+The researchers believe the second conclusion to be a more reasonable explanation for the results of this experiment, aligning with their hypothesis and previous research#CN. However, the researchers also recognize that caution and scrutiny must be employed when choosing to interpret results in a manner such that they support the original hypothesis.
+
 == Errors
 #lorem(50)
 == Extensions
