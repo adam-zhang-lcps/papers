@@ -71,12 +71,10 @@
 )
 
 #show: doc => aet-lab-report(
-  // TODO Technically Halo isn't a bacterium, does it matter?
   title: [Evaluating and Comparing Radiation Resistance of Model Bacteriums],
   partners: ([Cole Strickland], [Eva Ulreich], [Luz Lazo]),
   course: "AET AP Biology",
   date: datetime(year: 2024, month: 11, day: 22),
-  draft: true,
   appendix: [
     // Allow tables to span pages.
     #show figure: set block(breakable: true)
@@ -84,8 +82,16 @@
 
     #for (label, name, data) in (
       (label: <ecoli-data>, name: [Ecoli], data: (ecoli_group1, ecoli_group2)),
-      (label: <coag-data>, name: [Coagulans], data: (coag_control, coag_group1, coag_group2)),
-      (label: <halo-data>, name: [Halo], data: (halo_control, halo_group1, halo_group1)),
+      (
+        label: <coag-data>,
+        name: [Coagulans],
+        data: (coag_control, coag_group1, coag_group2),
+      ),
+      (
+        label: <halo-data>,
+        name: [Halo],
+        data: (halo_control, halo_group1, halo_group1),
+      ),
     ) [
       #figure(
         caption: [Spectrophotometer Absorbance Readings for #name],
