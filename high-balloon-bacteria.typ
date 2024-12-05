@@ -106,8 +106,6 @@
   doc,
 )
 
-#let CN = super[[citation needed]]
-
 = INTRODUCTION
 == Purpose
 Evaluate and compare the radiation resistance of Ecoli, Coagulans, and Halo.
@@ -242,7 +240,7 @@ The uncertainty of the data gathered throughout this experiment make it difficul
 
 On the other hand, the difference in absorbance readings between the control and experimental groups for Halo did not differ in any significant manner. @halo-graph shows that, in a similar manner as Coagulans, all absorbance readings were negative.
 
-There are two possible conclusions to be drawn from these results. The first possibility is to interpret greater absorbance as indicating a greater microbial presence#CN. Thus, results would indicate that Coagulans development actually _benefited_ from the high-altitude weather balloon, while Halo development was unaffected. The second possibility is to interpret lesser absorbance as indicating decreased presence of bacterial broth, and thus indirectly indicating greater bacterial development through broth consumption. Therefore, the results would indicate that the cultures of Coagulans which experienced the environment of the high-altitude balloon had lessened development compared to the control group, while the development of Halo was, again, unaffected.
+There are two possible conclusions to be drawn from these results. The first possibility is to interpret greater absorbance as indicating a greater microbial presence @Karki2020:MeasuremUv. Thus, results would indicate that Coagulans development actually _benefited_ from the high-altitude weather balloon, while Halo development was unaffected. The second possibility is to interpret lesser absorbance as indicating decreased presence of bacterial broth, and thus indirectly indicating greater bacterial development through broth consumption. Therefore, the results would indicate that the cultures of Coagulans which experienced the environment of the high-altitude balloon had lessened development compared to the control group, while the development of Halo was, again, unaffected.
 
 The researchers believe the second conclusion to be a more reasonable explanation for the results of this experiment, aligning with their hypothesis and previous research @Jung2017:Microbial. However, the researchers also recognize that caution and scrutiny must be employed when choosing to interpret results in a manner such that they support the original hypothesis.
 
@@ -252,6 +250,3 @@ There were plenty of sources of error present throughout this experiment, many o
 Additionally, there were multiple issues with the high-altitude balloon outside of the experimenters' control. Notably, many of the high-altitude balloon's sensors failed to properly function throughout the flight, resulting in a lack of availability of measurements to accurate describe flight conditions. It is also believed that the high-altitude balloon reached a peak altitude significantly lower than expected. Further experimentation should ensure that their high-altitude balloon reaches high altitudes.
 
 == Applications
-
-
-
