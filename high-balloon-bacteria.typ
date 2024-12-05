@@ -108,7 +108,7 @@
 
 #let CN = super[[citation needed]]
 
-= Introduction
+= INTRODUCTION
 == Purpose
 Evaluate and compare the radiation resistance of Ecoli, Coagulans, and Halo.
 
@@ -124,7 +124,7 @@ Since Halo has shown exceptional radiation resistance in previous research#CN, i
 
 #lorem(100)
 
-= Experimental Method
+= EXPERIMENTAL METHOD
 This experiment exposed organisms to ionizing radiation in the upper part of Earth's atmosphere by utilizing a high-altitude weather balloon. The weather balloon was prepared by an external party not directly involved in this experiment; experimental items were included as part of a biology "carry-on"; see @balloon-packing for a preliminary image of this payload.
 
 Three cultures of each bacterium were prepared. Bacteriums were cultured in broth inside a tube and inoculated from their shipment containers. Tubes were labeled with their bacterium species as well as the trial they belonged to. Two out of the three cultures for each species were then sent to be carried by the high-altitude weather balloon; the remaining culture remained at ground level to reproduce under "normal" conditions.
@@ -141,7 +141,7 @@ Once the cultures from the high-altitude balloon were retrieved, data collection
   image(height: 40%, "assets/high-balloon-bacteria/spectrophotometer.jpg"),
 ) <spectrophotometer-picture>
 
-= Results
+= RESULTS
 == Data
 Graphs of the absorbance values per wavelength for each bacterium's control and experimental groups are shown in @ecoli-graph, @coag-graph, and @halo-graph. Raw absorbance readings from the spectrophotometer are shown in the appendix in @ecoli-data, @coag-data, and @halo-data.
 
@@ -238,7 +238,7 @@ As the loss of the control trial makes it impossible to perform meaningful analy
   ),
 ) <differences-table>
 
-= Discussion
+= DISCUSSION
 == Conclusion
 The uncertainty of the data gathered throughout this experiment make it difficult for concrete conclusions to be drawn. The inability to perform meaningful analysis on the results of Ecoli further compound this uncertainty.
 
