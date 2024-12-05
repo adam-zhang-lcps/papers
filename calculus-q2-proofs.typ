@@ -37,35 +37,19 @@
 
   $
     arrow(r)'(t) &= -omega arrow(a) sin(omega t) + omega arrow(b) cos(omega t) \
-    arrow(r)(t) times arrow(r)'(t) &= (
-      arrow(a) cos(omega t) + arrow(b) sin (omega t)
-    ) times (-omega arrow(a) sin(omega t) + omega arrow(b) cos(omega t)) \
-    &= arrow(a) cos (
-      omega t
-    ) times omega arrow(b) cos(omega t) + arrow(b) sin(omega t) times -omega arrow(a) sin(omega t) \
-    &= cos(omega t) cos(omega t) (
-      arrow(a) times omega arrow(b)
-    ) + sin(omega t) sin(omega t) (arrow(b) times -omega arrow(a)) \
-    &= cancel((cos^2(omega t) + sin^2(omega t))) (
-      omega arrow(a) times arrow(b)
-    ) \
+    arrow(r)(t) times arrow(r)'(t) &= ( arrow(a) cos(omega t) + arrow(b) sin (omega t) ) times (-omega arrow(a) sin(omega t) + omega arrow(b) cos(omega t)) \
+    &= arrow(a) cos ( omega t ) times omega arrow(b) cos(omega t) + arrow(b) sin(omega t) times -omega arrow(a) sin(omega t) \
+    &= cos(omega t) cos(omega t) ( arrow(a) times omega arrow(b) ) + sin(omega t) sin(omega t) (arrow(b) times -omega arrow(a)) \
+    &= cancel((cos^2(omega t) + sin^2(omega t))) ( omega arrow(a) times arrow(b) ) \
     &= omega arrow(a) times arrow(b)
   $
 
 + If $arrow(u)(t) = arrow(r)(t) dot [arrow(r)'(t) times arrow(r)''(t)]$, show that $arrow(u)'(t) = arrow(r)(t) dot [arrow(r)'(t) times arrow(r)'''(t)]$.
 
   $
-    arrow(u)'(
-      t
-    ) &= cancel(arrow(r)'(t) dot [
+    arrow(u)'( t ) &= cancel(arrow(r)'(t) dot [
       arrow(r)'(t) times arrow(r)''(t)
-    ]) + arrow(r)(
-      t
-    ) dot [
-      cancel(arrow(r)''(t) times arrow(r)''(t)) + arrow(r)'(
-        t
-      ) times arrow(r)'''(t)
-    ] \
+    ]) + arrow(r)( t ) dot [ cancel(arrow(r)''(t) times arrow(r)''(t)) + arrow(r)'( t ) times arrow(r)'''(t) ] \
     &= arrow(r)(t) dot [arrow(r)'(t) times arrow(r)'''(t)]
   $
 
@@ -78,9 +62,7 @@
     &= dif / (dif t) integral m(t) m'(t) dif t \
     &= dif / (dif t) [m(t)^2 / 2] \
     &= 1 / 2 dif / (dif t) [arrow(r) dot arrow(r)] \
-    &= 1 / 2 (
-      (dif arrow(r)) / (dif t) dot arrow(r) + (dif arrow(r)) / (dif t) dot arrow(r)
-    ) \
+    &= 1 / 2 ( (dif arrow(r)) / (dif t) dot arrow(r) + (dif arrow(r)) / (dif t) dot arrow(r) ) \
     &= arrow(r) dot (dif arrow(r)) / (dif t)
   $
 
@@ -103,7 +85,7 @@
 
 + Prove, given that the third-order partial derivatives of $f(x, y, z)$ are continuous then, $f_(x y z) = f_(z x y) = f_(y z x)$.
 
-  If $f(x) : RR^n |-> RR$ has continuous second derivatives at $x$, then $(diff^2 f) / (diff x_i x_j) = (diff^2 f) / (diff x_j x_i)$ (Schwarz's theorem).
+  If $f(x) : RR^n |-> RR$ has continuous second derivatives at $x$, then $(diff^2 f) / (diff x_i x_j) = (diff^2 f) / (diff x_j x_i)$ (Clairaut's theorem).
 
   $
     f_(x y z) &= f_(z x y) &&= f_(y z x) \
@@ -120,9 +102,7 @@
   $
     (diff z) / (diff x) = f'(x^2 + y^2) dot 2x = 2x f'(x^2 + y^2) \
     (diff z) / (diff y) = f'(x^2 + y^2) dot 2y = 2y f'(x^2 + y^2) \
-    y (diff z) / (diff x) (x, y) - x (diff z) / (diff y) (x, y) = 2 x y f'(
-      x^2 + y^2
-    ) - 2 x y f'(x^2 + y^2) = 0
+    y (diff z) / (diff x) (x, y) - x (diff z) / (diff y) (x, y) = 2 x y f'( x^2 + y^2 ) - 2 x y f'(x^2 + y^2) = 0
   $
 
 + Let $alpha > 0$ be a constant. Prove that $u(x, y, z, t) = 1/(t^(3/2)) e^(- (x^2 + y^2 + z^2)/(4 alpha t))$, satisfies the heat equation given by: $u_t = alpha (u_(x x) + u_(y y) + u_(z z))$ for all $t > 0$.
@@ -192,9 +172,7 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
     &therefore dif / (dif t) norm(arrow(r)(t)) = 0 \
     arrow(r)'(t) &= -2t sin(t^2)hat(i) + 2t cos(t^2)hat(j) \
     norm(arrow(r)'(t)) &= sqrt(4t^2 sin^2(t^2) + 4t^2 cos^2(t^2)) = 2t \
-    exists t in RR : 0 != 2t &therefore exists (
-      arrow(r)(t) : RR |-> RR^3
-    ) exists t in RR :
+    exists t in RR : 0 != 2t &therefore exists ( arrow(r)(t) : RR |-> RR^3 ) exists t in RR :
     dif / (dif t) norm(arrow(r)(t)) != norm(arrow(r)'(t))
   $
 
@@ -209,8 +187,6 @@ Prove that the given statement is true in $RR^3$ or provide a counterexample to 
 + If $f$ is a function, then $lim_((x, y, z) -> (2, 5, 3)) f(x, y, z) = f(2, 5, 3)$.
 
   $
-    f(
-      x, y, z
-    ) : RR^3 |-> R = cases(x + y + z "if" x >= 2, x + y + 1 "if" x < 2) \
+    f( x, y, z ) : RR^3 |-> R = cases(x + y + z "if" x >= 2, x + y + 1 "if" x < 2) \
     f(2, 5, 3) = 10 and lim_((x, y, z) -> (2, 5, 3)) f(x, y, z) "does not exist"
   $
