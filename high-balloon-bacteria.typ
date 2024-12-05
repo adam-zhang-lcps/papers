@@ -113,9 +113,11 @@
 Evaluate and compare the radiation resistance of Ecoli, Coagulans, and Halo.
 
 == Hypothesis
-Since Halo has shown exceptional radiation resistance in previous research#CN, it will show greater radiation resistance compared to both Ecoli and Coagulans, model organisms with no significant demonstrated radiation resistance.
+Since Halo has shown exceptional radiation resistance in previous research @Jung2017:Microbial, it will show greater radiation resistance compared to both Ecoli and Coagulans, model organisms with no significant demonstrated radiation resistance.
 
 == Background
+@SmithSowa2017:BallooninBiologis
+
 #lorem(100)
 
 #lorem(100)
@@ -248,7 +250,7 @@ On the other hand, the difference in absorbance readings between the control and
 
 There are two possible conclusions to be drawn from these results. The first possibility is to interpret greater absorbance as indicating a greater microbial presence#CN. Thus, results would indicate that Coagulans development actually _benefited_ from the high-altitude weather balloon, while Halo development was unaffected. The second possibility is to interpret lesser absorbance as indicating decreased presence of bacterial broth, and thus indirectly indicating greater bacterial development through broth consumption. Therefore, the results would indicate that the cultures of Coagulans which experienced the environment of the high-altitude balloon had lessened development compared to the control group, while the development of Halo was, again, unaffected.
 
-The researchers believe the second conclusion to be a more reasonable explanation for the results of this experiment, aligning with their hypothesis and previous research#CN. However, the researchers also recognize that caution and scrutiny must be employed when choosing to interpret results in a manner such that they support the original hypothesis.
+The researchers believe the second conclusion to be a more reasonable explanation for the results of this experiment, aligning with their hypothesis and previous research @Jung2017:Microbial. However, the researchers also recognize that caution and scrutiny must be employed when choosing to interpret results in a manner such that they support the original hypothesis.
 
 == Errors and Limitations
 There were plenty of sources of error present throughout this experiment, many of which compounded upon each other. The most notable error is the failure by the researchers in collecting data for the control trial for Ecoli, rendering it impossible to perform meaningful analysis of the results of the two experimental Ecoli groups which were exposed to the conditions of the high-altitude balloon. Further research should certainly not aim to replicate this mistake.
