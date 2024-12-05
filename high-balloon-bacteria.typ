@@ -250,9 +250,12 @@ There are two possible conclusions to be drawn from these results. The first pos
 
 The researchers believe the second conclusion to be a more reasonable explanation for the results of this experiment, aligning with their hypothesis and previous research#CN. However, the researchers also recognize that caution and scrutiny must be employed when choosing to interpret results in a manner such that they support the original hypothesis.
 
-== Errors
-#lorem(50)
-== Extensions
-#lorem(50)
+== Errors and Limitations
+There were plenty of sources of error present throughout this experiment, many of which compounded upon each other. The most notable error is the failure by the researchers in collecting data for the control trial for Ecoli, rendering it impossible to perform meaningful analysis of the results of the two experimental Ecoli groups which were exposed to the conditions of the high-altitude balloon. Further research should certainly not aim to replicate this mistake.
+
+Additionally, there were multiple issues with the high-altitude balloon outside of the experimenters' control. Notably, many of the high-altitude balloon's sensors failed to properly function throughout the flight, resulting in a lack of availability of measurements to accurate describe flight conditions. It is also believed that the high-altitude balloon reached a peak altitude significantly lower than expected. Further experimentation should ensure that their high-altitude balloon reaches high altitudes.
+
+== Applications
+
 
 
