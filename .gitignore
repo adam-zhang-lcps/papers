@@ -1,6 +1,8 @@
 .direnv
 out
 .envrc
-aux
 *.pdf
 /public
+/auto
+*.aux
+*.log
