@@ -45,6 +45,20 @@
               package = typstyle;
             }
             {
+              category = "(La)TeX";
+              name = "latexmk";
+              help = "Compile LaTeX with packages included";
+              package = texliveBasic.withPackages (ps:
+                with ps; [
+                  latexmk
+                  amsmath
+                  fontspec
+                  etoolbox
+                  xcolor
+                  pgf
+                ]);
+            }
+            {
               category = "Analysis";
               package = gnuplot;
             }
