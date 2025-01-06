@@ -55,6 +55,7 @@
                   fontspec
                   etoolbox
                   xcolor
+                  fancyhdr
                   pgf
                 ]);
             }
