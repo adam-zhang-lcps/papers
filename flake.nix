@@ -55,8 +55,11 @@
                   fontspec
                   etoolbox
                   xcolor
+                  hyperref
+                  cleveref
                   fancyhdr
                   pgf
+                  cancel
                 ]);
             }
             {

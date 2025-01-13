@@ -3,6 +3,5 @@ out
 .envrc
 *.pdf
 /public
+/build
 /auto
-*.aux
-*.log

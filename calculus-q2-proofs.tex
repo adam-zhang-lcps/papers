@@ -2,14 +2,23 @@
 \usepackage{fontspec}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink]{cleveref}
 \usepackage{fancyhdr}
+\usepackage{cancel}
 
 \title{Calculus Q2 Proofs}
 \author{Adam Zhang}
 
-
+\newcommand{\nimplies}{\mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
+% Primed vectors are not typeset correctly and I don't feel like properly fixing
+% it, so let's just use bold vectors instead.
 \renewcommand{\vec}[1]{\ensuremath\mathbf{#1}}
+
+\crefname{proof}{Proof}{Proofs}
+\crefalias{enumi}{proof}
 
 \begin{document}
 \pagestyle{fancy}
@@ -26,8 +35,68 @@
 \item If \(\vec{r}(t) = \vec{a}\cos(\omega t) + \vec{b}\sin(\omega t)\), where \(\vec{a}\) and \(\vec{b}\) are constant vectors, show that: \(\vec{r}(t) \times \vec{r} '(t) = \omega \vec{a} \times \vec{b}\) (\textbf{Note}: \(\vec{r}(t)\) is not in component form).
   \begin{align*}
     \vec{r}'(t) &= -\omega \vec{a}\sin(\omega t) + \omega \vec{b} \cos (\omega t) \\
-    \vec{r}(t) \times \vec{r}'(t) &= \left( \vec{a} \cos(\omega t) + \vec{b} \sin(\omega t) \right) \times \left( -\omega \vec{a} \sin(\omega t) + \omega \vec{b} \cos(\omega t) \right) \\
+    \vec{r}(t) \times \vec{r}'(t) &= \left( \vec{a} \cos(\omega t) + \vec{b}
+                                    \sin(\omega t) \right) \times \left( -\omega
+                                    \vec{a} \sin(\omega t) + \omega \vec{b}
+                                    \cos(\omega t) \right) \\
+                &= \vec{a}\cos(\omega t) \left( \vec{a} \times \omega \vec{b} \right) +
+                  \sin(\omega t) \sin(\omega t) \left( \vec{b} \times -\omega \vec{a}
+                  \right) \\
   \end{align*}
+\item If \(\vec{u}(t) = \vec{r}(t) \cdot \left[ \vec{r}'(t) \times
+    \vec{r}''(t) \right]\), show that \(\vec{u}'(t) = \vec{r}(t) \cdot \left[
+    \vec{r}'(t) \times \vec{r}'''(t) \right]\).
+  \begin{align*}
+    \vec{u}'(t) &= \cancel{\vec{r}'(t) \cdot \left[ \vec{r}'(t) \times \vec{r}''(t)
+                  \right]} + \vec{r}(t) \cdot \big[ \cancel{\vec{r}''(t) \times \vec{r}''(t)} +
+                  \vec{r}'(t) \times \vec{r}'''(t) \big] \\
+                &= \vec{r}(t) \cdot \left[ \vec{r}'(t) \times \vec{r}'''(t) \right]
+  \end{align*}
+\item Show that \(\vec{A} \cdot \frac{\mathrm{d}\vec{A}}{dt} = \lVert
+  \vec{A} \rVert \frac{\mathrm{d} \lVert \vec{A} \rVert}{\mathrm{d}t}\).
+
+  Let \(\vec{A} = \vec{r}(t)\) and \(m(t) = \lVert \vec{r}(t) \rVert\).
+  \begin{align*}
+    \vec{r}(t) \cdot \frac{\mathrm{d}\vec{r}}{\mathrm{d}t}
+    &= m(t) \frac{\mathrm{d}m}{dt} \\
+    &= \frac{\mathrm{d}}{\mathrm{d}t} \int m(t)m'(t) \mathrm{d}t \\
+    &= \frac{\mathrm{d}}{\mathrm{d}t} \left[ \frac{m(t)^2}{2} \right] \\
+    &= \frac{1}{2} \frac{\mathrm{d}}{\mathrm{d}t} \left[ \vec{r}(t) \cdot
+      \vec{r}(t) \right] \\
+    &= \frac{1}{2} \left( \frac{\mathrm{d}\vec{r}}{\mathrm{d}t} \cdot
+      \vec{r}(t) + \frac{\mathrm{d}\vec{r}}{\mathrm{d}t} \cdot \vec{r}(t) \right) \\
+    &= \vec{r}(t) \cdot \frac{\mathrm{d}\vec{r}}{\mathrm{d}t}
+  \end{align*}
+
+\item You are told that there is a function \(f(x, y)\) whose partial
+    derivatives are given by \(f_x(x, y) = -2xy \sin(x^2y)\) and \(f_y(x, y) =
+    -x^2 \sin(x^2y)\). Should you believe it? Why or why not?
+    \begin{align*}
+      \int f_x \,\mathrm{d}x &= -\int 2xy \sin(x^2y) \,\mathrm{d}x \\
+                           &= \cos(x^2y) + g(y) \\
+      \int f_y \,\mathrm{d}y &= -\int x^2 \sin(x^2y) \,\mathrm{d}y \\
+                           &= \cos(x^2y) + h(x) \\
+      \therefore f(x, y) &= \cos(x^2y)
+    \end{align*}
+
+  \item The gas law for a fixed mass \(m\) of an ideal gas at absolute
+    temperature \(T\), pressure \(P\), and volume \(V\) is \(PV = mRT\) where
+    \(R\) is the gas constant. Show that \(T \frac{\partial V}{\partial T}
+    \frac{\partial P}{\partial T} = mR\).
+
+    \begin{align*}
+      V = \frac{mRT}{P} \land P = \frac{mRT}{V} \land T = \frac{PV}{mR} \\
+      T \frac{\partial V}{\partial T}
+    \frac{\partial P}{\partial T} = \frac{\cancel{PV}}{\cancel{mR}} \frac{\cancel{mR}}{\cancel{P}} \frac{mR}{\cancel{V}} = mR
+    \end{align*}
+
+    \item Prove, given that the third-order partial derivatives of \(f(x, y,
+      z)\) are continuous then, \(f_{xyz} = f_{zxy} = f_{yzx}\).
+
+      If \(f(x) : \mathbb{R}^n \mapsto \mathbb{R}\) has continuous second
+  derivatives at \(x\), then \(\frac{\partial^2 f}{\partial x_ix_j} =
+  \frac{\partial^2 f}{\partial x_jx_i}\) (Clairaut's theorem).
+
 \end{enumerate}
 
 \newpage
@@ -36,7 +105,40 @@ Prove that the given statement is true in \(\mathbb{R}^3\) or provide a countere
 
 \begin{enumerate}
   \setcounter{enumi}{8}
-\item The curves \(\vec{r}_1(t) = (-1 + t)\hat{\imath}\)
+\item The curves \(\vec{r}_1(t) = (-1 + t)\hat{\imath} + (1 + 2t)\hat{\jmath} +
+  (5 - t)\hat{k}\) and \(\vec{r}_2(t) = (2 + 2t)\hat{\imath} + (4 +
+  t)\hat{\jmath} + (3 + t)\hat{k}\) intersect.
+
+  Let \(\vec{r}_2(s) = (2 + 2s)\hat{\imath} + (4 + s)\hat{\jmath} + (3 +
+  s)\hat{k}\).
+
+  \item If \(\vec{r}(t)\) is a differentiable vector function, then
+    \(\frac{\mathrm{d}}{\mathrm{d}t} \lVert \vec{r}(t) \rVert = \lVert
+    \vec{r}'(t) \rVert\). \label{proof10}
+
+    Let \(\vec{r}(t) = \cos(t^2)\hat{\imath} + \sin(t^2)\hat{\jmath}\).
+
+    \begin{align*}
+      \forall t \in \mathbb{R} : \lVert \vec{r}(t) \rVert
+      &= \sqrt{\cos^2(t^2) + \sin^2(t^2)} = 1 \\
+      &\therefore \frac{\mathrm{d}}{\mathrm{d}t} \lVert \vec{r}(t) \rVert = 0 \\
+      \vec{r}'(t)
+      &= -2t \sin(t^2)\hat{\imath} + 2t\cos(t^2)\hat{\jmath} \\
+      \lVert \vec{r}'(t) \rVert
+      &= \sqrt{4t^2\sin^2(t^2) + 4t^2\cos^2(t^2)} = 2t \\
+      \exists t \in \mathbb{R} : 0 \neq 2t
+      &\therefore \exists(\vec{r}(t) : \mathbb{R} \mapsto \mathbb{R}^3) \exists
+        t \in \mathbb{R} : \frac{\mathrm{d}}{\mathrm{d}t} \lVert \vec{r}(t)
+        \rVert \neq \lVert \vec{r}'(t) \rVert
+    \end{align*}
+
+    \item If \(\lVert \vec{r}(t) \rVert = 1\) for all \(t\), then \(\lVert
+      \vec{r}'(t) \rVert\) is a constant.
+
+      Let \(\vec{r}(t) = \cos(t^2)\hat{\imath} + \sin(t^2)\hat{\jmath}\). By
+      \cref{proof10}, \(\forall t \in \mathbb{R} : \lVert \vec{r}(t) \rVert = 1
+      \land \lVert \vec{r}'(t) \rVert = 2t \therefore \lVert \vec{r}(t) \rVert =
+      1 \nimplies \forall t \in \mathbb{R} : \lVert \vec{r}'(t) \rVert = c\).
 \end{enumerate}
 
 \end{document}
