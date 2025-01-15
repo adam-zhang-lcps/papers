@@ -69,33 +69,99 @@
   \end{align*}
 
 \item You are told that there is a function \(f(x, y)\) whose partial
-    derivatives are given by \(f_x(x, y) = -2xy \sin(x^2y)\) and \(f_y(x, y) =
-    -x^2 \sin(x^2y)\). Should you believe it? Why or why not?
-    \begin{align*}
-      \int f_x \,\mathrm{d}x &= -\int 2xy \sin(x^2y) \,\mathrm{d}x \\
+  derivatives are given by \(f_x(x, y) = -2xy \sin(x^2y)\) and \(f_y(x, y) =
+  -x^2 \sin(x^2y)\). Should you believe it? Why or why not?
+  \begin{align*}
+    \int f_x \,\mathrm{d}x &= -\int 2xy \sin(x^2y) \,\mathrm{d}x \\
                            &= \cos(x^2y) + g(y) \\
-      \int f_y \,\mathrm{d}y &= -\int x^2 \sin(x^2y) \,\mathrm{d}y \\
+    \int f_y \,\mathrm{d}y &= -\int x^2 \sin(x^2y) \,\mathrm{d}y \\
                            &= \cos(x^2y) + h(x) \\
-      \therefore f(x, y) &= \cos(x^2y)
-    \end{align*}
+    \therefore f(x, y) &= \cos(x^2y)
+  \end{align*}
 
-  \item The gas law for a fixed mass \(m\) of an ideal gas at absolute
-    temperature \(T\), pressure \(P\), and volume \(V\) is \(PV = mRT\) where
-    \(R\) is the gas constant. Show that \(T \frac{\partial V}{\partial T}
-    \frac{\partial P}{\partial T} = mR\).
+\item The gas law for a fixed mass \(m\) of an ideal gas at absolute
+  temperature \(T\), pressure \(P\), and volume \(V\) is \(PV = mRT\) where
+  \(R\) is the gas constant. Show that \(T \frac{\partial V}{\partial T}
+  \frac{\partial P}{\partial T} = mR\).
 
-    \begin{align*}
-      V = \frac{mRT}{P} \land P = \frac{mRT}{V} \land T = \frac{PV}{mR} \\
-      T \frac{\partial V}{\partial T}
+  \begin{align*}
+    V = \frac{mRT}{P} \land P = \frac{mRT}{V} \land T = \frac{PV}{mR} \\
+    T \frac{\partial V}{\partial T}
     \frac{\partial P}{\partial T} = \frac{\cancel{PV}}{\cancel{mR}} \frac{\cancel{mR}}{\cancel{P}} \frac{mR}{\cancel{V}} = mR
-    \end{align*}
+  \end{align*}
 
-    \item Prove, given that the third-order partial derivatives of \(f(x, y,
-      z)\) are continuous then, \(f_{xyz} = f_{zxy} = f_{yzx}\).
+\item Prove, given that the third-order partial derivatives of \(f(x, y,
+  z)\) are continuous then, \(f_{xyz} = f_{zxy} = f_{yzx}\).
 
-      If \(f(x) : \mathbb{R}^n \mapsto \mathbb{R}\) has continuous second
+  If \(f(x) : \mathbb{R}^n \mapsto \mathbb{R}\) has continuous second
   derivatives at \(x\), then \(\frac{\partial^2 f}{\partial x_ix_j} =
   \frac{\partial^2 f}{\partial x_jx_i}\) (Clairaut's theorem).
+
+\item Verify that if \(z(x, y) = f(x^2 + y^2)\) then \(y \frac{\partial
+    z}{\partial x}(x,y) - x \frac{\partial z}{\partial y}(x,y) = 0\).
+
+  \begin{align*}
+    \frac{\partial z}{\partial x}
+    &= f'{\left(x^2 + y^2\right)} \cdot 2x = 2x
+      f'{\left(x^2 + y^2\right)} \\
+    \frac{\partial z}{\partial y}
+    &= f'{\left( x^2 + y^2 \right)} \cdot 2y = 2y f'{\left( x^2 + y^2 \right)}
+    \\
+    y \frac{\partial z}{\partial x}(x,y) - x &\frac{\partial z}{\partial
+                                               y}(x,y) = \cancel{2xy f'{\left( x^2 + y^2 \right)}} - \cancel{2xy f'{\left( x^2 + y^2
+                                               \right)}} = 0
+  \end{align*}
+
+\item Let \(\alpha > 0\) be a constant. Prove that \(u(x,y,z,t) =
+  \frac{1}{t^{\frac{3}{2}}} e^{-\frac{x^2 + y^2 + z^2}{4\alpha t}}\), satisfies that
+  heat equation given by: \(u_t = \alpha\left(u_{xx} + u_{yy} + u_{zz}\right)\) for all
+  \(t > 0\).
+
+  Let \(E = e^{-\frac{x^2 + y^2 + z^2}{4\alpha t}}\). Due to the symmetry of
+  \(u(x,y,z,t)\) across \(x\), \(y\), and \(z\), \eqref{p8:uxx} can be used
+  to derive \eqref{p8:uyy} and \eqref{p8:uzz}.
+
+  \begin{subequations}
+    \begin{align*}
+      u_x(x,y,z,t) &= \frac{1}{t^{\frac{3}{2}}} E \left( -\frac{x}{2\alpha t}
+                     \right) = -\frac{x}{2\alpha t^{\frac{5}{2}}} E \\
+      u_{xx}(x,y,z,t) &= -\frac{1}{2\alpha t^{\frac{5}{2}}} E +
+                        -\frac{x}{2\alpha t^{\frac{5}{2}}} E \left( -\frac{x}{2\alpha t} \right)
+      \\
+                   &= E \left( -\frac{1}{2\alpha t^{\frac{5}{2}}} + \frac{x^2}{4 \alpha^2
+                     t^{\frac{7}{2}}} \right)
+                     \stepcounter{equation}\tag{\theequation}\label{p8:uxx} \\ 
+      u_{yy} &= E \left( -\frac{1}{2\alpha t^{\frac{5}{2}}} +
+               \frac{y^2}{4\alpha^2 t^{\frac{7}{2}}} \right)
+               \stepcounter{equation}\tag{\theequation}\label{p8:uyy} \\
+      u_{zz} &= E \left( -\frac{1}{2\alpha t^{\frac{5}{2}}} +
+               \frac{y^2}{4\alpha^2 t^{\frac{7}{2}}} \right)
+               \stepcounter{equation}\tag{\theequation}\label{p8:uzz} \\
+    \end{align*}
+  \end{subequations}
+  \(u_t(x,y,z,t)\) is given by \eqref{p8:ut}.
+
+  \begin{equation}
+    \label{p8:ut}
+    \begin{split}
+      u_t(x,y,z,t) &= -\frac{3}{2t^{\frac{5}{2}}} E + \frac{1}{t^{\frac{3}{2}}}
+                     E \left( \frac{x^2 + y^2 + z^2}{4\alpha t^2} \right) \\
+                   &= E \left( -\frac{3}{2t^{\frac{5}{2}}} + \frac{x^2 + y^2 + z^2}{4\alpha
+                     t^{\frac{7}{2}}} \right)
+    \end{split}
+  \end{equation}
+
+  Combine to show equality.
+
+  \begin{align*}
+    E \left( -\frac{3}{2t^{\frac{5}{2}}} + \frac{x^2 + y^2 + z^2}{4\alpha
+    t^{\frac{7}{2}}} \right) &= \alpha \left( u_{xx} + u_{yy} + u_{zz}
+                               \right) \\
+                             &= \alpha E \left( -\frac{3}{2\alpha t^{\frac{5}{2}}} + \frac{x^2 + y^2
+                               + z^2}{4\alpha^2 t^{\frac{7}{2}}} \right) \\
+                             &= E \left( -\frac{3}{2 t^{\frac{5}{2}}} + \frac{x^2 + y^2 +
+                               z^2}{4\alpha t^{\frac{7}{2}}} \right)
+  \end{align*}
 
 \end{enumerate}
 
@@ -112,33 +178,70 @@ Prove that the given statement is true in \(\mathbb{R}^3\) or provide a countere
   Let \(\vec{r}_2(s) = (2 + 2s)\hat{\imath} + (4 + s)\hat{\jmath} + (3 +
   s)\hat{k}\).
 
-  \item If \(\vec{r}(t)\) is a differentiable vector function, then
-    \(\frac{\mathrm{d}}{\mathrm{d}t} \lVert \vec{r}(t) \rVert = \lVert
-    \vec{r}'(t) \rVert\). \label{proof10}
+  \begin{equation*}
+    \begin{gathered}
+      (-1 + t)\hat{\imath} = (2 + 2s)\hat{\imath} \implies t = 2s + 3 \\
+      (1 + 2t)\hat{\jmath} = (4 + s)\hat{\jmath} \\
+      s + 4 = 1 + 4s + 6 \\
+      3s = -3 \\
+      s = -1 \land t = 1 \\
+      (5 - t)\hat{k} = (3 + s)\hat{k} \\
+      4 \neq 2 \\
+      \therefore \not\exists(t, s) \in \mathbb{R}^2 : \vec{r}_1(t) = \vec{r}_2(s)
+    \end{gathered}
+  \end{equation*}
 
-    Let \(\vec{r}(t) = \cos(t^2)\hat{\imath} + \sin(t^2)\hat{\jmath}\).
+\item If \(\vec{r}(t)\) is a differentiable vector function, then
+  \(\frac{\mathrm{d}}{\mathrm{d}t} \lVert \vec{r}(t) \rVert = \lVert
+  \vec{r}'(t) \rVert\). \label{proof10}
 
-    \begin{align*}
-      \forall t \in \mathbb{R} : \lVert \vec{r}(t) \rVert
-      &= \sqrt{\cos^2(t^2) + \sin^2(t^2)} = 1 \\
-      &\therefore \frac{\mathrm{d}}{\mathrm{d}t} \lVert \vec{r}(t) \rVert = 0 \\
-      \vec{r}'(t)
-      &= -2t \sin(t^2)\hat{\imath} + 2t\cos(t^2)\hat{\jmath} \\
-      \lVert \vec{r}'(t) \rVert
-      &= \sqrt{4t^2\sin^2(t^2) + 4t^2\cos^2(t^2)} = 2t \\
-      \exists t \in \mathbb{R} : 0 \neq 2t
-      &\therefore \exists(\vec{r}(t) : \mathbb{R} \mapsto \mathbb{R}^3) \exists
-        t \in \mathbb{R} : \frac{\mathrm{d}}{\mathrm{d}t} \lVert \vec{r}(t)
-        \rVert \neq \lVert \vec{r}'(t) \rVert
-    \end{align*}
+  Let \(\vec{r}(t) = \cos(t^2)\hat{\imath} + \sin(t^2)\hat{\jmath}\).
 
-    \item If \(\lVert \vec{r}(t) \rVert = 1\) for all \(t\), then \(\lVert
-      \vec{r}'(t) \rVert\) is a constant.
+  \begin{align*}
+    \forall t \in \mathbb{R} : \lVert \vec{r}(t) \rVert
+    &= \sqrt{\cos^2(t^2) + \sin^2(t^2)} = 1 \\
+    &\therefore \frac{\mathrm{d}}{\mathrm{d}t} \lVert \vec{r}(t) \rVert = 0 \\
+    \vec{r}'(t)
+    &= -2t \sin(t^2)\hat{\imath} + 2t\cos(t^2)\hat{\jmath} \\
+    \lVert \vec{r}'(t) \rVert
+    &= \sqrt{4t^2\sin^2(t^2) + 4t^2\cos^2(t^2)} = 2t \\
+    \exists t \in \mathbb{R} : 0 \neq 2t
+    &\therefore \exists(\vec{r}(t) : \mathbb{R} \mapsto \mathbb{R}^3) \exists
+      t \in \mathbb{R} : \frac{\mathrm{d}}{\mathrm{d}t} \lVert \vec{r}(t)
+      \rVert \neq \lVert \vec{r}'(t) \rVert
+  \end{align*}
 
-      Let \(\vec{r}(t) = \cos(t^2)\hat{\imath} + \sin(t^2)\hat{\jmath}\). By
-      \cref{proof10}, \(\forall t \in \mathbb{R} : \lVert \vec{r}(t) \rVert = 1
-      \land \lVert \vec{r}'(t) \rVert = 2t \therefore \lVert \vec{r}(t) \rVert =
-      1 \nimplies \forall t \in \mathbb{R} : \lVert \vec{r}'(t) \rVert = c\).
+\item If \(\lVert \vec{r}(t) \rVert = 1\) for all \(t\), then \(\lVert
+  \vec{r}'(t) \rVert\) is a constant.
+
+  Let \(\vec{r}(t) = \cos(t^2)\hat{\imath} + \sin(t^2)\hat{\jmath}\). By
+  \cref{proof10}, \(\forall t \in \mathbb{R} : \lVert \vec{r}(t) \rVert = 1
+  \land \lVert \vec{r}'(t) \rVert = 2t \therefore \lVert \vec{r}(t) \rVert =
+  1 \nimplies \forall t \in \mathbb{R} : \lVert \vec{r}'(t) \rVert = c\).
+
+\item Any surface which is the level surface of a three-variable function
+  \(g(x, y, z)\) can also be represented as the graph of a two-variable
+  function \(f(x, y)\).
+
+  Let \(g(x, y, z) = x^2 + y^2 + z^2\). The level surface \(g(x, y, z) =
+  1\) is given by \(x^2 + y^2 + z^2 = 1\). Solving for \(z\) yields \(z =
+  \pm \sqrt{1 - x^2 + y^2}\), which cannot be represented as a function,
+  as the range contains multiple outputs per input.
+
+\item If \(f\) is a function, then \(\lim_{(x, y, z) \to (2, 5, 3)}
+  f(x, y, z) = f(2, 5, 3)\).
+
+  \begin{equation*}
+    \begin{gathered}
+      f(x, y, z) : \mathbb{R}^3 \mapsto \mathbb{R} =
+      \begin{cases}
+        x + y + z & \text{if } x \geq 2 \\
+        x + y + 1 & \text{if } x < 2
+      \end{cases} \\
+      f(2, 5, 3) = 10 \land \lim_{(x, y, z) \to (2, 5, 3)} f(x, y, z)
+      \text{ does not exist}
+    \end{gathered}
+  \end{equation*}
 \end{enumerate}
 
 \end{document}
