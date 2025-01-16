@@ -58,6 +58,8 @@
                   hyperref
                   cleveref
                   fancyhdr
+                  titlesec
+                  parskip
                   pgf
                   cancel
                 ]);
