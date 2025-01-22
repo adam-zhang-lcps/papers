@@ -18,7 +18,7 @@
   
 \titlespacing*{\section}
 {0pt}
-{\medskipamount}
+{\bigskipamount}
 {0pt}
 
 \hypersetup{
@@ -27,6 +27,8 @@
   linkbordercolor=blue,
   urlcolor=blue,
   urlbordercolor=blue,
+  citecolor=black,
+  citebordercolor=white,
 }
 
 % Workaround for `colorlinks=true` disabling borders with no option to re-enable them.
@@ -36,6 +38,7 @@
 }
 \makeatother
 
+\newcommand{\name}{\emph{Behind the Bits}}
 
 \begin{document}
 \begin{flushright}
@@ -47,40 +50,101 @@
 \medskip
 Dear Mrs. Jennings’s Block 5 Class,
 
-\medskip
-I am excited to reveal to you my podcast idea for the People’s Choice Podcast
-Awards, \emph{Behind the Bits}. \emph{Behind the Bits} is a podcast series focused on the
+\medskip I am excited to reveal to you my podcast idea for the People’s Choice
+Podcast Awards, \name. \name{} is a brand new podcast series focused on the
 modern loss of digital sovereignty, the predatory power relinquished to
-monopolistic technology corporations, and the resulting societal harms. The
-modern emphasis on “profit at all costs” has resulted in multifaceted harm to
-consumers’ rights, such as sovereignty (ownership over our own data), privacy,
-and digital freedoms. Behind the Bits aims to be an outlet to communicate these
-issues to the general public, along with both personal and possible societal
-remedies for these issues.
+monopolistic technology corporations, and the resulting personal and societal
+harms. The modern emphasis on ``profit at all costs'' has resulted in
+multifaceted harm to consumers’ rights, such as sovereignty (ownership over our
+own data), privacy, and digital freedom. \name{} aims to be both an educational
+outlet to communicate these hidden issues to the general public, along with
+advocating for both personal and possible long-term societal remedies.
 
 \section{You Are The Product}
-My first episode, “You Are The Product”, will serve as the foundational context
-for the rest of the season. In it, I want to discuss the economic structure of
-Western society, and how it feeds into the predatory market practices within the
-technology sector [citation needed]. I want to establish the insane profits that
-companies such as Google/Meta make, and where the money comes from [citation
-needed]—especially since these companies provide services that are free of
-monetary charge to consumers.
+My first episode, ``You Are The Product'', will serve as the introduction of the
+broad topics I will be covering, providing foundational context for the rest of
+the season. In it, I want to discuss the economic structure of Western society,
+and how it both allows and feeds into the predatory market practices within the
+technology sector \autocite{Elvy2017:PayingForPrivacyAndThePersonalDataEconomy}.
+I want to establish the insane profits that companies such as Google/Meta make,
+and where the money comes from [citation needed]—especially since these
+companies provide services that are free of monetary charge to consumers.
 
 \section{Nothing to Hide}
-In this episode, I want to discuss the problematic aspects of how companies turn personal information into a tradable asset, and the resulting privacy violations. The title comes from the argument “why should I care about privacy if I have nothing to hide”, a common fallacious argument I want to quickly debunk [citation needed]. I want to establish that companies have no care for the safety of users’ information, and actively exploit the trust of users to increase their profits.
+In this episode, I want to discuss the problematic aspects of how companies turn
+personal information into a tradable asset, and why the resulting privacy
+violations are a real threat.
+
+The title comes from the argument ``why should I care about privacy if I have
+nothing to hide'', a common fallacious argument I want to quickly debunk.
+Privacy, after all, is about more than ``I'm not doing anything illegal''. It's
+about your ability to be free, to be an independent thinker. It's about feeling
+safe in your own life. In the end, we all have something to hide; maybe not from
+the government, but certainly from each other---such is the essence of personal
+living \autocite{Mordini2008:NothingHideBiometricPrivacyPrivateSphere}.
+
+I want to establish that companies have no care for the safety of users’
+information, and actively exploit the trust of users to increase their profits.
 
 \section{Your Data, Their Decisions}
+In 2022, a dad lost over a decade's worth of photos, videos, emails,
+\emph{memories}, for merely taking a photo of his baby child's swollen genitalia to
+send to a doctor. What he lost that day was access to the Google account he had
+relied upon for countless years, all because Google's automated systems flagged
+him for child abuse material. Now, child abuse is abhorrent and should not be
+tolerated in the slightest, but should that protection of children come at the
+expense of our control over our own digital lives? In fact, the situation gets
+worse. Even after a police investigation, Google refused to restore access to
+the account. All his data was gone, just like that \autocite{Hill2022:DadTookPhotosHisNakedToddlerDoctor}.
+
+In ``Your Data, Their Decisions'', I aim to take a deep dive directly into the
+most fundamental rabbit hole---our data sovereignty in the digital age. Who
+really owns \emph{our} data? Well, the answer might very well be the services
+you rely upon every day, who, as we've seen, will turn their back on you the
+moment it's no longer profitable to allow you to use their services. For
+example, many social media platforms claim near-total control over any content
+you upload to their sites in their Terms of Service
+\autocite{Tanner2022:IAgreedWhat}. Yeah, that 100-page document that I'm sure
+you didn't read---after all, I didn't either. This has become evermore prevalent
+in the era of artificial intelligence, where foundational companies such as
+OpenAI, Meta, Google, and Anthropic are foaming at the mouths to get their hands
+on as much user data as possible to train their models---and they're willing to
+pay for it. Perhaps that's why even the FTC is calling out these abuses of the
+Terms of Service as ``predatory'' and ``deceptive''
+\autocite{Crystal2024:AiCompanies}.
+
+This is just the tip of the iceberg. It's time to find out just how deep the
+rabbit hole goes.
 
 \section{The Price Isn't Right}
+Every episode thus far has discussed, in a sense, ``theoretical'' problems.
+Problems that, while certainly present, perhaps aren't visible in our
+daily lives. After all, technology companies have done a very good job of hiding
+them away from us---out of sight, out of mind. In this episode, I want to shine
+the light on two direct harms resulting from abuse by technology companies:
+social media psychology and algorithmic pricing.
+
+It is perhaps well-known at this point that social media can be harmful to young
+children and teens. Among adolescents, social media has resulted in less
+face-to-face interaction, a greater desire to ``fit in'' with peers, and
+increased rates of depression and other mental health issues \autocite{Allen2019:Social}.
+
+Algorithmic pricing refers to any case in which algorithms directly control
+prices for consumers. There are reasonable uses for algorithmic pricing; for
+example, gasoline and the stock market. However, the harm truly begins when
+algorithmic pricing becomes \emph{personalized} pricing; using data about you to
+determine how much you're willing to pay. The more they think you'll pay, the
+more they're going to charge you \autocite{Bar-Gill2019:Symposium}. Oh, but the
+price will never go down---all that matters is how much \emph{more} money they
+can extract from your pockets. Is this acceptable? It's time to start caring
+about digital privacy.
 
 \section{Take Control}
 
 \section{Seize the Means}
 
-By this point you should now be revealing specific information about your first season. What do you hope to accomplish overall? Is there a common thread? What are you hoping to achieve within each episode? This section of the letter will be long – you will need to decide how you will keep your audience’s attention as you list the six episodes for the season AND their descriptions (each description should be no fewer than five specific sentences that reveal the overall content/message/etc.). How will you divide this information to maintain your reader’s attention? At the end of each episode synopsis, you should have the link(s) to the research used for that potential episode. EACH of the SIX episodes should have a title in quotation marks. You will want to look at sample podcasts from a structural and visual standpoint and explain your podcast plan accordingly alongside the research. While you describe your episodes, you will use in-text citations to credit your sources.
 
-This next paragraph will be shorter since its purpose is to project a new season. As you indicate your hope for a second season, give an overview of what you hope to accomplish by having a new season. Again, you will need to make sure that you have episode ideas and descriptions and links (but not as many as the first season’s plan).
+\section*{Looking Ahead}
 
 \section*{Contact}
 I appreciate your time and consideration of my podcast proposal. For more

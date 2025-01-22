@@ -51,18 +51,18 @@
               package = texliveBasic.withPackages (ps:
                 with ps; [
                   latexmk
-                  
+
                   amsmath
                   fontspec
                   etoolbox
-                  
+
                   hyperref
                   cleveref
-                  
+
                   fancyhdr
                   titlesec
                   parskip
-                  
+
                   xcolor
                   pgf
                   cancel
@@ -71,6 +71,10 @@
                   biber
                   biblatex-mla
                 ]);
+            }
+            {
+              category = "(La)TeX";
+              package = texlab;
             }
             {
               category = "Analysis";
