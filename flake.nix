@@ -51,17 +51,25 @@
               package = texliveBasic.withPackages (ps:
                 with ps; [
                   latexmk
+                  
                   amsmath
                   fontspec
                   etoolbox
-                  xcolor
+                  
                   hyperref
                   cleveref
+                  
                   fancyhdr
                   titlesec
                   parskip
+                  
+                  xcolor
                   pgf
                   cancel
+
+                  biblatex
+                  biber
+                  biblatex-mla
                 ]);
             }
             {
