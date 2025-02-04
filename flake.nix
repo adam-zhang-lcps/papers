@@ -55,13 +55,21 @@
                   amsmath
                   fontspec
                   etoolbox
+                  xkeyval
+                  xstring
+                  xpatch
+                  translations
 
                   hyperref
                   cleveref
-
                   fancyhdr
                   titlesec
                   parskip
+                  enumitem
+                  caption
+                  float
+                  hanging
+                  ragged2e
 
                   xcolor
                   pgf
@@ -69,7 +77,15 @@
 
                   biblatex
                   biber
+                  csquotes
+
+                  preprint
                   biblatex-mla
+                  newtx
+                  iftex
+                  fontaxes
+                  enotez
+                  mlacls
                 ]);
             }
             {
