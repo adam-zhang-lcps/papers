@@ -20,6 +20,8 @@
 \crefname{proof}{Proof}{Proofs}
 \crefalias{enumi}{proof}
 
+\setlength\parindent{0pt}
+
 \begin{document}
 \pagestyle{fancy}
 \fancyhead[L]{AET Multivariable Calculus \\ \textbf{Quarter 3 Proofs}}
@@ -30,5 +32,67 @@
 \end{center}
 
 \section*{Proofs}
+\begin{enumerate}
+\item Assume that all the given functions have continuous second-order partial
+  derivatives. Show that any function of the form \(z = f(x + at) + g(x - at) \)
+  is a solution of the wave equation \(\frac{\partial^2 z}{\partial t^2} = a^2
+  \frac{\partial^2 z}{\partial x^2}\) (\textit{Hint}: Let \( u = x + at \), \( v
+  = x - at \)).
+
+\item Suppose that directional derivatives of \(f(x,y)\) are known at a point in two nonparallel directions given by unit vectors \(\vec{u} = \langle a, b \rangle\) and \(\vec{v} = \langle c, d \rangle\). Let the directional derivatives be defined as \(D_{u} f\) and \(D_{v} f\). Is it possible to find \( \nabla f \) at this point? If so, find \( \nabla f \) in terms of \( D_{u} f \), \( D_{v} f \), and the unit vectors \(\vec{u} = \langle a, b \rangle\) and \(\vec{v} = \langle c, d \rangle\).
+
+\item Are there any points on the hyperboloid \(x^2 - y^2 - z^2 = 1\) where
+  the tangent plane is parallel to the plane \(z = x + y\)? If yes, find
+  the point(s). If no, clearly explain why.
+
+\item Use Lagrange Multipliers to prove that the triangle with maximum area that
+  has a given perimeter \(p\) is equilateral.
+
+  \textit{Hint}: Use the Heron's formula for the area:
+  \(A = \sqrt{s(s - x)(s - y)(s - z)}\) where \(s = \frac{p}{2}\) and
+  \(x, y, z\) are the lengths of the sides.
+
+\item Prove that \( \nabla (FG) = F \nabla G + G \nabla F \) where \( F \) and
+  \( G \) are differentiable scalar functions of \( x, y \) and \( z \).
+
+\item If \(f(x,y)\) is continuous on \([a,b] \times [c,d]\) and
+  \(g(x,y) = \int_0^x \int_0^y f(s,t) \, dt \, ds\) for
+  \(a < x < b, c < y < d\), show that \(g_{xy} = g_{yx} = f(x,y)\).
+
+\item Prove Property 10 from page 1059 in Section 15.2.
+  \begin{quote}
+    If \(m \leq f(x,y) \leq M\) for all \((x,y)\) in \(D\), then
+    \(m \cdot A(D) \leq \iint_D f(x,y) dA \leq M \cdot A(D)\).
+  \end{quote}
+\end{enumerate}
 
 \section*{True or False}
+Prove that the given statement is true or provide a counterexample to show that it is false.
+
+\begin{enumerate}
+  \setcounter{enumi}{7}
+
+\item If \(f\) has a local minimum at \((a,b)\) and \(f\) is differentiable at
+  \((a,b)\), then \(\nabla f (a,b) = 0\).
+
+\item If \( f(x,y) \) has two local maxima, then \( f \) must have a local minimum.
+\end{enumerate}
+
+\textit{For problems \#10--12, if the answer is false, your explanation must include what the correct integral should be.}
+
+\begin{enumerate}
+  \setcounter{enumi}{9}
+  
+\item
+  \(\int_{-\frac{1}{2}}^{2} \int_{\frac{y^2}{2}}^{\frac{3}{2}y+1} x^2 \sin(x-y)
+  \,dx \,dy = \int_0^4 \int_{\frac{2}{3}(x-1)}^{\sqrt{x}} x^2 \sin(x-y) \,dy
+  \,dx\)
+
+\item
+  \(\int_0^{\pi/4} \int_{\sin x}^{\cos x} \sqrt{x + y^2} \, dy \, dx = \int_0^1
+  \int_{\arcsin y}^{\arccos y} \sqrt{x + y^2} \, dx \, dy\)
+
+\item \(\int_{-1}^{1} \int_{0}^{1} e^{x^2 + y^2} \sin y \, dx \, dy = 0\)
+\end{enumerate}
+
+\end{document}
