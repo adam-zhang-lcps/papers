@@ -48,7 +48,7 @@
 \item Use Lagrange Multipliers to prove that the triangle with maximum area that
   has a given perimeter \(p\) is equilateral.
 
-  \textit{Hint}: Use the Heron's formula for the area:
+  \textit{Hint}: Use Heron's formula for the area:
   \(A = \sqrt{s(s - x)(s - y)(s - z)}\) where \(s = \frac{p}{2}\) and
   \(x, y, z\) are the lengths of the sides.
 
@@ -56,13 +56,13 @@
   \( G \) are differentiable scalar functions of \( x, y \) and \( z \).
 
 \item If \(f(x,y)\) is continuous on \([a,b] \times [c,d]\) and
-  \(g(x,y) = \int_0^x \int_0^y f(s,t) \, dt \, ds\) for
+  \(g(x,y) = \int_0^x \int_0^y f(s,t) \, \mathrm{d}t \, \mathrm{d}s\) for
   \(a < x < b, c < y < d\), show that \(g_{xy} = g_{yx} = f(x,y)\).
 
 \item Prove Property 10 from page 1059 in Section 15.2.
   \begin{quote}
     If \(m \leq f(x,y) \leq M\) for all \((x,y)\) in \(D\), then
-    \(m \cdot A(D) \leq \iint_D f(x,y) dA \leq M \cdot A(D)\).
+    \(m \cdot A(D) \leq \iint_D f(x,y) \, \mathrm{d}A \leq M \cdot A(D)\).
   \end{quote}
 \end{enumerate}
 
@@ -85,14 +85,17 @@ Prove that the given statement is true or provide a counterexample to show that 
   
 \item
   \(\int_{-\frac{1}{2}}^{2} \int_{\frac{y^2}{2}}^{\frac{3}{2}y+1} x^2 \sin(x-y)
-  \,dx \,dy = \int_0^4 \int_{\frac{2}{3}(x-1)}^{\sqrt{x}} x^2 \sin(x-y) \,dy
-  \,dx\)
+  \,\mathrm{d}x\,\mathrm{d}y= \int_0^4 \int_{\frac{2}{3}(x-1)}^{\sqrt{x}} x^2
+  \sin(x-y) \, \mathrm{d}y \, \mathrm{d}x\)
 
 \item
-  \(\int_0^{\pi/4} \int_{\sin x}^{\cos x} \sqrt{x + y^2} \, dy \, dx = \int_0^1
-  \int_{\arcsin y}^{\arccos y} \sqrt{x + y^2} \, dx \, dy\)
+  \(\int_0^{\pi/4} \int_{\sin x}^{\cos x} \sqrt{x + y^2} \, \mathrm{d}y\,
+  \mathrm{d}x= \int_0^1 \int_{\arcsin y}^{\arccos y} \sqrt{x + y^2} \,
+  \mathrm{d}x\, \mathrm{d}y\)
 
-\item \(\int_{-1}^{1} \int_{0}^{1} e^{x^2 + y^2} \sin y \, dx \, dy = 0\)
+\item
+  \(\int_{-1}^{1} \int_{0}^{1} e^{x^2 + y^2} \sin y \, \mathrm{d}x\,
+  \mathrm{d}y= 0\)
 \end{enumerate}
 
 \end{document}
