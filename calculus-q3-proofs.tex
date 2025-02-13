@@ -134,8 +134,17 @@
     z &= y = x \\
   \end{align*}
 
-\item Prove that \( \nabla (FG) = F \nabla G + G \nabla F \) where \( F \) and
-  \( G \) are differentiable scalar functions of \( x, y \) and \( z \).
+\item Prove that \(\nabla (FG) = F \nabla G + G \nabla F\) where \(F\) and
+  \(G\) are differentiable scalar functions of \(x, y\) and \(z\).
+
+  Let \(H(x, y, z) = F(x, y, z) G(x, y, z)\).
+
+  \begin{align*}
+    \nabla H &= \left< H_x, H_y, H_z \right> \\
+             &= \left< FG_x + GF_x, FG_y + GF_y, FG_z + GF_z \right> \\
+             &= \left< FG_x, FG_y, FG_z \right> + \left< GF_x, GF_y, GF_z \right> \\
+             &= F \nabla G + G \nabla F
+  \end{align*}
 
 \item If \(f(x,y)\) is continuous on \([a,b] \times [c,d]\) and
   \(g(x,y) = \int_0^x \int_0^y f(s,t) \, \mathrm{d}t \, \mathrm{d}s\) for
