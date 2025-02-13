@@ -183,6 +183,15 @@ Prove that the given statement is true or provide a counterexample to show that 
 \item
   \(\int_{-1}^{1} \int_{0}^{1} e^{x^2 + y^2} \sin y \, \mathrm{d}x\,
   \mathrm{d}y= 0\)
+
+  Consider \(x^2\) and \(y^2\), which are both even functions. Thus, both
+  \(x^2 + y^2\) and \(e^{x^2 + y^2}\) are even
+  functions\footnote{\label{fn:trivial} This trivial proof is left as an
+    exercise for the reader.}. Consider \(\sin(y)\), which is an odd
+  function\footnotemark[\value{footnote}]. Thus, the function
+  \(e^{x^2 + y^2} \sin y\) is an odd function along the
+  \(y\)-axis\footnotemark[\value{footnote}]. Therefore, the integral from
+  \(y = -1\) to \(y = 1\) is zero.
 \end{enumerate}
 
 \end{document}
