@@ -52,6 +52,27 @@
   \(A = \sqrt{s(s - x)(s - y)(s - z)}\) where \(s = \frac{p}{2}\) and
   \(x, y, z\) are the lengths of the sides.
 
+  \begin{align*}
+    A &= \sqrt{s(s - x)(s - y)(s - z)} \\
+    A^2 &= s(s - x)(s - y)(s - z) \\
+    f(x, y, z) &= s(s - x)(s - y)(s - z) \\
+    \nabla f &= \left< -s(s - y)(s - z), -s(s - x)(s - z), -s(s - x)(s - y) \right> \\
+    g(x, y, z) &= x + y + z = 2s \\
+    \nabla g &= \left< 1, 1, 1 \right> \\
+    \nabla f &= \lambda\nabla g
+               \begin{cases}
+                 -s(s - y)(s - z) &= 1 \cdot \lambda \\
+                 -s(s - x)(s - z) &= 1 \cdot \lambda \\
+                 -s(s - x)(s - y) &= 1 \cdot \lambda \\
+               \end{cases} \\
+    -s(s - y)(s - z) &= -s(s - x)(s - z) \\
+    s - y &= s - x \\
+    y &= x \\
+    -s(s - x)(s - z) &= -s(s - x)(s - y) \\
+    s - z &= s - y \\
+    z &= y = x \\
+  \end{align*}
+
 \item Prove that \( \nabla (FG) = F \nabla G + G \nabla F \) where \( F \) and
   \( G \) are differentiable scalar functions of \( x, y \) and \( z \).
 
