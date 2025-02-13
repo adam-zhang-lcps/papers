@@ -12,11 +12,6 @@
 \title{Calculus Q3 Proofs}
 \author{Adam Zhang}
 
-\newcommand{\nimplies}{\mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
-% Primed vectors are not typeset correctly and I don't feel like properly fixing
-% it, so let's just use bold vectors instead.
-\renewcommand{\vec}[1]{\ensuremath\mathbf{#1}}
-
 \crefname{proof}{Proof}{Proofs}
 \crefalias{enumi}{proof}
 
@@ -160,9 +155,15 @@ Prove that the given statement is true or provide a counterexample to show that 
   \setcounter{enumi}{7}
 
 \item If \(f\) has a local minimum at \((a,b)\) and \(f\) is differentiable at
-  \((a,b)\), then \(\nabla f (a,b) = 0\).
+  \((a,b)\), then \(\nabla f (a,b) = \vec{0}\).
 
-\item If \( f(x,y) \) has two local maxima, then \( f \) must have a local minimum.
+  Consider the case where \(\nabla f(a, b) \neq \vec{0}\). In this case,
+  \(\nabla f\) indicates the direction of greatest change of \(f\) at
+  \((a, b)\). Thus, moving in the direction of \(\nabla f\) would increase the
+  value of \(f\); consequently, moving in the direction of \(-\nabla f\) would
+  decrease the value of \(f\), meaning that \(f(a, b)\) cannot be a minimum.
+
+\item If \(f(x,y)\) has two local maxima, then \(f\) must have a local minimum.
 \end{enumerate}
 
 \textit{For problems \#10--12, if the answer is false, your explanation must include what the correct integral should be.}
