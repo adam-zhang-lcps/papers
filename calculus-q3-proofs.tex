@@ -150,6 +150,15 @@
   \(g(x,y) = \int_0^x \int_0^y f(s,t) \, \mathrm{d}t \, \mathrm{d}s\) for
   \(a < x < b, c < y < d\), show that \(g_{xy} = g_{yx} = f(x,y)\).
 
+  By Clairaut's theorem, \(g_{xy} = g_{yx}\). By the Fundamental Theorem of
+  Calculus, \(\frac{\mathrm{d}}{\mathrm{d}x} \int_0^x f(a) \mathrm{d}a = f(a)\).
+
+  \begin{align*}
+    g_{xy} &= \frac{\partial}{\partial y} \frac{\partial}{\partial x} \int_0^x \int_0^y f(s,t) \, \mathrm{d}t \, \mathrm{d}s \\
+           &= \frac{\partial}{\partial y} \int_0^y f(x, t) \, \mathrm{d}t \\
+           &= f(x, y) \\
+  \end{align*}
+
 \item Prove Property 10 from page 1059 in Section 15.2.
   \begin{quote}
     If \(m \leq f(x,y) \leq M\) for all \((x,y)\) in \(D\), then
