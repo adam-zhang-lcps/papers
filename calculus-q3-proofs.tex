@@ -45,6 +45,25 @@
   the tangent plane is parallel to the plane \(z = x + y\)? If yes, find
   the point(s). If no, clearly explain why.
 
+  \begin{align*}
+    \text{Plane: }& x + y - z = 0 \\
+    &\vec{N} = \left< 1, 1, -1 \right> \\
+    \text{Hyperboloid: }& f(x, y, z) = x^2 - y^2 - z^2 \\
+    &\nabla f = \left< 2x, -2y, -2z \right> \\
+    \lambda\vec{N} &= \nabla f
+              \begin{cases}
+                2x &= \lambda \\
+                -2y &= \lambda \\
+                -2z &= \lambda
+              \end{cases} \\
+    2x &= -2y \\
+    y &= -x \\
+    -2y &= -2z \\
+    y &= z = -x \\
+    x^2 - (-x)^2 - (-x)^2 &= 1 \\
+    x^2 &\neq -1
+  \end{align*}
+
 \item Use Lagrange Multipliers to prove that the triangle with maximum area that
   has a given perimeter \(p\) is equilateral.
 
