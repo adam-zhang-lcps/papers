@@ -41,21 +41,48 @@
 
 \item Suppose that directional derivatives of \(f(x,y)\) are known at a point in two nonparallel directions given by unit vectors \(\vec{u} = \langle a, b \rangle\) and \(\vec{v} = \langle c, d \rangle\). Let the directional derivatives be defined as \(D_{u} f\) and \(D_{v} f\). Is it possible to find \( \nabla f \) at this point? If so, find \( \nabla f \) in terms of \( D_{u} f \), \( D_{v} f \), and the unit vectors \(\vec{u} = \langle a, b \rangle\) and \(\vec{v} = \langle c, d \rangle\).
 
+  \begin{align*}
+    D_uf = \nabla f \cdot \vec{u} &\qquad D_vf = \nabla f \cdot \vec{v} \\
+    D_uf = a f_x + b f_y &\qquad D_vf = c f_x + d f_y \\
+    \begin{bmatrix}
+      a & b \\
+      c & d \\
+    \end{bmatrix}
+    \begin{bmatrix}
+      f_x \\ f_y
+    \end{bmatrix}
+    &=
+      \begin{bmatrix}
+        D_uf \\ D_v f
+      \end{bmatrix} \\
+    \nabla f
+    &=
+      \frac{1}{ad - bc}
+      \begin{bmatrix}
+        d & -b \\
+        -c & a \\
+      \end{bmatrix}
+      \begin{bmatrix}
+        D_uf \\ D_v f
+      \end{bmatrix} \\
+    &= \left< \frac{d D_uf - b D_vf}{ad - bc}, \frac{a D_vf - c D_uf}{ad - bc} \right>
+  \end{align*}
+
 \item Are there any points on the hyperboloid \(x^2 - y^2 - z^2 = 1\) where
   the tangent plane is parallel to the plane \(z = x + y\)? If yes, find
   the point(s). If no, clearly explain why.
 
   \begin{align*}
     \text{Plane: }& x + y - z = 0 \\
-    &\vec{N} = \left< 1, 1, -1 \right> \\
+                  &\vec{N} = \left< 1, 1, -1 \right> \\
     \text{Hyperboloid: }& f(x, y, z) = x^2 - y^2 - z^2 \\
-    &\nabla f = \left< 2x, -2y, -2z \right> \\
+                  &\nabla f = \left< 2x, -2y, -2z \right> \\
     \lambda\vec{N} &= \nabla f
-              \begin{cases}
-                2x &= \lambda \\
-                -2y &= \lambda \\
-                -2z &= \lambda
-              \end{cases} \\
+                     \begin{cases}
+                       2x &= \lambda \\
+                       -2y &= \lambda \\
+                       -2z &= \lambda
+                     \end{cases} \\
     2x &= -2y \\
     y &= -x \\
     -2y &= -2z \\
