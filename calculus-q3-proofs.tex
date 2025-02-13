@@ -164,6 +164,31 @@ Prove that the given statement is true or provide a counterexample to show that 
   decrease the value of \(f\), meaning that \(f(a, b)\) cannot be a minimum.
 
 \item If \(f(x,y)\) has two local maxima, then \(f\) must have a local minimum.
+
+  Consider the function \(f(x, y) = x^2 - x^4 - y^2\). Solve possible
+  critical points:
+
+  \begin{align*}
+    \nabla f(x, y) = &\left< 2x - 4x^3, -2y \right> \\
+    \vec{0} = \left< 2x - 4x^3, -2y \right>
+    &\begin{cases}
+      2x - 4x^3 &= 0 \\
+      -2y &= 0 \\
+    \end{cases} \\
+    x(2 - 4x^2) &= 0 \\
+    x(\sqrt{2} + 2x)(\sqrt{2} - 2x) &= 0 \\
+    x &= \left\{ 0, \pm \frac{\sqrt{2}}{2} \right\} \\
+    y &= 0
+  \end{align*}
+
+  Thus, \(f\) has local maxima at
+  \((\pm \frac{1}{\sqrt{2}}, 0, f(\frac{1}{\sqrt{2}}, 0))\). However, \((0, 0)\)
+  is neither a maximum nor minimum point (rather, it's a saddle point); thus,
+  \(f(x, y)\) has no minima\footnote{This is trivially verifiable by considering
+    that, since all critical points lie on the plane \(y = 0\), any extrema must
+    also be extrema on the \(x\) portion of \(f\). The maxima and lack of minima
+    for \(f(x) = x^2 - x^4\) is trivially verifiable using single-variable
+    calculus.}.
 \end{enumerate}
 
 \textit{For problems \#10--12, if the answer is false, your explanation must include what the correct integral should be.}
