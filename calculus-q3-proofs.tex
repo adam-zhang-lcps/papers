@@ -39,6 +39,26 @@
   \frac{\partial^2 z}{\partial x^2}\) (\textit{Hint}: Let \( u = x + at \), \( v
   = x - at \)).
 
+  \begin{align*}
+    z &= f(u) + g(v) \\
+    \frac{\partial z}{\partial t}
+      &= f'(u) \frac{\partial u}{\partial t} + g'(v) \frac{\partial
+        v}{\partial t} \\
+      &= a f'(u) -a g'(v) \\
+    \frac{\partial^2 z}{\partial t^2}
+      &= a f''(u) \frac{\partial u}{\partial t} - a g''(v) \frac{\partial
+        v}{\partial t} \\
+      &= a^2 f''(u) + a^2 g''(v) \\
+      &= a^2 (f''(u) + g''(v)) \\
+    \frac{\partial z}{\partial x}
+    &= f'(u) \frac{\partial u}{\partial x} + g'(v) \frac{\partial v}{\partial x}
+    \\
+      &= f'(u) + g'(v) \\
+    \frac{\partial^2 z}{\partial x^2}
+    &= f''(u) \frac{\partial u}{\partial x} + g''(v) \frac{\partial v}{\partial x} \\
+    &= f''(u) + g''(v) \\
+  \end{align*}
+
 \item Suppose that directional derivatives of \(f(x,y)\) are known at a point in two nonparallel directions given by unit vectors \(\vec{u} = \langle a, b \rangle\) and \(\vec{v} = \langle c, d \rangle\). Let the directional derivatives be defined as \(D_{u} f\) and \(D_{v} f\). Is it possible to find \( \nabla f \) at this point? If so, find \( \nabla f \) in terms of \( D_{u} f \), \( D_{v} f \), and the unit vectors \(\vec{u} = \langle a, b \rangle\) and \(\vec{v} = \langle c, d \rangle\).
 
   \begin{align*}
