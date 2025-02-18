@@ -6,6 +6,8 @@
 \usepackage[letterpaper,margin=1in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage[nameinlink]{cleveref}
+\usepackage{tikz}
+\usepackage{pgfplots}
 \usepackage{fancyhdr}
 \usepackage{cancel}
 
@@ -226,13 +228,51 @@ Prove that the given statement is true or provide a counterexample to show that 
   \setcounter{enumi}{9}
   
 \item
-  \(\int_{-\frac{1}{2}}^{2} \int_{\frac{y^2}{2}}^{\frac{3}{2}y+1} x^2 \sin(x-y)
-  \,\mathrm{d}x\,\mathrm{d}y= \int_0^4 \int_{\frac{2}{3}(x-1)}^{\sqrt{x}} x^2
-  \sin(x-y) \, \mathrm{d}y \, \mathrm{d}x\)
+  \(\int_{-\frac{1}{2}}^{2} \int_{y^2}^{\frac{3}{2}y+1} x^2 \sin(x-y)
+  \,\mathrm{d}x\,\mathrm{d}y = \int_0^4 \int_{\frac{2}{3}(x-1)}^{\sqrt{x}} x^2
+  \sin(x-y) \, \mathrm{d}y \, \mathrm{d}x\) \label{proof:10}
 
+  \begin{figure}[h]
+    \centering
+    \caption{Plot of Integration Regions for \cref{proof:10}}
+    \begin{tikzpicture}
+      \begin{axis}[
+        width=7cm,
+        height=7cm,
+        axis lines=middle,
+        xlabel={$x$}, ylabel={$y$},
+        xtick={-1,0,1,2,3,4},
+        ytick={-1,0,1,2,3},
+        enlargelimits=true,
+        domain=-0.5:2,
+        samples=100,
+        ]
+        \addplot[black, dashed, thick] ({(3/2)*x+1}, x) node[right] {};
+        \addplot[black, thick] ({x^2}, x) node[right] {};
+      \end{axis}
+    \end{tikzpicture}
+    \hspace{1cm}
+    \begin{tikzpicture}
+      \begin{axis}[
+        width=7cm,
+        height=7cm,
+        axis lines=middle,
+        xlabel={$x$}, ylabel={$y$},
+        xtick={0,1,2,3,4},
+        ytick={-1,0,1,2},
+        enlargelimits=true,
+        domain=0:4,
+        samples=100,
+        ]
+        \addplot[black, dashed, thick] {(2/3)*(x-1)} node[right] {};
+        \addplot[black, thick] {sqrt(x)} node[right] {};
+      \end{axis}
+    \end{tikzpicture}
+  \end{figure}
+  
 \item
   \(\int_0^{\pi/4} \int_{\sin x}^{\cos x} \sqrt{x + y^2} \, \mathrm{d}y\,
-  \mathrm{d}x= \int_0^1 \int_{\arcsin y}^{\arccos y} \sqrt{x + y^2} \,
+  \mathrm{d}x = \int_0^1 \int_{\arcsin y}^{\arccos y} \sqrt{x + y^2} \,
   \mathrm{d}x\, \mathrm{d}y\)
 
 \item

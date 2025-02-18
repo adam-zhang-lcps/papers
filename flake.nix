@@ -73,6 +73,7 @@
 
                   xcolor
                   pgf
+                  pgfplots
                   cancel
 
                   biblatex
