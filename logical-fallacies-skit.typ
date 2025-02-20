@@ -1,6 +1,3 @@
-\documentclass{article}
-
-\begin{document}
 Bartender: Hey guys, welcome in, take a seat wherever!
 
 [Taylor and Diego sit down at the bar. PhD Student is a few seats over, wearing a [??] sweater. Bartender is pouring him a drink. The Super Bowl is about to start on the TV screens around the bar.]
@@ -27,7 +24,7 @@ Diego: Wings aren’t healthy, and they aren’t even that good, they’re avera
 
 Taylor: Wow, are you saying you hate all short people? Short people can be just as healthy as everyone else. (Straw man) Also, didn’t you used to eat wings all the time? (Tu Quoque, pt. 2)
 
-Diego: Maybe, but don’t you do hard drugs everyday? Just because it hasn’t killed you does that mean it's healthy? 
+Diego: Maybe, but don’t you do hard drugs everyday? Just because it hasn’t killed you does that mean it's healthy?
 
 Taylor: Okay and? Everyone does hard drugs these days, you should try it too sometime! (Bandwagon)
 
@@ -51,7 +48,7 @@ Taylor: Our argument is valid since wings are just like salads. You eat them bot
 
 Diego: I still believe salad is better. Last year, I ate salad at the super bowl party, and my team won. Therefore, salad is better than wings and eating it helps them win. (False Cause)
 
-Taylor: Fine, salads are okay, but wings are a gift from nature. Who can deny that? (Appeal to Ignorance). 
+Taylor: Fine, salads are okay, but wings are a gift from nature. Who can deny that? (Appeal to Ignorance).
 
 [Bartender walks away, notices PhD Student asleep, and shakes PhD Student awake.]
 
@@ -79,7 +76,7 @@ Taylor: Diego thinks that salad is better than chicken wings! Like, lettuce and 
 
 PhD Student: Uh, I think that’s a fallacious argument…
 
-Diego: HA, you’re wrong Taylor! (Fallacy fallacy) 
+Diego: HA, you’re wrong Taylor! (Fallacy fallacy)
 
 [In the background, the Super Bowl is beginning on the televisions around the bar.]
 
@@ -88,4 +85,3 @@ Bartender: Hey you two, no more bickering, the game is on!
 [Intensified NFL theme music.]
 [Fade to black. End scene.]
 [Text Message Displayed on Black Screen] [Every food is good food. Enjoy the game.]
-\end{document}
