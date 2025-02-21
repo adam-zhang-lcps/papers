@@ -3,25 +3,54 @@
 // Double spacing is weird
 #set par(spacing: 1.89em)
 
-#let titlepage(title: str, desc: content, by: content) = [
-  #page(
-    margin: (
-      top: 3.5in,
-      left: 4in,
-      right: 1in,
-      bottom: 1in,
-    ),
-  )[
+#let title_page(title: str, desc: content, by: content) = page(
+  margin: (
+    top: 3.5in,
+    left: 4in,
+    right: 1in,
+    bottom: 1in,
+  ),
+)[
+  #[
+    // HACK: this is stupid.
+    #set par(spacing: 1em)
     #upper(title)
 
     #{ "_" * title.len() }
-
-    #desc
-
-    by
-
-    #by
   ]
+
+  #desc
+
+  by
+
+  #by
+]
+
+
+#let cast_page(characters: array, scene: content, time: content) = page(
+  margin: (left: 1.5in, rest: 1in),
+)[
+  #align(center)[#underline[Cast of Characters]]
+
+  #for (name, desc) in characters [
+    // HACK: cannot use a top-level grid, since row height varies.
+    #grid(
+      // HACK: there were no explicit dimensions given for this.
+      columns: (45%, 55%),
+      [#underline(name):], desc,
+    )
+  ]
+
+  // HACK: this matches the example given 🤷.
+  #v(2em)
+
+  #align(center)[#underline[Scene]]
+
+  #scene
+
+  #align(center)[#underline[Time]]
+
+  #time
 ]
 
 #let character(name) = [#h(3in) #upper(name)]
@@ -30,15 +59,25 @@
 
 #let direction(content) = [#h(2.5in) #content]
 
-#titlepage(
+#title_page(
   title: "Super Bowl Squabble",
   desc: [An Intense Food Fight],
   by: [Adam Zhang, Kaleigh Knodell, Diego Carames, Taylor Leberknight],
 )
 
-#page(margin: (left: 1.5in, rest: 1in))[
-  #align(center)[#underline[Cast of Characters]]
-]
+#cast_page(
+  characters: (
+    (
+      [Kaleigh],
+      [A woman, early 20s, serving as the bartender at the scene's bar.],
+    ),
+    ([Taylor], [A girl, late teens, enjoys eating wings.]),
+    ([Diego], [A boy, late teens, sports fan and health aficionado.]),
+    ([Adam], [A man, early 20s, alcoholic PhD student at MIT.]),
+  ),
+  scene: [A casual bar.],
+  time: [2025, on the evening of Super Bowl LIX.],
+)
 
 #h(3in) #underline[ACT I]
 
@@ -46,7 +85,7 @@
 
 #character[Bartender]
 
-#dialogue[Hey guys, welcome in, take a seat wherever!],
+#dialogue[Hey guys, welcome in, take a seat wherever!]
 
 #direction[Taylor and Diego sit down at the bar. PhD Student is a few seats over, wearing a MIT sweater. Bartender is pouring him a drink. The Super Bowl is about to start on the TV screens around the bar.]
 
