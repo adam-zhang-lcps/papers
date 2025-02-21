@@ -126,11 +126,17 @@
 
 #dialogue[Hey guys, welcome in, take a seat wherever!]
 
-[Bartender comes over from serving PhD Student’s 2nd soju glass of the night.]
+#direction[BARTENDER comes over from serving ADAM’s 2nd soju glass of the night.]
 
-Bartender: [Wipes glass with rag] What can I get you started with for today?
+#character[Bartender]
 
-Diego: I’ll take a glass of apple juice and a Caesar salad to start with, thank you.
+#direction[Wipes glass with rag.]
+
+#dialogue[What can I get you started with for today?]
+
+#character[Diego]
+
+#dialogue[I’ll take a glass of apple juice and a Caesar salad to start with, thank you.]
 
 Bartender: What about you, ma’am?
 
