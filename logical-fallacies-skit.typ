@@ -84,6 +84,8 @@
 
 #let direction(content) = block[#h(2.5in) (#content)]
 
+#let fallacy(content) = emph[(#content)]
+
 #title_page(
   title: "Super Bowl Squabble",
   desc: [An Intense Food Fight],
@@ -183,22 +185,22 @@
 
 #character(
   [Diego],
-  dialogue[You shouldn’t have ordered that, those wings are horrible for your health, they’ll give you a heart attack and you’ll die. (slippery slope)],
+  dialogue[You shouldn’t have ordered that, those wings are horrible for your health, they’ll give you a heart attack and you’ll die. #fallacy[slippery slope]],
 )
 
 #character(
   [Taylor],
-  dialogue[Well, I eat wings every day and haven’t died yet so they must be healthy. (anecdotal fallacy)],
+  dialogue[Well, I eat wings every day and haven’t died yet so they must be healthy. #fallacy[anecdotal fallacy]],
 )
 
 #character(
   [Diego],
-  dialogue[Wings aren’t healthy, and they aren’t even that good, they’re average at best, the salad is way better. (Tu Quoque, pt. 1) Maybe if you started eating healthy you’d actually grow to a reasonable height. (Ad hominem)],
+  dialogue[Wings aren’t healthy, and they aren’t even that good, they’re average at best, the salad is way better. #fallacy[Tu Quoque, pt. 1] Maybe if you started eating healthy you’d actually grow to a reasonable height. #fallacy[Ad hominem]],
 )
 
 #character(
   [Taylor],
-  dialogue[Wow, are you saying you hate all short people? Short people can be just as healthy as everyone else. (straw man) Also, didn’t you used to eat wings all the time? (Tu Quoque, pt. 2)],
+  dialogue[Wow, are you saying you hate all short people? Short people can be just as healthy as everyone else. #fallacy[straw man] Also, didn’t you used to eat wings all the time? #fallacy[Tu Quoque, pt. 2]],
 )
 
 #character(
@@ -208,7 +210,7 @@
 
 #character(
   [Taylor],
-  dialogue[Okay and? Everyone does hard drugs these days, you should try it too sometime! (Bandwagon)],
+  dialogue[Okay and? Everyone does hard drugs these days, you should try it too sometime! #fallacy[bandwagon]],
 )
 
 #character(
@@ -224,12 +226,12 @@
 
 #character(
   [Taylor],
-  dialogue[Yeah but he’s a PhD student at MIT, he must be right! (appeal to authority)],
+  dialogue[Yeah but he’s a PhD student at MIT, he must be right! #fallacy[appeal to authority]],
 )
 
 #character(
   [Diego],
-  dialogue[Does PhD stand for "possibly high and drunk"? (Ad hominem)],
+  dialogue[Does PhD stand for "possibly high and drunk"? #fallacy[Ad hominem]],
 )
 
 #character(
@@ -241,37 +243,37 @@
 
 #character(
   [Bartender],
-  dialogue[Haven’t you people ever had the decency to consider running on a treadmill while watching the Super Bowl?! (red herring) Being active while watching TV is obviously the best, that's why everyone should workout while watching the Super Bowl. (circular argument)],
+  dialogue[Haven’t you people ever had the decency to consider running on a treadmill while watching the Super Bowl?! #fallacy[red herring] Being active while watching TV is obviously the best, that's why everyone should workout while watching the Super Bowl. #fallacy[circular argument]],
 )
 
 #character(
   [Diego],
-  dialogue[Even the bartender agrees, running and salad are both healthy for you. Therefore salad is better than wings! (false equivalence)],
+  dialogue[Even the bartender agrees, running and salad are both healthy for you. Therefore salad is better than wings! #fallacy[false equivalence]],
 )
 
 #character(
   [Bartender],
-  dialogue[Salad and wings aren’t a great comparison either. One is fried finger food and the other is a healthy dish. Besides, I’ve never had a bad experience with any Super Bowl food before, it’s always tasty and perfect. (hasty generalization)],
+  dialogue[Salad and wings aren’t a great comparison either. One is fried finger food and the other is a healthy dish. Besides, I’ve never had a bad experience with any Super Bowl food before, it’s always tasty and perfect. #fallacy[hasty generalization]],
 )
 
 #character(
   [Taylor],
-  dialogue[Our argument is valid since wings are just like salads. You eat them both during the super bowl. (weak analogy)],
+  dialogue[Our argument is valid since wings are just like salads. You eat them both during the super bowl. #fallacy[weak analogy]],
 )
 
 #character(
   [Diego],
-  dialogue[I still believe salad is better. Last year, I ate salad at my Super Bowl party, and my team won. Therefore, salad is better than wings and eating it helps them win. (false cause)],
+  dialogue[I still believe salad is better. Last year, I ate salad at my Super Bowl party, and my team won. Therefore, salad is better than wings and eating it helps them win. #fallacy[false cause]],
 )
 
 #character(
   [Taylor],
-  dialogue[Fine, salads are okay, but wings are a gift from nature. Who can deny that? (appeal to ignorance)],
+  dialogue[Fine, salads are okay, but wings are a gift from nature. Who can deny that? #fallacy[appeal to ignorance]],
 )
 
 #character(
   [Diego],
-  dialogue[Salads are more of a gift of nature than wings. They literally come straight from the Earth. Also, you can’t say salads are bad and then say they’re okay a few minutes later. You either hate salads or you love them. Pick a side! (false dilemma)],
+  dialogue[Salads are more of a gift of nature than wings. They literally come straight from the Earth. Also, you can’t say salads are bad and then say they’re okay a few minutes later. You either hate salads or you love them. Pick a side! #fallacy[false dilemma]],
 )
 
 #direction[BARTENDER walks away, notices ADAM asleep, and shakes ADAM awake.]
@@ -284,7 +286,7 @@
 
 #character(
   [Taylor],
-  dialogue[Well, I’ve already ordered the wings, so it’d be a waste to not eat them. (sunk cost)],
+  dialogue[Well, I’ve already ordered the wings, so it’d be a waste to not eat them. #fallacy[sunk cost]],
 )
 
 #character(
@@ -297,7 +299,7 @@
 #character(
   [Taylor],
   direction[shaking head],
-  dialogue[If he really cared about the environment he wouldn’t waste food. (emotional appeal)],
+  dialogue[If he really cared about the environment he wouldn’t waste food. #fallacy[emotional appeal]],
 )
 
 #direction[ADAM slowly stirs and rubs his eyes.]
@@ -315,7 +317,7 @@
 
 #character(
   [Taylor],
-  dialogue[Diego thinks that salad is better than chicken wings! Like, lettuce and cucumbers are disgusting, why would anyone eat salad? (composition fallacy)],
+  dialogue[Diego thinks that salad is better than chicken wings! Like, lettuce and cucumbers are disgusting, why would anyone eat salad? #fallacy[composition fallacy]],
 )
 
 #direction[Diego returns from the restroom.]
@@ -327,7 +329,7 @@
 
 #character(
   [Diego],
-  dialogue[HA, you’re wrong Taylor! (fallacy fallacy)],
+  dialogue[HA, you’re wrong Taylor! #fallacy[fallacy fallacy]],
 )
 
 #direction[In the background, the Super Bowl Halftime Show is beginning on the televisions around the bar.]
