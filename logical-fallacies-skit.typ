@@ -87,7 +87,15 @@
 #title_page(
   title: "Super Bowl Squabble",
   desc: [An Intense Food Fight],
-  by: [Adam Zhang, Kaleigh Knodell, Diego Carames, and Taylor Leberknight],
+  by: [
+    Adam Zhang
+
+    Kaleigh Knodell
+
+    Diego Carames
+
+    Taylor Leberknight
+  ],
   contact: [
     19019 Upper Belmont Pl \
     Leesburg, VA 20176 \
@@ -145,7 +153,7 @@
 
 #character(
   [Bartender],
-  direction[Wipes glass with rag.],
+  direction[Clicks pen.],
   dialogue[What can I get you started with for today?],
 )
 
@@ -329,4 +337,4 @@
   dialogue[Hey you three, no more bickering, the halftime show is starting!],
 )
 
-#direction[Fade to black and end scene. On a black screen, the message "Every food is good food. Enjoy the game." is displayed while "Not Like Us" by Kendrick Lamar plays in the background.]
+#direction[Fade to black and end scene. On a black screen, the message "Every food is good food. Enjoy the show." is displayed while "Not Like Us" by Kendrick Lamar plays in the background.]
