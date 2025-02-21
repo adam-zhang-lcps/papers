@@ -3,7 +3,12 @@
 // Double spacing is weird
 #set par(spacing: 1.89em)
 
-#let title_page(title: str, desc: content, by: content) = page(
+#let title_page(
+  title: str,
+  desc: content,
+  by: content,
+  contact: content,
+) = page(
   margin: (
     top: 3.5in,
     left: 4in,
@@ -24,12 +29,20 @@
   by
 
   #by
+
+  // NOTE: this ignores margins, I think.
+  #place(bottom + right, dx: 0.8in, dy: 0.8in)[
+    #set align(left)
+    #contact
+  ]
 ]
 
 
-#let cast_page(characters: array, scene: content, time: content) = page(
-  margin: (left: 1.5in, rest: 1in),
-)[
+#let cast_page(
+  characters: array,
+  scene: content,
+  time: content,
+) = page(margin: (left: 1.5in, rest: 1in))[
   #align(center)[#underline[Cast of Characters]]
 
   #for (name, desc) in characters [
@@ -62,7 +75,13 @@
 #title_page(
   title: "Super Bowl Squabble",
   desc: [An Intense Food Fight],
-  by: [Adam Zhang, Kaleigh Knodell, Diego Carames, Taylor Leberknight],
+  by: [Adam Zhang, Kaleigh Knodell, Diego Carames, and Taylor Leberknight],
+  contact: [
+    19019 Upper Belmont Pl \
+    Leesburg, VA 20176 \
+    Phone: (555) 555-5555 \
+    Email: contact\@example.org
+  ],
 )
 
 #cast_page(
