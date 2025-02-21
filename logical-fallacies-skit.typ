@@ -66,11 +66,16 @@
   #time
 ]
 
+#let init_labeling(label, content) = grid(
+  columns: (3in, auto),
+  [#upper(label):], content,
+)
+
 #let character(name) = [#h(3in) #upper(name)]
 
 #let dialogue(content) = content
 
-#let direction(content) = [#h(2.5in) #content]
+#let direction(content) = [#h(2.5in) (#content)]
 
 #title_page(
   title: "Super Bowl Squabble",
@@ -102,11 +107,20 @@
 
 #h(3in) #underline[Scene 1]
 
+#init_labeling(
+  [Setting],
+  [A lively bar in the heart of the city. The Super Bowl is playing on the TV screens around the bar.],
+)
+#init_labeling(
+  [At rise],
+  [TAYLOR and DIEGO are walking into the bar. ADAM is a few seats away, wearing a MIT sweater and drinking. BARTENDER is pouring ADAM a drink.],
+)
+// HACK
+#v(1em)
+
 #character[Bartender]
 
 #dialogue[Hey guys, welcome in, take a seat wherever!]
-
-#direction[Taylor and Diego sit down at the bar. PhD Student is a few seats over, wearing a MIT sweater. Bartender is pouring him a drink. The Super Bowl is about to start on the TV screens around the bar.]
 
 [Bartender comes over from serving PhD Student’s 2nd soju glass of the night.]
 
