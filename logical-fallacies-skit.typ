@@ -107,6 +107,17 @@
   time: [2025, on the evening of Super Bowl LIX.],
 )
 
+// HACK: Set up page counter now to exclude first two pages and also reset the
+// counter.
+#counter(page).update(1)
+#set page(
+  numbering: (p, _total) => [
+    // HACK Just hardcode Act and Scene.
+    I-1-#p
+  ],
+  number-align: top + right,
+)
+
 #h(3in) #underline[ACT I]
 
 #h(3in) #underline[Scene 1]
