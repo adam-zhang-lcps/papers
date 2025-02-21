@@ -72,14 +72,14 @@
   [#upper(label):], content,
 )
 
-#let character(name) = [#h(3in) #upper(name)]
+#let character(name) = block[#h(3in) #upper(name)]
 
-#let dialogue(content) = [
+#let dialogue(content) = block[
   #set par(leading: 0.65em)
   #content
 ]
 
-#let direction(content) = [#h(2.5in) (#content)]
+#let direction(content) = block[#h(2.5in) (#content)]
 
 #title_page(
   title: "Super Bowl Squabble",
@@ -134,95 +134,128 @@
 #v(1em)
 
 #character[Bartender]
-
 #dialogue[Hey guys, welcome in, take a seat wherever!]
 
 #direction[BARTENDER comes over from serving ADAM’s 2nd soju glass of the night.]
 
 #character[Bartender]
-
 #direction[Wipes glass with rag.]
-
 #dialogue[What can I get you started with for today?]
 
 #character[Diego]
-
 #dialogue[I’ll take a glass of apple juice and a Caesar salad to start with, thank you.]
 
-Bartender: What about you, ma’am?
+#character[Bartender]
+#dialogue[What about you, ma’am?]
 
-Taylor: I’ll have a Shirley Temple and some bone-in wings.
+#character[Taylor]
+#dialogue[I’ll have a Shirley Temple and some bone-in wings.]
 
-[Bartender prepares the drinks.]
+#direction[BARTENDER prepares their drinks.]
 
-Bartender: Alright, here are your drinks, I’ll grab those dishes for you from the kitchen.
+#character[Bartender]
+#dialogue[Alright, here are your drinks, I’ll grab those dishes for you from the kitchen.]
 
-Diego: You shouldn’t have ordered that, those wings are horrible for your health, they’ll give you a heart attack and you’ll die. (Slippery slope)
+#direction[BARTENDER walks out of scene.]
 
-Taylor: Well, I eat wings every day and haven’t died yet so they must be healthy. (Anecdotal Fallacy)
+#character[Diego]
+#dialogue[You shouldn’t have ordered that, those wings are horrible for your health, they’ll give you a heart attack and you’ll die. (slippery slope)]
 
-Diego: Wings aren’t healthy, and they aren’t even that good, they’re average at best, the salad is way better. (Tu Quoque, pt. 1) Maybe if you started eating healthy you’d actually grow to a reasonable height. (Ad hominem)
+#character[Taylor]
+#dialogue[Well, I eat wings every day and haven’t died yet so they must be healthy. (anecdotal fallacy)]
 
-Taylor: Wow, are you saying you hate all short people? Short people can be just as healthy as everyone else. (Straw man) Also, didn’t you used to eat wings all the time? (Tu Quoque, pt. 2)
+#character[Diego]
+#dialogue[Wings aren’t healthy, and they aren’t even that good, they’re average at best, the salad is way better. (Tu Quoque, pt. 1) Maybe if you started eating healthy you’d actually grow to a reasonable height. (Ad hominem)]
 
-Diego: Maybe, but don’t you do hard drugs everyday? Just because it hasn’t killed you does that mean it's healthy?
+#character[Taylor]
+#dialogue[Wow, are you saying you hate all short people? Short people can be just as healthy as everyone else. (straw man) Also, didn’t you used to eat wings all the time? (Tu Quoque, pt. 2)]
 
-Taylor: Okay and? Everyone does hard drugs these days, you should try it too sometime! (Bandwagon)
+#character[Diego]
+#dialogue[Maybe, but don’t you do hard drugs everyday? Just because it hasn’t killed you doesn't mean it's healthy?]
 
-PhD Student: Yeah what she said! [passes out]
+#character[Taylor]
+#dialogue[Okay and? Everyone does hard drugs these days, you should try it too sometime! (Bandwagon)]
 
-Diego: He’s a drunk and depressed broke alcoholic with no scholarships and 200k in student loans, him agreeing proves nothing! (Ad Hominem)
+#character[Adam]
+#dialogue[Yeah what she said!]
+#direction[ADAM passes out on the table.]
 
-Taylor: Yeah but he’s a PhD student at [?], he must be right! (Appeal to authority)
+#character[Diego]
+#dialogue[Look at him, he’s a drunk and depressed broke alcoholic with no scholarships and 200k in student loans, him agreeing proves nothing!]
 
-Diego: Does PhD stand for “perpetually high and drunk”? (Ad Hominem)
+#character[Taylor]
+#dialogue[Yeah but he’s a PhD student at MIT, he must be right! (appeal to authority)]
 
-Taylor: Hey, the bartender’s coming back, let’s ask her to weigh in!
+#character[Diego]
+#dialogue[Does PhD stand for "possibly high and drunk"? (Ad hominem)]
 
-Bartender: Haven’t you people ever had the decency to consider running on a treadmill while watching the Super Bowl?! (Red Herring). Being active while watching TV is obviously the best, that's why everyone should workout while watching the Super Bowl. (Circular Argument)
+#character[Taylor]
+#dialogue[Hey, the bartender’s coming back, let’s ask her to weigh in!]
 
-Diego: Even the bartender agrees, running and salad are both healthy for you. Therefore salad is better than wings! (False Equivalence)
+#direction[BARTENDER returns with the food ordered earlier.]
 
-Bartender: Salad and wings aren’t a great comparison either. One is fried finger food and the other is a healthy dish. Besides, I’ve never had a bad experience with any Super Bowl food before, it’s always tasty and perfect (Hasty Generalization).
+#character[Bartender]
+#dialogue[Haven’t you people ever had the decency to consider running on a treadmill while watching the Super Bowl?! (red herring) Being active while watching TV is obviously the best, that's why everyone should workout while watching the Super Bowl. (circular argument)]
 
-Taylor: Our argument is valid since wings are just like salads. You eat them both during the super bowl. (Weak Analogy)
+#character[Diego]
+#dialogue[Even the bartender agrees, running and salad are both healthy for you. Therefore salad is better than wings! (false equivalence)]
 
-Diego: I still believe salad is better. Last year, I ate salad at the super bowl party, and my team won. Therefore, salad is better than wings and eating it helps them win. (False Cause)
+#character[Bartender]
+#dialogue[Salad and wings aren’t a great comparison either. One is fried finger food and the other is a healthy dish. Besides, I’ve never had a bad experience with any Super Bowl food before, it’s always tasty and perfect. (hasty generalization)]
 
-Taylor: Fine, salads are okay, but wings are a gift from nature. Who can deny that? (Appeal to Ignorance).
+#character[Taylor]
+#dialogue[Our argument is valid since wings are just like salads. You eat them both during the super bowl. (weak analogy)]
 
-[Bartender walks away, notices PhD Student asleep, and shakes PhD Student awake.]
+#character[Diego]
+#dialogue[I still believe salad is better. Last year, I ate salad at my Super Bowl party, and my team won. Therefore, salad is better than wings and eating it helps them win. (false cause)]
 
-Diego: Salads are more of a gift of nature than wings. They literally come straight from the Earth. Also, you can’t say salads are bad and then say they’re okay a few minutes later. You either hate salads or you love them. Pick a side! (False Dilemma).
+#character[Taylor]
+#dialogue[Fine, salads are okay, but wings are a gift from nature. Who can deny that? (appeal to ignorance)]
 
-PhD Student: [groggy] What?
+#character[Diego]
+#dialogue[Salads are more of a gift of nature than wings. They literally come straight from the Earth. Also, you can’t say salads are bad and then say they’re okay a few minutes later. You either hate salads or you love them. Pick a side! (false dilemma)]
 
-Taylor: Well, I’ve already ordered the wings, so it’d be a waste to not eat them (Sunk cost).
+#direction[BARTENDER walks away, notices ADAM asleep, and shakes ADAM awake.]
 
-Diego: Whatever, I'm going to the bathroom.
+#character[Adam]
+#direction[groggy]
+#dialogue[What?]
 
-[Diego leaves to use the restroom. Taylor, still frustrated, looks around and notices PhD Student again.]
+#character[Taylor]
+#dialogue[Well, I’ve already ordered the wings, so it’d be a waste to not eat them. (sunk cost)]
 
-Taylor: [shaking head] If he really cared about the environment he wouldn’t waste food. (Emotional Appeal)
+#character[Diego]
+#dialogue[Whatever, I'm going to the bathroom.]
 
-[PhD Student slowly stirs and rubs his eyes.]
+#direction[DIEGO leaves to use the restroom. TAYLOR, still frustrated, looks around and notices ADAM again.]
 
-Taylor: Adam, would you like a wing? Maybe you’ll find them worthy of Super Bowl status unlike someone.
+#character[Taylor]
+#direction[shaking head]
+#dialogue[If he really cared about the environment he wouldn’t waste food. (emotional appeal)]
 
-PhD Student: No, I think I’ll throw up if I eat anything. Thanks though. [yawning] What were you two arguing about so loudly anyway?
+#direction[ADAM slowly stirs and rubs his eyes.]
 
-Taylor: Diego thinks that salad is better than chicken wings! Like, lettuce and cucumbers are disgusting, why would anyone eat salad?? (Composition fallacy)
+#character[Taylor]
+#dialogue[Adam, would you like a wing? Maybe you’ll find them worthy of Super Bowl status unlike someone.]
 
-[Diego returns from the restroom.]
+#character[Adam]
+#direction[yawning]
+#dialogue[No, I think I’ll throw up if I eat anything. Thanks though. What were you two arguing about so loudly anyway?]
 
-PhD Student: Uh, I think that’s a fallacious argument…
+#character[Taylor]
+#dialogue[Diego thinks that salad is better than chicken wings! Like, lettuce and cucumbers are disgusting, why would anyone eat salad? (composition fallacy)]
 
-Diego: HA, you’re wrong Taylor! (Fallacy fallacy)
+#direction[Diego returns from the restroom.]
 
-[In the background, the Super Bowl is beginning on the televisions around the bar.]
+#character[Adam]
+#dialogue[Uh, I think that’s a fallacious argument...]
 
-Bartender: Hey you two, no more bickering, the game is on!
+#character[Diego]
+#dialogue[HA, you’re wrong Taylor! (fallacy fallacy)]
 
-[Intensified NFL theme music.]
-[Fade to black. End scene.]
-[Text Message Displayed on Black Screen] [Every food is good food. Enjoy the game.]
+#direction[In the background, the Super Bowl Halftime Show is beginning on the televisions around the bar.]
+
+#character[Bartender]
+#dialogue[Hey you three, no more bickering, the halftime show is starting!]
+
+#direction[Fade to black and end scene. On a black screen, the message "Every food is good food. Enjoy the game." is displayed while "Not Like Us" by Kendrick Lamar plays in the background.]
