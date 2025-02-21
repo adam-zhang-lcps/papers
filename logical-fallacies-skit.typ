@@ -1,7 +1,7 @@
 #set page(paper: "us-letter", margin: 1in)
 #set text(font: "Courier Prime", size: 12pt)
-// Double spacing is weird
-#set par(spacing: 1.89em)
+// HACK: Double spacing is weird.
+#set par(leading: 1.89em, spacing: 1.89em)
 
 #let title_page(
   title: str,
@@ -28,6 +28,7 @@
 
   by
 
+  #set par(leading: 0.65em)
   #by
 
   // NOTE: this ignores margins, I think.
@@ -73,7 +74,10 @@
 
 #let character(name) = [#h(3in) #upper(name)]
 
-#let dialogue(content) = content
+#let dialogue(content) = [
+  #set par(leading: 0.65em)
+  #content
+]
 
 #let direction(content) = [#h(2.5in) (#content)]
 
