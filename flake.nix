@@ -113,6 +113,10 @@
               category = "CI Tooling";
               package = nushell;
             }
+            {
+              category = "Fonts";
+              package = courier-prime;
+            }
           ];
         };
       };

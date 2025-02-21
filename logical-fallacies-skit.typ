@@ -1,6 +1,54 @@
-Bartender: Hey guys, welcome in, take a seat wherever!
+#set page(paper: "us-letter", margin: 1in)
+#set text(font: "Courier Prime", size: 12pt)
+// Double spacing is weird
+#set par(spacing: 1.89em)
 
-[Taylor and Diego sit down at the bar. PhD Student is a few seats over, wearing a [??] sweater. Bartender is pouring him a drink. The Super Bowl is about to start on the TV screens around the bar.]
+#let titlepage(title: str, desc: content, by: content) = [
+  #page(
+    margin: (
+      top: 3.5in,
+      left: 4in,
+      right: 1in,
+      bottom: 1in,
+    ),
+  )[
+    #upper(title)
+
+    #{ "_" * title.len() }
+
+    #desc
+
+    by
+
+    #by
+  ]
+]
+
+#let character(name) = [#h(3in) #upper(name)]
+
+#let dialogue(content) = content
+
+#let direction(content) = [#h(2.5in) #content]
+
+#titlepage(
+  title: "Super Bowl Squabble",
+  desc: [An Intense Food Fight],
+  by: [Adam Zhang, Kaleigh Knodell, Diego Carames, Taylor Leberknight],
+)
+
+#page(margin: (left: 1.5in, rest: 1in))[
+  #align(center)[#underline[Cast of Characters]]
+]
+
+#h(3in) #underline[ACT I]
+
+#h(3in) #underline[Scene 1]
+
+#character[Bartender]
+
+#dialogue[Hey guys, welcome in, take a seat wherever!],
+
+#direction[Taylor and Diego sit down at the bar. PhD Student is a few seats over, wearing a MIT sweater. Bartender is pouring him a drink. The Super Bowl is about to start on the TV screens around the bar.]
 
 [Bartender comes over from serving PhD Student’s 2nd soju glass of the night.]
 
