@@ -2,6 +2,7 @@
   description = "LaTeX sources for school papers";
 
   inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     devshell = {
       url = "github:numtide/devshell";
@@ -11,8 +12,8 @@
 
   outputs = inputs @ {
     self,
-    flake-parts,
     nixpkgs,
+    flake-parts,
     ...
   }:
     flake-parts.lib.mkFlake {inherit inputs;} {
