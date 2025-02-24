@@ -286,10 +286,50 @@ Prove that the given statement is true or provide a counterexample to show that 
   \end{equation*}
   
 \item
-  \(\int_0^{\pi/4} \int_{\sin x}^{\cos x} \sqrt{x + y^2} \, \mathrm{d}y\,
-  \mathrm{d}x = \int_0^1 \int_{\arcsin y}^{\arccos y} \sqrt{x + y^2} \,
-  \mathrm{d}x\, \mathrm{d}y\)
+  \(\int_0^{\pi/4} \int_{\sin x}^{\cos x} \sqrt{x + y^2} \,\mathrm{d}y
+  \,\mathrm{d}x = \int_0^1 \int_{\arcsin y}^{\arccos y} \sqrt{x + y^2} \,
+  \mathrm{d}x \,\mathrm{d}y\) \label{proof:11}
 
+  \Cref{fig:11-region-plot} shows the region of integration for the left
+  integral.
+
+  \begin{figure}[h]
+    \centering
+    \caption{Plot of Left Integration Region for \cref{proof:11}}
+    \label{fig:11-region-plot}
+    \begin{tikzpicture}
+      \begin{axis}[
+        width=10cm,
+        height=7cm,
+        axis lines=middle,
+        xlabel={$x$}, ylabel={$y$},
+        xtick={0,pi/8,pi/4},
+        xticklabels={$0$, $\frac{\pi}{8}$, $\frac{\pi}{4}$},
+        ytick={0,0.5,1},
+        enlargelimits=true,
+        domain=0:pi/4,
+        samples=100,
+        ]
+        \addplot[black, thick] {cos(deg(x))};
+        \addplot[black, dashed, thick] {sin(deg(x))};
+
+        \addplot[mark=*, only marks] coordinates {(pi/4, {sqrt(2)/2})};
+        \node at (axis cs:{pi/4}, {sqrt(2)/2}) [anchor=south] 
+        {$\left(\frac{\pi}{4}, \frac{\sqrt{2}}{2}\right)$};
+      \end{axis}
+    \end{tikzpicture}
+  \end{figure}
+
+  Swapping the order of integration for this region thus requires breaking the
+  integral into two separate integrals with differing bounds.
+
+  \begin{equation*}
+    \int_0^{\frac{\sqrt{2}}{2}} \int_0^{\arcsin y} \sqrt{x + y^2} \,
+    \mathrm{d}x \,\mathrm{d}y +
+    \int_{\frac{\sqrt{2}}{2}}}^1 \int_0^{\arccos y} \sqrt{x + y^2} \,
+    \mathrm{d}x \,\mathrm{d}y
+  \end{equation*}
+  
 \item
   \(\int_{-1}^{1} \int_{0}^{1} e^{x^2 + y^2} \sin y \, \mathrm{d}x\,
   \mathrm{d}y= 0\)
