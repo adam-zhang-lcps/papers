@@ -232,9 +232,14 @@ Prove that the given statement is true or provide a counterexample to show that 
   \,\mathrm{d}x\,\mathrm{d}y = \int_0^4 \int_{\frac{2}{3}(x-1)}^{\sqrt{x}} x^2
   \sin(x-y) \, \mathrm{d}y \, \mathrm{d}x\) \label{proof:10}
 
+  \Cref{fig:10-region-plot} shows the regions of integration for the two given
+  integrals, which are not equal. Since the function \(x^2 \sin(x - y)\) is
+  non-zero on the region difference, the given integrals are not equal.
+
   \begin{figure}[h]
     \centering
     \caption{Plot of Integration Regions for \cref{proof:10}}
+    \label{fig:10-region-plot}
     \begin{tikzpicture}
       \begin{axis}[
         width=7cm,
@@ -242,7 +247,7 @@ Prove that the given statement is true or provide a counterexample to show that 
         axis lines=middle,
         xlabel={$x$}, ylabel={$y$},
         xtick={-1,0,1,2,3,4},
-        ytick={-1,0,1,2,3},
+        ytick={-0.5,0,0.5,1,1.5,2},
         enlargelimits=true,
         domain=-0.5:2,
         samples=100,
@@ -259,7 +264,7 @@ Prove that the given statement is true or provide a counterexample to show that 
         axis lines=middle,
         xlabel={$x$}, ylabel={$y$},
         xtick={0,1,2,3,4},
-        ytick={-1,0,1,2},
+        ytick={-0.5,0,0.5,1,1.5,2},
         enlargelimits=true,
         domain=0:4,
         samples=100,
@@ -269,6 +274,16 @@ Prove that the given statement is true or provide a counterexample to show that 
       \end{axis}
     \end{tikzpicture}
   \end{figure}
+
+  To make them equal, the left integral can be broken into two integrals to
+  properly encapsulate the missing area.
+
+  \begin{equation*}
+    \int_{-\frac{2}{3}}^{0} \int_{0}^{\frac{3}{2}y+1} x^2 \sin(x-y)
+    \,\mathrm{d}x\,\mathrm{d}y + 
+    \int_{0}^{2} \int_{y^2}^{\frac{3}{2}y+1} x^2 \sin(x-y)
+    \,\mathrm{d}x\,\mathrm{d}y
+  \end{equation*}
   
 \item
   \(\int_0^{\pi/4} \int_{\sin x}^{\cos x} \sqrt{x + y^2} \, \mathrm{d}y\,
