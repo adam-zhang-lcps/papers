@@ -1,11 +1,10 @@
-#import "@preview/tablex:0.0.6": tablex, rowspanx
 #import "aet-lab-report-template.typ": aet-lab-report
 #show: doc => aet-lab-report(
-    title: "Investigating Drag Forces on Falling Coffee Filters",
-    course: "AET AP Physics C: Mechanics",
-    teacher: "Mr. Matthew Hilsdorf",
-    date: datetime(year: 2023, month: 12, day: 7),
-    doc,
+  title: "Investigating Drag Forces on Falling Coffee Filters",
+  course: "AET AP Physics C: Mechanics",
+  teacher: "Mr. Matthew Hilsdorf",
+  date: datetime(year: 2023, month: 12, day: 7),
+  doc,
 )
 
 = Introduction
@@ -24,13 +23,13 @@ mass will have a directly proportional relationship with terminal velocity.
 The derivation for this conclusion is as follows: beginning with Newton's 2nd
 Law, the coffee filter experiences a downward force of gravity, and a drag
 force in the opposite direction.
-$ a = (m g - b v^n)/m $
+$ a = (m g - b v^n) / m $
 Since terminal velocity is reached when acceleration is equal to zero, the
 equation can be solved for velocity as follows.
-$ 0 = (m g - b v^n)/m $
+$ 0 = (m g - b v^n) / m $
 $ 0 = m g - b v^n $
 $ m g = b v^n $
-$ v^n = (m g)/b $
+$ v^n = (m g) / b $
 Again, assuming a laminar flow, $n = 1$, resulting in velocity being directly
 proportional to mass.
 
@@ -70,37 +69,37 @@ The following materials are required for this experiment.
 The setup for this experiment is shown in @setup.
 
 #figure(
-    image("assets/coffee-filter-drag/coffee-filter-setup.jpeg", width: 50%),
-    caption: "Experimental Setup",
+  image("assets/coffee-filter-drag/coffee-filter-setup.jpeg", width: 50%),
+  caption: "Experimental Setup",
 )<setup>
 == Procedures
 The following procedure was implemented during this experiment.
 + Open Vernier#emoji.reg Graphical Analysis and pair with the Vernier#emoji.reg Motion
-    Sensor. Place the Motion Sensor on the ground, facing upwards.
+  Sensor. Place the Motion Sensor on the ground, facing upwards.
 + Measure the mass of a single coffee filter using the balance. Record the mass
-    in @data. <proc-outer-start>
+  in @data. <proc-outer-start>
 + Hold the coffee filter high above the motion sensor. Begin collecting data in
-    Vernier#emoji.reg Graphical Analysis, then drop the coffee filter.
-    <proc-inner-start>
+  Vernier#emoji.reg Graphical Analysis, then drop the coffee filter.
+  <proc-inner-start>
 + Once the coffee filter reaches the ground, end the data collection.
 + Highlight the linear section of the position vs. time graph in Vernier#emoji.reg Graphical
-    Analysis. Apply a linear fit curve. Record the slope in @data as terminal
-    velocity. An example is shown in @vernier-example. <proc-inner-end>
+  Analysis. Apply a linear fit curve. Record the slope in @data as terminal
+  velocity. An example is shown in @vernier-example. <proc-inner-end>
 + Repeat steps #link(label("proc-inner-start"), "3")#sym.dash.en#link(label("proc-inner-end"), "5") to
-    obtain data for a second trial. <proc-outer-end>
+  obtain data for a second trial. <proc-outer-end>
 + Repeat steps #link(label("proc-outer-start"), "2")#sym.dash.en#link(label("proc-outer-end"), "6") for
-    2, 3, 4, and 5 filters stacked together.
+  2, 3, 4, and 5 filters stacked together.
 + Plot mass vs. terminal velocity. Fit a linear trendline, and record the slope
-    and $R^2$ in @trendlines.
+  and $R^2$ in @trendlines.
 + Plot mass vs. terminal velocity squared. Fit a linear trendline, and record
-    the slope and $R^2$ in @trendlines.
+  the slope and $R^2$ in @trendlines.
 
 #figure(
-    image(
-        "assets/coffee-filter-drag/coffee-filter-vernier-screenshot.png",
-        width: 70%,
-    ),
-    caption: [Example of Selecting and Fitting a Linear Trendline to Find Terminal Velocity],
+  image(
+    "assets/coffee-filter-drag/coffee-filter-vernier-screenshot.png",
+    width: 70%,
+  ),
+  caption: [Example of Selecting and Fitting a Linear Trendline to Find Terminal Velocity],
 ) <vernier-example>
 
 = Results
@@ -109,7 +108,8 @@ The following procedure was implemented during this experiment.
 squared for each trial for each stack of filters, along with the mass for each
 stack of filters.
 
-#figure(tablex(
+#figure(
+  table(
     align: center + horizon,
     columns: 5,
     [\# of Filters],
@@ -117,72 +117,82 @@ stack of filters.
     [Trials],
     [$V_T$ (m/s)],
     [$V_T^2$ (m#super([2])/s#super([2]))],
-    rowspanx(2)[1],
-    rowspanx(2)[0.03],
+    table.cell(rowspan: 2)[1],
+    table.cell(rowspan: 2)[0.03],
     [1],
     [0.8601],
     [0.7398],
     [2],
     [0.8377],
     [0.7017],
-    rowspanx(2)[2],
-    rowspanx(2)[0.07],
+    table.cell(rowspan: 2)[2],
+    table.cell(rowspan: 2)[0.07],
     [1],
     [1.244],
     [1.548],
     [2],
     [1.223],
     [1.496],
-    rowspanx(2)[2],
-    rowspanx(2)[0.10],
+    table.cell(rowspan: 2)[2],
+    table.cell(rowspan: 2)[0.10],
     [1],
     [1.521],
     [2.313],
     [2],
     [1.571],
     [2.468],
-    rowspanx(2)[2],
-    rowspanx(2)[0.14],
+    table.cell(rowspan: 2)[2],
+    table.cell(rowspan: 2)[0.14],
     [1],
     [1.652],
     [2.729],
     [2],
     [1.711],
     [2.928],
-    rowspanx(2)[2],
-    rowspanx(2)[0.17],
+    table.cell(rowspan: 2)[2],
+    table.cell(rowspan: 2)[0.17],
     [1],
     [2.075],
     [4.306],
     [2],
     [1.894],
     [3.587],
-), caption: "Terminal Velocity per Filter Stack", kind: table) <data>
+  ),
+  caption: "Terminal Velocity per Filter Stack",
+  kind: table,
+) <data>
 == Calculations
 To determine whether laminar flow ($n = 1$) or turbulent flow ($n = 2$) was a
 better fit for the motion of the coffee filter, two graphs were created;
 @tv-vs-mass fits a linear equation to mass vs. terminal velocity, and
 @tv2-vs-mass fits a linear equation to mass vs. terminal velocity squared.
 
-#figure(image(
+#figure(
+  image(
     "assets/coffee-filter-drag/coffee-filter-drag-mass-vs-tm.png",
     width: 70%,
-), caption: "Mass vs. Terminal Velocity") <tv-vs-mass>
-#figure(image(
+  ),
+  caption: "Mass vs. Terminal Velocity",
+) <tv-vs-mass>
+#figure(
+  image(
     "assets/coffee-filter-drag/coffee-filter-drag-mass-vs-tm2.png",
     width: 70%,
-), caption: "Mass vs. Terminal Velocity Squared") <tv2-vs-mass>
+  ),
+  caption: "Mass vs. Terminal Velocity Squared",
+) <tv2-vs-mass>
 
-#figure(tablex(
+#figure(
+  table(
     align: center + horizon,
     columns: (20%, 20%),
-    [Data Range],
-    [$R^2$],
-    [$V_T$],
-    [0.962],
-    [$V_T^2$],
-    [0.954],
-), caption: [$R^2$ per Data Range], kind: table) <trendlines>
+    [Data Range], [$R^2$],
+    [$V_T$], [0.962],
+    [$V_T^2$], [0.954],
+  ),
+  caption: [$R^2$ per Data Range],
+  kind: table,
+) <trendlines>
 = Discussion
 == Conclusion
 The experiment was successful in accomplishing its purpose, and both
