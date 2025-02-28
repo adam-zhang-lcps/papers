@@ -29,9 +29,9 @@ build-html:
       let file = $'($f.stem).($f.extension)'
 
       if $f.extension == "typ" {
-        typst c $file $'public/pdf/($f.stem).pdf'
+        do -i { typst c $file $'public/pdf/($f.stem).pdf' }
       } else {
-        latexmk -lualatex -out2dir=public/pdf $file
+        do -i { latexmk -lualatex -out2dir=public/pdf $file }
       }
 
       $'<li><a href="pdf/($f.stem).pdf">($f.stem)</a></li>'
