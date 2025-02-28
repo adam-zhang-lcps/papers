@@ -1,9 +1,9 @@
-#+title: Typst Sources
+#+title: Typst/LaTeX Sources
 #+author: Adam Zhang
 
 [[https://creativecommons.org/licenses/by-sa/4.0/][https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg]]
 
-This repository contains the [[https://typst.app][Typst]] sources for my formal academic papers (and sometimes informal assignments as well 🙃).
+This repository contains the [[https://typst.app][Typst]]/[[https://en.wikipedia.org/wiki/LaTeX][LaTeX]] sources for my formal academic papers (and sometimes informal assignments as well 🙃).
 
 * Obtaining Compiled PDFs 📄
 ** From Index
@@ -86,11 +86,15 @@ On the dashboard, select the "Build Changed Typst Files" action, choose a commit
  
 
 ** Compiling Manually
-To compile PDFs locally, you will need to install [[https://typst.app][Typst]]. Releases are available [[https://github.com/typst/typst/releases][here]]. Alternatively, you can enter a development shell using [[https://nixos.org][Nix]] with ~nix develop~, which comes with the Typst compiler.
+To compile PDFs locally, you will need to install either [[https://typst.app][Typst]] (releases are available [[https://github.com/typst/typst/releases][here]]) or a [[https://tug.org/texlive/][TeXLive distribution]] (note that, while others compilers will likely also work, I compile with LuaLaTeX). Alternatively, you can enter a development shell using [[https://nixos.org][Nix]] with ~nix develop~, which comes with both the Typst compiler as well as a TeXLive environment containing LuaLaTeX as well as all packages used.
 
-Once Typst is installed, compiling documents is as simple as:
+Once installed, compiling documents is as simple as running the appropriate compiler:
 #+begin_src shell
-typst c document.typ
+  # To compile Typst documents
+  typst c document.typ
+
+  # To compile LaTeX documents
+  latexmk -lualatex document.tex
 #+end_src
 
 * License
