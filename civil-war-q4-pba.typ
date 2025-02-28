@@ -6,7 +6,7 @@
 #set page(paper: "us-letter")
 #set text(font: "Liberation Serif", size: 11pt)
 #set par(first-line-indent: 0.25in)
-#show par: set block(spacing: 0.65em)
+#set par(spacing: 0.65em)
 
 One economic cause of sectionalism during the antebellum period was the differing economy between the North and the South. The North focused primarily on manufacturing and industry, while the South instead emphasized old-school agriculture. An exa mple of sectionalism fueled by this divide was the publication of Hilton Helper's book _The Impending Crisis of the South_. Helper argued against the institution of slavery in the South as a cause of economic stagnation, limiting their ability to grow @Helper1857ImpendingCrisis. This book was highly controversial after it was published, as it was a Southerner, Helper, arguing for abolition, rather than against it, while attempting to appeal to the South's rationals.
 
@@ -21,7 +21,7 @@ A modern cause of sectionalism is the current harsh political divide in the Unit
 // the MLA formatting right now is broken and I don't feel like fixing it.
 #show bibliography: it => {
   show heading: it => {
-    set align(center) 
+    set align(center)
     set text(weight: "regular", size: 11pt)
     it
   }
