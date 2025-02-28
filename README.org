@@ -105,8 +105,10 @@ All software works are licensed under the MIT license. This includes all files a
 .dir-locals.el
 .gitignore
 .github
+Justfile
 flake.nix
 flake.lock
+html/template.html
 typstfmt.toml
 #+end_example
 
