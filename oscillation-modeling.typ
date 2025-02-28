@@ -1,4 +1,5 @@
-#import "@preview/cetz:0.2.2"
+#import "@preview/cetz:0.3.2"
+#import "@preview/cetz-plot:0.1.1": plot
 #import "@preview/unify:0.5.0": qty
 #import "./aet-lab-report-template.typ": aet-lab-report
 
@@ -9,12 +10,17 @@
   date: datetime(year: 2024, month: 05, day: 03),
   appendix: [
     Note that in the interest of printability, raw position data has been rounded to 14 digits after the decimal point.
-    
+
     #import table: header, cell
-    
+
     #let data = csv("assets/oscillation-modeling/data.csv").slice(1)
-    #let captions = ([control], [further initial position], [heavier mass], [stiffer spring])
-    
+    #let captions = (
+      [control],
+      [further initial position],
+      [heavier mass],
+      [stiffer spring],
+    )
+
     #show figure: set block(breakable: true)
 
     #let aligning(x, y) = {
@@ -30,25 +36,25 @@
     }
 
     #for i in range(0, 4) {
-      let trials = data.map(
-        r => {
-          for c in range(0, 3) {
-            import calc: round
+      let trials = data.map(r => {
+        for c in range(0, 3) {
+          import calc: round
 
-            (
-              r.at(0),
-              [#round(digits: 14, float(r.at(i * 3 + c + 1)))]
-            )
-          }
-        },
-      )
+          (
+            r.at(0),
+            [#round(digits: 14, float(r.at(i * 3 + c + 1)))],
+          )
+        }
+      })
 
       [
         #figure(
           caption: [Raw data from #captions.at(i) trials],
           table(
             columns: 6,
-            fill: (x, y) => if calc.even(y) and y > 1 { luma(240) } else { white },
+            fill: (x, y) => if calc.even(y) and y > 1 { luma(240) } else {
+              white
+            },
             align: aligning,
             header(
               ..range(1, 4).map(i => cell(colspan: 2)[Trial #i]),
@@ -66,8 +72,8 @@
       raw(
         lang: "octave",
         block: true,
-        read("assets/oscillation-modeling/regressions.m")
-      )
+        read("assets/oscillation-modeling/regressions.m"),
+      ),
     ) <octave-regression-script>
   ],
   doc,
@@ -92,10 +98,10 @@ $ F_s = -k x $ <hookes-law>
 
 By using Newton's 2nd Law, @hookes-law can be used to derive the second-order differential equation shown in @acceleration-difeq. Solving this differential equation yields the model for position as a function of time presented in @basic-shm-model.
 
-$ (dif^2 x)/(dif t^2) = -k/m x $ <acceleration-difeq>
+$ (dif^2 x) / (dif t^2) = -k / m x $ <acceleration-difeq>
 $ x = A cos(omega t + Phi) $ <basic-shm-model>
 
-As shown by @basic-shm-model, simple harmonic motion is modeled by a sinusoidal wave, where $A$ represents the amplitude of the oscillation, $omega$ represents the angular frequency, and $Phi$ represents the phase shift of the wave. As $A$ represents the amplitude of the oscillation, it represents the maximum distance away from equilibrium that the mass reaches (as $forall x in RR : cos(x) gt.not 1$), and depends solely upon the initial conditions (position and velocity). The angular frequency $omega$ is dependent upon the mass of the oscillating object and the stiffness of the spring, and is equal to $sqrt(k/m)$  @Meyers2024OscillatorKinematics. Finally, phase shift changes only the point at which the wave starts, and is also dependent solely upon initial conditions. Notably, a system with initial velocity is functionally equivalent to a system with no initial velocity and a further starting distance, and results only in a phase shift @MoebsEtAl2016UniversityPhysics.
+As shown by @basic-shm-model, simple harmonic motion is modeled by a sinusoidal wave, where $A$ represents the amplitude of the oscillation, $omega$ represents the angular frequency, and $Phi$ represents the phase shift of the wave. As $A$ represents the amplitude of the oscillation, it represents the maximum distance away from equilibrium that the mass reaches (as $forall x in RR : cos(x) gt.not 1$), and depends solely upon the initial conditions (position and velocity). The angular frequency $omega$ is dependent upon the mass of the oscillating object and the stiffness of the spring, and is equal to $sqrt(k/m)$ @Meyers2024OscillatorKinematics. Finally, phase shift changes only the point at which the wave starts, and is also dependent solely upon initial conditions. Notably, a system with initial velocity is functionally equivalent to a system with no initial velocity and a further starting distance, and results only in a phase shift @MoebsEtAl2016UniversityPhysics.
 
 This experiment seeks to experimentally verify the theoretical models discussed above. To do so, a mass $m_1$ will be suspended from a vertical spring of stiffness $k_1$ and allowed to oscillate from a starting position $Delta x_1$. Motion will be recorded using a Vernier Motion Sensor#emoji.reg. Two differing masses ($m_1$ and $m_2$), starting positions ($Delta x_1$ and $Delta x_2$), and springs ($k_1$ and $k_2$) will be tested, each in isolation, to determine how each change affects the resulting simple harmonic motion model.
 
@@ -114,33 +120,47 @@ The following materials are required for this experiment.
 
 The setup for this experiment is shown in @setup and @setup-2.
 
-#figure(
-  caption: [Setup of spring system in equilibrium],
-)[
+#figure(caption: [Setup of spring system in equilibrium])[
   #cetz.canvas(
-    length: 20%, {
+    length: 20%,
+    {
       import cetz.draw: *
       import cetz.decorations: *
 
       line(stroke: 3pt, (-1.6, -1.2), (rel: (0, 2.2)))
       line(stroke: 2pt, (-2, 1), (1, 1))
 
-      line(name: "x-axis", stroke: (dash: "dashed"), (-0.2, -0.2), (rel: (1, 0)))
+      line(
+        name: "x-axis",
+        stroke: (dash: "dashed"),
+        (-0.2, -0.2),
+        (rel: (1, 0)),
+      )
       content((rel: (-0.2, 0), to: "x-axis.start"))[$ x = 0 $]
 
       coil(
-        name: "spring", amplitude: 0.25, start: 5%, end: 95%, line((0.4, 1), (rel: (0, -1))),
+        name: "spring",
+        amplitude: 0.25,
+        start: 5%,
+        end: 95%,
+        line((0.4, 1), (rel: (0, -1))),
       )
       content((rel: (0.3, 0), to: "spring.mid"))[$ k $]
 
       rect(
-        name: "mass", fill: white, (rel: (-0.2, -0.01), to: "spring.end"), (rel: (0.4, -0.4)),
+        name: "mass",
+        fill: white,
+        (rel: (-0.2, -0.01), to: "spring.end"),
+        (rel: (0.4, -0.4)),
       )
       content("mass")[$ m $]
 
       rect(name: "sensor", (0.3, -1), (0.5, -1.2))
       arc(
-        (rel: (-0.08, 0), to: "sensor.north"), start: 180deg, stop: 360deg, radius: 0.08,
+        (rel: (-0.08, 0), to: "sensor.north"),
+        start: 180deg,
+        stop: 360deg,
+        radius: 0.08,
       )
       content((rel: (-0.6, 0), to: "sensor.east"))[Motion Sensor]
       line(stroke: (dash: "dotted"), "sensor.north", "mass.south")
@@ -148,11 +168,10 @@ The setup for this experiment is shown in @setup and @setup-2.
   )
 ] <setup>
 
-#figure(
-  caption: [Setup of spring system before release],
-)[
+#figure(caption: [Setup of spring system before release])[
   #cetz.canvas(
-    length: 20%, {
+    length: 20%,
+    {
       import cetz.draw: *
       import cetz.decorations: *
 
@@ -160,28 +179,45 @@ The setup for this experiment is shown in @setup and @setup-2.
       line(stroke: 2pt, (-2, 1), (1, 1))
 
       line(
-        name: "x-axis", stroke: (dash: "dashed"), (-0.2, -0.2), (rel: (0.8, 0)),
+        name: "x-axis",
+        stroke: (dash: "dashed"),
+        (-0.2, -0.2),
+        (rel: (0.8, 0)),
       )
       content((rel: (-0.2, 0), to: "x-axis.start"))[$ x = 0 $]
 
       coil(
-        name: "spring", amplitude: 0.25, start: 5%, end: 95%, line((0.4, 1), (rel: (0, -1.4))),
+        name: "spring",
+        amplitude: 0.25,
+        start: 5%,
+        end: 95%,
+        line((0.4, 1), (rel: (0, -1.4))),
       )
       content((rel: (0.3, 0), to: "spring.mid"))[$ k $]
 
       rect(
-        name: "mass", fill: white, (rel: (-0.2, -0.01), to: "spring.end"), (rel: (0.4, -0.4)),
+        name: "mass",
+        fill: white,
+        (rel: (-0.2, -0.01), to: "spring.end"),
+        (rel: (0.4, -0.4)),
       )
       content("mass")[$ m $]
 
       line(
-        name: "dx", (rel: (0.05, 0), to: "x-axis.end"), (rel: (0.1, 0)), (rel: (0, -0.4)), (rel: (-0.1, 0)),
+        name: "dx",
+        (rel: (0.05, 0), to: "x-axis.end"),
+        (rel: (0.1, 0)),
+        (rel: (0, -0.4)),
+        (rel: (-0.1, 0)),
       )
       content((rel: (0.12, 0), to: "dx.mid"))[$ Delta x $]
 
       rect(name: "sensor", (0.3, -1), (0.5, -1.2))
       arc(
-        (rel: (-0.08, 0), to: "sensor.north"), start: 180deg, stop: 360deg, radius: 0.08,
+        (rel: (-0.08, 0), to: "sensor.north"),
+        start: 180deg,
+        stop: 360deg,
+        radius: 0.08,
       )
       content((rel: (-0.6, 0), to: "sensor.east"))[Motion Sensor]
       line(stroke: (dash: "dotted"), "sensor.north", "mass.south")
@@ -207,9 +243,16 @@ Graphs showing the three trials of data collected for each variation as well as 
 
 The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw-data-2, and @raw-data-3.
 
-#let data = csv("assets/oscillation-modeling/data.csv").slice(1).map(r => r.map(float))
+#let data = (
+  csv("assets/oscillation-modeling/data.csv").slice(1).map(r => r.map(float))
+)
 #let params = csv("assets/oscillation-modeling/parameters.csv").map(r => r.map(float))
-#let captions = ([Control], [Further Initial Position], [Heavier Mass], [Stiffer Spring])
+#let captions = (
+  [Control],
+  [Further Initial Position],
+  [Heavier Mass],
+  [Stiffer Spring],
+)
 #let labels = ("control", "initial-position", "heavier-mass", "stiffer-spring")
 
 #for i in range(0, 4) [
@@ -217,13 +260,21 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
     caption: [Time vs. Position for #lower(captions.at(i)) trials],
     cetz.canvas({
       import cetz.draw: *
-      import cetz.plot: *
+      import plot: plot, add
 
       let data_offset = i * 3 + 1
       let colors = (green, blue, red)
 
       plot(
-        size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
+        size: (15, 8),
+        axis-style: "scientific-auto",
+        legend: "north",
+        legend-style: (orientation: ltr, stroke: none),
+        x-label: [Time (s)],
+        y-label: [Position (m)],
+        x-grid: "both",
+        y-grid: "both",
+        {
           for j in range(0, 3) {
             add(
               style: (stroke: none),
@@ -252,11 +303,15 @@ The full raw data is available in the appendix in @raw-data-0, @raw-data-1, @raw
 == Calculations
 #let averages = range(0, 4).map(i => {
   import calc: round
-  
-  params.slice(i * 3, count: 3)
-    .fold((0, 0, 0), (acc, cur) => {
-      acc.zip(cur).map(((a, b)) => a + b)
-    })
+
+  params
+    .slice(i * 3, count: 3)
+    .fold(
+      (0, 0, 0),
+      (acc, cur) => {
+        acc.zip(cur).map(((a, b)) => a + b)
+      },
+    )
     .map(x => x / 3)
 })
 
@@ -269,49 +324,55 @@ The above figures included lines of best fit from a nonlinear regression calcula
     stroke: (x, y) => if x < 2 and y < 1 { none } else { 1pt },
     align: (x, y) => if y > 0 and x > 1 { right } else { center },
     table.header([], [], $A$, $omega$, $Phi$),
-    ..range(0, 4).map(i => {
-      import calc: round
-      
-      (
-        table.cell(rowspan: 4, align: horizon, captions.at(i)),
-        ..range(0, 3).map(j => {
-          (
-            [Trial #(j + 1)],
-            ..params.at(i * 3 + j)
-              .map(f => round(digits: 14, f))
-              .map(str)
-          )
-        }),
-        [Average],
-        ..averages
-          .at(i)
-          .map(x => round(digits: 14, x))
-          .map(str)
-      )
-    }).flatten()
-  )
+    ..range(0, 4)
+      .map(i => {
+        import calc: round
+
+        (
+          table.cell(rowspan: 4, align: horizon, captions.at(i)),
+          ..range(0, 3).map(j => {
+            (
+              [Trial #(j + 1)],
+              ..params.at(i * 3 + j).map(f => round(digits: 14, f)).map(str),
+            )
+          }),
+          [Average],
+          ..averages.at(i).map(x => round(digits: 14, x)).map(str),
+        )
+      })
+      .flatten()
+  ),
 ) <parameters>
 
 #figure(
   caption: [Models using average parameters],
   cetz.canvas({
-    import cetz.plot: *
+    import plot: plot, add
 
     plot(
-      size: (15, 8), axis-style: "scientific-auto", legend: "legend.north", legend-style: (orientation: ltr, stroke: none), x-label: [Time (s)], y-label: [Position (m)], x-grid: "both", y-grid: "both", {
+      size: (15, 8),
+      axis-style: "scientific-auto",
+      legend: "north",
+      legend-style: (orientation: ltr, stroke: none),
+      x-label: [Time (s)],
+      y-label: [Position (m)],
+      x-grid: "both",
+      y-grid: "both",
+      {
         import calc: cos
-        
+
         for i in range(0, 4) {
           let ps = averages.at(i)
           add(
             domain: (0, 5),
             samples: 250,
             label: captions.at(i),
-            x => ps.at(0) * cos(ps.at(1) * x + ps.at(2)))
+            x => ps.at(0) * cos(ps.at(1) * x + ps.at(2)),
+          )
         }
-      }
+      },
     )
-  })
+  }),
 ) <average-parameters-graph>
 
 = Discussion
@@ -329,8 +390,10 @@ As mentioned previously, the largest inconsistency throughout the collected data
 
 Another source of experimental error is the failure to account for dampened motion. Simple harmonic motion accurately models an ideal system, where energy is fully conserved. Unfortunately, the real world is not an ideal system, and is subject to external factors---most notably friction and air resistance. Since the experiment was performed with a spring suspended vertically, friction is not a major concern---however, air resistance was undoubtedly present. This results in _damped_ harmonic motion. Since air resistance is dependent upon the current velocity of the object, @acceleration-difeq becomes @acceleration-damped-difq. Solving this equation yields @damped-shm-model @MoebsEtAl2016UniversityPhysics @Kreyszig1972EngineeringMathematics @Meyers2024DampedAndOtherOscillations.
 
-$ (dif^2 x)/(dif t^2) = -k/m x - mu (dif x)/(dif t) $ <acceleration-damped-difq>
-$ x = A_0 e^(-b/(2m) t) cos(omega t + Phi) $ <damped-shm-model>
+$
+  (dif^2 x) / (dif t^2) = -k / m x - mu (dif x) / (dif t)
+$ <acceleration-damped-difq>
+$ x = A_0 e^(-b / (2m) t) cos(omega t + Phi) $ <damped-shm-model>
 
 As shown by @damped-shm-model, damped harmonic motion includes an exponential decay term, the speed of which is determined by the value $b$. This value represents properties of the system such as the fluid viscosity @Meyers2024DampedAndOtherOscillations. This decaying amplitude is visible in the graphs of the data collected, most visibly in @heavier-mass-graph.
 
