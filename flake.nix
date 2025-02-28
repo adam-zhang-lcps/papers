@@ -32,6 +32,12 @@
         packages.devshell = self.outputs.devShells.${system}.default;
 
         devshells.default = with pkgs; {
+          env = [
+            {
+              name = "LANG";
+              value = "en_US.UTF-8";
+            }
+          ];
           commands = [
             {
               category = "Typst";
