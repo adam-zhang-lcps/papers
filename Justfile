@@ -9,6 +9,14 @@ build-changed-typst:
       typst c $file $'out/(basename -s .typ $file).pdf'
     }
 
+build-changed-latex:
+    #!/usr/bin/env nu
+    mkdir out
+    let files = (git diff-tree --no-commit-id --name-only -r HEAD | lines | where { str ends-with  ".tex" })
+    for file in $files {
+      latexmk -lualatex -outdir=out $file
+    }
+
 build-html:
     #!/usr/bin/env nu
     # This is 100% not a completely scuffed handwritten templating engine…

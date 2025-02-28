@@ -1,0 +1,28 @@
+name: Build Changed LaTeX Files
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.tex'
+      - 'Justfile'
+      
+jobs:
+  build-typst-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - name: Build PDFs
+        run: nix run .#devshell -- just build-changed-latex
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf
+          path: out/*.pdf
