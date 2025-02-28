@@ -20,7 +20,7 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Build PDFs
-        run: nix run .#devshell -- just build-changed
+        run: nix run .#devshell -- just build-changed-typst
       - name: Upload PDFs
         uses: actions/upload-artifact@v4
         with:

@@ -1,7 +1,7 @@
 default:
     just --list
 
-build-changed:
+build-changed-typst:
     #!/usr/bin/env nu
     mkdir out
     let files = (git diff-tree --no-commit-id --name-only -r HEAD | lines | where { str ends-with  ".typ" })
