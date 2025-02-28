@@ -23,14 +23,18 @@ build-html:
     mkdir public/pdf
     
     let template = (open html/template.html | split row '<!-- CONTENT HERE -->')
-    let files = (ls *.typ | get name)
+    let files = (glob *.{typ,tex} | path parse)
 
     let html = ($files | each {|f|
-      let basename = (basename -s '.typ' $f)
+      let file = $'($f.stem).($f.extension)'
 
-      typst c $f $'public/pdf/($basename).pdf'
+      if $f.extension == "typ" {
+        typst c $file $'public/pdf/($f.stem).pdf'
+      } else {
+        latexmk -lualatex -out2dir=public/pdf $file
+      }
 
-      $'<li><a href="pdf/($basename).pdf">($basename)</a></li>'
+      $'<li><a href="pdf/($f.stem).pdf">($f.stem)</a></li>'
     })
 
     [$template.0, ...$html, $template.1] | str join | save public/index.html
