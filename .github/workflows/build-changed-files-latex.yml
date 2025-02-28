@@ -7,7 +7,7 @@ on:
       - 'Justfile'
       
 jobs:
-  build-typst-files:
+  build-latex-files:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
