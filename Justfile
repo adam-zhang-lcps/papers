@@ -23,7 +23,7 @@ build-html:
     mkdir public/pdf
     
     let template = (open html/template.html | split row '<!-- CONTENT HERE -->')
-    let files = (glob *.{typ,tex} | path parse)
+    let files = (glob *.{typ,tex} | path parse | sort-by stem)
 
     let html = ($files | each {|f|
       let file = $'($f.stem).($f.extension)'
