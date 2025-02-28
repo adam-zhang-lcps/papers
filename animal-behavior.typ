@@ -1,4 +1,5 @@
-#import "@preview/cetz:0.2.2"
+#import "@preview/cetz:0.3.2"
+#import "@preview/cetz-plot:0.1.1": plot, chart
 #import "aet-lab-report-template.typ": aet-lab-report
 
 #let species = [_Tribolium confusum_]
@@ -90,8 +91,6 @@ The data collected for all three trials is shown in @data-table. @graph-left sho
 #figure(
   caption: [Number of Beetles in the Left Chamber (plain Cheerios)],
   cetz.canvas({
-    import cetz.plot
-
     plot.plot(
       size: (10, 8),
       axis-style: "scientific-auto",
@@ -100,7 +99,7 @@ The data collected for all three trials is shown in @data-table. @graph-left sho
       y-min: 0,
       y-max: 10,
       y-tick-step: 1.0,
-      legend: "legend.north",
+      legend: "north",
       legend-style: (orientation: ltr, stroke: none, item: (spacing: 0.25)),
       {
         for i in (1, 3, 5) {
@@ -119,8 +118,6 @@ The data collected for all three trials is shown in @data-table. @graph-left sho
 #figure(
   caption: [Number of Beetles in the Right Chamber (Honey Nut Cheerios)],
   cetz.canvas({
-    import cetz.plot
-
     plot.plot(
       size: (10, 8),
       axis-style: "scientific-auto",
@@ -129,7 +126,7 @@ The data collected for all three trials is shown in @data-table. @graph-left sho
       y-min: 0,
       y-max: 10,
       y-tick-step: 1.0,
-      legend: "legend.north",
+      legend: "north",
       legend-style: (orientation: ltr, stroke: none, item: (spacing: 0.25)),
       {
         for i in (2, 4, 6) {
@@ -147,17 +144,22 @@ The data collected for all three trials is shown in @data-table. @graph-left sho
 
 == Calculations
 #let diff(o, e) = calc.pow(o - e, 2) / e
-#let diffs = totals.slice(1).chunks(2).map(x => {
-  let (left, right) = x.map(int)
-  let left_diff = diff(left, 100)
-  let right_diff = diff(right, 100)
+#let diffs = (
+  totals
+    .slice(1)
+    .chunks(2)
+    .map(x => {
+      let (left, right) = x.map(int)
+      let left_diff = diff(left, 100)
+      let right_diff = diff(right, 100)
 
-  (
-    left: (val: left, diff: left_diff),
-    right: (val: right, diff: right_diff),
-    chi: left_diff + right_diff,
-  )
-})
+      (
+        left: (val: left, diff: left_diff),
+        right: (val: right, diff: right_diff),
+        chi: left_diff + right_diff,
+      )
+    })
+)
 #let averages = {
   let (left, right) = diffs
     .fold(
@@ -196,20 +198,25 @@ The result of the $chi^2$ test for each trial, as well as an average, is shown i
       [Observed],
       [Expected],
       [$ (o-e)^2 / e $],
-    ) * 2,
+    )
+      * 2,
     ..(
-      diffs.enumerate().map(((i, x)) => {
-        (
-          [Trial #{i+1}],
-          x.left.val,
-          100,
-          x.left.diff,
-          x.right.val,
-          100,
-          x.right.diff,
-          x.chi,
-        )
-      }).flatten().map(x => [#x])
+      diffs
+        .enumerate()
+        .map(((i, x)) => {
+          (
+            [Trial #{i+1}],
+            x.left.val,
+            100,
+            x.left.diff,
+            x.right.val,
+            100,
+            x.right.diff,
+            x.chi,
+          )
+        })
+        .flatten()
+        .map(x => [#x])
     ),
     [*Average*],
     ..{
