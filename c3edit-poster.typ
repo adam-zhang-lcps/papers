@@ -1,3 +1,5 @@
+#import "@preview/fletcher:0.5.7" as fletcher: diagram, edge, node
+
 #set page(width: 48in, height: 36in, margin: 1in)
 #set text(font: "New Computer Modern", size: 36pt)
 
@@ -24,6 +26,44 @@
       #set text(64pt)
       *c3: Developing a Framework for Real-Time Cross-Editor Collaborative Editing*
     ]
+
+    = Method
+    #figure(diagram(
+      node-stroke: .1em,
+      node-fill: gradient.radial(
+        blue.lighten(80%),
+        blue,
+        center: (30%, 20%),
+        radius: 80%,
+      ),
+      spacing: 4em,
+      edge((-1, 0), "r", "-|>", `open(path)`, label-pos: 0, label-side: center),
+      node((0, 0), `reading`, radius: 2em),
+      edge(`read()`, "-|>"),
+      node((1, 0), `eof`, radius: 2em),
+      edge(`close()`, "-|>"),
+      node((2, 0), `closed`, radius: 2em, extrude: (-2.5, 0)),
+      edge((0, 0), (0, 0), `read()`, "--|>", bend: 130deg),
+      edge((0, 0), (2, 0), `close()`, "-|>", bend: -40deg),
+    ))
+
+    #figure(diagram(
+      node-stroke: 1pt,
+      node-corner-radius: 4pt,
+      node-inset: 4mm,
+      node-outset: 1mm,
+      edge-stroke: 1pt,
+      mark-scale: 80%,
+      node((0, 0), [Editor]),
+      edge("<|-|>"),
+      node((1, 0), [Backend]),
+      node(enclose: ((0, 0), (1, 0)), inset: 6mm, snap: false),
+      edge("<|-|>"),
+      node((3, 0), [Backend]),
+      edge("<|-|>"),
+      node((4, 0), [Editor]),
+      node(enclose: ((3, 0), (4, 0)), inset: 6mm, snap: false),
+    ))
   ],
   [
     = Results
