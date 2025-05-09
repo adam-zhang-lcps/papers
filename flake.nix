@@ -104,10 +104,10 @@
               category = "Analysis";
               package = gnuplot;
             }
-            {
-              category = "Analysis";
-              package = octave.withPackages (ps: with ps; [optim]);
-            }
+            # {
+            #   category = "Analysis";
+            #   package = octave.withPackages (ps: with ps; [optim]);
+            # }
             {
               category = "CI Tooling";
               package = gitMinimal;
