@@ -13,13 +13,21 @@
   // panels. Our grid is one inch less on each edge, since we have two inches of
   // gutter in-between. Another inch deducted on sides for page margins.
   columns: (10in, 22in, 10in),
+  // TODO Remove when done and bounding boxes no longer need to be visible.
   stroke: (paint: black, dash: "dotted"),
   gutter: 2in,
   [
-    = Introduction
+    = Problem
+    There exists a wide variety of software developers, and an equally diverse landscape of developer tools, including text editors/integrated developer environments (IDEs).
 
-    #figure(image(width: 80%, "assets/c3edit-poster/so-developer-survey.png"))
+    StackOverflow conducts the largest annual survey of developers. One question asked is editor/IDE preference. @so-editor-survey shows a small snippet of the responses; as shown, there is a large swath of different choices.
 
+    #figure(
+      caption: [StackOverflow 2024 Developer Survey Results for Editor Preference],
+      image(width: 80%, "assets/c3edit-poster/so-developer-survey.png"),
+    ) <so-editor-survey>
+
+    With the increasing popularity of remote work and online collaboration, there is an corroborating desire for collaborative tools. Developers find themselves with no shortage of asynchronous collaborative tools: Git, issue trackers, and forums are aplenty. However, synchronous tools are not nearly as prevalent.
   ],
   [
     #align(center)[
