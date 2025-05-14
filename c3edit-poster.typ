@@ -8,19 +8,22 @@
 #show heading.where(level: 1): set text(54pt)
 #show heading.where(level: 1): set align(center)
 
-#let section(title, body) = rect(
-  width: 100%,
-  inset: 0.5in,
-  stroke: (
-    paint: black,
-    thickness: 2pt,
-    dash: "dotted",
-  ),
-  radius: 16pt,
-)[
-  = #title
+#let section(title, body) = [#rect(
+    width: 100%,
+    inset: 0.5in,
+    stroke: (
+      paint: black,
+      thickness: 2pt,
+      dash: "dotted",
+    ),
+    radius: 16pt,
+  )[
+    = #title
 
-  #body
+    #body
+  ]
+
+  #v(0.5in)
 ]
 
 #grid(
@@ -31,6 +34,10 @@
   columns: (11in, 23in, 11in),
   gutter: 1in,
   [
+    #section([Background])[
+      #lorem(80)
+    ]
+
     #section([Problem])[
       There exists a wide variety of software developers, and an equally diverse landscape of developer tools, including text editors/integrated developer environments (IDEs).
 
@@ -116,5 +123,13 @@
           )[#label #box(width: 1fr, repeat[.]) #symbol])
           .reduce((x, y) => x + y)
       }]
+
+    #section([Discussion])[
+      #lorem(80)
+    ]
+
+    #section([Further Work])[
+      #lorem(80)
+    ]
   ],
 )
