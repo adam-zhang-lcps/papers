@@ -8,7 +8,8 @@
 #show heading.where(level: 1): set text(54pt)
 #show heading.where(level: 1): set align(center)
 
-#let section(title, body) = [#rect(
+#let section(title, body) = [
+  #rect(
     width: 100%,
     inset: 0.5in,
     stroke: (
@@ -23,7 +24,7 @@
     #body
   ]
 
-  #v(0.5in)
+  #v(1fr)
 ]
 
 #grid(
@@ -34,6 +35,8 @@
   columns: (11in, 23in, 11in),
   gutter: 1in,
   [
+    #v(1fr)
+
     #section([Background])[
       #lorem(80)
     ]
@@ -52,6 +55,8 @@
     ]
   ],
   [
+    #v(1em)
+
     #align(center)[
       #set text(64pt)
       *c3: Developing a Framework for Real-Time Cross-Editor Collaborative Editing*
@@ -95,6 +100,8 @@
     ]
   ],
   [
+    #v(1fr)
+
     #section([Results])[
       #{
         (
