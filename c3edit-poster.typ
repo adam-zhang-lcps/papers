@@ -38,10 +38,6 @@
     #v(1fr)
 
     #section([Background])[
-      #lorem(80)
-    ]
-
-    #section([Problem])[
       There exists a wide variety of software developers, and an equally diverse landscape of developer tools, including text editors/integrated developer environments (IDEs).
 
       StackOverflow conducts the largest annual survey of developers. One question asked is editor/IDE preference. @so-editor-survey shows a small snippet of the responses; as shown, there is a large swath of different choices.
@@ -51,7 +47,13 @@
         image(width: 80%, "assets/c3edit-poster/so-developer-survey.png"),
       ) <so-editor-survey>
 
-      With the increasing popularity of remote work and online collaboration, there is an corroborating desire for collaborative tools. Developers find themselves with no shortage of asynchronous collaborative tools: Git, issue trackers, and forums are aplenty. However, synchronous tools are not nearly as prevalent. Notably, there is infrequent use of real-time collaborative editing tools (akin to Google Docs). One reason for this may be the
+      With the increasing popularity of remote work and online collaboration, there is an corroborating desire for collaborative tools. Developers find themselves with no shortage of asynchronous collaborative tools: Git, issue trackers, and forums are aplenty. However, synchronous tools are not nearly as prevalent. Notably, there is infrequent use of real-time collaborative editing tools (akin to Google Docs). One reason for this may be the lack of collaborative editing tools that work across editors.
+    ]
+
+    #section([Problem])[
+      The lack of a cross-editor framework or project for real-time collaborative editing poses an obstacle to synchronous remote or virtual collaboration among developers.
+
+      c3 aims to provide a generic framework, as well as three reference editor implementations, to allow developers to edit files real-time with other developers who may be using different editors.
     ]
   ],
   [
@@ -120,14 +122,17 @@
             below: 0.5em,
           )[#label #box(width: 1fr, repeat[.]) #symbol])
           .reduce((x, y) => x + y)
-      }]
+      }
+    ]
 
     #section([Discussion])[
       #lorem(80)
     ]
 
     #section([Further Work])[
-      #lorem(80)
+      #figure(caption: [], image("assets/c3edit-poster/ethersync.png"))
+
+      #lorem(30)
     ]
   ],
 )
