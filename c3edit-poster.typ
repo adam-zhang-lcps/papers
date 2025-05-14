@@ -59,47 +59,38 @@
 
     #section([Method])[
       #figure(diagram(
-        node-stroke: .1em,
-        node-fill: gradient.radial(
+        node-stroke: 0.1em,
+        node-outset: 0.2em,
+        spacing: 4em,
+        node((0, 0), [Editor], radius: 2em, fill: gradient.radial(
           blue.lighten(80%),
           blue,
           center: (30%, 20%),
           radius: 80%,
-        ),
-        spacing: 4em,
-        edge(
-          (-1, 0),
-          "r",
-          "-|>",
-          `open(path)`,
-          label-pos: 0,
-          label-side: center,
-        ),
-        node((0, 0), `reading`, radius: 2em),
-        edge(`read()`, "-|>"),
-        node((1, 0), `eof`, radius: 2em),
-        edge(`close()`, "-|>"),
-        node((2, 0), `closed`, radius: 2em, extrude: (-2.5, 0)),
-        edge((0, 0), (0, 0), `read()`, "--|>", bend: 130deg),
-        edge((0, 0), (2, 0), `close()`, "-|>", bend: -40deg),
-      ))
-
-      #figure(diagram(
-        node-stroke: 1pt,
-        node-corner-radius: 4pt,
-        node-inset: 4mm,
-        node-outset: 1mm,
-        edge-stroke: 1pt,
-        mark-scale: 80%,
-        node((0, 0), [Editor]),
-        edge("<|-|>"),
-        node((1, 0), [Backend]),
-        node(enclose: ((0, 0), (1, 0)), inset: 6mm, snap: false),
-        edge("<|-|>"),
-        node((3, 0), [Backend]),
-        edge("<|-|>"),
-        node((4, 0), [Editor]),
-        node(enclose: ((3, 0), (4, 0)), inset: 6mm, snap: false),
+        )),
+        edge("<|-|>", [IPC]),
+        node((1, 0), [c3 Backend], radius: 3em, fill: gradient.radial(
+          blue.lighten(80%),
+          blue,
+          center: (30%, 20%),
+          radius: 80%,
+        )),
+        node(enclose: ((0, 0), (1, 0)), inset: 1em, snap: false),
+        edge("<|-|>", [Network]),
+        node((3, 0), [c3 Backend], radius: 3em, fill: gradient.radial(
+          blue.lighten(80%),
+          blue,
+          center: (30%, 20%),
+          radius: 80%,
+        )),
+        edge("<|-|>", [IPC]),
+        node((4, 0), [Editor], radius: 2em, fill: gradient.radial(
+          blue.lighten(80%),
+          blue,
+          center: (30%, 20%),
+          radius: 80%,
+        )),
+        node(enclose: ((3, 0), (4, 0)), inset: 1em, snap: false),
       ))
     ]
   ],
