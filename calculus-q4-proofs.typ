@@ -69,4 +69,20 @@ and mathematical answers must solve the problem completely.
 3. If $arrow(F) = y hat(i) + x hat(j)$ and $C$ is given by $arrow(r)(t) = (4sin(t))hat(i) + (3cos(t))hat(j) "where" 0 <= t <= pi$, then $integral_C arrow(F) dot dif arrow(r) = 0$.
 + If $C_1$, $C_2$, and $C_3$ have the same initial and terminal points and $integral_C_1 arrow(F) dot dif arrow(r_1) = integral_C_2 arrow(F) dot dif arrow(r_2)$ then $integral_C_1 arrow(F) dot dif arrow(r_1) = integral_C_3 arrow(F) dot dif arrow(r_3)$.
 + If $integral_C arrow(F) dot dif arrow(r) = 0$, where $C$ is any circle of the form $x^2 + y^2 = a^2$, then $arrow(F)$ is path independent.
-+ $R$ and $T$ are corresponding regions of the $x y$- and $u v$-planes. $R$ is the region bound by the rotated ellipse $x^2 - x y + y^2 = 2$. Using the change of variables $y - x = (2sqrt(2 / 3))v$ and $y + x = (2sqrt(2))u$ leads to $integral.double_R (x^2 - x y + y^2) dif x dif y = integral.double_T (2u^2 + 2y^2)(sqrt(3) / 2) dif u dif v$ where $T$ is the region bound by the unit circle $u^2 + v^2 = 1$.
++ $R$ and $T$ are corresponding regions of the $x y$- and $u v$-planes. $R$ is the region bound by the rotated ellipse $x^2 - x y + y^2 = 2$. Using the change of variables $y - x = (2sqrt(2 / 3))v$ and $y + x = (2sqrt(2))u$ leads to $integral.double_R (x^2 - x y + y^2) dif x dif y = integral.double_T (2u^2 + 2v^2)(sqrt(3) / 2) dif u dif v$ where $T$ is the region bound by the unit circle $u^2 + v^2 = 1$.
+
+  $
+    (y + x) + (y - x) = 2y & = 2sqrt(2)u + 2sqrt(2 / 3)v \
+                         y & = sqrt(2) u + sqrt(2 / 3)v  \
+    (y + x) - (y - x) = 2x & = 2sqrt(2)u - 2sqrt(2 / 3)v \
+                         x & = sqrt(2)u - sqrt(2 / 3)v   \
+  $
+
+$
+  dif x dif y & = |J| dif u dif v \
+  |J| & = abs(diff(x, y) / diff(u, v)) = mat(delim: "|", (diff x) / (diff u), (diff x) / (diff v); (diff y) / (diff u), (diff y) / (diff v)) \
+  &= mat(delim: "|", sqrt(2), -sqrt(2 / 3); sqrt(2), sqrt(2 / 3)) \
+  &= abs(sqrt(2)sqrt(2 / 3) + sqrt(2)sqrt(2 / 3)) \
+  &= 2 sqrt(2) (sqrt(2)) / (sqrt(3)) \
+  &= 4 / sqrt(3) != sqrt(3) / 2
+$
