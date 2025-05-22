@@ -50,13 +50,22 @@
     &= rho^2 sin phi because forall phi in [0, tau / 2] : sin phi >= 0
   $
 
+// This question only asks which ones *can* be evaluated via Green's Theorem; it
+// doesn't actually ask to *evaluate* them. So, because I'm lazier than Haskell,
+// I will *not* be doing that 🙃.
 + For which of the following can you use Green's Theorem to evaluate the integral? Explain.
 
   + $integral_C (x^2 + y^2) dif x + (x^2 + y^2) dif y$ where $C$ is the curve defined by $y = x$, $y = x^2$, $0 <= x <= 1$ with counterclockwise orientation.
 
+    Since the curve $C$ is counterclockwise (positively oriented), closed, piecewise smooth, and both $L(x, y) = x^2 + y^2$ and $M(x, y) = x^2 + y^2$ have continuous partial derivatives for all $(x, y) in RR^2$ ($D subset RR^2$), Green's Theorem can be used to evaluate the integral.
+
   + $integral_C 1 / (sqrt(x^2 + y^2)) dif x - 1 / sqrt(x^2 + y^2) dif y$ where $C$ is the unit circle centered at the origin, oriented counterclockwise.
 
+    Since the point $(0, 0) in D$ and $L(0, 0) = 1(sqrt(0)) = "undefined"$, indicating that the partial derivatives over $D$ are not continuous, Green's Theorem cannot be used to evaluate the integral.
+
   + $integral_C F dot dif r$ where $F = x hat(i) + y hat(j)$ and $C$ is defined by $r(t) = t^2 hat(i) + t^3 hat(j)$.
+
+    Since $r(t)$ is not a closed loop for any value of $t$, Green's Theorem cannot be used to evaluate the integral.
 
 
 #pagebreak()
