@@ -19,6 +19,8 @@
 #set text(font: "New Computer Modern")
 #set enum(numbering: "1.a.")
 
+#set math.vec(delim: "[")
+
 #align(center)[
   _On my honor, I will not accept nor provide any unauthorized aid on this assignment._
 ]
@@ -76,6 +78,17 @@ theorem or give a counterexample. Written answers must be in complete sentences
 and mathematical answers must solve the problem completely.
 
 3. If $arrow(F) = y hat(i) + x hat(j)$ and $C$ is given by $arrow(r)(t) = (4sin(t))hat(i) + (3cos(t))hat(j) "where" 0 <= t <= pi$, then $integral_C arrow(F) dot dif arrow(r) = 0$.
+
+  $
+    x(t) & = 4sin(t) \
+    y(t) & = 3cos(t) \
+    F(r(t)) & = vec(3cos(t), 4sin(t)) \
+    dif arrow(r) & = vec(4cos(t), -3sin(t)) dif t \
+    F(r(t)) dot dif arrow(r) & = 12cos^2(t) - 12sin^2(t) = 12cos(2t) dif t \
+    integral_0^(tau / 2) 12 cos(2t) dif t &= 12 dot 1 / 2 [sin(2t)]_0^(tau / 2) = 6 (sin(tau) - sin(0)) \
+    &= 0
+  $
+
 + If $C_1$, $C_2$, and $C_3$ have the same initial and terminal points and $integral_C_1 arrow(F) dot dif arrow(r_1) = integral_C_2 arrow(F) dot dif arrow(r_2)$ then $integral_C_1 arrow(F) dot dif arrow(r_1) = integral_C_3 arrow(F) dot dif arrow(r_3)$.
 + If $integral_C arrow(F) dot dif arrow(r) = 0$, where $C$ is any circle of the form $x^2 + y^2 = a^2$, then $arrow(F)$ is path independent.
 + $R$ and $T$ are corresponding regions of the $x y$- and $u v$-planes. $R$ is the region bound by the rotated ellipse $x^2 - x y + y^2 = 2$. Using the change of variables $y - x = (2sqrt(2 / 3))v$ and $y + x = (2sqrt(2))u$ leads to $integral.double_R (x^2 - x y + y^2) dif x dif y = integral.double_T (2u^2 + 2v^2)(sqrt(3) / 2) dif u dif v$ where $T$ is the region bound by the unit circle $u^2 + v^2 = 1$.
